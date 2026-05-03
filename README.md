@@ -48,7 +48,11 @@
 
 ## Enlace del repositorio del informe
 
+https://github.com/upc-1ASI0732-2610-16879-Stoq/Report 
+
 ## Enlace de los repositorios de la organizacion
+
+https://github.com/upc-1ASI0732-2610-16879-Stoq 
 
 <div style="page-break-after: always;"></div>
 
@@ -327,6 +331,27 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 ## 1.1. Startup Profile
 
 ### 1.1.1. Descripcion de la Startup
+
+Somos StockWise una gestión de inventarios dirigida a pequeñas y medianas empresas, startups y bodegas especializadas. Su objetivo principal es facilitar el control eficiente de entradas y salidas de productos, la gestión de usuarios, la configuración de alertas inteligentes, la generación de reportes detallados y de boleta de venta, todo a través de una interfaz intuitiva y accesible desde cualquier dispositivo.
+
+La solución responde a una problemática concreta: muchos negocios aún utilizan métodos manuales (como hojas de cálculo o registros en papel) para administrar sus inventarios y pagos, lo cual genera errores, desorganización, sobrecompras y pérdidas económicas. StockWise busca resolver este problema digitalizando y centralizando el control del inventario y de las ganancias de la tienda, permitiendo a los negocios tomar decisiones basadas en datos y optimizar su operación mediante cuatro planes de funcionalidad avanzada:
+
+- **Plan A – Entrada por voz:** Permite registrar productos mediante comandos de voz (ejemplo: “Agregar 20 botellas de agua al inventario”), ofreciendo mayor rapidez y comodidad, especialmente en situaciones donde el personal no pueda usar el teclado.
+
+- **Plan B – Geolocalización (GPS):** Integra funciones de ubicación para optimizar la trazabilidad y distribución de productos, permitiendo identificar su procedencia, registrar puntos de entrega y visualizar en un mapa interactivo las distintas sedes o sucursales vinculadas a la tienda principal.
+
+- **Plan C – Localización y predicción inteligente:**
+
+  - Localiza: Utiliza un mapa interactivo con integración de códigos QR para ubicar productos dentro del almacén de manera precisa.
+  - Predice: Implementa un sistema de reabastecimiento inteligente basado en patrones de ventas, que sugiere cuándo y cuánto stock reponer para evitar quiebres de inventario.
+
+- **Plan D – Escaneo por lotes con cámara rápida:** En lugar de códigos de barras, la app toma una foto del producto o lote y una API de visión (como Google ML Kit) devuelve etiquetas genéricas. El usuario confirma el producto exacto y la cantidad en un menú antes de registrarlo, pudiendo ver directamente su ubicación en el almacén virtual.
+
+<br>
+<b>Misión: </b>Brindar a pequeñas y medianas empresas una solución de gestión de inventarios y pagos sencilla, accesible y eficiente, que les permita digitalizar su operación, reducir errores logísticos y tomar decisiones basadas en datos reales, apoyando así su crecimiento sostenible.
+
+<br>
+<b>Visión: </b>StockWise se enfoca en ser una aplicación preferida de los empresarios que buscan una gestión de inventarios, herramientas de alto valor con un modelo escalable, adaptable y centrado en el usuario.
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
