@@ -355,6 +355,67 @@ La solución responde a una problemática concreta: muchos negocios aún utiliza
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
+<table>
+  <tr>
+    <th>
+      <img src="assets/Chapter-1/fotoFabs.jpg" alt="Foto de perfil de " width="800px">
+    </th>
+    <td valign="top">
+      <p><b> Saldaña Ayala, Fabiola del Rocio</b></p>
+      <p>
+        Soy estudiante de la carrera de Ingeniería de Software, actualmente me encuentro en el quinto ciclo. Me gusta viajar, aprender nuevos idiomas, leer y me interesa aprender más acerca de nuevas tecnologías.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <img src="assets/Chapter-1/.jpg" alt="Foto de perfil de Jeremy" width="800px">
+    </th>
+    <td valign="top">
+      <p><b>Luciana Carolina Choquehuanca Nuñez</b></p>
+      <p>
+        ..
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <img src="assets/Chapter-1/fotocam.png" alt="Foto de perfil de Camila" width="800px">
+    </th>
+    <td valign="top">
+      <p><b>Sánchez Ríos, Camila Cristina</b></p>
+      <p>
+       Soy estudiante de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas, actualmente me encuentro en el octavo ciclo. Poseo conocimientos sólidos en el desarrollo de aplicaciones web y de escritorio utilizando lenguajes como HTML, Java y C#, aplicando principios de diseño orientados al dominio (Domain Driven Design) y metodologías de desarrollo modernas. Además, tengo experiencia en diseño de interfaces y prototipado con Figma, lo que me permite aportar al equipo en la creación de soluciones visualmente coherentes, funcionales y centradas en la experiencia del usuario (UI/UX)..
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <img src="assets/Chapter-1/.jpg" alt="Foto de perfil de Kevin" width="800px">
+    </th>
+    <td valign="top">
+      <p><b>Ronald Joel Peralta Chipa</b></p>
+      <p>
+        ...
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <img src="assets/Chapter-1/.png" alt="Foto de perfil de Alejandro" width="800px">
+    </th>
+    <td valign="top">
+      <p><b>...</b></p>
+      <p>
+        ...
+      </p>
+    </td>
+  </tr>
+    <tr>
+  </tr>
+</table>
+<br>
+
 ## 1.2. Solution Profile
 
 ### 1.2.1. Antecedentes y problematica
