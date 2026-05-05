@@ -493,6 +493,23 @@ La elección tipográfica para StockWise es un componente esencial que complemen
   
 ### 4.1.2. Web Style Guidelines
 
+DISEÑO RESPONSIVE:
+
+- El diseño se adaptará automáticamente al tamaño de la pantalla.
+
+COMPONENTES VISUALES:
+
+- Botones: Redondeados con 10px de radio. Cambian de color y tienen un efecto de sombra al usarse.
+
+- Formularios: Cajas de texto con bordes suaves y sombreados ligeros, 40px. de alto.
+
+- Links: En azul (#0000FF), subrayado. Subrayado, con color de cambio a azul oscuro (#00008E).
+
+- Navegación: Menú superior: Con enlaces a las principales secciones.
+
+<center> <img src="assets/Chapter-4/webStyleStockTrack.png" style="width: 250px;"/> </center>
+<br>
+
 ### 4.1.3. Mobile Style Guidelines
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
@@ -500,6 +517,8 @@ La elección tipográfica para StockWise es un componente esencial que complemen
 #### 4.1.3.2. Android Mobile Style Guidelines
 
 ## 4.2. Information Architecture
+
+La arquitectura de la información, también conocida como Information Architecture (IA), implica la organización de la información de manera clara y lógica, de modo que los usuarios puedan comprender su ubicación, lo que han descubierto, qué pueden esperar y qué está disponible a su alrededor. Esto tiene como objetivo permitir a los usuarios encontrar con facilidad lo que están buscando, y a los clientes, comprender las capacidades de la plataforma. Además, la arquitectura de la información posibilita la incorporación de nuevas funciones y la expansión del producto sin generar una estructura compleja o de difícil comprensión (Rosenfeld, Morville & Arango 2015).
 
 ### 4.2.1. Organization Systems
 
@@ -562,6 +581,8 @@ La elección tipográfica para StockWise es un componente esencial que complemen
 ## 4.10. Database Design
 
 ### 4.10.1. Relational/Non-Relational Database Diagram
+
+
 
 # Capitulo V: Product Implementation
 
