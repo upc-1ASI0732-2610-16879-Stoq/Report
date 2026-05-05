@@ -3,13 +3,13 @@
 </p>
 
 <h2 align="center">Universidad Peruana de Ciencias Aplicadas</h2>
-<h3 align="center">IngenierÃ­a de Software</h3>
+<h3 align="center">Ingenieri­a de Software</h3>
 
 <p align="center">
     Periodo: 202610 <br>
-    1ASI0732 | DiseÃ±o de Experimentos de IngenierÃ­a de Software <br>
+    1ASI0732 | Diseño de Experimentos de Ingenierí­a de Software <br>
     NRC: 16879 <br>
-    Docente: Alex Humberto SÃ¡nchez Ponce <br>
+    Docente: Alex Humberto Sanchez Ponce <br>
 </p>
 
 <hr>
@@ -23,11 +23,11 @@
 <div align="center">
     <h5><strong>Integrantes</strong></h5>
     <p>
-        U â€“ Luciana Carolina Choquehuanca NuÃ±ez <br>
-        U â€“ Ronald Joel Peralta Chipa <br>
-        U202210973 â€“ Sanchez Rios, Camila Cristina <br>
-        U â€“ Fabiola Del Rocio SaldaÃ±a Ayalan <br>
-        U â€“  <br>
+        U - Luciana Carolina Choquehuanca Nuñez <br>
+        U - Ronald Joel Peralta Chipa <br>
+        U202210973 - Sanchez Rios, Camila Cristina <br>
+        U - Fabiola Del Rocio Saldaña Ayalan <br>
+        U - Roy Linsh Fernandez Remon  <br>
     </p>
     <p><em>Abril, 2026</em></p>
 </div>
@@ -275,12 +275,12 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>TB1: </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
-        <p><b>Luciana Carolina Choquehuanca Nuñez</b></p>
+        <p><b>Choquehuanca Nuñez, Luciana Carolina</b></p>
         <p><b>AV1: </b> </p>
         <p><b>TB1: </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
-        <p><b>....</b></p>
+        <p><b>Fernandez Remon, Roy Linsh</b></p>
         <p><b>AV1: </b> </p>
         <p><b>TB1: </b> </p>
         <p><b>AV2: </b> </p>
@@ -306,12 +306,12 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>TB1: </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
-        <p><b>Luciana Carolina Choquehuanca Nuñez</b></p>
+        <p><b>Choquehuanca Nuñez, Luciana Carolina</b></p>
         <p><b>AV1: </b> </p>
         <p><b>TB1: </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
-        <p><b>...</b></p>
+        <p><b>Fernandez Remon, Roy Linsh</b></p>
         <p><b>AV1: </b> </p>
         <p><b>TB1: </b> </p>
         <p><b>AV2: </b> </p>
@@ -332,20 +332,11 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 1.1.1. Descripcion de la Startup
 
-Somos StockWise una gestión de inventarios dirigida a pequeñas y medianas empresas, startups y bodegas especializadas. Su objetivo principal es facilitar el control eficiente de entradas y salidas de productos, la gestión de usuarios, la configuración de alertas inteligentes, la generación de reportes detallados y de boleta de venta, todo a través de una interfaz intuitiva y accesible desde cualquier dispositivo.
+StockWise es una startup tecnológica especializada en el desarrollo de soluciones digitales para la gestión de inventarios. La compañía está dirigida principalmente a pequeñas y medianas empresas, startups en fase de crecimiento y bodegas especializadas que requieren un control preciso y eficiente de sus productos. Su propuesta de valor se centra en facilitar el registro de entradas y salidas de mercancía, la administración de múltiples usuarios, la configuración de alertas inteligentes, la generación de reportes detallados y la emisión de boletas de venta. Todo ello se ofrece a través de una interfaz intuitiva y accesible desde cualquier dispositivo, lo que permite a los negocios operar con mayor agilidad y sin limitaciones geográficas.
 
-La solución responde a una problemática concreta: muchos negocios aún utilizan métodos manuales (como hojas de cálculo o registros en papel) para administrar sus inventarios y pagos, lo cual genera errores, desorganización, sobrecompras y pérdidas económicas. StockWise busca resolver este problema digitalizando y centralizando el control del inventario y de las ganancias de la tienda, permitiendo a los negocios tomar decisiones basadas en datos y optimizar su operación mediante cuatro planes de funcionalidad avanzada:
+StockWise propone digitalizar y centralizar tanto el control del inventario como el registro de las ganancias de la tienda, brindando a los negocios la capacidad de tomar decisiones basadas en datos reales y optimizar su operación diaria .Para adaptarse a las distintas necesidades y niveles ofrece cuatro planes de funcionalidad avanzada. El Plan A – Geolocalización (GPS) incorpora funciones de ubicación para optimizar la trazabilidad y distribución de productos, posibilitando identificar su procedencia, registrar puntos de entrega y visualizar en un mapa interactivo todas las sedes o sucursales vinculadas a la tienda principal.
 
-- **Plan A – Entrada por voz:** Permite registrar productos mediante comandos de voz (ejemplo: “Agregar 20 botellas de agua al inventario”), ofreciendo mayor rapidez y comodidad, especialmente en situaciones donde el personal no pueda usar el teclado.
-
-- **Plan B – Geolocalización (GPS):** Integra funciones de ubicación para optimizar la trazabilidad y distribución de productos, permitiendo identificar su procedencia, registrar puntos de entrega y visualizar en un mapa interactivo las distintas sedes o sucursales vinculadas a la tienda principal.
-
-- **Plan C – Localización y predicción inteligente:**
-
-  - Localiza: Utiliza un mapa interactivo con integración de códigos QR para ubicar productos dentro del almacén de manera precisa.
-  - Predice: Implementa un sistema de reabastecimiento inteligente basado en patrones de ventas, que sugiere cuándo y cuánto stock reponer para evitar quiebres de inventario.
-
-- **Plan D – Escaneo por lotes con cámara rápida:** En lugar de códigos de barras, la app toma una foto del producto o lote y una API de visión (como Google ML Kit) devuelve etiquetas genéricas. El usuario confirma el producto exacto y la cantidad en un menú antes de registrarlo, pudiendo ver directamente su ubicación en el almacén virtual.
+El Plan B – Localización y predicción inteligente combina dos capacidades clave. Por un lado, localiza mediante un mapa interactivo con integración de códigos QR para ubicar productos dentro del almacén de manera precisa. Por otro lado, predice mediante un sistema de reabastecimiento inteligente basado en patrones de ventas, que sugiere cuándo y cuánto stock reponer para evitar quiebres de inventario. Finalmente, el Plan C – Escaneo por lotes con cámara rápida ofrece una alternativa eficiente al código de barras tradicional: la aplicación toma una fotografía del producto o lote, y una API de visión —como Google ML Kit— devuelve etiquetas genéricas. El usuario confirma el producto exacto y la cantidad en un menú antes de registrarlo, pudiendo ver directamente su ubicación en el almacén virtual. Esta variedad de planes permite a StockWise atender desde negocios que recién comienzan su transformación digital hasta aquellos que requieren funcionalidades avanzadas de inteligencia y geolocalización.
 
 <br>
 <b>Misión: </b>Brindar a pequeñas y medianas empresas una solución de gestión de inventarios y pagos sencilla, accesible y eficiente, que les permita digitalizar su operación, reducir errores logísticos y tomar decisiones basadas en datos reales, apoyando así su crecimiento sostenible.
@@ -441,17 +432,20 @@ La solución responde a una problemática concreta: muchos negocios aún utiliza
 - **How much (¿Cuánto cuesta no resolverlo?)**<br>
   El costo se traduce en pérdidas económicas significativas por productos no vendidos, errores de stock, tiempo invertido en tareas manuales y menor competitividad frente a negocios más organizados.
 
+  Según un estudio realizado por GS1 Uruguay (2024), el porcentaje de productos no encontrados en góndolas alcanzó el 7.08 %, lo que representa un aumento del 74 % respecto al año anterior; este dato indica que por cada 100 productos auditados, 7 no estaban disponibles, evidenciando el impacto directo que una gestión ineficiente de inventarios puede tener en la disponibilidad, las ventas y la experiencia del cliente.
+
+   <img src="assets/Chapter-1/Evolucion-del-Indice.png" alt="Lean Ux canvas" width="800px">
+
+
 ### 1.2.2. Lean UX Process
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-El propósito de StockWise es proporcionar una aplicación intuitiva y accesible para que empresas pequeñas y medianas, startups y bodegas especializadas puedan gestionar su inventario de forma eficiente, digitalizada y sin complicaciones técnicas ni altos costos.
+El propósito de StockWise es proporcionar un sistema intuitiva y accesible para que empresas pequeñas y medianas, startups y bodegas especializadas puedan gestionar su inventario de forma eficiente, digitalizada y sin complicaciones técnicas ni altos costos.
 
-Actualmente, muchos de estos negocios aún dependen de métodos manuales para registrar y controlar su stock. Este enfoque genera errores frecuentes, tales como registros incorrectos, desactualización en tiempo real o pérdidas de productos. Como resultado, se producen compras innecesarias, falta de trazabilidad, escasa visibilidad sobre los niveles de inventario y una gestión logística ineficiente. Según un estudio de NetSuite (2024), el promedio de precisión de inventario en empresas es de aproximadamente 83 %, lo que refleja un margen de error significativo que afecta los costos operativos y la toma de decisiones.
+Actualmente, pequeñas y medianas empresas, startups y bodegas especializadas dependen de métodos manuales como hojas de cálculo o registros en papel para gestionar su inventario. Esta forma de trabajo genera errores frecuentes en los registros, desactualización en tiempo real, pérdida de productos, sobrecompras innecesarias, falta de trazabilidad y una gestión logística ineficiente. Según NetSuite (2024), la precisión promedio del inventario en este tipo de negocios es solo del 83%, lo que impacta directamente en los costos operativos, la satisfacción del cliente y la rentabilidad general. A medida que estas empresas escalan, el desorden operativo se vuelve insostenible, reduciendo su capacidad de respuesta ante la demanda y su competitividad en el mercado.
 
-Diversas investigaciones sostienen que una gestión ineficiente del inventario repercute directamente en la productividad empresarial, la satisfacción del cliente y la rentabilidad general del negocio, además de generar sobrecostos en almacenamiento y desperdicio de recursos (Altavant Consulting, 2024; Arce-Gonzales & Sandoval, 2023). A medida que estas empresas escalan, el desorden operativo se vuelve insostenible, reduciendo su capacidad de respuesta ante la demanda y su competitividad en el mercado.
-
-Por lo tanto, surge la necesidad de diseñar una aplicación de gestión de inventarios que sea simple, funcional y adaptable, capaz de atender las necesidades reales de las pymes en crecimiento. Esta herramienta debe facilitar el control exacto del inventario, reducir errores humanos, mejorar la trazabilidad y proporcionar información en tiempo real para respaldar decisiones basadas en datos.
+Por lo tanto, surge la necesidad de diseñar una aplicación de gestión de inventarios que sea simple, funcional y adaptable, capaz de ofrecer control exacto del stock en tiempo real, reducción de errores humanos, mejora de la trazabilidad, alertas inteligentes y reportes analíticos que respalden la toma de decisiones. Frente a este escenario, la pregunta clave que guía el desarrollo de StockWise es: ¿cómo lograr que las bodegas y almacenes adopten un sistema automatizado que elimine los procesos manuales, reduzca errores y mejore la eficiencia operativa sin limitar el crecimiento del negocio?
 
 #### 1.2.2.2. Lean UX Assumptions
 
@@ -524,7 +518,7 @@ Cuando los usuarios reporten una reducción del 50% en errores de facturación y
 
 #### 1.2.2.4. Lean UX Canvas
 
- <img src="assets/Chapter-1/Lean Ux canvas.png" alt="Lean Ux canvas" width="800px">
+ <img src="assets/Chapter-1/Lean-UX-Canvas.jpg" alt="Lean Ux canvas" width="800px">
 
 _Imagen (N°1). Elaboración propia. Realizado en Canva_
 
@@ -532,12 +526,12 @@ _Imagen (N°1). Elaboración propia. Realizado en Canva_
 
 ## 1.3. Segmentos objetivo
 
-**Segmento 1: Bodegas especializadas por rubro**
+**Segmento 1: Dueños de bodegas**
 
 **Aspectos demográficos:**
 
 - Sexo: Femenino, Masculino
-- Edades: 28 a 50 años
+- Edades: 20 a 60 años
 - Nivel socioeconómico: Clases B y C
 - Aspectos geográficos:
 - Nacionalidad: Peruana
@@ -556,7 +550,7 @@ _Imagen (N°1). Elaboración propia. Realizado en Canva_
 **Aspectos demográficos:**
 
 - Sexo: Masculino
-- Edades: 20 a 30 años
+- Edades: 22 a 45 años
 - Nivel socioeconómico: Clases B y C
 - Aspectos geográficos:
 - Nacionalidad: Peruana
