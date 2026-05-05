@@ -121,8 +121,9 @@
     - [4.5.1. Android Mobile Applications Prototyping](#451-android-mobile-applications-prototyping)
     - [4.5.2. iOS Mobile Applications Prototyping](#452-ios-mobile-applications-prototyping)
   - [4.6. Web Applications UX/UI Design](#46-web-applications-uxui-design)
-    - [4.6.1. Web Applications Wireframes](#461-web-applications-wireframes)
     - [4.6.2. Web Applications Wireflow Diagrams](#462-web-applications-wireflow-diagrams)
+    - [User Goal: “Crear cuenta e ingresar a la aplicación”](#user-goal-crear-cuenta-e-ingresar-a-la-aplicación)
+    - [User Goal: “Crear un nuevo rol para el personal”](#user-goal-crear-un-nuevo-rol-para-el-personal)
     - [4.6.3. Web Applications Mock-ups](#463-web-applications-mock-ups)
     - [4.6.4. Web Applications User Flow Diagrams](#464-web-applications-user-flow-diagrams)
   - [4.7. Web Applications Prototyping](#47-web-applications-prototyping)
@@ -672,9 +673,64 @@ La arquitectura de la información, también conocida como Information Architect
 
 ## 4.6. Web Applications UX/UI Design
 
-### 4.6.1. Web Applications Wireframes
+ <img src="assets/Chapter-4/wireframes-web/Register.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/login.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Inicio.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Inventario.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Inventario - Información Producto-1.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Inventario - Nuevo Producto-1.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Inventario - Reposición-1.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Inventario - Nuevo kit-1.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Proveedores.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Proveedores-1.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Administración del personal - Creación personal-1.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Administración del personal - Creación rol.jpg" alt="Web Wireframes" width="800px">
+ <img src="assets/Chapter-4/wireframes-web/Salida producto.jpg" alt="Web Wireframes" width="800px">
+
 
 ### 4.6.2. Web Applications Wireflow Diagrams
+
+ <img src="assets/Chapter-4/wireframes-web/flow1.png" alt="Wireflow 1" width="900px">
+
+### User Goal: “Crear cuenta e ingresar a la aplicación”
+
+User persona: Empresa — Administrador
+**Happy path**
+
+1. En Regístrate, completa Nombre, Email y Contraseña → pulsa Registrarse.
+2. El sistema valida y crea la cuenta (opcional: confirma email).
+3. En Iniciar sesión, ingresa Email y Contraseña → Entrar.
+4. Accede al Dashboard (métricas y notificaciones cargadas).
+
+**Unhappy paths**
+
+* Email ya registrado o formato inválido → mensaje y bloqueo.
+* Contraseña débil/incorrecta → mensaje y reintento.
+* Cuenta inactiva/no verificada → aviso con instrucciones.
+* Falla de red/sesión → error; el formulario conserva los datos.
+
+<br>
+
+ <img src="assets/Chapter-4//wireframes-web/flow2.png" alt="Wireflow 2" width="900px">
+
+### User Goal: “Crear un nuevo rol para el personal”
+
+User persona: Empresa — Administrador
+
+**Happy path**
+
+1. Desde el Dashboard, abre Administración del personal.
+2. Pulsa Nuevo Rol.
+3. En el modal, indica Nombre del rol y Permisos (p. ej., Inventario, Compras, Estadísticas, Cuentas).
+4. Guardar → el rol se crea y queda disponible para asignarlo a usuarios.
+
+**Unhappy paths**
+
+* Cancelar → no se guarda nada.
+* Nombre de rol vacío/duplicado → mensaje y bloqueo.
+* Sin permisos seleccionados (si es obligatorio) → aviso para completar.
+* Falla de red/sesión → error y preservación del formulario para reintentar.
+<br>
 
 ### 4.6.3. Web Applications Mock-ups
 
