@@ -512,6 +512,51 @@ COMPONENTES VISUALES:
 
 ### 4.1.3. Mobile Style Guidelines
 
+El diseño móvil de StockWise prioriza la eficiencia en tareas rápidas, la facilidad de uso con una sola mano y la legibilidad en condiciones de poca luz o movimiento (típicas en bodegas y almacenes). Los principios clave son: accesibilidad táctil, minimalismo visual y respuesta inmediata.
+
+**Navegación Móvil**
+
+- Barra inferior (Bottom Tab Bar): Principal elemento de navegación. Contiene entre 4 y 5 iconos con etiqueta textual: _Inicio , Inventario, Movimientos, Alertas y Perfil._
+
+  - Altura: 56px.
+  - Iconos activos: Color primario #BC162A.
+  - Iconos inactivos: Gris medio (#8E8E93).
+  - Efecto táctil: Ripple o cambio de opacidad al presionar.
+
+- **Navegación jerárquica:** Uso de flecha de retorno (<) en la esquina superior izquierda de cada pantalla secundaria, siguiendo el estándar de iOS y Android.
+
+**Componentes Táctiles**
+
+- Botones: Altura mínima de 48px (recomendación de accesibilidad). Ancho ajustable según contenido.
+
+  - Botón primario: Fondo #BC162A, texto blanco, border radius 12px. Padding vertical: 12px, horizontal: 24px.
+  - Botón secundario: Borde de 1.5px sólido #EE7F27, texto #EE7F27, fondo transparente.
+  - Botón flotante (FAB): Para acciones rápidas como "Agregar producto" o "Escanear lote". Fondo #EE7F27, icono blanco, tamaño 56px, sombra media.
+
+- Elementos de lista (Cards): Altura mínima 72px, separación entre cards de 8px. Al tocar una card, se resalta con un fondo gris muy claro (#F2F2F2) o un cambio de sombra. Espaciado interno: 12px.
+
+**Entradas de Datos Específicas para Móvil**
+
+- Campos de texto: Altura 48px, border radius 12px, borde de 1px #D9D593. Fondo blanco o #F5E1A4. Al activarse, borde cambia a #EE7F27 y aparece un ícono de limpiar (X) si hay texto.
+  
+- Escáner QR / Cámara rápida (Plan C): Llamada a pantalla completa con visor. El botón de captura debe estar en la parte inferior, a 72px del borde, para alcanzar con el pulgar. Confirmación posterior con un modal de resumen (producto sugerido + cantidad) antes de registrar.
+
+**Feedback y Estados**
+
+- Alerta in-app (Snackbar/Toast): Aparece en la parte inferior, sobre la barra de navegación. Duración 3 segundos. Fondo #302325, texto blanco, botón de acción (si aplica) en color #FFC107.
+
+- Estados de carga: Indicador circular (spinner) con color primario, centrado en pantalla o dentro del componente correspondiente. Para acciones largas, mostrar mensaje: "Actualizando inventario...".
+
+- Gestos táctiles: Soporte para "pull to refresh" en listas de inventario y movimientos. Deslizar horizontalmente (swipe) sobre un producto para mostrar acciones rápidas: Editar (lápiz) y Eliminar (basurero, color rojo error).
+
+**Adaptabilidad y Accesibilidad**
+
+- Tamaño mínimo de objetivo táctil: 44x44 puntos (Apple HIG) o 48x48dp (Material Design). Aplicado a todos los elementos interactivos: botones, enlaces, tarjetas seleccionables.
+
+- Modo oscuro (no incluido inicialmente): Preparado para futura implementación. Usar variables de color que permitan mapeo inverso.
+
+- Orientación: Soportada principalmente vertical (retrato). La orientación horizontal (landscape) se habilita solo para mapas (Plan B y C) y visualización de reportes gráficos, con adaptación de la barra superior.
+
 #### 4.1.3.1. iOS Mobile Style Guidelines
 
 #### 4.1.3.2. Android Mobile Style Guidelines
