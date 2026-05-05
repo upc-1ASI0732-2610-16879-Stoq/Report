@@ -390,8 +390,107 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ## 4.1. Style Guidelines
 
+Un "style guideline" o guía de estilo es un conjunto de reglas y pautas que establecen la forma en que se deben escribir, diseñar o presentar documentos, contenido web, software, o cualquier otro tipo de trabajo creativo. A continuación, se otorga especificación a los parámetros implementados en la estructura del proyecto:
+
 ### 4.1.1. General Style Guidelines
 
+**Branding**
+
+StockWise es una marca pensada para ofrecer confianza, cercanía y eficiencia a pequeñas y medianas empresas, especialmente bodegas de barrio y emprendimientos. El branding refleja accesibilidad, modernidad y calidez. El enfoque está en facilitar la transformación digital de la gestión de inventarios con una interfaz clara, amigable y funcional.
+
+**Logotipo**
+
+El logo combina una bodega estilizada con colores cálidos y un código de barras, representando tanto la esencia física del negocio como la modernización a través de tecnología.
+
+- La palabra "Stock" en rojo (#BC162A) resalta la acción y lo esencial del inventario.
+- La palabra "Wise" en marrón oscuro (#302325) sugiere inteligencia y fiabilidad.
+  
+El código de barras integrado representa la gestión estructurada y la automatización del stock.
+
+<div align="center">
+  <img src="assets/Chapter-4/logo.png" alt="c4-container"/>
+</div>
+
+**Tono de comunicación**
+
+Nos comunicamos como lo haría un buen amigo del barrio, claro, sin complicaciones, y con buena onda. Queremos transmitir una sensación de seguridad y eficiencia, mientras mantenemos una comunicación cercana y amigable.
+
+**Lenguaje (Language):**
+
+Usamos términos fáciles de entender: “productos”, “alertas”, “entradas/salidas”, “usuarios”. Evitamos jerga técnica innecesaria o anglicismos si no son esenciales.
+
+**Colores**
+
+La paleta de colores de StockWise ha sido cuidadosamente seleccionada para transmitir profesionalismo, confianza y accesibilidad.
+
+**Primary Colors:**
+
+- #BC162A (Rojo intenso): Botones principales, acciones críticas, alertas importantes
+- #EE7F27 (Naranja vibrante): Botones secundarios, estados activos, notificaciones
+- #302325 (Marrón oscuro): Texto principal, headers, elementos de navegación
+
+**Background Colors:**
+
+- #F5E1A4 (Fondo cálido claro): Fondo general de la aplicación
+- #D9D593 (Gris suave): Fondos de secciones, cards secundarios
+
+**Functional Colors:**
+
+- #27A300 (Verde éxito): Confirmaciones, estados positivos
+- #FFC107 (Amarillo advertencia): Alertas moderadas, advertencias
+- #DC3545 (Rojo error): Estados de error, acciones destructivas
+
+<center> <img src="assets/Chapter-4/color.jpeg" style="width: 250px;"/> </center>
+<br>
+
+**Tipografía**
+
+La elección tipográfica para StockWise es un componente esencial que complementa la identidad visual de la marca. Se han seleccionado dos familias tipográficas que juntas ofrecen versatilidad y coherencia, asegurando que la comunicación sea clara y efectiva en todos los medios.
+
+**Font Families:**
+
+- Inter: Para textos largos, body copy y contenido principal
+- Nunito: Para headers, botones y elementos de interfaz
+
+**Font Scale (Mobile First):**
+
+- h1: 24px / 1.1 / Bold
+- h2: 20px / 1.1 / SemiBold
+- h3: 18px / 1.2 / Medium
+- Body Large: 17px / 1.4 / Regular
+- Body: 16px / 1.4 / Regular
+- Small: 14px / 1.4 / Regular
+- Caption: 12px / 1.3 / Regular
+
+**Weights:**
+
+- Bold (700): Títulos principales, acciones críticas
+- SemiBold (600): Subtítulos, botones importantes
+- Medium (500): Etiquetas, elementos interactivos
+- Regular (400): Texto body, contenido principal
+- Light (300): Texto secundario, descripciones
+
+**Border Radius:**
+
+- Small: 8px (botones pequeños, inputs)
+- Medium: 12px (cards, modales)
+- Large: 16px (containers principales)
+
+**Spacing System (8px base):**
+
+- xs: 4px
+- sm: 8px
+- md: 16px
+- lg: 24px
+- xl: 32px
+- xxl: 48px
+
+**Shadows:**
+
+- Low: 0 2px 4px rgba(48, 35, 37, 0.1)
+- Medium: 0 4px 8px rgba(48, 35, 37, 0.15)
+- High: 0 8px 16px rgba(48, 35, 37, 0.2)
+  
 ### 4.1.2. Web Style Guidelines
 
 ### 4.1.3. Mobile Style Guidelines
