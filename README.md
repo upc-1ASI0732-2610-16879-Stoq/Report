@@ -751,6 +751,7 @@ User persona: Empresa — Administrador
  <img src="assets/Chapter-4/mockups-web/Salida producto-1.jpg" alt="Web Mockups" width="800px">
 
 
+<br>
 
 ### 4.6.4. Web Applications User Flow Diagrams
 
