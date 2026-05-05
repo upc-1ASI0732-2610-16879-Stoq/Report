@@ -126,6 +126,8 @@
     - [User Goal: “Crear un nuevo rol para el personal”](#user-goal-crear-un-nuevo-rol-para-el-personal)
     - [4.6.3. Web Applications Mock-ups](#463-web-applications-mock-ups)
     - [4.6.4. Web Applications User Flow Diagrams](#464-web-applications-user-flow-diagrams)
+    - [User Goal: “Registrar salida de productos (venta/consumo/merma)”](#user-goal-registrar-salida-de-productos-ventaconsumomerma)
+    - [User Goal: “Gestionar inventario (ingresar reposición y crear producto)”](#user-goal-gestionar-inventario-ingresar-reposición-y-crear-producto)
   - [4.7. Web Applications Prototyping](#47-web-applications-prototyping)
   - [4.8. Domain-Driven Software Architecture](#48-domain-driven-software-architecture)
     - [4.8.1. Software Architecture Context Diagram](#481-software-architecture-context-diagram)
@@ -734,9 +736,106 @@ User persona: Empresa — Administrador
 
 ### 4.6.3. Web Applications Mock-ups
 
+ <img src="assets/Chapter-4/mockups-web/login-2.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/login-1.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Inventario-1.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Inventario - Información Producto.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Inventario - Nuevo Producto.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Inventario - Reposición.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Inventario - Reposición (1).jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Proveedores-2.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Proveedores-3.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Administración del personal-1.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Administración del personal - Creación Personal.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Administración del personal - Creación roles.jpg" alt="Web Mockups" width="800px">
+ <img src="assets/Chapter-4/mockups-web/Salida producto-1.jpg" alt="Web Mockups" width="800px">
+
+
+
 ### 4.6.4. Web Applications User Flow Diagrams
 
+ <img src="assets/Chapter-4/mockups-web/flowdiagram1.png" alt="Web Flow Diagram" width="800px">
+
+### User Goal: “Registrar salida de productos (venta/consumo/merma)”
+
+User persona: Tienda/Almacén — Operador(a)
+**Happy path**
+
+1. Desde Inicio, abre Salida de productos (barra lateral).
+2. En Salida de productos:
+
+   * Busca/filtra por nombre o código (ej. “Bolsa Papitas”).
+   * Selecciona uno o varios productos (ve Precio unitario y Stock actual).
+   * (Opcional) agrega un Kit desde Kits (p. ej., “Combo Película”).
+3. En el panel Borrador salida de productos (derecha):
+
+   * Ajusta la Cantidad por ítem.
+   * Se calcula Precio por línea y Total automáticamente.
+   * (Opcional) elimina líneas.
+4. Guardar:
+
+   * Se valida stock, se registra el movimiento y se descuenta inventario (los kits se desglosan en componentes).
+
+
+
+**Unhappy paths**
+
+* Cancelar → se descarta el borrador; no se registra ningún movimiento.
+* Cantidad > stock → alerta y bloqueo hasta corregir.
+
+
+<br>
+
+ <img src="assets/Chapter-4/mockups-web/flowdiagram2.png" alt="Web Flow Diagram" width="800px">
+ <img src="assets/Chapter-4/mockups-web/flowdiagram3.png" alt="Web Flow Diagram" width="500px">
+ <img src="assets/Chapter-4/mockups-web/flowdiagram4.png" alt="Web Flow Diagram" width="500px">
+
+
+### User Goal: “Gestionar inventario (ingresar reposición y crear producto)”
+
+User persona: Tienda/Almacén — Operador(a)
+
+A) Ingresar reposición
+
+**Happy path**
+
+1. Desde Inicio, abre Inventario (barra lateral).
+2. Revisa Productos y Kits; pulsa Ingresar reposición.
+3. En el modal, completa Lote, Fecha de recepción y Fecha de vencimiento.
+4. Define Cantidad ingresando por producto; se calcula el Total.
+5. Guardar → se registra la reposición, aumenta el stock y se actualizan alertas/métricas.
+
+**Unhappy paths**
+
+* Cancelar → se descarta el formulario, no se registra nada.
+* Fechas inválidas (vencimiento < recepción) → error y bloqueo.
+* Cantidades inválidas (0, negativas o vacías) → validación en línea.
+* Falla de red/sesión → error y preservación del formulario para reintentar.
+
+
+B) Crear nuevo producto
+
+**Happy path**
+
+1. En Inventario, pulsa + Producto.
+2. Completa Nombre, Categoría, Proveedor, Stock mínimo y Precio unitario.
+3. Guardar → se crea el producto, aparece en la lista y queda disponible para reposiciones/kits.
+
+**Unhappy paths**
+
+* Cancelar → no se crea el producto.
+* Campos obligatorios vacíos** o nombre duplicado → mensaje y bloqueo.
+* Valores inválidos (precio ≤ 0, stock mínimo < 0) → validación en línea.
+* Falla de red/sesión → error y preservación del formulario.
+
+
 ## 4.7. Web Applications Prototyping
+
+El prototipo web ha sido concebido aplicando principios de arquitectura de información, diseño centrado en el usuario y las heurísticas de usabilidad, con el propósito de brindar una experiencia intuitiva, eficiente y accesible. La navegación se organiza de manera jerárquica y lógica, lo que facilita a los usuarios localizar rápidamente las funciones principales, como el registro de movimientos de inventario, la visualización de reportes y configuración de personal. La interfaz mantiene una disposición visual uniforme, apoyada en una paleta de colores equilibrada y tipografía clara, reforzando la identidad de la plataforma. Los elementos interactivos se han colocado estratégicamente para optimizar la interacción y minimizar la carga cognitiva del usuario. Cada componente del prototipo asegura coherencia visual, visibilidad del estado del sistema y retroalimentación inmediata ante cada acción. Asimismo, se adoptan buenas prácticas y estándares de diseño web contemporáneos para garantizar una experiencia fluida y adaptable en distintos dispositivos.
+
+<https://www.figma.com/proto/jKNuDhwMS5qe3o6zF4ugo8/OPEN-SOURCE?node-id=150-3805&p=f&t=C8AMNn5sgvqnuoFs-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=150%3A5901>
+
+
 
 ## 4.8. Domain-Driven Software Architecture
 
