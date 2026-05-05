@@ -587,7 +587,7 @@ Para la versión iOS de StockWise, se aplican las pautas generales de la marca (
 
 **Teclado y Entrada de Datos**
 
-- Escáner QR (Plan D): Usar AVFoundation para cámara. El visor debe respetar las esquinas redondeadas del dispositivo.
+- Escáner QR: Usar AVFoundation para cámara. El visor debe respetar las esquinas redondeadas del dispositivo.
 
 **Tipografía y Escala**
 
@@ -596,6 +596,43 @@ Para la versión iOS de StockWise, se aplican las pautas generales de la marca (
 - Títulos grandes (Large Title): 34pt, Bold, #302325.
 
 #### 4.1.3.2. Android Mobile Style Guidelines
+
+Para la versión Android de StockWise, se aplican las pautas generales de la marca adaptadas a las convenciones de Material Design.
+
+**Navegación**
+
+- Barra inferior (Bottom Navigation): Altura 56px (estándar Material). Íconos con línea en estado inactivo, rellenos en estado activo. Color activo #BC162A, inactivo gris oscuro (#757575). Efecto ripple al presionar.
+
+- Barra superior (Top App Bar): Altura 56px. Color de fondo #F5E1A4 o blanco. Ícono de hamburguesa (☰) para navegación lateral si aplica.
+
+**Controles y Componentes**
+
+- Botones primarios: Texto en mayúsculas? Sí (convención Material). Fondo #BC162A, esquinas redondeadas 12px, altura 48px, padding horizontal 24px. Efecto ripple en #EE7F27 al presionar.
+
+- Botón flotante (FAB): Sí se usa. Tamaño 56px, fondo #EE7F27, icono blanco (@drawable/ic_add o similar). Elevación (sombra) por defecto 6dp. Ubicación: inferior derecha, margen 16px.
+
+- Switches y toggles: Estilo Material Switch. Color activo #27A300, inactivo #D9D593.
+
+- Alertas (Dialog): Para confirmaciones, usar AlertDialog con botones "Cancelar" (izquierda) y "Aceptar" (derecha).
+
+**Gestos y Comportamiento**
+
+- Swipe para atrás: Gestual desde cualquier borde lateral, sin botón de flecha adicional (navegación predictiva).
+
+- Pull to refresh: Animación estándar Material (spinner circular con trayectoria).
+
+- Swipe sobre lista: Deslizar horizontalmente sobre un producto para acciones rápidas: Editar (lápiz) y Eliminar (basurero, fondo rojo #DC3545).
+
+**Entrada de Datos**
+
+- Escáner QR / cámara rápida: Usar CameraX o ML Kit. El visor debe mostrar un rectángulo guía para encuadre.
+
+- Campos de texto: Altura 48px, border radius 8px. Al activarse, subrayado o borde cambia a #EE7F27. Soporte para autocompletado sugerido.
+
+**Tipografía y Escala**
+
+- Mantener Inter y Nunito. Tamaño mínimo de texto: 14sp (vs 16px en web). Escala tipográfica basada en dp (no pt ni px).
+
 
 ## 4.2. Information Architecture
 
