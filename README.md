@@ -559,6 +559,42 @@ El diseño móvil de StockWise prioriza la eficiencia en tareas rápidas, la fac
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
 
+Para la versión iOS de StockWise, se aplican las pautas generales de la marca (colores, tipografía, espaciado) adaptadas a las convenciones del ecosistema Apple (Human Interface Guidelines).
+
+**Navegación**
+
+- Barra inferior (Tab Bar): Altura 49px (estándar iOS). Íconos con estilo de línea (SF Symbols) que se llenan en estado activo. Color activo #BC162A, inactivo gris sistema (#8E8E93).
+
+- Barra superior (Navigation Bar): Título grande (Large Title) en pantalla principal. Título pequeño en pantallas secundarias. Botón de retorno con texto de pantalla anterior.
+
+**Controles y Componentes**
+
+- Botones primarios: Texto centrado en mayúsculas? No (evitar mayúsculas forzadas en iOS). Fondo #BC162A, esquinas redondeadas (12px), altura 50px.
+
+- Botón flotante (FAB): No se usa en iOS nativo. En su lugar, acción primaria como botón fijo en la parte inferior de la pantalla o dentro de la barra de navegación superior (lado derecho).
+
+- Switches y toggles: Estilo iOS estándar (fondo gris, círculo blanco), con color activo #27A300 (verde éxito).
+
+- Alertas (UIAlertController): Para confirmaciones destructivas (ej. eliminar producto), usar acción en rojo. Para notificaciones simples, preferir UIAlertController estilo action sheet desde la parte inferior.
+
+**Gestos y Comportamiento**
+
+- Swipe para atrás: Gestual nativo desde el borde izquierdo de la pantalla, soportado en todas las vistas.
+
+- Pull to refresh: Animación estándar de iOS (spinner con líneas curvas).
+
+- Selección de fecha/cantidad: Usar UIDatePicker (ruedas) o UIPickerView en la parte inferior, en lugar de modales personalizados.
+
+**Teclado y Entrada de Datos**
+
+- Escáner QR (Plan D): Usar AVFoundation para cámara. El visor debe respetar las esquinas redondeadas del dispositivo.
+
+**Tipografía y Escala**
+
+- Mantener las fuentes Inter y Nunito (no usar SF Pro por consistencia de marca). Asegurarse de que el tamaño mínimo de texto sea 15pt para body (vs 16px en Android/web).
+
+- Títulos grandes (Large Title): 34pt, Bold, #302325.
+
 #### 4.1.3.2. Android Mobile Style Guidelines
 
 ## 4.2. Information Architecture
