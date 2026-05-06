@@ -1083,6 +1083,99 @@ Facilita la actualización de datos en tiempo real, permitiendo mantener el inve
 
 ### 4.4.2. Mobile Applications Wireflow Diagrams
 
+Los Mobile Applications Wireflow Diagrams son una combinación de wireframes y flujos de usuario (user flows) que ilustran no solo la estructura y disposición de las pantallas de una Mobile Application, sino también cómo los usuarios navegarán entre ellas. Estos diagramas proporcionan una visión detallada del recorrido del usuario, mostrando las interacciones clave y las transiciones de una pantalla a otra dentro de la aplicación.
+
+**User Goal Registrar:** El usuario desea crear una nueva cuenta para comenzar a usar la plataforma y vincular su método de pago según el plan seleccionado.
+
+**Flujo funcional:**
+
+1. El usuario selecciona la opción “Registrar” en la Landing Page.
+2. Ingresa los datos solicitados: correo electrónico, nombre y contraseña.
+3. Selecciona el tipo de plan.
+4. Si elige el Plan Negocio, completa los datos de la tarjeta y confirma el pago.
+5. El sistema valida la transacción.
+6. Si el pago es exitoso, se muestra una ventana flotante indicando “Pago realizado correctamente”.
+7. Si el pago falla, se muestra una alerta de error con el mensaje “No se pudo procesar el pago”.
+8. Finalmente, se redirige al usuario a la pantalla de Inicio de sesión.
+<center> <img src="assets/Chapter-4/user goal Registrar.png" style="width: 420px;"/> </center>
+<br> 
+
+**User Goal: Iniciar sesión**
+
+El usuario desea iniciar sesión en la plataforma utilizando sus credenciales y acceder a las funciones principales del sistema.
+
+**Flujo funcional:**
+
+1. El usuario ingresa su correo electrónico y contraseña.
+2. El usuario selecciona la opción “Iniciar sesión”.
+3. El sistema valida las credenciales ingresadas.
+4. Si las credenciales son correctas, el sistema autoriza el acceso y muestra el panel principal (Dashboard).
+5. Desde el panel principal, el usuario puede acceder al módulo de Perfil y editar su información personal.
+6. Si las credenciales son incorrectas, el sistema muestra un mensaje de error: “Correo o contraseña incorrectos” y permite reintentar el acceso.
+<center> <img src="assets/Chapter-4/user goal Iniciar sesion.png" style="width: 420px;"/> </center>
+<br> 
+
+**User Goal: Navegar por el Dashboard**
+
+El usuario explora la vista principal y accede a las herramientas clave del sistema.
+
+**Flujo funcional:**
+
+1. El usuario accede al Dashboard después de iniciar sesión.
+2. Visualiza el total de productos registrados y fecha del último proveedor.
+3. Observa un resumen de productos próximos a caducar con stock y fecha.
+4. Accede a botones de acción rápida (Historial de Movimientos, Inventario, Agregar Productos, Kits y Devolución de productos)
+5. Selecciona cualquiera de las secciones para continuar su gestión.
+<center> <img src="assets/Chapter-4/user goal Navegador por el dashboard.png" style="width: 420px;"/> </center>
+<br> 
+
+**User Goal: Inventario (Producto / Lote)**
+
+El usuario explora la vista de inventario y accede a los registros de productos y lotes.
+
+**Flujo funcional:**
+
+1. Ingresa a la sección de Inventario.
+2. Revisa el listado de productos presionando el botón "por producto".
+3. Filtra los productos por categoría, nombre del producto, fecha o stock mínimo.
+4. Consulta el listado con información clave: fecha de entrada, cantidad por unidad, precio, stock mínimo y unidad de medida.
+<center> <img src="assets/Chapter-4/user goal Inventario.png" style="width: 420px;"/> </center>
+<br> 
+
+**User Goal: Botones Principales (Agregar Producto y Kits)**
+
+El usuario visualiza la sección principal y gestiona productos y kits desde las opciones disponibles.
+
+**Flujo funcional:**
+
+1. Pulsa el botón "Agregar Producto".
+2. Rellena los campos solicitados para registrar uno nuevo.
+3. Pulsa el botón "Crear Kit".
+4. Combina productos existentes para crear un kit nuevo.
+5. El usuario pulsa el botón “Añadir Productos” desde el Dashboard.
+6. Visualiza una galería de productos existentes y accede a opciones para editarlos o duplicarlos.
+7. Puede agregar uno nuevo haciendo clic en el botón “+”, donde se despliega un formulario con campos como nombre,etiquetas, cantidad, lote, precios, fecha de caducidad y notas.
+8. Desde el menú principal, también accede a la opción “Kits”.
+<center> <img src="assets/Chapter-4/user goal Botones principales.png" style="width: 420px;"/> </center>
+<br> 
+
+**User Goal: Historial de Movimientos**
+
+El usuario consulta y analiza los movimientos del inventario, accediendo a información de entradas, salidas y métricas relacionadas.
+
+**Flujo funcional:**
+
+1. Navega a la sección de Historial.
+2. Visualiza entradas y salidas de productos.
+3. Filtra movimientos por fecha, producto o lote.
+4. El usuario accede a la sección de Historial desde el panel principal.
+5. Filtra los registros por tipo de gestión, categoría, stock promedio y fecha.
+6. Visualiza los movimientos realizados, incluyendo datos como nombre del producto, fecha de consulta, precio unitario, cantidad y total.
+7. Consulta métricas como el stock promedio, estado del producto y stock ideal.
+8. Cuenta con botones para editar o eliminar cada registro y, para los stock promedio, exportar la información y realiza un ticket promedio.
+<center> <img src="assets/Chapter-4/user goal Historial .png" style="width: 420px;"/> </center>
+<br> 
+
 ### 4.4.3. Mobile Applications Mock-ups
 
 ### 4.4.4. Mobile Applications User Flow Diagrams
