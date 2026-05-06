@@ -1278,9 +1278,27 @@ El usuario consulta y analiza los movimientos del inventario, accediendo a infor
 
 ## 4.5. Mobile Applications Prototyping
 
+El apartado de Mobile Application Prototyping muestra el primer acercamiento visual e interactivo al diseño de la aplicación. A través del uso de herramientas de prototipado, se crean representaciones dinámicas que permiten simular la navegación, disposición de módulos y flujos de interacción del usuario antes de pasar a la fase de desarrollo.
+
+Durante este proceso, se estructuran pantallas clave como el login, panel de control, gestión de productos, movimientos de stock, generación de reportes y alertas de inventario. El objetivo es anticipar posibles mejoras de usabilidad y validar la propuesta funcional con los usuarios finales.
+
+El prototipo también permite identificar ajustes necesarios en la experiencia de usuario (UX) y verificar que los requisitos funcionales definidos en las User Stories se reflejen correctamente en las interfaces propuestas.
+
+A continuación, se presenta el enlace para visualizar el video de navegación del prototipo interactivo:
+
+[![Demo](<assets/Chapter-4/mockups-mobile/Inicio de sesión (1).png>)](assets/Chapter-3/Grabación%20de%20pantalla%202025-10-09%20165528.mp4)
+
 ### 4.5.1. Android Mobile Applications Prototyping
 
+A continuación, se presenta el enlace para visualizar el video de navegación del prototipo interactivo:
+
+[![Demo](<assets/Chapter-4/mockups-mobile/Dashboard.png>)](assets/Chapter-3/Grabación%20de%20pantalla%202025-10-09%20165528.mp4)
+
 ### 4.5.2. iOS Mobile Applications Prototyping
+
+A continuación, se presenta el enlace para visualizar el video de navegación del prototipo interactivo:
+
+[![Demo](<assets/Chapter-4/mockups-mobile/Dashboard.png>)](assets/Chapter-3/Grabación%20de%20pantalla%202025-10-09%20165528.mp4)
 
 ## 4.6. Web Applications UX/UI Design
 
@@ -1387,12 +1405,10 @@ User persona: Tienda/Almacén — Operador(a)
    * Se valida stock, se registra el movimiento y se descuenta inventario (los kits se desglosan en componentes).
 
 
-
 **Unhappy paths**
 
 * Cancelar → se descarta el borrador; no se registra ningún movimiento.
 * Cantidad > stock → alerta y bloqueo hasta corregir.
-
 
 <br>
 
@@ -1422,7 +1438,6 @@ A) Ingresar reposición
 * Cantidades inválidas (0, negativas o vacías) → validación en línea.
 * Falla de red/sesión → error y preservación del formulario para reintentar.
 
-
 B) Crear nuevo producto
 
 **Happy path**
@@ -1444,8 +1459,6 @@ B) Crear nuevo producto
 El prototipo web ha sido concebido aplicando principios de arquitectura de información, diseño centrado en el usuario y las heurísticas de usabilidad, con el propósito de brindar una experiencia intuitiva, eficiente y accesible. La navegación se organiza de manera jerárquica y lógica, lo que facilita a los usuarios localizar rápidamente las funciones principales, como el registro de movimientos de inventario, la visualización de reportes y configuración de personal. La interfaz mantiene una disposición visual uniforme, apoyada en una paleta de colores equilibrada y tipografía clara, reforzando la identidad de la plataforma. Los elementos interactivos se han colocado estratégicamente para optimizar la interacción y minimizar la carga cognitiva del usuario. Cada componente del prototipo asegura coherencia visual, visibilidad del estado del sistema y retroalimentación inmediata ante cada acción. Asimismo, se adoptan buenas prácticas y estándares de diseño web contemporáneos para garantizar una experiencia fluida y adaptable en distintos dispositivos.
 
 <https://www.figma.com/proto/jKNuDhwMS5qe3o6zF4ugo8/OPEN-SOURCE?node-id=150-3805&p=f&t=C8AMNn5sgvqnuoFs-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=150%3A5901>
-
-
 
 ## 4.8. Domain-Driven Software Architecture
 
