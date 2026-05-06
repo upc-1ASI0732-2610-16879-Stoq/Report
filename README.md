@@ -24,7 +24,7 @@
     <h5><strong>Integrantes</strong></h5>
     <p>
         U - Luciana Carolina Choquehuanca Nuñez <br>
-        U - Ronald Joel Peralta Chipa <br>
+        U202224619 - Ronald Joel Peralta Chipa <br>
         U202210973 - Sanchez Rios, Camila Cristina <br>
         U - Fabiola Del Rocio Saldaña Ayalan <br>
         U - Roy Linsh Fernandez Remon  <br>
@@ -382,12 +382,12 @@ El Plan B – Localización y predicción inteligente combina dos capacidades cl
   </tr>
   <tr>
     <th>
-      <img src="assets/Chapter-1/.jpg" alt="Foto de perfil de Kevin" width="800px">
+      <img src="assets/Chapter-1/ronald_perfil.jpg" alt="Foto de perfil de Kevin" width="800px">
     </th>
     <td valign="top">
       <p><b>Ronald Joel Peralta Chipa</b></p>
       <p>
-        ...
+        Soy estudiante de la carrera de Ingeniería de Software. Soy una persona comprometida con el orden, con un estilo de liderazgo democrático y una gran capacidad para escuchar y comprender. Disfruto crecer en equipo y aprender constantemente de los demás. Además, tengo interés en la cultura DevSecOps y la gestión de proyectos, lo que me permite tener un enfoque integral orientado a la seguridad, organización y mejora continua.
       </p>
     </td>
   </tr>
