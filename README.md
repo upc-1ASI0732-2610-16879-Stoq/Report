@@ -1252,6 +1252,30 @@ El usuario consulta y analiza los movimientos del inventario, accediendo a infor
 
 ### 4.4.4. Mobile Applications User Flow Diagrams
 
+**User Goal: Registrar**
+<center> <img src="assets/Chapter-4/Color user goal Registrar.png" style="width: 420px;"/> </center>
+<br>
+
+**User Goal: Iniciar sesión**
+<center> <img src="assets/Chapter-4/Color user goal Iniciar sesion.png" style="width: 420px;"/> </center>
+<br>
+
+**User Goal: Navegar por el dashboard**
+<center> <img src="assets/Chapter-4/Color user goal Navegador.png" style="width: 420px;"/> </center>
+<br>
+
+**User Goal: Inventario (Producto/Lote)**
+<center> <img src="assets/Chapter-4/Color user goal Inventario .png" style="width: 420px;"/> </center>
+<br>
+
+**User Goal: Botones Principales (Agregar Producto y Kits)**
+<center> <img src="assets/Chapter-4/Color user goal Botones principales .png" style="width: 420px;"/> </center>
+<br>
+
+**User Goal: Historial de Movimientos**
+<center> <img src="assets/Chapter-4/Color user goal Historial .png" style="width: 420px;"/> </center>
+<br>
+
 ## 4.5. Mobile Applications Prototyping
 
 ### 4.5.1. Android Mobile Applications Prototyping
