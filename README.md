@@ -690,6 +690,116 @@ Este apartado muestra la evidencia de la implementación de una API RESTful, doc
 ![RESTful API](./assets/Chapter-5/swagger_2.png)
 
 ### 5.2.7. RESTful API documentation
+La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**, accesible desde el entorno de desarrollo. A continuación se detallan todos los endpoints disponibles, agrupados por módulo funcional.
+
+---
+
+#### Authentication
+*Gestión de autenticación y roles de usuario.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `POST` | `/api/v1/authentication/sign-up` | Registrar una nueva cuenta de usuario |
+| `POST` | `/api/v1/authentication/sign-in` | Autenticar e iniciar sesión |
+| `PUT` | `/api/v1/authentication/change-role` | Cambiar el rol de un usuario |
+
+---
+
+#### Products
+*Puntos de acceso disponibles para la gestión de productos.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/products/{productId}` | Obtener Producto por Id |
+| `POST` | `/api/v1/products` | Crear Producto |
+| `GET` | `/api/v1/products` | Obtener todos los Productos |
+| `GET` | `/api/v1/products/by-category/{categoryId}` | Obtener Productos por Categoría |
+| `GET` | `/api/v1/products/by-tag/{tagId}` | Obtener Productos por Etiqueta |
+
+---
+
+#### Combos
+*Puntos de acceso disponibles para la gestión de combos (kits).*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/combos/{comboId}` | Obtener Combo por Id |
+| `POST` | `/api/v1/combos` | Crear Combo |
+| `GET` | `/api/v1/combos` | Obtener todos los Combos |
+
+---
+
+#### Tags
+*Puntos de acceso para la gestión de etiquetas.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/tags` | Obtener todas las etiquetas |
+
+---
+
+#### Units
+*Puntos de acceso para la gestión de unidades de medida.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/units` | Obtener todas las unidades de medida |
+
+---
+
+#### Sales
+*Operaciones de ventas con integración automática de inventario y reportes.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `POST` | `/api/v1/sales` | Realizar venta con stock automático |
+| `GET` | `/api/v1/sales/{id}` | Obtener venta por ID |
+| `GET` | `/api/v1/sales/check-stock/{productId}` | Verificar stock disponible |
+
+---
+
+#### Inventory
+*Operaciones del inventario general, por producto y por lote.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/inventory` | Obtener todos los registros de inventario |
+| `POST` | `/api/v1/inventory/by-product` | Crear Inventario por Producto |
+| `GET` | `/api/v1/inventory/by-product` | Listar todos los Inventarios por Producto con filtros |
+| `GET` | `/api/v1/inventory/by-product/{id}` | Obtener Inventario por Producto por ID |
+| `DELETE` | `/api/v1/inventory/by-product/{id}` | Eliminar Inventario por Producto por ID |
+| `POST` | `/api/v1/inventory/by-batch` | Crear Inventario por Lote |
+| `GET` | `/api/v1/inventory/by-batch` | Listar todos los Inventarios por Lote con filtros |
+| `GET` | `/api/v1/inventory/by-batch/{id}` | Obtener Inventario por Lote por ID |
+| `DELETE` | `/api/v1/inventory/by-batch/{id}` | Eliminar Inventario por Lote por ID |
+
+---
+
+#### StockAlert
+*Gestión de alertas de stock y nivel de inventario.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/alerts` | Obtener alertas de stock |
+| `GET` | `/api/alerts/by-category` | Obtener alertas por categoría |
+| `GET` | `/api/alerts/summary` | Obtener resumen de alertas |
+
+---
+
+#### Report
+*Puntos de acceso disponibles para la gestión de reportes de categoría y de stock promedio.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/reports` | Obtener todos los reportes generales |
+| `POST` | `/api/v1/reports/category` | Crear CategoryReport |
+| `GET` | `/api/v1/reports/category` | Listar CategoryReports |
+| `GET` | `/api/v1/reports/category/{id}` | Obtener CategoryReport por ID |
+| `GET` | `/api/v1/reports/category/by-date` | Filtrar CategoryReports por fecha |
+| `POST` | `/api/v1/reports/stock-average` | Crear StockAverageReport |
+| `GET` | `/api/v1/reports/stock-average` | Listar StockAverageReports |
+| `GET` | `/api/v1/reports/stock-average/{id}` | Obtener StockAverageReport por ID |
+| `GET` | `/api/v1/reports/stock-average/by-date` | Filtrar StockAverageReports por fecha |
 
 ### 5.2.8. Team Collaboration Insights
 
