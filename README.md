@@ -1178,6 +1178,78 @@ El usuario consulta y analiza los movimientos del inventario, accediendo a infor
 
 ### 4.4.3. Mobile Applications Mock-ups
 
+**Iniciar sesión**
+<center> <img src="assets/Chapter-4/mockups-mobile/Inicio de sesión (1).png" style="width: 420px;"/> </center>
+<br>
+
+**Crear cuenta**
+<center> <img src="assets/Chapter-4/mockups-mobile/Registro (1).png" style="width: 420px;"/> </center>
+<br> 
+
+**Elegir plan de pago**
+<center> <img src="assets/Chapter-4/mockups-mobile/Seleccionar plan (1).png" style="width: 420px;"/> </center>
+<br> 
+
+**Pasarela de pagos**
+<center> <img src="assets/Chapter-4/mockups-mobile/Pago (1).png" style="width: 420px;"/> </center>
+<br> 
+
+**Mi perfil**
+
+*Perfil Administrador*
+<center> <img src="assets/Chapter-4/mockups-mobile/Perfil.png" style="width: 420px;"/> </center>
+<br> 
+<center> <img src="assets/Chapter-4/mockups-mobile/Perfil ajustes.png" style="width: 420px;"/> </center>
+<br> 
+
+**Panel de control (Dashboard)**
+<center> <img src="assets/Chapter-4/mockups-mobile/Dashboard.png" style="width: 420px;"/> </center>
+<br> 
+
+**Combinación de Productos en Kits**
+<center> <img src="assets/Chapter-4/mockups-mobile/Combinar producto.png" style="width: 420px;"/> </center>
+<br> 
+
+**Agregar Producto**
+<center> <img src="assets/Chapter-4/mockups-mobile/Agregar Producto.png" style="width: 420px;"/> </center>
+<br> 
+
+**Registro de Nuevo Producto**
+<center> <img src="assets/Chapter-4/mockups-mobile/Registro Prodcuto.png" style="width: 420px;"/> </center>
+<br> 
+
+*Edición Rápida de Producto*
+<center> <img src="assets/Chapter-4/mockups-mobile/Edicion Producto.png" style="width: 420px;"/> </center>
+<br> 
+
+**Historial de Movimientos**
+<center> <img src="assets/Chapter-4/mockups-mobile/Historial.png" style="width: 420px;"/> </center>
+<br> 
+
+*Confirmación de Eliminación*
+<center> <img src="assets/Chapter-4/mockups-mobile/Historial Eliminar.png" style="width: 420px;"/> </center>
+<br> 
+
+**Ticket Promedio**   
+<center> <img src="assets/Chapter-4/mockups-mobile/Historial Ticket Promedio.png" style="width: 420px;"/> </center>
+<br> 
+
+**Pantalla principal de Inventario por Lote**
+<center> <img src="assets/Chapter-4/mockups-mobile/Inventario.png" style="width: 420px;"/> </center>
+<br> 
+
+*Busqueda Avanzada*
+<center> <img src="assets/Chapter-4/mockups-mobile/Inventario Busqueda.png" style="width: 420px;"/> </center>
+<br>
+
+**Pantalla de Inventario por Producto**
+<center> <img src="assets/Chapter-4/mockups-mobile/Inventario por producto.png" style="width: 420px;"/> </center>
+<br>
+
+*Edición de Registro*
+<center> <img src="assets/Chapter-4/mockups-mobile/Inventario por producto edi.png" style="width: 420px;"/> </center>
+<br>
+
 ### 4.4.4. Mobile Applications User Flow Diagrams
 
 ## 4.5. Mobile Applications Prototyping
