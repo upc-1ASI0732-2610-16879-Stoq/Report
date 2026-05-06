@@ -601,14 +601,93 @@ El último sprint culminó el desarrollo con el acceso al hardware del dispositi
 | US35 | Optimización UI/UX | TSK-37 | Refinamiento Visual | Mejoras finales en la interfaz, paleta de colores y fluidez de navegación. | 4 | Sanchez Camila | Done |
 
 ### 5.2.2. Implemented Landing Page Evidence
+En esta sección se presenta la evidencia visual de la Landing Page oficial de Stoq, la cual sirve como el punto de contacto principal para los clientes potenciales. La página ha sido diseñada bajo un enfoque de conversión, resaltando la propuesta de valor de la plataforma (gestión inteligente y movilidad) e integrando internacionalización (i18n) para soportar múltiples idiomas. Se incluyen capturas de las secciones clave: Hero Section, Beneficios, Planes de Suscripción y Footer.
+
+![Landing Page](./assets/Chapter-5/landing_1.png)
+
+Link: [https://landing_page.com](https://upc-pre-202510-1asi0730-4366-aynitech.github.io/Landing-Page/)
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
+Se detallan a continuación las interfaces que componen el Dashboard Web de Administración. Este componente está orientado al dueño de negocio o administrador, permitiendo una gestión centralizada y profunda del inventario que complementa la operación móvil. Las capturas muestran el panel de control con métricas en tiempo real, la tabla de gestión de productos con opciones avanzadas de filtrado y el módulo de administración de usuarios para la asignación de roles.
+
+![Front_app](./assets/Chapter-5/front_app.png)
+
+Link: [https://front_app.com](https://aynitech.netlify.app)
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
+El presente Acuerdo de Servicio regula los términos y condiciones bajo los cuales los usuarios acceden y utilizan la plataforma Stoq, una solución SaaS (Software as a Service) desarrollada para optimizar la gestión de inventarios y control de stock en pequeñas y medianas empresas (pymes), startups y bodegas especializadas en el Perú.
+
+Este acuerdo se incorpora como parte integral de los "Términos y Condiciones" disponibles en el sitio web oficial de Stoq, y su aceptación es obligatoria para completar el registro y uso de las aplicaciones web y móviles.
+
+#### 1. Definiciones
+"Plataforma": Ecosistema compuesto por la aplicación móvil (Kotlin/Flutter), el dashboard web y el backend operado por el equipo de desarrollo de Stoq.
+
+"Usuario": Persona natural o jurídica que accede a la plataforma en calidad de Administrador o Empleado.
+
+"Comercio/Pyme": Negocio registrado que utiliza Stoq para la gestión de sus activos y mercadería.
+
+"Cuenta": Perfil de acceso individual vinculado a una organización específica.
+
+"Plan": Modalidad de suscripción (Freemium o Premium) que determina las funcionalidades activas y límites de registros.
+
+#### 2. Objeto del Acuerdo
+Stoq concede al usuario una licencia limitada, no exclusiva, intransferible y revocable para utilizar la plataforma exclusivamente con fines de gestión operativa de inventarios, logística y administración de ventas internas.
+
+#### 3. Registro y Acceso
+El uso de la plataforma requiere la creación de una cuenta mediante el formulario de registro oficial.
+
+Cada usuario es responsable de la confidencialidad de sus credenciales (correo y contraseña) y del uso que se realice bajo su sesión.
+
+Stoq se reserva el derecho de suspender o eliminar cuentas que realicen actividades fraudulentas o infrinjan la integridad del sistema.
+
+#### 4. Tarifas y Planes
+La plataforma opera bajo un modelo de suscripción SaaS. El Plan Premium permite el acceso a funciones avanzadas como el escaneo por código de barras, geolocalización de sedes y reportes de analítica profunda.
+
+Las suscripciones se renuevan automáticamente al finalizar el periodo contratado, a menos que el usuario gestione la cancelación antes del vencimiento.
+
+Ante el impago del servicio, Stoq se reserva el derecho de restringir el acceso a las funciones premium, manteniendo la cuenta en modo de consulta o bajo las limitaciones del plan gratuito.
+
+#### 5. Propiedad Intelectual
+Todos los derechos sobre la plataforma, incluyendo código fuente (Backend, Web y Mobile), diseño de interfaces (UI), marcas y algoritmos de predicción pertenecen exclusivamente al equipo de desarrollo de Stoq.
+
+#### 6. Uso Aceptable
+Queda expresamente prohibido:
+
+- Manipular el código fuente o intentar realizar ingeniería inversa sobre las aplicaciones.
+
+- Utilizar la plataforma para el registro de productos o actividades ilícitas según la normativa peruana.
+
+- Interferir con la operación técnica de los Web Services o realizar ataques de denegación de servicio.
+
+#### 7. Protección de Datos y Privacidad
+Stoq garantiza el cumplimiento estricto de la Ley N.º 29733 - Ley de Protección de Datos Personales del Perú.
+
+Los datos de inventario y personales serán tratados únicamente para fines operativos y estadísticos de la plataforma.
+
+Los usuarios tienen derecho a acceder, rectificar o suprimir sus datos mediante los canales de soporte establecidos.
+
+Se emplean medidas de seguridad técnicas (encriptación y tokens JWT) para proteger la información almacenada.
+
+#### 8. Disponibilidad del Servicio
+Stoq busca mantener una alta disponibilidad del servicio (99.5%). No obstante, el acceso puede interrumpirse temporalmente por mantenimientos programados o fallas en servicios de terceros (hosting/nube).
+
+#### 9. Limitación de Responsabilidad
+Stoq no se responsabiliza por errores en el conteo físico de productos, decisiones financieras basadas en los reportes generados o pérdidas de mercadería derivadas de un mal uso de la plataforma por parte del usuario.
+
+#### 10. Modificaciones del Acuerdo
+Stoq podrá actualizar este acuerdo para reflejar nuevas funcionalidades o cambios legales. Se notificará a los usuarios con al menos 5 días de anticipación a través de la aplicación o correo electrónico registrado.
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
+Este apartado presenta la evidencia de la implementación de la aplicación móvil nativa. Se muestran capturas de la interfaz y funcionalidades principales, destacando la interacción del usuario y el correcto funcionamiento de la aplicación en el entorno móvil.
+
+![Native-Mobile](./assets/Chapter-5/mobile_1.png)
+![Native-Mobile](./assets/Chapter-5/mobile_2.png)
 
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
+Este apartado muestra la evidencia de la implementación de una API RESTful, documentada mediante Swagger. Se presentan los endpoints disponibles, sus métodos HTTP, parámetros y respuestas, lo que facilita la comprensión, prueba e integración del backend del sistema.
+
+![RESTful API](./assets/Chapter-5/swagger_1.png)
+![RESTful API](./assets/Chapter-5/swagger_2.png)
 
 ### 5.2.7. RESTful API documentation
 
