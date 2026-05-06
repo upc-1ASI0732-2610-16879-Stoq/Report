@@ -476,6 +476,9 @@ En la siguiente sección se describe la ruta de referencia de cada uno de los pr
 * **Lucidchart / Diagrams.net:** Aplicaciones destinadas a la elaboración de Wireflows, User Flows móviles y diagramas de clases.
 * **Kotlin and Flutter:** Lenguaje y framework principal utilizado para el desarrollo de la aplicación móvil nativa o híbrida.
 * **Jetpack Compose:** Frameworks modernos utilizados para la construcción de la interfaz de usuario móvil mediante componentes declarativos.
+* **HTML** Es el lenguaje de marcado que se utiliza para estructurar y organizar el contenido de una página web.
+* **CSS** Es el lenguaje de estilos que se utiliza para controlar la apariencia visual de la página.
+
 
 #### Software Deployment
 * **Git:** Herramienta de control de versiones que nos permitirá rastrear cambios, colaborar de manera eficiente y mantener un historial detallado de las modificaciones en el código fuente.
@@ -489,6 +492,7 @@ El proyecto seguirá las convenciones de flujo de trabajo establecidas por el mo
 *   **Repositorio Landing Page:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-LandingPage.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Landing-Page)
 *   **Repositorio Web Services:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-Manager-General-BackEnd.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Web-Services)
 *   **Repositorio Mobil Applications:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/MobileAppMobileApp.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Frontend-Web-Applications)
+*   **Repositorio Web Applications:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-FrontendWeb.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Frontend-Web-Applications)
 
 #### GitFlow
 
@@ -518,6 +522,14 @@ Para garantizar la mantenibilidad de la aplicación móvil, se seguirán las sig
 * **Arquitectura:** Se implementará el patrón **MVVM (Model-View-ViewModel)** para separar la lógica de negocio de la interfaz de usuario.
 * **Gestión de Strings:** No se debe escribir texto directamente ("hardcoded") en la interfaz. Todos los textos deben estar definidos en archivos de recursos de strings para facilitar la localización (multi-idioma).
 * **Componentes Reutilizables:** Se priorizará la creación de componentes de UI pequeños y reutilizables para mantener la consistencia visual en todas las pantallas de la app.
+
+* **Sintaxis de Elementos HTML:** Todos los elementos deben cerrarse obligatoriamente para garantizar un código coherente y ordenado (ej. `<p>Esto es un párrafo.</p>`).
+* **Nomenclatura y Case Sensitivity:** Se limitará el uso de minúsculas en nombres de elementos y atributos, evitando combinar mayúsculas para mantener la legibilidad y el orden.
+* **Atributos y Comillas:** Se deben utilizar comillas en los atributos, especialmente en casos donde existan espacios entre los valores.
+* **Disponibilidad de Contenido (Multimedia):** Es obligatorio especificar el texto `alt` y las dimensiones `width` y `height` en las imágenes para facilitar la disponibilidad y carga del contenido.
+* **Nomenclatura CSS:** Los nombres de las clases deben ser breves, autodescriptivos y utilizar guiones para separar palabras (ej. `#video-id`, `.hero-shadow`).
+* **Optimización de Unidades:** Se debe evitar especificar la unidad de medida (px, %, em) cuando el valor utilizado sea `0`.
+* **Legibilidad y Estructura CSS:** Las declaraciones y selectores deben separarse en nuevas líneas para agilizar la lectura y el mantenimiento del código.
 
 ### 5.1.4. Software Deployment Configuration
 Para el despliegue de la Landing Page, es necesario contar con una cuenta de GitHub, una organización establecida y un repositorio dedicado. El proceso de despliegue se realizará aprovechando las capacidades de **GitHub Pages**. A continuación, se detallan los requisitos y pasos a seguir:
@@ -557,6 +569,7 @@ El objetivo de este primer sprint fue establecer la infraestructura base, desarr
 | US06 | Búsqueda en Inventario | TSK-05 | Filtros Avanzados | Implementación de barra de búsqueda en tiempo real por nombre o código. | 5 | Roy Fernandez | Done |
 | US12 | Reportes Base | TSK-08 | Vista de Estadísticas | Visualización de reportes por fecha/categoría y exportación a PDF. | 6 | Fabiola Saldaña | Done |
 | US17 | Registro por Lotes | TSK-09 | Ingreso Masivo | Interfaz para registro de lotes de productos con proveedor y fecha de vencimiento. | 5 | Sanchez Camila | Done |
+| US05 | Autenticación | TSK-W02 | Web Auth Integration | Implementación del login en la web y manejo de persistencia del token (LocalStorage/Cookies). | 4 | Sanchez Camila | Done |
 
 
 ### Sprint 2: Funcionalidades Avanzadas y Alertas
@@ -572,6 +585,7 @@ Durante este sprint, el equipo se enfocó en optimizar el flujo de inventario, i
 | US16 | Proveedores | TSK-25 | Directorio de Contactos | Módulo para registrar y enlazar proveedores con los lotes de ingreso. | 5 | Fabiola Saldaña | Done |
 | US14 | Devoluciones | TSK-23 | Flujo de Retornos | Funcionalidad para registrar mermas o devoluciones actualizando el stock central. | 5 | Luciana Choquehuanca | Done |
 | SPK01 | Innovación UX | TSK-31 | Entrada por Voz (Spike) | Prototipo de integración Speech-to-Text para comandos básicos de inventario. | 6 | Luciana Choquehuanca | In-Process |
+ US01 | Gestión de Productos | TSK-W03 | Web Inventory CRUD | Desarrollo de las tablas de gestión de productos (Crear, Editar, Listar) en la versión Web. | 7 | Luciana Choquehuanca | In-Process |
 
 ### Sprint 3: Integración de Hardware, Geolocalización y Cierre
 
