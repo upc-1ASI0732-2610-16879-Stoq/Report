@@ -1058,10 +1058,18 @@ El prototipo web ha sido concebido aplicando principios de arquitectura de infor
 ## 4.8. Domain-Driven Software Architecture
 
 ### 4.8.1. Software Architecture Context Diagram
+ <img src="assets/Chapter-4/c4/SystemContext-001.png" alt="Sytem Context" width="800px">
 
 ### 4.8.2. Software Architecture Container Diagrams
+ <img src="assets/Chapter-4/c4/Container-001.png" alt="Sytem Container" width="800px">
 
 ### 4.8.3. Software Architecture Components Diagrams
+ <img src="assets/Chapter-4/c4/Component-001.png" alt="Sytem Container" width="300px">
+ <img src="assets/Chapter-4/c4/Component-002.png" alt="Sytem Container" width="400px">
+ <img src="assets/Chapter-4/c4/Component-003.png" alt="Sytem Container" width="400px">
+ <img src="assets/Chapter-4/c4/Component-004.png" alt="Sytem Container" width="400px">
+ <img src="assets/Chapter-4/c4/Component-005.png" alt="Sytem Container" width="500px">
+
 
 ## 4.9. Software Object-Oriented Design
 
