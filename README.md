@@ -1064,16 +1064,29 @@ El prototipo web ha sido concebido aplicando principios de arquitectura de infor
  <img src="assets/Chapter-4/c4/Container-001.png" alt="Sytem Container" width="800px">
 
 ### 4.8.3. Software Architecture Components Diagrams
+
+- IAM Context
  <img src="assets/Chapter-4/c4/Component-001.png" alt="Sytem Container" width="300px">
+
+ - Product Context
  <img src="assets/Chapter-4/c4/Component-002.png" alt="Sytem Container" width="400px">
+
+ - Inventory Context
  <img src="assets/Chapter-4/c4/Component-003.png" alt="Sytem Container" width="400px">
+
+ - Sales Context
  <img src="assets/Chapter-4/c4/Component-004.png" alt="Sytem Container" width="400px">
+ 
+ - Alert Context
  <img src="assets/Chapter-4/c4/Component-005.png" alt="Sytem Container" width="500px">
 
 
 ## 4.9. Software Object-Oriented Design
 
 ### 4.9.1. Class Diagrams
+
+ <img src="assets/Chapter-4/diagramadeclases.png" alt="Sytem Container" width="900px">
+
 
 ### 4.9.2. Class Dictionary
 
