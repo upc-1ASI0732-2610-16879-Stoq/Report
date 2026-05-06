@@ -467,18 +467,124 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 # Capitulo V: Product Implementation
 
 ## 5.1. Software Configuration Management
+En la siguiente sección se describe la ruta de referencia de cada uno de los productos de software para que cualquier miembro del equipo pueda desarrollar cada punto del trabajo.
 
 ### 5.1.1. Software Development Environment Configuration
+  * **UXPressia:** Plataforma colaborativa que nos permitirá crear user personas e integrarlos con los múltiples mapas para evaluar sus prioridades.
+* **Figma:** Herramienta colaborativa que nos permitirá desarrollar wireframes y mockups de la interfaz móvil.
+* **Miro:** Plataforma en línea que facilita la colaboración en tiempo real mediante pizarras digitales para crear diagramas, mapas mentales y flujos de trabajo móvil.
+* **Lucidchart / Diagrams.net:** Aplicaciones destinadas a la elaboración de Wireflows, User Flows móviles y diagramas de clases.
+* **Kotlin and Flutter:** Lenguaje y framework principal utilizado para el desarrollo de la aplicación móvil nativa o híbrida.
+* **Jetpack Compose:** Frameworks modernos utilizados para la construcción de la interfaz de usuario móvil mediante componentes declarativos.
+
+#### Software Deployment
+* **Git:** Herramienta de control de versiones que nos permitirá rastrear cambios, colaborar de manera eficiente y mantener un historial detallado de las modificaciones en el código fuente.
+* **GitHub:** Plataforma de alojamiento que facilitará la colaboración en equipo, la gestión de ramas, el seguimiento de issues y la integración continua (CI/CD).
+
+
 
 ### 5.1.2. Source Code Management
+El proyecto seguirá las convenciones de flujo de trabajo establecidas por el modelo **GitFlow** para el control de versiones, utilizando **GitHub** como plataforma y sistema de control de versiones. A continuación, se detallará cómo se implementará GitFlow como Workflow de control de versiones, además de proporcionar los URL de los repositorios de GitHub para cada producto: Landing Page, Web Services y Frontend Web Applications.
+
+*   **Repositorio Landing Page:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-LandingPage.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Landing-Page)
+*   **Repositorio Web Services:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-Manager-General-BackEnd.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Web-Services)
+*   **Repositorio Mobil Applications:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/MobileAppMobileApp.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Frontend-Web-Applications)
+
+#### GitFlow
+
+**Estructura de branches (Ramas):**
+
+1.  **Master branch (Rama principal):** Esta rama será considerada como la principal para la aplicación, y contendrá versiones estables y finales del desarrollo. Solo se permitirán cambios que hayan sido previamente probados y verificados en otras ramas de prueba.
+2.  **Develop branch (Rama de desarrollo):** El propósito de esta rama es llevar a cabo los avances del proyecto en equipo y de mantener los archivos centrales del desarrollo continuo.
+3.  **Feature branches (Ramas de funcionalidad):** Cada funcionalidad desarrollada por el equipo o separada del enfoque actual del desarrollo tendrá su propia rama. Una vez que una funcionalidad esté completamente trabajada, se fusionará con la rama de desarrollo del proyecto. Las convenciones para nombrar las ramas de funcionalidad seguirán un patrón descriptivo y único, por ejemplo, `feature/nombre-de-la-funcionalidad`.
+4.  **Release branches (Ramas de lanzamiento):** Estas ramas se utilizarán para mantener una instancia de la rama develop que esté próxima a ser incluida en la rama principal. Se seguirá el sistema de versionamiento semántico (Semantic Versioning) para nombrar las Releases.
+
+**Versionamiento Semántico:**
+
+Para nombrar las Releases, se aplicará el sistema de versionamiento semántico (**Semantic Versioning 2.0.0**).
+
+**Convenciones de Commits:**
+
+Para los mensajes de los commits realizados, se utilizará la especificación **Conventional Commits** basada en *Angular Commit Guidelines*. La estructura a seguir será la siguiente:
+
+`git commit -m "<type>[optional scope]:<title>" -m"<description>"`
 
 ### 5.1.3. Source Code Style Guide & Conventions
+#### Mobile Development (UI & Logic)
+Para garantizar la mantenibilidad de la aplicación móvil, se seguirán las siguientes convenciones:
+
+* **Nomenclatura de Recursos:** Todos los archivos de recursos (iconos, layouts, drawables) deben utilizar `snake_case` (ej. `ic_back_button.xml`, `fragment_login.xml`).
+* **Estilo de Código (Kotlin/Swift):** Se seguirá la guía oficial de estilo del lenguaje elegido (ej. Google Kotlin Style Guide). Uso de `camelCase` para variables y funciones, y `PascalCase` para clases.
+* **Arquitectura:** Se implementará el patrón **MVVM (Model-View-ViewModel)** para separar la lógica de negocio de la interfaz de usuario.
+* **Gestión de Strings:** No se debe escribir texto directamente ("hardcoded") en la interfaz. Todos los textos deben estar definidos en archivos de recursos de strings para facilitar la localización (multi-idioma).
+* **Componentes Reutilizables:** Se priorizará la creación de componentes de UI pequeños y reutilizables para mantener la consistencia visual en todas las pantallas de la app.
 
 ### 5.1.4. Software Deployment Configuration
+Para el despliegue de la Landing Page, es necesario contar con una cuenta de GitHub, una organización establecida y un repositorio dedicado. El proceso de despliegue se realizará aprovechando las capacidades de **GitHub Pages**. A continuación, se detallan los requisitos y pasos a seguir:
+
+#### Requisitos de Estructura
+Para un despliegue correcto, el repositorio debe mantener la siguiente estructura de archivos y nomenclaturas:
+* **index.html**: Archivo principal que contiene la estructura y contenido de la landing page.
+* **style.css**: Archivo que contiene las hojas de estilo del sitio.
+* **assets/**: Carpeta raíz para recursos multimedia.
+    * **img/**: Subcarpeta dedicada exclusivamente a las imágenes del sitio.
+
+#### Pasos para el Despliegue
+1. **Creación del Repositorio:** Crear un repositorio específico dentro de la organización de GitHub para alojar exclusivamente el código de la Landing Page.
+2. **Carga de Archivos:** Subir los archivos siguiendo la estructura mencionada anteriormente mediante un `commit` inicial a la rama principal.
+3. **Configuración de GitHub Pages:** 
+   * Dirigirse a la sección de **Settings** del repositorio.
+   * En el menú lateral, seleccionar **Pages**.
+   * En el apartado "Build and deployment", seleccionar la rama correspondiente (generalmente `main` o `master`) y la carpeta raíz (`/root`).
+4. **Verificación y Lanzamiento:** 
+   * Esperar a que GitHub realice las comprobaciones automáticas (*GitHub Actions*). 
+   * Una vez culminado el proceso, GitHub proporcionará una URL pública (ej. `https://nombre-organizacion.github.io/repo-name/`) donde la Landing Page estará oficialmente desplegada.
 
 ## 5.2. Product Implementation & Deployment
 
 ### 5.2.1. Sprint Backlogs
+A continuación, se detallan los Sprint Backlogs trabajados a lo largo del desarrollo de la plataforma Stoq. La planificación abarca desde la configuración inicial y desarrollo del núcleo móvil, hasta la integración de funcionalidades avanzadas como geolocalización y escaneo por código de barras.
+
+### Sprint 1: Núcleo Móvil, APIs Base y Landing Page
+El objetivo de este primer sprint fue establecer la infraestructura base, desarrollar los servicios de autenticación y construir los módulos principales de gestión de inventario para la aplicación móvil.
+
+| Story Id | Story Title | Task Id | Task Title | Description | Est. (Hrs) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| US05 | Autenticación de Usuario | TSK-04 | Interfaz de Login/Registro | Creación de la UI móvil para autenticación integrada con las APIs de IAM. | 6 | Ronald Peralta | Done |
+| TS02 | APIs IAM | TSK-11 | Endpoint de Login | Desarrollo de los endpoints para emisión de JWT y validación de credenciales. | 4 | Ronald Peralta | Done |
+| US01 | Registro de Producto | TSK-01 | Formulario de Productos | Interfaz móvil para crear productos con validación de campos obligatorios. | 6 | Fabiola Saldaña | Done |
+| TS03 | APIs Product | TSK-12 | Endpoint de Creación | Construcción del endpoint para almacenar nuevos productos y validar unicidad. | 5 | Luciana Choquehuanca | Done |
+| US06 | Búsqueda en Inventario | TSK-05 | Filtros Avanzados | Implementación de barra de búsqueda en tiempo real por nombre o código. | 5 | Roy Fernandez | Done |
+| US12 | Reportes Base | TSK-08 | Vista de Estadísticas | Visualización de reportes por fecha/categoría y exportación a PDF. | 6 | Fabiola Saldaña | Done |
+| US17 | Registro por Lotes | TSK-09 | Ingreso Masivo | Interfaz para registro de lotes de productos con proveedor y fecha de vencimiento. | 5 | Sanchez Camila | Done |
+
+
+### Sprint 2: Funcionalidades Avanzadas y Alertas
+
+Durante este sprint, el equipo se enfocó en optimizar el flujo de inventario, integrando sistemas de alertas tempranas, gestión de roles y la exploración de comandos por voz.
+
+| Story Id | Story Title | Task Id | Task Title | Description | Est. (Hrs) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| US19 | Alertas de Stock | TSK-27 | Lógica de Notificaciones | Sistema de alertas automáticas en la app cuando el stock cae por debajo del mínimo. | 5 | Ronald Peralta | Done |
+| US22 | Alertas de Caducidad | TSK-28 | Control de Vencimientos | Detección de productos perecibles próximos a vencer con alertas visuales. | 5 | Ronald Peralta | Done |
+| US18 | Historial de Movimientos | TSK-26 | Gráficas de Evolución | Construcción de la vista histórica con filtros de periodo y gráficas de stock. | 5 | Sanchez Camila | Done |
+| US15 | Configuración de Roles | TSK-24 | Gestión de Usuarios | Pantalla móvil para administrar accesos (Admin/Empleado) vinculada al backend. | 5 | Roy Fernandez | Done |
+| US16 | Proveedores | TSK-25 | Directorio de Contactos | Módulo para registrar y enlazar proveedores con los lotes de ingreso. | 5 | Fabiola Saldaña | Done |
+| US14 | Devoluciones | TSK-23 | Flujo de Retornos | Funcionalidad para registrar mermas o devoluciones actualizando el stock central. | 5 | Luciana Choquehuanca | Done |
+| SPK01 | Innovación UX | TSK-31 | Entrada por Voz (Spike) | Prototipo de integración Speech-to-Text para comandos básicos de inventario. | 6 | Luciana Choquehuanca | In-Process |
+
+### Sprint 3: Integración de Hardware, Geolocalización y Cierre
+
+El último sprint culminó el desarrollo con el acceso al hardware del dispositivo (cámara/GPS), mejoras de seguridad y las pruebas integrales de calidad.
+
+| Story Id | Story Title | Task Id | Task Title | Description | Est. (Hrs) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TS07 | Quality Assurance | TSK-38 | Testing Final | Pruebas de integración E2E validando la comunicación completa entre app y API. | 6 | Luciana Choquehuanca | Done |
+| US31 | Escáner de Barras | TSK-33 | Lector de Cámara | Integración de la cámara del dispositivo móvil para escanear y registrar ventas. | 6 | Sanchez Camila | Done |
+| US32 | Ubicación | TSK-34 | Geolocalización de Sedes | Integración de OpenStreetMap para visualizar y gestionar almacenes en un mapa. | 5 | Roy Fernandez | Done |
+| US33 | Legal & Compliance | TSK-35 | Términos y Condiciones | Checkbox y vista de aceptación obligatoria de T&C durante el proceso de registro. | 4 | Fabiola Saldaña | Done |
+| US34 | Seguridad IAM | TSK-36 | Restricciones de Acceso | Aplicación estricta de permisos por rol en las pantallas críticas de la app. | 5 | Ronald Peralta | Done |
+| US35 | Optimización UI/UX | TSK-37 | Refinamiento Visual | Mejoras finales en la interfaz, paleta de colores y fluidez de navegación. | 4 | Sanchez Camila | Done |
 
 ### 5.2.2. Implemented Landing Page Evidence
 
