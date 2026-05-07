@@ -422,6 +422,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 | 38 | TS14          | Generar API Consulta de alertas                                      | 3            |
 | 39 | US24          | Visualizar resumen de stock por categoría                            | 2            |
 
+
 ## 3.2. User Stories
 
 
