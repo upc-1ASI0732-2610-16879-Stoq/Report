@@ -1085,15 +1085,15 @@ El prototipo web ha sido concebido aplicando principios de arquitectura de infor
 
 ### 4.9.1. Class Diagrams
 
- <img src="assets/Chapter-4/diagramadeclases.png" alt="Sytem Container" width="900px">
+ <img src="assets/Chapter-4/diagramadeclases.png" alt="Sytem Container" width="700px">
 
 
 ### 4.9.2. Class Dictionary
 
 ## 4.10. Database Design
-
 ### 4.10.1. Relational/Non-Relational Database Diagram
 
+ <img src="assets/Chapter-4/databasediagram.png" alt="Sytem Container" width="800px">
 
 
 # Capitulo V: Product Implementation
