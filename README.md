@@ -384,7 +384,19 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ## 3.2. User Stories
 
+Las User Stories son clave en metodologías ágiles porque traducen los requisitos funcionales desde la mirada del usuario. Cada historia especifica una necesidad concreta, lo que permite planificar, priorizar y construir el sistema de forma iterativa. Así se asegura que cada función aporte valor real y permanezca alineada con las expectativas del usuario final.
 
+ <img src="assets/Chapter-3/US01.png" alt="US01" width="800px"> 
+
+ <img src="assets/Chapter-3/US02.png" alt="US02" width="800px"> 
+
+ <img src="assets/Chapter-3/US03.png" alt="US03" width="800px"> 
+
+ <img src="assets/Chapter-3/US04.png" alt="US04" width="800px"> 
+
+ <img src="assets/Chapter-3/US05.png" alt="US05" width="800px"> 
+
+ <img src="assets/Chapter-3/US06.png" alt="US06" width="800px"> 
 
 ## 3.3. Product Backlog
 
@@ -432,7 +444,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 **Gestión del producto Backlog** 
 
- <img src="assets/Chapter-3/Trello.png" alt="Lean Ux canvas" width="800px"> 
+ <img src="assets/Chapter-3/Trello.png" alt="Trello" width="800px"> 
 
 _Imagen (N°10). Elaboración propia. Realizado en Trello_ 
 
