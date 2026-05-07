@@ -484,6 +484,14 @@ En esta sección se describen las historias técnicas que desarrollamos para imp
 
  <img src="assets/Chapter-3/TS12.png" alt="TS12" width="800px"> 
 
+ <img src="assets/Chapter-3/TS13.png" alt="TS13" width="800px"> 
+
+ <img src="assets/Chapter-3/TS14.png" alt="TS14" width="800px"> 
+
+ <img src="assets/Chapter-3/TS15.png" alt="TS15" width="800px"> 
+
+ <img src="assets/Chapter-3/TS16.png" alt="TS16" width="800px"> 
+
 
 
 ## 3.3. Product Backlog
