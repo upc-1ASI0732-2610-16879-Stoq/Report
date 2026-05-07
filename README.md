@@ -380,6 +380,14 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ## 3.1. To-Be Scenario Mapping
 
+
+
+## 3.2. User Stories
+
+
+
+## 3.3. Product Backlog
+
 | #  | User Story ID | Título                                                               | Story Points |
 |----|---------------|----------------------------------------------------------------------|--------------|
 | 1  | US01          | Registrar producto nuevo                                             | 5            |
@@ -422,14 +430,13 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 | 38 | TS14          | Generar API Consulta de alertas                                      | 3            |
 | 39 | US24          | Visualizar resumen de stock por categoría                            | 2            |
 
+**Gestión del producto Backlog** 
 
-## 3.2. User Stories
+![img_1.png](img_1.png)
+_Imagen (N°10). Elaboración propia. Realizado en Trello_ 
 
-
-
-## 3.3. Product Backlog
-
-
+Trello del Product Backlog:
+https://trello.com/invite/b/69fcb34c3773ca9fb5de2d61/ATTI1644207d65abc14d280915502d0695bc0DE32724/stoq-product-backlog
 
 ## 3.4. Impact Mapping
 
