@@ -878,17 +878,427 @@ En la versión mobile el navbar se reemplaza por un menu desplegable.
 
 ### 4.4.1. Mobile Applications Wireframes
 
+Los wireframes ayudan a los diseñadores y desarrolladores a planificar la arquitectura y la funcionalidad de la aplicación, permitiendo visualizar cómo los usuarios interactuarán con ella. Son esenciales en las primeras etapas de desarrollo, ya que facilitan la comunicación de ideas, la identificación de problemas potenciales y la alineación de todos los involucrados en el proyecto antes de pasar al diseño detallado y la programación.
+
+**Iniciar sesión**
+
+La siguiente imagen evidencia el wireframe de la sección de “inicio de sesión” desde la vista desktop web browser. En ella, los usuarios deberán ingresar las credenciales necesarias para poder acceder a la aplicación, siempre y cuando posean con una cuenta previamente creada.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Inicio de sesión.png" style="width: 420px;"/> </center>
+<br>
+
+**Crear cuenta**
+
+La siguiente imagen presenta la sección de “registro de usuario”, a través de la cual los administradores podrán remitir a la aplicación la información necesaria para crear una cuenta.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Registro.png" style="width: 420px;"/> </center>
+<br>
+
+**Elegir plan de pago**
+
+La siguiente imagen presenta la sección “Elegir plan de pago”, la cual despliega las categorías de planes disponibles en la plataforma. Los tres planes están diseñados para adaptarse a las necesidades de los administradores de tienda acorde a sus necesidades.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Seleccionar plan.png" style="width: 420px;"/> </center>
+<br>
+
+**Pasarela de pagos**
+
+La siguiente imagen corresponde a la sección “Pasarela de pagos” donde los usuarios son dirigidas a un formulario para seleccionar y registrar su método de pago. Una vez que el proceso de pago es completado exitosamente, se notifica al usuario con un mensaje confirmando el vinculo de su tarjeta con la plataforma. Del mismo modo, si el usuario desea retirar su información o actualizar lo podra hacer a travéz de su perfil.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Pago.png" style="width: 420px;"/> </center>
+<br>
+
+**Mi perfil**
+
+La sección titulada “Mi perfil” solicita al usuario que complete información en dos categorías para registrar sus datos. Adicionalmente, la categoría "cambiar cuenta" ofrece la opción de permitir al usuario cambiar de cuenta a una de empleador y utilizar las herramientas de este por la plataforma. Tambien, tiene libertad de cambiar el plan si es necesario.
+
+_Perfil Administrador_
+
+En este perfil, el usuario puede ver a la derecha sus herramientas correpondientes a su cuenta.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Perfil.png" style="width: 420px;"/> </center>
+<br>
+<center> <img src="assets/Chapter-4/wireframes-mobile/Perfil (1).png" style="width: 420px;"/> </center>
+<br>
+
+**Panel de control (Dashboard)**
+
+Esta pantalla representa el panel de control principal del sistema StockWise. Su objetivo es proporcionar al usuario una vista general del estado del inventario y acceso rápido a funciones clave. Entre sus elementos principales se encuentran:
+
+- Resumen de información:
+  - Total de Productos: número total de ítems registrados.
+  - Fecha del Último Proveedor: muestra la última fecha de ingreso de productos (por proveedor).
+  - Próximos a Caducar: productos con fecha de vencimiento próxima, indicando la fecha y el stock restante.
+- Accesos rápidos:
+  - Historial de Movimientos: seguimiento de entradas y salidas del inventario.
+  - Inventario: acceso directo a la lista completa de productos.
+- Botones de acción:
+  - Agregar Productos: para registrar nuevos productos en el sistema.
+  - Kits de Productos: permite combinar productos individuales en un kit.
+  - Devolución de Productos: facilita el registro de productos devueltos por proveedores o clientes.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Dashboard.png" style="width: 420px;"/> </center>
+<br>
+
+**Combinación de Productos en Kits**
+
+Esta sección está dedicada a la funcionalidad de crear kits de productos, una herramienta útil para negocios que venden combos o paquetes predefinidos. Las características principales incluyen:
+
+Buscador de productos: permite al usuario localizar rápidamente productos por nombre. Listado de productos existentes: Muestra el nombre, precio y stock disponible de cada producto. Incluye un botón de acción en cada fila para añadir productos al kit. Botón “Seleccionar para kit”: una vez seleccionados los productos deseados, el usuario puede avanzar para crear el kit final. Esta funcionalidad mejora la gestión del stock agrupado y permite optimizar estrategias de venta, como combos promocionales o paquetes de temporada.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Combinar Producto.png" style="width: 420px;"/> </center>
+<br>
+
+**Agregar Producto**
+
+Esta pantalla permite visualizar todos los productos actualmente registrados en el inventario, con acceso rápido para editar o ver más detalles. Las funcionalidades clave incluyen:
+
+- Tarjetas de producto con información relevante:
+  - Nombre del producto (ej. Galleta).
+  - Categoría/etiqueta (ej. Golosina).
+  - Stock disponible.
+- Botón “+ Detalle” para ver información adicional o editar.
+- Botón “+”: permite agregar un nuevo producto desde cero
+- Buscador de productos y opción de filtro por categoría o stock.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Agregar Producto (1).png" style="width: 420px;"/> </center>
+<br>
+
+**Registro de Nuevo Producto**
+
+Pantalla que aparece al presionar el botón “+”, diseñada para agregar un nuevo producto al sistema. Incluye los siguientes campos:
+
+- Nombre del producto.
+- Etiquetas/Categorías (por ejemplo: Golosina, Bebida).
+- Precio de compra y de venta.
+- Cantidad inicial del producto.
+- Número de lote y fecha de caducidad.
+- Notas adicionales, si se desea registrar observaciones específicas.
+
+Una vez completado el formulario, se debe presionar "Guardar" para registrar el nuevo ítem.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Agregar Producto.png" style="width: 420px;"/> </center>
+<br>  
+
+_Edición Rápida de Producto_
+
+Este modal aparece al hacer clic en “+ Detalle” sobre cualquier tarjeta de producto en la pantalla principal. Permite realizar modificaciones rápidas sobre un producto específico:
+
+- Editar etiquetas.
+- Actualizar cantidad.
+- Modificar fecha de caducidad.
+- Agregar notas.
+
+Incluye botones para “Duplicar” (crear una copia rápida del producto) y “Eliminar” (quitar del sistema).
+<center> <img src="assets/Chapter-4/wireframes-mobile/Agregar Producto (2).png" style="width: 420px;"/> </center>
+<br>  
+
+**Historial de Movimientos**
+
+Esta vista permite al usuario consultar todos los movimientos registrados en el sistema, ya sea por producto individual, por categoría o mediante cálculo del ticket promedio.
+
+- Filtros disponibles:
+  - Tipo de gestión: Producto, Categoría o Stock Promedio.
+  - Rango de fecha: permite buscar registros por fechas específicas.
+- Resultados organizados en tarjetas que muestran:
+  - Producto o categoría
+  - Fecha del movimiento
+  - Precio unitario (si aplica)
+  - Cantidad gestionada
+  - Total del movimiento
+- También cuenta con botones para:
+  - Editar un registro
+  - Eliminar un registro (con confirmación previa).
+<center> <img src="assets/Chapter-4/wireframes-mobile/Historial.png" style="width: 420px;"/> </center>
+<br>  
+
+_Confirmación de Eliminación_
+
+Al presionar el botón de eliminar, se despliega una ventana emergente de confirmación que advierte al usuario antes de borrar un registro del historial.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Historial Eliminar.png" style="width: 420px;"/> </center>
+<br>  
+
+**Ticket Promedio**
+
+Al seleccionar “Stock Promedio” como tipo de gestión, se habilita el acceso al cálculo de Ticket Promedio, que estima el valor promedio de venta por unidad en un rango de fechas. Este recurso permite realizar un análisis financiero rápido sobre el comportamiento de productos específicos.
+
+- Campos del formulario:
+  -  Rango de fecha.
+  -  Producto a analizar.
+  -  Cantidad de ventas.
+  - Precio total de ventas.
+  - Resultado del ticket promedio (calculado automáticamente).
+- Botones:
+  - Crear: Guarda el registro del ticket.
+  - Cancelar: Cierra el modal sin guardar.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Historial Ticket Promedio.png" style="width: 420px;"/> </center>
+<br> 
+
+**Pantalla principal de Inventario por Lote**
+
+Esta pantalla permite la visualización y gestión del inventario agrupado por lote de entrada.
+
+- Filtros en la parte superior:
+  - Búsqueda por Producto
+  - Proveedor
+  - Fecha de ingreso
+  - Cantidad
+  - Precio
+- Lista de productos ingresados por lote:
+  - Proveedor
+  - Producto
+  - Fecha de entrada
+  - Cantidad por unidad
+  - Precio por unidad
+  - Unidad de medida
+- Botón rojo “Generar Nuevo Lote” ubicado a la derecha, que permite agregar un nuevo registro.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Inventario por lote.png" style="width: 420px;"/> </center>
+<br> 
+
+_Busqueda Avanzada_
+<center> <img src="assets/Chapter-4/wireframes-mobile/Inventario por lote (2).png" style="width: 420px;"/> </center>
+<br> 
+
+**Pantalla de Inventario por Producto**
+
+Visualización clara de todos los productos del inventario, con opción de filtrar por condiciones específicas, lo cual optimiza el control individualizado del stock.
+
+- Filtros:
+  - Categoría
+  - Productos
+  - Rango de Fecha
+  - Stock Mínimo.
+- Tabla:
+  - Categoría
+  - Producto
+  - Fecha de entrada
+  - Cantidad
+  - Precio
+  - Stock mínimo
+  - Unidad de medida.
+- Botón: “Generar Nuevo Lote”.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Inventario por producto.png" style="width: 420px;"/> </center>
+<br> 
+
+_Edición de Registro_
+
+Facilita la actualización de datos en tiempo real, permitiendo mantener el inventario siempre actualizado y preciso.
+
+- Elementos mostrados:
+  - Formulario editable con campos: Categoría, Producto, Cantidad por unidad, Precio por unidad, Unidad de medida.
+  - Botones de acción: “Crear” (confirmar edición) y “Cancelar”.
+<center> <img src="assets/Chapter-4/wireframes-mobile/Inventario por producto (1).png" style="width: 420px;"/> </center>
+<br> 
+
 ### 4.4.2. Mobile Applications Wireflow Diagrams
+
+Los Mobile Applications Wireflow Diagrams son una combinación de wireframes y flujos de usuario (user flows) que ilustran no solo la estructura y disposición de las pantallas de una Mobile Application, sino también cómo los usuarios navegarán entre ellas. Estos diagramas proporcionan una visión detallada del recorrido del usuario, mostrando las interacciones clave y las transiciones de una pantalla a otra dentro de la aplicación.
+
+**User Goal Registrar:** El usuario desea crear una nueva cuenta para comenzar a usar la plataforma y vincular su método de pago según el plan seleccionado.
+
+**Flujo funcional:**
+
+1. El usuario selecciona la opción “Registrar” en la Landing Page.
+2. Ingresa los datos solicitados: correo electrónico, nombre y contraseña.
+3. Selecciona el tipo de plan.
+4. Si elige el Plan Negocio, completa los datos de la tarjeta y confirma el pago.
+5. El sistema valida la transacción.
+6. Si el pago es exitoso, se muestra una ventana flotante indicando “Pago realizado correctamente”.
+7. Si el pago falla, se muestra una alerta de error con el mensaje “No se pudo procesar el pago”.
+8. Finalmente, se redirige al usuario a la pantalla de Inicio de sesión.
+<center> <img src="assets/Chapter-4/user goal Registrar.png" style="width: 420px;"/> </center>
+<br> 
+
+**User Goal: Iniciar sesión**
+
+El usuario desea iniciar sesión en la plataforma utilizando sus credenciales y acceder a las funciones principales del sistema.
+
+**Flujo funcional:**
+
+1. El usuario ingresa su correo electrónico y contraseña.
+2. El usuario selecciona la opción “Iniciar sesión”.
+3. El sistema valida las credenciales ingresadas.
+4. Si las credenciales son correctas, el sistema autoriza el acceso y muestra el panel principal (Dashboard).
+5. Desde el panel principal, el usuario puede acceder al módulo de Perfil y editar su información personal.
+6. Si las credenciales son incorrectas, el sistema muestra un mensaje de error: “Correo o contraseña incorrectos” y permite reintentar el acceso.
+<center> <img src="assets/Chapter-4/user goal Iniciar sesion.png" style="width: 420px;"/> </center>
+<br> 
+
+**User Goal: Navegar por el Dashboard**
+
+El usuario explora la vista principal y accede a las herramientas clave del sistema.
+
+**Flujo funcional:**
+
+1. El usuario accede al Dashboard después de iniciar sesión.
+2. Visualiza el total de productos registrados y fecha del último proveedor.
+3. Observa un resumen de productos próximos a caducar con stock y fecha.
+4. Accede a botones de acción rápida (Historial de Movimientos, Inventario, Agregar Productos, Kits y Devolución de productos)
+5. Selecciona cualquiera de las secciones para continuar su gestión.
+<center> <img src="assets/Chapter-4/user goal Navegador por el dashboard.png" style="width: 420px;"/> </center>
+<br> 
+
+**User Goal: Inventario (Producto / Lote)**
+
+El usuario explora la vista de inventario y accede a los registros de productos y lotes.
+
+**Flujo funcional:**
+
+1. Ingresa a la sección de Inventario.
+2. Revisa el listado de productos presionando el botón "por producto".
+3. Filtra los productos por categoría, nombre del producto, fecha o stock mínimo.
+4. Consulta el listado con información clave: fecha de entrada, cantidad por unidad, precio, stock mínimo y unidad de medida.
+<center> <img src="assets/Chapter-4/user goal Inventario.png" style="width: 420px;"/> </center>
+<br> 
+
+**User Goal: Botones Principales (Agregar Producto y Kits)**
+
+El usuario visualiza la sección principal y gestiona productos y kits desde las opciones disponibles.
+
+**Flujo funcional:**
+
+1. Pulsa el botón "Agregar Producto".
+2. Rellena los campos solicitados para registrar uno nuevo.
+3. Pulsa el botón "Crear Kit".
+4. Combina productos existentes para crear un kit nuevo.
+5. El usuario pulsa el botón “Añadir Productos” desde el Dashboard.
+6. Visualiza una galería de productos existentes y accede a opciones para editarlos o duplicarlos.
+7. Puede agregar uno nuevo haciendo clic en el botón “+”, donde se despliega un formulario con campos como nombre,etiquetas, cantidad, lote, precios, fecha de caducidad y notas.
+8. Desde el menú principal, también accede a la opción “Kits”.
+<center> <img src="assets/Chapter-4/user goal Botones principales.png" style="width: 420px;"/> </center>
+<br> 
+
+**User Goal: Historial de Movimientos**
+
+El usuario consulta y analiza los movimientos del inventario, accediendo a información de entradas, salidas y métricas relacionadas.
+
+**Flujo funcional:**
+
+1. Navega a la sección de Historial.
+2. Visualiza entradas y salidas de productos.
+3. Filtra movimientos por fecha, producto o lote.
+4. El usuario accede a la sección de Historial desde el panel principal.
+5. Filtra los registros por tipo de gestión, categoría, stock promedio y fecha.
+6. Visualiza los movimientos realizados, incluyendo datos como nombre del producto, fecha de consulta, precio unitario, cantidad y total.
+7. Consulta métricas como el stock promedio, estado del producto y stock ideal.
+8. Cuenta con botones para editar o eliminar cada registro y, para los stock promedio, exportar la información y realiza un ticket promedio.
+<center> <img src="assets/Chapter-4/user goal Historial .png" style="width: 420px;"/> </center>
+<br> 
 
 ### 4.4.3. Mobile Applications Mock-ups
 
+**Iniciar sesión**
+<center> <img src="assets/Chapter-4/mockups-mobile/Inicio de sesión (1).png" style="width: 420px;"/> </center>
+<br>
+
+**Crear cuenta**
+<center> <img src="assets/Chapter-4/mockups-mobile/Registro (1).png" style="width: 420px;"/> </center>
+<br> 
+
+**Elegir plan de pago**
+<center> <img src="assets/Chapter-4/mockups-mobile/Seleccionar plan (1).png" style="width: 420px;"/> </center>
+<br> 
+
+**Pasarela de pagos**
+<center> <img src="assets/Chapter-4/mockups-mobile/Pago (1).png" style="width: 420px;"/> </center>
+<br> 
+
+**Mi perfil**
+
+*Perfil Administrador*
+<center> <img src="assets/Chapter-4/mockups-mobile/Perfil.png" style="width: 420px;"/> </center>
+<br> 
+<center> <img src="assets/Chapter-4/mockups-mobile/Perfil ajustes.png" style="width: 420px;"/> </center>
+<br> 
+
+**Panel de control (Dashboard)**
+<center> <img src="assets/Chapter-4/mockups-mobile/Dashboard.png" style="width: 420px;"/> </center>
+<br> 
+
+**Combinación de Productos en Kits**
+<center> <img src="assets/Chapter-4/mockups-mobile/Combinar producto.png" style="width: 420px;"/> </center>
+<br> 
+
+**Agregar Producto**
+<center> <img src="assets/Chapter-4/mockups-mobile/Agregar Producto.png" style="width: 420px;"/> </center>
+<br> 
+
+**Registro de Nuevo Producto**
+<center> <img src="assets/Chapter-4/mockups-mobile/Registro Prodcuto.png" style="width: 420px;"/> </center>
+<br> 
+
+*Edición Rápida de Producto*
+<center> <img src="assets/Chapter-4/mockups-mobile/Edicion Producto.png" style="width: 420px;"/> </center>
+<br> 
+
+**Historial de Movimientos**
+<center> <img src="assets/Chapter-4/mockups-mobile/Historial.png" style="width: 420px;"/> </center>
+<br> 
+
+*Confirmación de Eliminación*
+<center> <img src="assets/Chapter-4/mockups-mobile/Historial Eliminar.png" style="width: 420px;"/> </center>
+<br> 
+
+**Ticket Promedio**   
+<center> <img src="assets/Chapter-4/mockups-mobile/Historial Ticket Promedio.png" style="width: 420px;"/> </center>
+<br> 
+
+**Pantalla principal de Inventario por Lote**
+<center> <img src="assets/Chapter-4/mockups-mobile/Inventario.png" style="width: 420px;"/> </center>
+<br> 
+
+*Busqueda Avanzada*
+<center> <img src="assets/Chapter-4/mockups-mobile/Inventario Busqueda.png" style="width: 420px;"/> </center>
+<br>
+
+**Pantalla de Inventario por Producto**
+<center> <img src="assets/Chapter-4/mockups-mobile/Inventario por producto.png" style="width: 420px;"/> </center>
+<br>
+
+*Edición de Registro*
+<center> <img src="assets/Chapter-4/mockups-mobile/Inventario por producto edi.png" style="width: 420px;"/> </center>
+<br>
+
 ### 4.4.4. Mobile Applications User Flow Diagrams
+
+**User Goal: Registrar**
+<center> <img src="assets/Chapter-4/Color user goal Registrar.png" style="width: 420px;"/> </center>
+<br>
+
+**User Goal: Iniciar sesión**
+<center> <img src="assets/Chapter-4/Color user goal Iniciar sesion.png" style="width: 420px;"/> </center>
+<br>
+
+**User Goal: Navegar por el dashboard**
+<center> <img src="assets/Chapter-4/Color user goal Navegador.png" style="width: 420px;"/> </center>
+<br>
+
+**User Goal: Inventario (Producto/Lote)**
+<center> <img src="assets/Chapter-4/Color user goal Inventario .png" style="width: 420px;"/> </center>
+<br>
+
+**User Goal: Botones Principales (Agregar Producto y Kits)**
+<center> <img src="assets/Chapter-4/Color user goal Botones principales .png" style="width: 420px;"/> </center>
+<br>
+
+**User Goal: Historial de Movimientos**
+<center> <img src="assets/Chapter-4/Color user goal Historial .png" style="width: 420px;"/> </center>
+<br>
 
 ## 4.5. Mobile Applications Prototyping
 
+El apartado de Mobile Application Prototyping muestra el primer acercamiento visual e interactivo al diseño de la aplicación. A través del uso de herramientas de prototipado, se crean representaciones dinámicas que permiten simular la navegación, disposición de módulos y flujos de interacción del usuario antes de pasar a la fase de desarrollo.
+
+Durante este proceso, se estructuran pantallas clave como el login, panel de control, gestión de productos, movimientos de stock, generación de reportes y alertas de inventario. El objetivo es anticipar posibles mejoras de usabilidad y validar la propuesta funcional con los usuarios finales.
+
+El prototipo también permite identificar ajustes necesarios en la experiencia de usuario (UX) y verificar que los requisitos funcionales definidos en las User Stories se reflejen correctamente en las interfaces propuestas.
+
+A continuación, se presenta el enlace para visualizar el video de navegación del prototipo interactivo:
+
+[![Demo](<assets/Chapter-4/mockups-mobile/Inicio de sesión (1).png>)](assets/Chapter-3/Grabación%20de%20pantalla%202025-10-09%20165528.mp4)
+
 ### 4.5.1. Android Mobile Applications Prototyping
 
+A continuación, se presenta el enlace para visualizar el video de navegación del prototipo interactivo:
+
+[![Demo](<assets/Chapter-4/mockups-mobile/Dashboard.png>)](assets/Chapter-3/Grabación%20de%20pantalla%202025-10-09%20165528.mp4)
+
 ### 4.5.2. iOS Mobile Applications Prototyping
+
+A continuación, se presenta el enlace para visualizar el video de navegación del prototipo interactivo:
+
+[![Demo](<assets/Chapter-4/mockups-mobile/Dashboard.png>)](assets/Chapter-3/Grabación%20de%20pantalla%202025-10-09%20165528.mp4)
 
 ## 4.6. Web Applications UX/UI Design
 
@@ -995,12 +1405,10 @@ User persona: Tienda/Almacén — Operador(a)
    * Se valida stock, se registra el movimiento y se descuenta inventario (los kits se desglosan en componentes).
 
 
-
 **Unhappy paths**
 
 * Cancelar → se descarta el borrador; no se registra ningún movimiento.
 * Cantidad > stock → alerta y bloqueo hasta corregir.
-
 
 <br>
 
@@ -1030,7 +1438,6 @@ A) Ingresar reposición
 * Cantidades inválidas (0, negativas o vacías) → validación en línea.
 * Falla de red/sesión → error y preservación del formulario para reintentar.
 
-
 B) Crear nuevo producto
 
 **Happy path**
@@ -1052,8 +1459,6 @@ B) Crear nuevo producto
 El prototipo web ha sido concebido aplicando principios de arquitectura de información, diseño centrado en el usuario y las heurísticas de usabilidad, con el propósito de brindar una experiencia intuitiva, eficiente y accesible. La navegación se organiza de manera jerárquica y lógica, lo que facilita a los usuarios localizar rápidamente las funciones principales, como el registro de movimientos de inventario, la visualización de reportes y configuración de personal. La interfaz mantiene una disposición visual uniforme, apoyada en una paleta de colores equilibrada y tipografía clara, reforzando la identidad de la plataforma. Los elementos interactivos se han colocado estratégicamente para optimizar la interacción y minimizar la carga cognitiva del usuario. Cada componente del prototipo asegura coherencia visual, visibilidad del estado del sistema y retroalimentación inmediata ante cada acción. Asimismo, se adoptan buenas prácticas y estándares de diseño web contemporáneos para garantizar una experiencia fluida y adaptable en distintos dispositivos.
 
 <https://www.figma.com/proto/jKNuDhwMS5qe3o6zF4ugo8/OPEN-SOURCE?node-id=150-3805&p=f&t=C8AMNn5sgvqnuoFs-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=150%3A5901>
-
-
 
 ## 4.8. Domain-Driven Software Architecture
 
