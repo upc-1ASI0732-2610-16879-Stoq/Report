@@ -492,7 +492,17 @@ En esta sección se describen las historias técnicas que desarrollamos para imp
 
  <img src="assets/Chapter-3/TS16.png" alt="TS16" width="800px"> 
 
+**Spike Story** 
 
+ <img src="assets/Chapter-3/SPK01.png" alt="SPK01" width="800px"> 
+
+ <img src="assets/Chapter-3/SPK02.png" alt="SPK02" width="800px"> 
+
+ <img src="assets/Chapter-3/SPK03.png" alt="SPK03" width="800px"> 
+
+ <img src="assets/Chapter-3/SPK04.png" alt="SPK04" width="800px"> 
+
+ <img src="assets/Chapter-3/SPK05.png" alt="SPK05" width="800px"> 
 
 ## 3.3. Product Backlog
 
