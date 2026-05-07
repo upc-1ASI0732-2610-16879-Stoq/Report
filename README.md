@@ -432,7 +432,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 **Gestión del producto Backlog** 
 
-![img_1.png](img_1.png)
+ <img src="assets/Chapter-3/Trello.png" alt="Lean Ux canvas" width="800px"> 
+
 _Imagen (N°10). Elaboración propia. Realizado en Trello_ 
 
 Trello del Product Backlog:
