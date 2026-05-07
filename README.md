@@ -422,6 +422,18 @@ Las User Stories son clave en metodologías ágiles porque traducen los requisit
 
  <img src="assets/Chapter-3/US18.png" alt="US18" width="800px"> 
 
+ <img src="assets/Chapter-3/US19.png" alt="US19" width="800px"> 
+
+ <img src="assets/Chapter-3/US20.png" alt="US20" width="800px"> 
+
+ <img src="assets/Chapter-3/US21.png" alt="US21" width="800px"> 
+
+ <img src="assets/Chapter-3/US22.png" alt="US22" width="800px"> 
+
+ <img src="assets/Chapter-3/US23.png" alt="US23" width="800px"> 
+
+ <img src="assets/Chapter-3/US24.png" alt="US24" width="800px"> 
+
 
 
 ## 3.3. Product Backlog
