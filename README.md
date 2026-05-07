@@ -380,11 +380,59 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ## 3.1. To-Be Scenario Mapping
 
+| #  | User Story ID | Título                                                               | Story Points |
+|----|---------------|----------------------------------------------------------------------|--------------|
+| 1  | US01          | Registrar producto nuevo                                             | 5            |
+| 2  | US05          | Generar alertas por bajo stock                                       | 5            |
+| 3  | US07          | Añadir etiquetas para productos                                      | 5            |
+| 4  | US08          | Generar estadística de productos más vendidos                        | 5            |
+| 5  | US09          | Generar estadística de categoría más vendida                         | 5            |
+| 6  | US11          | Generar estadística de stock promedio                                | 5            |
+| 7  | US15          | Configurar roles y permisos                                          | 5            |
+| 8  | US17          | Registrar lote de productos                                          | 5            |
+| 9  | US20          | Añadir etiquetas a productos                                         | 5            |
+| 10 | US26          | Registrar productos por voz                                          | 5            |
+| 11 | US27          | Registrar geolocalización de productos y entregas                    | 5            |
+| 12 | US28          | Localizar productos con mapa y QR                                    | 5            |
+| 13 | US02          | Editar información de producto                                       | 3            |
+| 14 | US03          | Registrar salida de producto                                         | 3            |
+| 15 | US04          | Ver historial de movimientos                                         | 3            |
+| 16 | US06          | Buscar productos en inventario                                       | 3            |
+| 17 | US10          | Generar ticket promedio                                              | 3            |
+| 18 | US12          | Generar reportes de inventario                                       | 3            |
+| 19 | US13          | Controlar productos caducados                                        | 3            |
+| 20 | US14          | Registrar devolución de productos                                    | 3            |
+| 21 | US16          | Gestionar proveedores                                                | 3            |
+| 22 | US18          | Visualizar historial de stock                                        | 3            |
+| 23 | US19          | Configurar alertas de stock mínimo                                   | 3            |
+| 24 | US21          | Buscar productos en inventario                                       | 3            |
+| 25 | US22          | Generar alertas por productos caducados                              | 3            |
+| 26 | US23          | Registrar ingreso de productos                                       | 3            |
+| 27 | US25          | Comparar ventas entre periodos                                       | 3            |
+| 28 | US29          | Gestionar predicción de reabastecimiento                             | 3            |
+| 29 | TS03          | Generar API Creación de productos                                    | 3            |
+| 30 | TS06          | Generar API Productos por etiqueta                                   | 3            |
+| 31 | SPK01         | Implementar entrada por voz, comandos estructurados e interpretación | 3            |
+| 32 | SPK03         | Geolocalizar y modelar la ubicación                                  | 3            |
+| 33 | SPK04         | Configurar predicción de reabastecimiento                            | 3            |
+| 34 | TS07          | Generar API Registro de inventario                                   | 3            |
+| 35 | US30          | Escanear por lotes con cámara rápida                                 | 3            |
+| 36 | US32          | Optimizar tiempos de respuesta                                       | 3            |
+| 37 | US35          | Alertas en tiempo real                                               | 3            |
+| 38 | TS14          | Generar API Consulta de alertas                                      | 3            |
+| 39 | US24          | Visualizar resumen de stock por categoría                            | 2            |
+
 ## 3.2. User Stories
+
+
 
 ## 3.3. Product Backlog
 
+
+
 ## 3.4. Impact Mapping
+
+
 
 # Capitulo IV: Product Design
 
