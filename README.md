@@ -565,6 +565,10 @@ https://trello.com/invite/b/69fcb34c3773ca9fb5de2d61/ATTI1644207d65abc14d2809155
 
 _Imagen (N°8). Elaboración propia. Realizado en UXPRESSIA_
 
+ <img src="assets/Chapter-3/stockwise%20-%20impact%20map-emprendedor.png" alt="Objetivo2" width="800px"> 
+
+_Imagen (N°9). Elaboración propia. Realizado en UXPRESSIA_
+
 # Capitulo IV: Product Design
 
 ## 4.1. Style Guidelines
