@@ -559,7 +559,11 @@ https://trello.com/invite/b/69fcb34c3773ca9fb5de2d61/ATTI1644207d65abc14d2809155
 
 ## 3.4. Impact Mapping
 
+**Segmento Objetivo 1: Bodegas especializadas por rubro** 
 
+ <img src="assets/Chapter-3/stockwise%20-%20impact%20map-bodeguero.png" alt="Objetivo1" width="800px"> 
+
+_Imagen (N°8). Elaboración propia. Realizado en UXPRESSIA_
 
 # Capitulo IV: Product Design
 
