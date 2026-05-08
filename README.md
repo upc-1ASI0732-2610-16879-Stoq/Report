@@ -558,18 +558,18 @@ Para un despliegue correcto, el repositorio debe mantener la siguiente estructur
 A continuación, se detallan los Sprint Backlogs trabajados a lo largo del desarrollo de la plataforma Stoq. La planificación abarca desde la configuración inicial y desarrollo del núcleo móvil, hasta la integración de funcionalidades avanzadas como geolocalización y escaneo por código de barras.
 
 ### Sprint 1: Núcleo Móvil, APIs Base y Landing Page
+
 El objetivo de este primer sprint fue establecer la infraestructura base, desarrollar los servicios de autenticación y construir los módulos principales de gestión de inventario para la aplicación móvil.
 
 | Story Id | Story Title | Task Id | Task Title | Description | Est. (Hrs) | Assigned To | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| US05 | Autenticación de Usuario | TSK-04 | Interfaz de Login/Registro | Creación de la UI móvil para autenticación integrada con las APIs de IAM. | 6 | Ronald Peralta | Done |
-| TS02 | APIs IAM | TSK-11 | Endpoint de Login | Desarrollo de los endpoints para emisión de JWT y validación de credenciales. | 4 | Ronald Peralta | Done |
+| TS02 | APIs IAM | TSK-11 | Endpoint de Login | Desarrollo de los endpoints para emisión de JWT y validación de credenciales. | 4 | Luciana Choquehuanca | Done |
 | US01 | Registro de Producto | TSK-01 | Formulario de Productos | Interfaz móvil para crear productos con validación de campos obligatorios. | 6 | Fabiola Saldaña | Done |
-| TS03 | APIs Product | TSK-12 | Endpoint de Creación | Construcción del endpoint para almacenar nuevos productos y validar unicidad. | 5 | Luciana Choquehuanca | Done |
-| US06 | Búsqueda en Inventario | TSK-05 | Filtros Avanzados | Implementación de barra de búsqueda en tiempo real por nombre o código. | 5 | Roy Fernandez | Done |
-| US12 | Reportes Base | TSK-08 | Vista de Estadísticas | Visualización de reportes por fecha/categoría y exportación a PDF. | 6 | Fabiola Saldaña | Done |
-| US17 | Registro por Lotes | TSK-09 | Ingreso Masivo | Interfaz para registro de lotes de productos con proveedor y fecha de vencimiento. | 5 | Sanchez Camila | Done |
-| US05 | Autenticación | TSK-W02 | Web Auth Integration | Implementación del login en la web y manejo de persistencia del token (LocalStorage/Cookies). | 4 | Sanchez Camila | Done |
+| TS03 | APIs Product | TSK-12 | Endpoint de Creación | Construcción del endpoint para almacenar nuevos productos y validar unicidad. | 5 | Roy Fernandez | Done |
+| US06 | Búsqueda en Inventario | TSK-05 | Filtros Avanzados | Implementación de barra de búsqueda en tiempo real por nombre o código. | 5 | Sanchez Camila | Done |
+| US12 | Reportes Base | TSK-08 | Vista de Estadísticas | Visualización de reportes por fecha/categoría y exportación a PDF. | 6 | Ronald Peralta | Done |
+| US17 | Registro por Lotes | TSK-09 | Ingreso Masivo | Interfaz para registro de lotes de productos con proveedor y fecha de vencimiento. | 5 | Fabiola Saldaña | Done |
+
 
 
 ### Sprint 2: Funcionalidades Avanzadas y Alertas
@@ -579,26 +579,26 @@ Durante este sprint, el equipo se enfocó en optimizar el flujo de inventario, i
 | Story Id | Story Title | Task Id | Task Title | Description | Est. (Hrs) | Assigned To | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | US19 | Alertas de Stock | TSK-27 | Lógica de Notificaciones | Sistema de alertas automáticas en la app cuando el stock cae por debajo del mínimo. | 5 | Ronald Peralta | Done |
-| US22 | Alertas de Caducidad | TSK-28 | Control de Vencimientos | Detección de productos perecibles próximos a vencer con alertas visuales. | 5 | Ronald Peralta | Done |
-| US18 | Historial de Movimientos | TSK-26 | Gráficas de Evolución | Construcción de la vista histórica con filtros de periodo y gráficas de stock. | 5 | Sanchez Camila | Done |
-| US15 | Configuración de Roles | TSK-24 | Gestión de Usuarios | Pantalla móvil para administrar accesos (Admin/Empleado) vinculada al backend. | 5 | Roy Fernandez | Done |
-| US16 | Proveedores | TSK-25 | Directorio de Contactos | Módulo para registrar y enlazar proveedores con los lotes de ingreso. | 5 | Fabiola Saldaña | Done |
-| US14 | Devoluciones | TSK-23 | Flujo de Retornos | Funcionalidad para registrar mermas o devoluciones actualizando el stock central. | 5 | Luciana Choquehuanca | Done |
+| US22 | Alertas de Caducidad | TSK-28 | Control de Vencimientos | Detección de productos perecibles próximos a vencer con alertas visuales. | 5 | Fabiola Saldaña | Done |
+| US18 | Historial de Movimientos | TSK-26 | Gráficas de Evolución | Construcción de la vista histórica con filtros de periodo y gráficas de stock. | 5 | Roy Fernandez | Done |
+| US15 | Configuración de Roles | TSK-24 | Gestión de Usuarios | Pantalla móvil para administrar accesos (Admin/Empleado) vinculada al backend. | 5 | Sanchez Camila | Done |
+| US16 | Proveedores | TSK-25 | Directorio de Contactos | Módulo para registrar y enlazar proveedores con los lotes de ingreso. | 5 | Luciana Choquehuanca | Done |
+| US14 | Devoluciones | TSK-23 | Flujo de Retornos | Funcionalidad para registrar mermas o devoluciones actualizando el stock central. | 5 | Ronald Peralta | Done |
 | SPK01 | Innovación UX | TSK-31 | Entrada por Voz (Spike) | Prototipo de integración Speech-to-Text para comandos básicos de inventario. | 6 | Luciana Choquehuanca | In-Process |
- US01 | Gestión de Productos | TSK-W03 | Web Inventory CRUD | Desarrollo de las tablas de gestión de productos (Crear, Editar, Listar) en la versión Web. | 7 | Luciana Choquehuanca | In-Process |
+| US01 | Gestión de Productos (Web) | TSK-W03 | Web Inventory CRUD | Desarrollo de las tablas de gestión de productos (Crear, Editar, Listar) en la versión Web. | 7 | Fabiola Saldaña | Done |
 
 ### Sprint 3: Integración de Hardware, Geolocalización y Cierre
 
-El último sprint culminó el desarrollo con el acceso al hardware del dispositivo (cámara/GPS), mejoras de seguridad y las pruebas integrales de calidad.
+El último sprint culminó el desarrollo con el acceso al dispositivo (GPS), mejoras de seguridad y las pruebas integrales y unitarias de calidad.
 
 | Story Id | Story Title | Task Id | Task Title | Description | Est. (Hrs) | Assigned To | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | TS07 | Quality Assurance | TSK-38 | Testing Final | Pruebas de integración E2E validando la comunicación completa entre app y API. | 6 | Luciana Choquehuanca | Done |
 | US31 | Escáner de Barras | TSK-33 | Lector de Cámara | Integración de la cámara del dispositivo móvil para escanear y registrar ventas. | 6 | Sanchez Camila | Done |
-| US32 | Ubicación | TSK-34 | Geolocalización de Sedes | Integración de OpenStreetMap para visualizar y gestionar almacenes en un mapa. | 5 | Roy Fernandez | Done |
+| US27 | Ubicación | TSK-34 | Geolocalización de Sedes | Integración de mapas para gestionar ubicaciones de sedes y almacenes. | 5 | Roy Fernandez | Done |
 | US33 | Legal & Compliance | TSK-35 | Términos y Condiciones | Checkbox y vista de aceptación obligatoria de T&C durante el proceso de registro. | 4 | Fabiola Saldaña | Done |
 | US34 | Seguridad IAM | TSK-36 | Restricciones de Acceso | Aplicación estricta de permisos por rol en las pantallas críticas de la app. | 5 | Ronald Peralta | Done |
-| US35 | Optimización UI/UX | TSK-37 | Refinamiento Visual | Mejoras finales en la interfaz, paleta de colores y fluidez de navegación. | 4 | Sanchez Camila | Done |
+| US32 | Optimización UI/UX | TSK-37 | Refinamiento Visual | Mejoras finales en la interfaz, optimización de tiempos y fluidez de navegación. | 4 | Sanchez Camila | Done |
 
 ### 5.2.2. Implemented Landing Page Evidence
 En esta sección se presenta la evidencia visual de la Landing Page oficial de Stoq, la cual sirve como el punto de contacto principal para los clientes potenciales. La página ha sido diseñada bajo un enfoque de conversión, resaltando la propuesta de valor de la plataforma (gestión inteligente y movilidad) e integrando internacionalización (i18n) para soportar múltiples idiomas. Se incluyen capturas de las secciones clave: Hero Section, Beneficios, Planes de Suscripción y Footer.
