@@ -380,6 +380,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ## 3.1. To-Be Scenario Mapping
 
+Para el desarrollo de esta sección, el equipo llevó a cabo un proceso estructurado centrado en proyectar la experiencia ideal de nuestros User Personas al interactuar con StockWise. El proceso inició con una etapa de preparación, donde se revisaron los problemas identificados en los As-Is Scenario Mappings. Posteriormente, se realizó una lluvia de ideas individual para proponer soluciones tecnológicas directas a través de las funcionalidades de la aplicación (como el escaneo rápido o las alertas de stock). 
+
 
 
 ## 3.2. User Stories
