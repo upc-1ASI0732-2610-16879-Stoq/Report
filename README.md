@@ -396,7 +396,13 @@ Sebastián necesita generar un reporte de fin de mes para identificar qué produ
 
  <img src="assets/Chapter-3/Scenario%20Mapping%2002.jpg" alt="ScenarioMapping02" width="800px">
 
+**Cambios identificados frente al As-Is Scenario Mapping (Comparación)** 
 
+Al contrastar estos mapas con la situación actual (As-Is), destacan los siguientes beneficios del escenario To-Be con StockWise: 
+
+- De manual a automatizado: Se elimina el registro en libretas o la digitación celda por celda en hojas de cálculo, pasando al escaneo de códigos y automatización de sumas. 
+- De reactivo a proactivo: Los usuarios ya no descubren que falta stock cuando el cliente lo pide; el sistema les avisa antes mediante alertas de "Stock Crítico".
+- Cambio emocional drástico: La frustración, el miedo a equivocarse en los cálculos y la pérdida de tiempo se transforman en sentimientos de confianza, eficiencia y tranquilidad. 
 
 ## 3.2. User Stories
 
