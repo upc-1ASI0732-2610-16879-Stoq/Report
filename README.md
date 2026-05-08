@@ -384,6 +384,12 @@ Para el desarrollo de esta sección, el equipo llevó a cabo un proceso estructu
 
 Tras esto, el equipo se reunió para una revisión e identificación de fases, agrupando las ideas y estableciendo las columnas cronológicas que representan el nuevo flujo de trabajo. Una vez que procedimos a nombrar las fases, comparamos el mapa resultante con el As-Is, identificando que el To-Be Scenario Mapping ofrece cambios significativos: reduce la carga cognitiva, automatiza el registro de datos y transforma sentimientos de frustración y estrés en tranquilidad y control. A continuación, se presentan los escenarios elaborados para cada User Persona. 
 
+**1. To-Be Scenario Mapping: Carla Dueña de Bodega / Microempresa)** 
+
+Carla acaba de recibir un nuevo pedido de proveedores en su tienda y necesita registrar el ingreso de los productos al inventario rápidamente mientras atiende su negocio. 
+
+ <img src="assets/Chapter-3/Scenario%20Mapping.jpg" alt="ScenarioMapping01" width="800px"> 
+
 
 
 ## 3.2. User Stories
