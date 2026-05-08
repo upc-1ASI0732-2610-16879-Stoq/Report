@@ -390,6 +390,12 @@ Carla acaba de recibir un nuevo pedido de proveedores en su tienda y necesita re
 
  <img src="assets/Chapter-3/Scenario%20Mapping.jpg" alt="ScenarioMapping01" width="800px"> 
 
+**2. To-Be Scenario Mapping: Sebastián (Administrador de Inventario / Startup)**
+
+Sebastián necesita generar un reporte de fin de mes para identificar qué productos tienen baja rotación y cuáles necesitan reabastecimiento urgente antes de la próxima. 
+
+ <img src="assets/Chapter-3/Scenario%20Mapping%2002.jpg" alt="ScenarioMapping02" width="800px">
+
 
 
 ## 3.2. User Stories
