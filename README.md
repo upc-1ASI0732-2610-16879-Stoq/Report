@@ -600,7 +600,7 @@ La finalidad de realizar entrevistas es obtener un alcance más completo sobre l
     <td>San Borja</td>
   </tr>
   <tr>
-    <th>Captura de la entrevista: <img src="img/Segmento 1 - Marcelo Binda.png" alt="Captura de la entrevista" width="200"></th>
+    <th>Captura de la entrevista: <img src="img/Segmento 1 - Marcelo Binda.png.png" alt="Captura de la entrevista" width="200"></th>
     <td colspan="3">
       En la entrevista, Marcelo Binda comenta que gestiona el inventario de su bodega de forma manual, usando un cuaderno y, en algunos casos, Excel. Señala que su principal dificultad es mantener el stock actualizado, controlar los productos próximos a vencer y saber qué mercadería debe reponer. También menciona que ha tenido pérdidas por productos vencidos o por pensar que tenía stock cuando ya se había agotado. Actualmente realiza conteos manuales y organiza los productos por fecha de vencimiento. Considera importante contar con una plataforma digital que le permita registrar entradas y salidas, recibir alertas de bajo stock o vencimiento y acceder a reportes sobre ventas, ganancias y movimientos del negocio.
     </td>
