@@ -595,6 +595,21 @@ Asimismo, se comprueba que el sistema impida operaciones inconsistentes, como as
 
 ### 6.1.3. Core Behavior-Driven Development
 
+En esta sección se presentan las pruebas Behavior-Driven Development desarrolladas para validar el comportamiento esperado de las funcionalidades principales de StockWise desde la perspectiva del usuario. El desarrollo de estas pruebas se basó en las User Stories priorizadas del Product Backlog, específicamente US01 - Registrar producto nuevo y US05 - Generar alertas por bajo stock, ambas pertenecientes al epic EP01 - Funciones básicas de inventario. Estas historias fueron seleccionadas porque representan funciones centrales del sistema de inventario.
+
+#### Evidence 1: Product Registration Feature File
+
+<img src="assets/Chapter-6/prueba-3.png" alt="Product Registration Feature File" width="800px">
+
+#### Evidence 2: Low Stock Alert Feature File
+
+<img src="assets/Chapter-6/prueba-2.png" alt="Low Stock Alert Feature File" width="800px">
+
+#### Evidence 3: BDD Test Execution Results
+
+<img src="assets/Chapter-6/prueba-1.png" alt="BDD Test Execution Results" width="800px">
+
+
 ### 6.1.4. Core System Tests
 
 ## 6.2. Static testing & Verification
