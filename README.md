@@ -605,14 +605,14 @@ En esta sección se presenta la evidencia visual de la Landing Page oficial de S
 
 ![Landing Page](./assets/Chapter-5/landing_1.png)
 
-Link: [https://landing_page.com](https://upc-pre-202510-1asi0730-4366-aynitech.github.io/Landing-Page/)
+Link: [https://landing_page.com](https://stockwiselanding.netlify.app/)
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 Se detallan a continuación las interfaces que componen el Dashboard Web de Administración. Este componente está orientado al dueño de negocio o administrador, permitiendo una gestión centralizada y profunda del inventario que complementa la operación móvil. Las capturas muestran el panel de control con métricas en tiempo real, la tabla de gestión de productos con opciones avanzadas de filtrado y el módulo de administración de usuarios para la asignación de roles.
 
 ![Front_app](./assets/Chapter-5/front_app.png)
 
-Link: [https://front_app.com](https://aynitech.netlify.app)
+Link: [https://front_app.com](https://stocktrack-frontend.vercel.app/auth/register)
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
 El presente Acuerdo de Servicio regula los términos y condiciones bajo los cuales los usuarios acceden y utilizan la plataforma Stoq, una solución SaaS (Software as a Service) desarrollada para optimizar la gestión de inventarios y control de stock en pequeñas y medianas empresas (pymes), startups y bodegas especializadas en el Perú.
