@@ -565,6 +565,30 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 ## 7.3. Continuous deployment
 
 ### 7.3.1. Tools and Practices
+El proceso de Continuous Deployment (CD) automático hacia producción únicamente deberá habilitarse cuando la suite de pruebas y los *smoke scenarios* presenten un nivel adecuado de robustez, confiabilidad y cobertura.
+
+#### Recomendaciones
+
+- No habilitar despliegues automáticos hacia producción sin mecanismos de control adicionales, tales como:
+  - aprobación humana (*approval gate*),
+  - estrategias de *feature flags*,
+  - validaciones previas obligatorias.
+
+- En caso de habilitar CD automático:
+  - la rama `main` deberá ejecutar un workflow automatizado responsable de:
+    1. construir la aplicación,
+    2. ejecutar pruebas Unit, Integration y Specs,
+    3. generar y publicar artefactos,
+    4. y realizar el despliegue automático hacia la plataforma objetivo (por ejemplo, Railway o Azure).
+
+- El pipeline de despliegue deberá incluir mecanismos de rollback automático:
+  - ante la detección de fallos en los *smoke tests* posteriores al despliegue,
+  - el sistema deberá revertir automáticamente a la última versión estable disponible.
+
+#### Consideraciones adicionales
+
+- Todo despliegue a producción deberá generar trazabilidad mediante logs, métricas y registros de auditoría.
+- Se recomienda integrar monitoreo continuo y alertas automáticas para detectar degradaciones funcionales o de rendimiento posteriores al despliegue.
 
 ### 7.3.2. Production Deployment Pipeline Components
 
