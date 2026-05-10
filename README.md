@@ -612,43 +612,10 @@ En esta sección se presentan las pruebas Behavior-Driven Development desarrolla
 
 ### 6.1.4. Core System Tests
 
-## 6.2. Static testing & Verification
+<img src="assets/Chapter-6/core-system-test1.png" alt="Core system test 1" width="800px">
 
-### 6.2.1. Static Code Analysis
+<img src="assets/Chapter-6/core-system-test-evidencia.png" alt="Core system test 1 evidence" width="800px">
 
-#### 6.2.1.1. Coding standard & Code conventions
-
-#### 6.2.1.2. Code Quality & Code Security
-
-### 6.2.2. Reviews
-
-## 6.3. Validation Interviews
-
-### 6.3.1. Diseno de Entrevistas
-
-### 6.3.2. Registro de Entrevistas
-
-### 6.3.3. Evaluaciones segun heuristicas
-
-## 6.4. Auditoria de Experiencias de Usuario
-
-### 6.4.1. Auditoria realizada
-
-#### 6.4.1.1. Informacion del grupo auditado
-
-#### 6.4.1.2. Cronograma de auditoria realizada
-
-#### 6.4.1.3. Contenido de auditoria realizada
-
-### 6.4.2. Auditoria recibida
-
-#### 6.4.2.1. Informacion del grupo auditor
-
-#### 6.4.2.2. Cronograma de auditoria recibida
-
-#### 6.4.2.3. Contenido de auditoria recibida
-
-#### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
 
 # Capitulo VII: DevOps Practices
 
