@@ -591,31 +591,31 @@ La finalidad de realizar entrevistas es obtener un alcance más completo sobre l
     <th>Entrevista</th>
     <td>1</td>
     <th>Nombre</th>
-    <td>Milagros Almerco</td>
+    <td>Marcelo Binda</td>
   </tr>
   <tr>
     <th>Edad</th>
-    <td>28</td>
+    <td>26</td>
     <th>Distrito</th>
-    <td>San Martín de Porres</td>
+    <td>San Borja</td>
   </tr>
   <tr>
-    <th>Captura de la entrevista: <img src="img/Segmento 1 - Milagros Almerco.png" alt="Captura de la entrevista" width="200"></th>
+    <th>Captura de la entrevista: <img src="img/Segmento 1 - Marcelo Binda.png" alt="Captura de la entrevista" width="200"></th>
     <td colspan="3">
-      Milagros Almerco evaluó la plataforma StockWise y destacó su facilidad de uso al registrar productos y gestionar inventario. Aunque al inicio tuvo dudas sobre la diferencia entre “stock” y “lote”, logró comprenderlo rápidamente gracias a la interfaz intuitiva. Resaltó como funcionalidades más valiosas el control de productos próximos a vencer y la visualización por lotes, que considera claves para evitar pérdidas. Valoró también el diseño moderno y claro, sin presentar dificultades técnicas. Sugirió como mejora incluir un sistema para registrar pagos pendientes o créditos. En general, calificó la plataforma como práctica, útil y recomendada para otros dueños de bodegas.
+      En la entrevista, Marcelo Binda comenta que gestiona el inventario de su bodega de forma manual, usando un cuaderno y, en algunos casos, Excel. Señala que su principal dificultad es mantener el stock actualizado, controlar los productos próximos a vencer y saber qué mercadería debe reponer. También menciona que ha tenido pérdidas por productos vencidos o por pensar que tenía stock cuando ya se había agotado. Actualmente realiza conteos manuales y organiza los productos por fecha de vencimiento. Considera importante contar con una plataforma digital que le permita registrar entradas y salidas, recibir alertas de bajo stock o vencimiento y acceder a reportes sobre ventas, ganancias y movimientos del negocio.
     </td>
   </tr>
   <tr>
     <th>URL de la grabación</th>
     <td colspan="3">
-      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221g068_upc_edu_pe/EfICOj-xe6REtnBdqmvY7QsB40AX08yJQHh4VQP5k9XQUA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=SCUtfJ">
+      <a href="https://youtu.be/BDUiVJaxxLY">
         Ver grabación
       </a>
     </td>
   </tr>
   <tr>
     <th>Timing</th>
-    <td colspan="3">00:00 - 5:48</td>
+    <td colspan="3">00:00 - 5:11</td>
   </tr>
 </table>
 
