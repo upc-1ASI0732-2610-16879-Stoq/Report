@@ -652,9 +652,12 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 8.6.1. About-the-Product Intro Video
 
-# Conclusiones
-
 # Conclusiones y recomendaciones
+En conclusión, el desarrollo de StockWise permitió aplicar distintas buenas prácticas de ingeniería de software que mejoraron la calidad y confiabilidad del sistema. El uso de pruebas unitarias permitió validar el correcto funcionamiento de componentes individuales, mientras que las pruebas de integración aseguraron una comunicación adecuada entre módulos como inventario, autenticación y gestión de productos, ayudando a detectar errores antes del despliegue.
+
+Asimismo, la implementación de integración continua, APIs RESTful y una arquitectura organizada basada en DDD facilitó el trabajo colaborativo, el mantenimiento del código y la escalabilidad de la aplicación. Además, el uso de wireframes, mockups y prototipos permitió integrar adecuadamente el diseño UX/UI con el desarrollo, logrando una experiencia más intuitiva para los usuarios.
+
+En general, estas prácticas aportaron beneficios importantes como mayor estabilidad, reducción de errores, validación temprana de fallos, despliegues más seguros y un proceso de desarrollo más eficiente y profesional.
 
 # Video App Validation
 
