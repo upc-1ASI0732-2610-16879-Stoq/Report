@@ -505,6 +505,93 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 ### 6.1.1. Core Entities Unit Tests
 
 ### 6.1.2. Core Integration Tests
+En esta sección se presentan las pruebas de integración desarrolladas para validar la correcta comunicación e interacción entre los componentes principales de StockWise, garantizando el funcionamiento coordinado y consistente de los distintos módulos que conforman el sistema.
+
+### Información General Test-1
+
+| Elemento | Descripción |
+|---|---|
+| Clase de Test | `ProductControllerIntegrationTest` |
+| Módulo(s) | inventory, shared, iam - US12, US13 |
+| Descripción General | Validar la integración completa del módulo de productos dentro del sistema StockTrack, comprobando que las operaciones relacionadas con la gestión de productos funcionen correctamente desde la capa HTTP hasta la persistencia en base de datos. |
+
+
+### Escenario 1 
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 1](./assets/Chapter-6/test1_sc1.png)  | Este escenario valida que el sistema pueda registrar correctamente un nuevo producto cuando se envían datos válidos, verificando el flujo completo desde la solicitud HTTP hasta la persistencia en base de datos. Se comprueba la integración entre controller, servicios de aplicación, aggregate Product, repositorios JPA y la base de datos H2. Esta validación es importante porque asegura que la funcionalidad principal de creación de productos opere correctamente y que la información registrada mantenga consistencia dentro del inventario. |
+
+### Escenario 2
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 2](./assets/Chapter-6/test1_sc2.png) | Este escenario valida que el sistema rechace productos con un precio unitario inválido, específicamente valores negativos, comprobando que las reglas de negocio definidas en el dominio sean respetadas antes de persistir información. La prueba garantiza que las validaciones del aggregate y el manejo de excepciones funcionen correctamente a través de toda la integración del sistema. Esto es importante para proteger la integridad de los datos financieros y evitar inconsistencias en cálculos de ventas, reportes y valorización de inventario. |
+
+### Escenario 3 
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 3](./assets/Chapter-6/test1_sc3.png) | Este escenario verifica que el sistema no permita registrar productos sin nombre o con nombres vacíos, validando las restricciones obligatorias del dominio y el correcto manejo de respuestas HTTP ante entradas inválidas. La prueba asegura que los datos esenciales del catálogo sean obligatorios y que el sistema prevenga registros incompletos que puedan afectar búsquedas, clasificación de productos y operaciones posteriores dentro del inventario.|
+
+### Escenario 4 
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 4](./assets/Chapter-6/test1_sc4.png) | Este escenario valida que el sistema pueda actualizar correctamente la información de un producto existente, verificando la integración entre el endpoint REST, los servicios de actualización, el aggregate Product, el repositorio JPA y la persistencia en base de datos. Se comprueba que los cambios enviados sean reflejados correctamente y que las validaciones del dominio continúen aplicándose durante la edición. Esta validación es importante porque garantiza que la información del catálogo pueda mantenerse actualizada y consistente a lo largo del tiempo. |
+
+#### Resumen:
+La prueba verifica la comunicación e integración entre:
+
+- endpoints REST
+- controllers
+- command/query services
+- aggregates del dominio
+- repositorios JPA
+- base de datos H2 en memoria
+- validaciones de negocio
+
+Además, se valida que el sistema responda adecuadamente ante datos válidos e inválidos, garantizando la integridad de la información del inventario.
+
+---
+### Información General Test-2
+
+| Elemento | Descripción |
+|---|---|
+| Clase de Test | `ProviderProductIntegrationTest` |
+| Módulo(s) | inventory, shared - US24, US26 |
+| Descripción General | Validar la integración entre los módulos de proveedores y productos, asegurando que las relaciones funcionales entre ambos aggregates se comporten correctamente dentro del sistema. |
+
+
+### Escenario 1 
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 1](./assets/Chapter-6/test2_sc1.png) | Este escenario valida que el sistema pueda registrar correctamente un nuevo proveedor utilizando datos válidos, comprobando el flujo completo desde la solicitud HTTP hasta la persistencia en base de datos. La prueba verifica la integración entre controller, servicios de aplicación, aggregate Provider, value objects, repositorios JPA y la base de datos H2. Esta validación es importante porque garantiza que los proveedores puedan ser gestionados correctamente y que la información crítica de abastecimiento quede almacenada de manera consistente y segura. |
+
+### Escenario 2
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 2](./assets/Chapter-6/test2_sc2.png) | Este escenario valida que el sistema rechace proveedores con correos electrónicos inválidos, comprobando que las reglas de validación implementadas en los value objects del dominio funcionen correctamente durante todo el flujo de integración. La prueba asegura que las excepciones generadas por datos inconsistentes sean manejadas adecuadamente y que la información inválida no llegue a persistirse en la base de datos. Esta validación es importante porque protege la calidad de los datos y evita problemas posteriores relacionados con notificaciones, contacto con proveedores y trazabilidad del sistema. |
+
+### Escenario 3
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 3](./assets/Chapter-6/test2_sc3.png) | Este escenario valida la integración funcional entre los módulos de productos y proveedores, verificando que un producto solo pueda registrarse cuando se encuentra asociado a un proveedor existente dentro del sistema. La prueba comprueba la interacción entre múltiples aggregates, servicios de aplicación, repositorios y validaciones de negocio relacionadas con integridad referencial. Esta validación es importante porque asegura consistencia entre entidades del inventario y evita relaciones inválidas que puedan afectar procesos de compras, abastecimiento y trazabilidad de productos. |
+
+#### Resumen:
+La prueba verifica el flujo completo de creación y asociación de proveedores y productos, incluyendo:
+
+- validaciones de dominio
+- reglas de integridad entre entidades
+- persistencia de datos
+- manejo de excepciones
+- interacción entre múltiples repositorios y servicios
+
+Asimismo, se comprueba que el sistema impida operaciones inconsistentes, como asociar productos a proveedores inexistentes o registrar información inválida.
+
+---
 
 ### 6.1.3. Core Behavior-Driven Development
 
