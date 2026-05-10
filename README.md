@@ -360,12 +360,12 @@ El Plan B – Localización y predicción inteligente combina dos capacidades cl
   </tr>
   <tr>
     <th>
-      <img src="assets/Chapter-1/.jpg" alt="Foto de perfil de Jeremy" width="800px">
+      <img src="assets/Chapter-1/luciana.jpg" alt="Foto de perfil de Luciana" width="800px">
     </th>
     <td valign="top">
       <p><b>Luciana Carolina Choquehuanca Nuñez</b></p>
       <p>
-        ..
+       Soy estudiante de la carrera de Ingeniería de Software, actualmente cursando el séptimo ciclo, y tengo 20 años. Me considero una persona proactiva, con gran interés en participar en proyectos que impliquen adquirir nuevos conocimientos y seguir aprendiendo constantemente. Me gusta mantener el orden en mi trabajo, por lo que siempre busco entregar resultados que cumplan con los estándares requeridos. Además, disfruto aprender tanto de mis profesores como de mis compañeros, ya que considero que el aprendizaje colaborativo es clave para mi desarrollo profesional.
       </p>
     </td>
   </tr>
