@@ -127,8 +127,6 @@
     - [User Goal: “Crear un nuevo rol para el personal”](#user-goal-crear-un-nuevo-rol-para-el-personal)
     - [4.6.3. Web Applications Mock-ups](#463-web-applications-mock-ups)
     - [4.6.4. Web Applications User Flow Diagrams](#464-web-applications-user-flow-diagrams)
-    - [User Goal: “Registrar salida de productos (venta/consumo/merma)”](#user-goal-registrar-salida-de-productos-ventaconsumomerma)
-    - [User Goal: “Gestionar inventario (ingresar reposición y crear producto)”](#user-goal-gestionar-inventario-ingresar-reposición-y-crear-producto)
   - [4.7. Web Applications Prototyping](#47-web-applications-prototyping)
   - [4.8. Domain-Driven Software Architecture](#48-domain-driven-software-architecture)
     - [4.8.1. Software Architecture Context Diagram](#481-software-architecture-context-diagram)
@@ -137,12 +135,6 @@
   - [4.9. Software Object-Oriented Design](#49-software-object-oriented-design)
     - [4.9.1. Class Diagrams](#491-class-diagrams)
     - [4.9.2. Class Dictionary](#492-class-dictionary)
-    - [IAM Context](#iam-context)
-    - [Product Management Context](#product-management-context)
-    - [Inventory Context](#inventory-context)
-    - [Sales Context](#sales-context)
-    - [Alert Stock Context](#alert-stock-context)
-    - [Reports Context](#reports-context)
   - [4.10. Database Design](#410-database-design)
     - [4.10.1. Relational/Non-Relational Database Diagram](#4101-relationalnon-relational-database-diagram)
 - [Capitulo V: Product Implementation](#capitulo-v-product-implementation)
@@ -166,7 +158,21 @@
   - [6.1. Testing Suites \& Validation](#61-testing-suites--validation)
     - [6.1.1. Core Entities Unit Tests](#611-core-entities-unit-tests)
     - [6.1.2. Core Integration Tests](#612-core-integration-tests)
+    - [Información General Test-1](#información-general-test-1)
+    - [Escenario 1](#escenario-1)
+    - [Escenario 2](#escenario-2)
+    - [Escenario 3](#escenario-3)
+    - [Escenario 4](#escenario-4)
+      - [Resumen:](#resumen)
+    - [Información General Test-2](#información-general-test-2)
+    - [Escenario 1](#escenario-1-1)
+    - [Escenario 2](#escenario-2-1)
+    - [Escenario 3](#escenario-3-1)
+      - [Resumen:](#resumen-1)
     - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
+      - [Evidence 1: Product Registration Feature File](#evidence-1-product-registration-feature-file)
+      - [Evidence 2: Low Stock Alert Feature File](#evidence-2-low-stock-alert-feature-file)
+      - [Evidence 3: BDD Test Execution Results](#evidence-3-bdd-test-execution-results)
     - [6.1.4. Core System Tests](#614-core-system-tests)
 - [Capitulo VII: DevOps Practices](#capitulo-vii-devops-practices)
   - [7.1. Continuous Integration](#71-continuous-integration)
@@ -178,6 +184,48 @@
   - [7.3. Continuous deployment](#73-continuous-deployment)
     - [7.3.1. Tools and Practices](#731-tools-and-practices)
     - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
+  - [7.4. Continuous Monitoring](#74-continuous-monitoring)
+    - [7.4.1. Tools and Practices](#741-tools-and-practices)
+    - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
+    - [7.4.3. Alerting Pipeline Components](#743-alerting-pipeline-components)
+    - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
+- [Part III: Experiment-Driven Lifecycle](#part-iii-experiment-driven-lifecycle)
+- [Capitulo VIII: Experiment-Driven Development](#capitulo-viii-experiment-driven-development)
+  - [8.1. Experiment Planning](#81-experiment-planning)
+    - [8.1.1. As-Is Summary](#811-as-is-summary)
+    - [8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims](#812-raw-material-assumptions-knowledge-gaps-ideas-claims)
+    - [8.1.3. Experiment-Ready Questions](#813-experiment-ready-questions)
+    - [8.1.4. Question Backlog](#814-question-backlog)
+    - [8.1.5. Experiment Cards](#815-experiment-cards)
+  - [8.2. Experiment Design](#82-experiment-design)
+    - [8.2.1. Hypotheses](#821-hypotheses)
+    - [8.2.2. Domain Business Metrics](#822-domain-business-metrics)
+    - [8.2.3. Measures](#823-measures)
+    - [8.2.4. Conditions](#824-conditions)
+    - [8.2.5. Scale Calculations and Decisions](#825-scale-calculations-and-decisions)
+    - [8.2.6. Methods Selection](#826-methods-selection)
+    - [8.2.7. Data Analytics: Goals, KPIs and Metrics Selection](#827-data-analytics-goals-kpis-and-metrics-selection)
+    - [8.2.8. Web and Mobile Tracking Plan](#828-web-and-mobile-tracking-plan)
+  - [8.3. Experimentation](#83-experimentation)
+    - [8.3.1. To-Be User Stories](#831-to-be-user-stories)
+    - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)
+    - [8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle](#833-pipeline-supported-experiment-driven-to-be-software-platform-lifecycle)
+      - [8.3.3.1. To-Be Sprint Backlogs](#8331-to-be-sprint-backlogs)
+      - [8.3.3.2. Implemented To-Be Landing Page Evidence](#8332-implemented-to-be-landing-page-evidence)
+    - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence-1)
+      - [8.3.3.4. Implemented To-Be Native-Mobile Application Evidence](#8334-implemented-to-be-native-mobile-application-evidence)
+      - [8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence](#8335-implemented-to-be-restful-api-andor-serverless-backend-evidence)
+      - [8.3.3.6. Team Collaboration Insights](#8336-team-collaboration-insights)
+    - [8.3.4. To-Be Validation Interviews](#834-to-be-validation-interviews)
+      - [8.3.4.1. Diseno de Entrevistas](#8341-diseno-de-entrevistas)
+      - [8.3.4.2. Registro de Entrevistas](#8342-registro-de-entrevistas)
+  - [8.4. Experiment Aftermath \& Analysis](#84-experiment-aftermath--analysis)
+    - [8.4.1. Analysis and Interpretation of Results](#841-analysis-and-interpretation-of-results)
+    - [8.4.2. Re-scored and Re-prioritized Question Backlog](#842-re-scored-and-re-prioritized-question-backlog)
+  - [8.5. Continuous Learning](#85-continuous-learning)
+    - [8.5.1. Shareback Session Artifacts: Learning Workflow](#851-shareback-session-artifacts-learning-workflow)
+  - [8.6. To-Be Software Platform Pre-launch](#86-to-be-software-platform-pre-launch)
+    - [8.6.1. About-the-Product Intro Video](#861-about-the-product-intro-video)
 - [Conclusiones](#conclusiones)
 - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Bibliografia](#bibliografia)
@@ -1306,211 +1354,27 @@ User persona: Empresa — Administrador
 
 ### 4.6.3. Web Applications Mock-ups
 
- <img src="assets/Chapter-4/mockups-web/login-2.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/login-1.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Inventario-1.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Inventario - Información Producto.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Inventario - Nuevo Producto.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Inventario - Reposición.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Inventario - Reposición (1).jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Proveedores-2.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Proveedores-3.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Administración del personal-1.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Administración del personal - Creación Personal.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Administración del personal - Creación roles.jpg" alt="Web Mockups" width="800px">
- <img src="assets/Chapter-4/mockups-web/Salida producto-1.jpg" alt="Web Mockups" width="800px">
-
-
-<br>
-
 ### 4.6.4. Web Applications User Flow Diagrams
 
- <img src="assets/Chapter-4/mockups-web/flowdiagram1.png" alt="Web Flow Diagram" width="800px">
-
-### User Goal: “Registrar salida de productos (venta/consumo/merma)”
-
-User persona: Tienda/Almacén — Operador(a)
-**Happy path**
-
-1. Desde Inicio, abre Salida de productos (barra lateral).
-2. En Salida de productos:
-
-   * Busca/filtra por nombre o código (ej. “Bolsa Papitas”).
-   * Selecciona uno o varios productos (ve Precio unitario y Stock actual).
-   * (Opcional) agrega un Kit desde Kits (p. ej., “Combo Película”).
-3. En el panel Borrador salida de productos (derecha):
-
-   * Ajusta la Cantidad por ítem.
-   * Se calcula Precio por línea y Total automáticamente.
-   * (Opcional) elimina líneas.
-4. Guardar:
-
-   * Se valida stock, se registra el movimiento y se descuenta inventario (los kits se desglosan en componentes).
-
-
-**Unhappy paths**
-
-* Cancelar → se descarta el borrador; no se registra ningún movimiento.
-* Cantidad > stock → alerta y bloqueo hasta corregir.
-
-<br>
-
- <img src="assets/Chapter-4/mockups-web/flowdiagram2.png" alt="Web Flow Diagram" width="800px">
- <img src="assets/Chapter-4/mockups-web/flowdiagram3.png" alt="Web Flow Diagram" width="500px">
- <img src="assets/Chapter-4/mockups-web/flowdiagram4.png" alt="Web Flow Diagram" width="500px">
-
-
-### User Goal: “Gestionar inventario (ingresar reposición y crear producto)”
-
-User persona: Tienda/Almacén — Operador(a)
-
-A) Ingresar reposición
-
-**Happy path**
-
-1. Desde Inicio, abre Inventario (barra lateral).
-2. Revisa Productos y Kits; pulsa Ingresar reposición.
-3. En el modal, completa Lote, Fecha de recepción y Fecha de vencimiento.
-4. Define Cantidad ingresando por producto; se calcula el Total.
-5. Guardar → se registra la reposición, aumenta el stock y se actualizan alertas/métricas.
-
-**Unhappy paths**
-
-* Cancelar → se descarta el formulario, no se registra nada.
-* Fechas inválidas (vencimiento < recepción) → error y bloqueo.
-* Cantidades inválidas (0, negativas o vacías) → validación en línea.
-* Falla de red/sesión → error y preservación del formulario para reintentar.
-
-B) Crear nuevo producto
-
-**Happy path**
-
-1. En Inventario, pulsa + Producto.
-2. Completa Nombre, Categoría, Proveedor, Stock mínimo y Precio unitario.
-3. Guardar → se crea el producto, aparece en la lista y queda disponible para reposiciones/kits.
-
-**Unhappy paths**
-
-* Cancelar → no se crea el producto.
-* Campos obligatorios vacíos** o nombre duplicado → mensaje y bloqueo.
-* Valores inválidos (precio ≤ 0, stock mínimo < 0) → validación en línea.
-* Falla de red/sesión → error y preservación del formulario.
-
-
 ## 4.7. Web Applications Prototyping
-
-El prototipo web ha sido concebido aplicando principios de arquitectura de información, diseño centrado en el usuario y las heurísticas de usabilidad, con el propósito de brindar una experiencia intuitiva, eficiente y accesible. La navegación se organiza de manera jerárquica y lógica, lo que facilita a los usuarios localizar rápidamente las funciones principales, como el registro de movimientos de inventario, la visualización de reportes y configuración de personal. La interfaz mantiene una disposición visual uniforme, apoyada en una paleta de colores equilibrada y tipografía clara, reforzando la identidad de la plataforma. Los elementos interactivos se han colocado estratégicamente para optimizar la interacción y minimizar la carga cognitiva del usuario. Cada componente del prototipo asegura coherencia visual, visibilidad del estado del sistema y retroalimentación inmediata ante cada acción. Asimismo, se adoptan buenas prácticas y estándares de diseño web contemporáneos para garantizar una experiencia fluida y adaptable en distintos dispositivos.
-
-<https://www.figma.com/proto/jKNuDhwMS5qe3o6zF4ugo8/OPEN-SOURCE?node-id=150-3805&p=f&t=C8AMNn5sgvqnuoFs-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=150%3A5901>
 
 ## 4.8. Domain-Driven Software Architecture
 
 ### 4.8.1. Software Architecture Context Diagram
- <img src="assets/Chapter-4/c4/SystemContext-001.png" alt="Sytem Context" width="800px">
 
 ### 4.8.2. Software Architecture Container Diagrams
- <img src="assets/Chapter-4/c4/Container-001.png" alt="Sytem Container" width="800px">
 
 ### 4.8.3. Software Architecture Components Diagrams
-
-- IAM Context
- <img src="assets/Chapter-4/c4/Component-001.png" alt="Sytem Container" width="300px">
-
- - Product Context
- <img src="assets/Chapter-4/c4/Component-002.png" alt="Sytem Container" width="400px">
-
- - Inventory Context
- <img src="assets/Chapter-4/c4/Component-003.png" alt="Sytem Container" width="400px">
-
- - Sales Context
- <img src="assets/Chapter-4/c4/Component-004.png" alt="Sytem Container" width="400px">
- 
- - Alert Context
- <img src="assets/Chapter-4/c4/Component-005.png" alt="Sytem Container" width="500px">
-
 
 ## 4.9. Software Object-Oriented Design
 
 ### 4.9.1. Class Diagrams
 
- <img src="assets/Chapter-4/diagramadeclases.png" alt="Sytem Container" width="700px">
-
-
 ### 4.9.2. Class Dictionary
-El presente diccionario de clases describe los principales elementos del diagrama de clases de StockWise. Se incluyen entidades del dominio, servicios, repositorios y enumeraciones agrupadas por contexto, con el objetivo de explicar su responsabilidad dentro del sistema.
-
-<br>
-
-### IAM Context
-
-| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
-|---|---|---|---|---|
-| `User` | Clase | Representa a un usuario registrado en StockWise. Puede ser encargado de ventas, administrador de negocio o configurador del sistema. | `Id`, `Name`, `Email`, `PasswordHash`, `Role`, `IsActive` | `ChangeRole(role)`, `Deactivate()` |
-| `UserRole` | Enum | Define los roles disponibles para los usuarios del sistema. | `SalesManager`, `BusinessAdmin`, `SystemConfigurator` | No aplica |
-| `IUserService` | Interface | Define las operaciones de negocio relacionadas con usuarios, autenticación y cambio de roles. | No aplica | `SignUp(name, email, password)`, `SignIn(email, password)`, `ChangeUserRole(userId, role)` |
-| `IUserRepository` | Interface | Define las operaciones de acceso a datos para usuarios. | No aplica | `FindById(id)`, `FindByEmail(email)`, `Save(user)`, `Update(user)` |
-
-
-### Product Management Context
-
-| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
-|---|---|---|---|---|
-| `Product` | Clase | Representa un producto registrado en el catálogo del negocio. Es una de las entidades centrales del sistema. | `Id`, `Name`, `Description`, `Sku`, `SalePrice`, `MinStock`, `IsActive` | `UpdatePrice(price)`, `ChangeMinStock(minStock)`, `Deactivate()` |
-| `Category` | Clase | Representa la categoría a la que pertenece un producto. | `Id`, `Name` | No aplica |
-| `Unit` | Clase | Representa la unidad de medida utilizada por un producto. | `Id`, `Name`, `Abbreviation` | No aplica |
-| `Tag` | Clase | Representa una etiqueta asociada a productos para facilitar su clasificación o búsqueda. | `Id`, `Name` | No aplica |
-| `IProductService` | Interface | Define las operaciones de negocio para la gestión del catálogo de productos. | No aplica | `CreateProduct(product)`, `UpdateProduct(product)`, `GetProductById(id)`, `GetAllProducts()` |
-| `IProductRepository` | Interface | Define las operaciones de persistencia para productos. | No aplica | `FindById(id)`, `FindAll()`, `Save(product)`, `Update(product)` |
-
-
-### Inventory Context
-
-| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
-|---|---|---|---|---|
-| `InventoryItem` | Clase | Representa el stock actual de un producto dentro del inventario. | `Id`, `ProductId`, `CurrentQuantity`, `MinStock`, `Status`, `LastUpdated` | `IncreaseStock(quantity)`, `DecreaseStock(quantity)`, `IsLowStock()` |
-| `InventoryMovement` | Clase | Representa un movimiento de inventario, como entrada, salida, ajuste o venta. | `Id`, `ProductId`, `Type`, `Quantity`, `UnitCost`, `MovementDate`, `Reason` | No aplica |
-| `MovementType` | Enum | Define los tipos de movimientos que pueden registrarse en el inventario. | `Entry`, `Exit`, `Adjustment`, `Sale` | No aplica |
-| `StockStatus` | Enum | Define el estado del stock de un producto. | `Available`, `LowStock`, `OutOfStock` | No aplica |
-| `IInventoryService` | Interface | Define las operaciones de negocio relacionadas con el inventario. | No aplica | `RegisterEntry(productId, quantity, cost)`, `RegisterExit(productId, quantity, reason)`, `GetInventoryByProduct(productId)`, `GetLowStock()` |
-| `IInventoryRepository` | Interface | Define las operaciones de acceso a datos para el inventario. | No aplica | `FindByProductId(productId)`, `SaveMovement(movement)`, `UpdateStock(item)`, `FindLowStock()` |
-
-
-### Sales Context
-
-| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
-|---|---|---|---|---|
-| `Sale` | Clase | Representa una venta realizada dentro del sistema. Contiene información general de la transacción. | `Id`, `SaleDate`, `CustomerName`, `Total`, `Status` | `AddLine(line)`, `CalculateTotal()`, `Cancel()` |
-| `SaleLine` | Clase | Representa el detalle de una venta, incluyendo producto, cantidad, precio unitario y subtotal. | `Id`, `ProductId`, `ProductName`, `Quantity`, `UnitPrice`, `Subtotal` | `CalculateSubtotal()` |
-| `SaleStatus` | Enum | Define los estados posibles de una venta. | `Created`, `Completed`, `Cancelled` | No aplica |
-| `ISalesService` | Interface | Define las operaciones de negocio relacionadas con el registro y consulta de ventas. | No aplica | `RegisterSale(sale)`, `GetSalesByDate(from, to)` |
-| `ISaleRepository` | Interface | Define las operaciones de persistencia para ventas. | No aplica | `FindById(id)`, `FindByDate(from, to)`, `Save(sale)` |
-
-
-### Alert Stock Context
-
-| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
-|---|---|---|---|---|
-| `StockAlert` | Clase | Representa una alerta generada cuando el stock de un producto está por debajo del mínimo permitido. | `Id`, `ProductId`, `ProductName`, `CurrentStock`, `MinStock`, `Status`, `CreatedAt` | `MarkAsSent()`, `Resolve()` |
-| `AlertStatus` | Enum | Define el estado de una alerta de stock. | `Pending`, `Sent`, `Resolved` | No aplica |
-| `IAlertService` | Interface | Define la lógica para generar, notificar y resolver alertas de bajo stock. | No aplica | `GenerateLowStockAlerts()`, `NotifyAlert(alert)`, `ResolveAlert(alertId)` |
-| `IAlertRepository` | Interface | Define las operaciones de persistencia para las alertas de stock. | No aplica | `FindPending()`, `Save(alert)`, `Update(alert)` |
-
-
-### Reports Context
-
-| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
-|---|---|---|---|---|
-| `Report` | Clase | Representa un reporte generado por el sistema, basado en ventas, inventario o categorías. | `Id`, `Type`, `GeneratedAt`, `TotalSales`, `TotalProducts`, `Summary` | No aplica |
-| `ReportType` | Enum | Define los tipos de reportes disponibles en StockWise. | `Sales`, `Inventory`, `Category`, `StockAverage` | No aplica |
-| `IReportService` | Interface | Define la lógica para generar y consultar reportes del sistema. | No aplica | `GenerateSalesReport(from, to)`, `GenerateInventoryReport()`, `GetReportsByDate(from, to)` |
-| `IReportRepository` | Interface | Define las operaciones de persistencia para reportes. | No aplica | `Save(report)`, `FindByDate(from, to)` |
-
 
 ## 4.10. Database Design
+
 ### 4.10.1. Relational/Non-Relational Database Diagram
-
- <img src="assets/Chapter-4/databasediagram.png" alt="Sytem Container" width="800px">
-
 
 # Capitulo V: Product Implementation
 
@@ -1553,14 +1417,117 @@ El presente diccionario de clases describe los principales elementos del diagram
 ### 6.1.1. Core Entities Unit Tests
 
 ### 6.1.2. Core Integration Tests
+En esta sección se presentan las pruebas de integración desarrolladas para validar la correcta comunicación e interacción entre los componentes principales de StockWise, garantizando el funcionamiento coordinado y consistente de los distintos módulos que conforman el sistema.
+
+### Información General Test-1
+
+| Elemento | Descripción |
+|---|---|
+| Clase de Test | `ProductControllerIntegrationTest` |
+| Módulo(s) | inventory, shared, iam - US12, US13 |
+| Descripción General | Validar la integración completa del módulo de productos dentro del sistema StockTrack, comprobando que las operaciones relacionadas con la gestión de productos funcionen correctamente desde la capa HTTP hasta la persistencia en base de datos. |
+
+
+### Escenario 1 
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 1](./assets/Chapter-6/test1_sc1.png)  | Este escenario valida que el sistema pueda registrar correctamente un nuevo producto cuando se envían datos válidos, verificando el flujo completo desde la solicitud HTTP hasta la persistencia en base de datos. Se comprueba la integración entre controller, servicios de aplicación, aggregate Product, repositorios JPA y la base de datos H2. Esta validación es importante porque asegura que la funcionalidad principal de creación de productos opere correctamente y que la información registrada mantenga consistencia dentro del inventario. |
+
+### Escenario 2
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 2](./assets/Chapter-6/test1_sc2.png) | Este escenario valida que el sistema rechace productos con un precio unitario inválido, específicamente valores negativos, comprobando que las reglas de negocio definidas en el dominio sean respetadas antes de persistir información. La prueba garantiza que las validaciones del aggregate y el manejo de excepciones funcionen correctamente a través de toda la integración del sistema. Esto es importante para proteger la integridad de los datos financieros y evitar inconsistencias en cálculos de ventas, reportes y valorización de inventario. |
+
+### Escenario 3 
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 3](./assets/Chapter-6/test1_sc3.png) | Este escenario verifica que el sistema no permita registrar productos sin nombre o con nombres vacíos, validando las restricciones obligatorias del dominio y el correcto manejo de respuestas HTTP ante entradas inválidas. La prueba asegura que los datos esenciales del catálogo sean obligatorios y que el sistema prevenga registros incompletos que puedan afectar búsquedas, clasificación de productos y operaciones posteriores dentro del inventario.|
+
+### Escenario 4 
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 4](./assets/Chapter-6/test1_sc4.png) | Este escenario valida que el sistema pueda actualizar correctamente la información de un producto existente, verificando la integración entre el endpoint REST, los servicios de actualización, el aggregate Product, el repositorio JPA y la persistencia en base de datos. Se comprueba que los cambios enviados sean reflejados correctamente y que las validaciones del dominio continúen aplicándose durante la edición. Esta validación es importante porque garantiza que la información del catálogo pueda mantenerse actualizada y consistente a lo largo del tiempo. |
+
+#### Resumen:
+La prueba verifica la comunicación e integración entre:
+
+- endpoints REST
+- controllers
+- command/query services
+- aggregates del dominio
+- repositorios JPA
+- base de datos H2 en memoria
+- validaciones de negocio
+
+Además, se valida que el sistema responda adecuadamente ante datos válidos e inválidos, garantizando la integridad de la información del inventario.
+
+---
+### Información General Test-2
+
+| Elemento | Descripción |
+|---|---|
+| Clase de Test | `ProviderProductIntegrationTest` |
+| Módulo(s) | inventory, shared - US24, US26 |
+| Descripción General | Validar la integración entre los módulos de proveedores y productos, asegurando que las relaciones funcionales entre ambos aggregates se comporten correctamente dentro del sistema. |
+
+
+### Escenario 1 
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 1](./assets/Chapter-6/test2_sc1.png) | Este escenario valida que el sistema pueda registrar correctamente un nuevo proveedor utilizando datos válidos, comprobando el flujo completo desde la solicitud HTTP hasta la persistencia en base de datos. La prueba verifica la integración entre controller, servicios de aplicación, aggregate Provider, value objects, repositorios JPA y la base de datos H2. Esta validación es importante porque garantiza que los proveedores puedan ser gestionados correctamente y que la información crítica de abastecimiento quede almacenada de manera consistente y segura. |
+
+### Escenario 2
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 2](./assets/Chapter-6/test2_sc2.png) | Este escenario valida que el sistema rechace proveedores con correos electrónicos inválidos, comprobando que las reglas de validación implementadas en los value objects del dominio funcionen correctamente durante todo el flujo de integración. La prueba asegura que las excepciones generadas por datos inconsistentes sean manejadas adecuadamente y que la información inválida no llegue a persistirse en la base de datos. Esta validación es importante porque protege la calidad de los datos y evita problemas posteriores relacionados con notificaciones, contacto con proveedores y trazabilidad del sistema. |
+
+### Escenario 3
+
+| Evidencia | Descripción |
+|---|---|
+| ![Escenario 3](./assets/Chapter-6/test2_sc3.png) | Este escenario valida la integración funcional entre los módulos de productos y proveedores, verificando que un producto solo pueda registrarse cuando se encuentra asociado a un proveedor existente dentro del sistema. La prueba comprueba la interacción entre múltiples aggregates, servicios de aplicación, repositorios y validaciones de negocio relacionadas con integridad referencial. Esta validación es importante porque asegura consistencia entre entidades del inventario y evita relaciones inválidas que puedan afectar procesos de compras, abastecimiento y trazabilidad de productos. |
+
+#### Resumen:
+La prueba verifica el flujo completo de creación y asociación de proveedores y productos, incluyendo:
+
+- validaciones de dominio
+- reglas de integridad entre entidades
+- persistencia de datos
+- manejo de excepciones
+- interacción entre múltiples repositorios y servicios
+
+Asimismo, se comprueba que el sistema impida operaciones inconsistentes, como asociar productos a proveedores inexistentes o registrar información inválida.
+
+---
 
 ### 6.1.3. Core Behavior-Driven Development
 
+En esta sección se presentan las pruebas Behavior-Driven Development desarrolladas para validar el comportamiento esperado de las funcionalidades principales de StockWise desde la perspectiva del usuario. El desarrollo de estas pruebas se basó en las User Stories priorizadas del Product Backlog, específicamente US01 - Registrar producto nuevo y US05 - Generar alertas por bajo stock, ambas pertenecientes al epic EP01 - Funciones básicas de inventario. Estas historias fueron seleccionadas porque representan funciones centrales del sistema de inventario.
+
+#### Evidence 1: Product Registration Feature File
+
+<img src="assets/Chapter-6/prueba-3.png" alt="Product Registration Feature File" width="800px">
+
+#### Evidence 2: Low Stock Alert Feature File
+
+<img src="assets/Chapter-6/prueba-2.png" alt="Low Stock Alert Feature File" width="800px">
+
+#### Evidence 3: BDD Test Execution Results
+
+<img src="assets/Chapter-6/prueba-1.png" alt="BDD Test Execution Results" width="800px">
+
+
 ### 6.1.4. Core System Tests
 
- <img src="assets/Chapter-6/core-system-test1.png" alt="Core system test 1" width="800px">
+<img src="assets/Chapter-6/core-system-test1.png" alt="Core system test 1" width="800px">
 
- <img src="assets/Chapter-6/core-system-test-evidencia.png" alt="Core system test 1 evidence" width="800px">
+<img src="assets/Chapter-6/core-system-test-evidencia.png" alt="Core system test 1 evidence" width="800px">
+
 
 # Capitulo VII: DevOps Practices
 
@@ -1582,6 +1549,89 @@ El presente diccionario de clases describe los principales elementos del diagram
 
 ### 7.3.2. Production Deployment Pipeline Components
 
+## 7.4. Continuous Monitoring
+
+### 7.4.1. Tools and Practices
+
+### 7.4.2. Monitoring Pipeline Components
+
+### 7.4.3. Alerting Pipeline Components
+
+### 7.4.4. Notification Pipeline Components
+
+# Part III: Experiment-Driven Lifecycle
+
+# Capitulo VIII: Experiment-Driven Development
+
+## 8.1. Experiment Planning
+
+### 8.1.1. As-Is Summary
+
+### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
+
+### 8.1.3. Experiment-Ready Questions
+
+### 8.1.4. Question Backlog
+
+### 8.1.5. Experiment Cards
+
+## 8.2. Experiment Design
+
+### 8.2.1. Hypotheses
+
+### 8.2.2. Domain Business Metrics
+
+### 8.2.3. Measures
+
+### 8.2.4. Conditions
+
+### 8.2.5. Scale Calculations and Decisions
+
+### 8.2.6. Methods Selection
+
+### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
+
+### 8.2.8. Web and Mobile Tracking Plan
+
+## 8.3. Experimentation
+
+### 8.3.1. To-Be User Stories
+
+### 8.3.2. To-Be Product Backlog
+
+### 8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle
+
+#### 8.3.3.1. To-Be Sprint Backlogs
+
+#### 8.3.3.2. Implemented To-Be Landing Page Evidence
+
+### 5.2.3. Implemented Frontend-Web Application Evidence
+
+#### 8.3.3.4. Implemented To-Be Native-Mobile Application Evidence
+
+#### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
+
+#### 8.3.3.6. Team Collaboration Insights
+
+### 8.3.4. To-Be Validation Interviews
+
+#### 8.3.4.1. Diseno de Entrevistas
+
+#### 8.3.4.2. Registro de Entrevistas
+
+## 8.4. Experiment Aftermath & Analysis
+
+### 8.4.1. Analysis and Interpretation of Results
+
+### 8.4.2. Re-scored and Re-prioritized Question Backlog
+
+## 8.5. Continuous Learning
+
+### 8.5.1. Shareback Session Artifacts: Learning Workflow
+
+## 8.6. To-Be Software Platform Pre-launch
+
+### 8.6.1. About-the-Product Intro Video
 
 # Conclusiones
 
