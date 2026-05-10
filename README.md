@@ -286,7 +286,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
       </td>
-      <td></td>
+      <td> Como equipo, se logró cumplir este criterio porque el desarrollo del proyecto se realizó con responsabilidad profesional, tomando decisiones basadas en evidencia obtenida durante el análisis de usuarios, entrevistas, evaluación del contexto y revisión de buenas prácticas de ingeniería de software. Esto permitió evitar que la solución se construyera únicamente sobre suposiciones, priorizando necesidades reales y problemas identificados en los segmentos objetivo. Además, se consideró la importancia de trabajar con trazabilidad, validación y calidad durante el proceso, fortaleciendo la confiabilidad del producto y el compromiso ético del equipo con una solución útil y bien sustentada. </td>
     </tr>
     <tr>
       <td><b>Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales</b></td>
@@ -317,7 +317,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
       </td>
-      <td></td>
+      <td> Como equipo, se logró cumplir este criterio porque las decisiones del proyecto fueron evaluadas considerando el impacto que la solución puede generar en los usuarios, el negocio y el entorno. Se analizaron aspectos sociales relacionados con la utilidad y accesibilidad del producto, así como aspectos económicos vinculados a la reducción de errores, optimización de procesos y mejora de la eficiencia. También se consideró la sostenibilidad del desarrollo mediante prácticas que favorecen la mantenibilidad, escalabilidad y evolución del software, permitiendo que la propuesta aporte valor de forma responsable y alineada a necesidades reales. </td>
     </tr>
   </tbody>
 </table>
