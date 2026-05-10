@@ -478,6 +478,17 @@ Las User Stories son clave en metodologías ágiles porque traducen los requisit
 
  <img src="assets/Chapter-3/US35.png" alt="US35" width="800px"> 
 
+ <img src="assets/Chapter-3/US36.png" alt="US36" width="800px"> 
+
+ <img src="assets/Chapter-3/US37.png" alt="US37" width="800px"> 
+
+ <img src="assets/Chapter-3/US38.png" alt="US38" width="800px"> 
+
+ <img src="assets/Chapter-3/US39.png" alt="US39" width="800px"> 
+
+ <img src="assets/Chapter-3/US40.png" alt="US40" width="800px"> 
+
+
 **Technical Stories** 
 
 En esta sección se describen las historias técnicas que desarrollamos para implementar las funcionalidades clave. Cada historia define tareas específicas que el equipo de desarrollo debe realizar, como crear endpoints, manejar validaciones, controlar el stock, generar reportes, entre otros.
