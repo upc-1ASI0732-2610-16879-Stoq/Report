@@ -276,8 +276,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Choquehuanca Nuñez, Luciana Carolina</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1: Reconocí responsabilidad ética y profesional en situaciones de ingeniería de software al sustentar la propuesta con evidencia obtenida de entrevistas, análisis de competidores y artefactos de needfinding. Esto permitió evitar decisiones basadas en suposiciones y orientar la solución hacia necesidades reales de los usuarios. </b> </p>
+        <p><b>TB1: Reconocí responsabilidad ética y profesional en situaciones de ingeniería de software al aplicar BDD y prácticas de integración continua para comprobar el comportamiento esperado del sistema antes de su entrega. Esto ayudó a reducir errores, mejorar la trazabilidad del desarrollo y fortalecer la confiabilidad del producto. </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Fernandez Remon, Roy Linsh</b></p>
@@ -307,8 +307,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Choquehuanca Nuñez, Luciana Carolina</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1: Emití juicios informados considerando el impacto de la solución al analizar cómo las necesidades, frustraciones y tareas de los usuarios podían afectar la aceptación del producto. Esto permitió orientar la propuesta hacia una solución útil, viable y alineada al contexto social y económico del público objetivo. </b> </p>
+        <p><b>TB1: Emití juicios informados considerando el impacto de la solución al seleccionar prácticas como BDD e integración continua para mejorar la calidad del software. Esto permitió reducir riesgos técnicos, evitar retrabajo y asegurar que el producto pueda mantenerse y evolucionar de forma más confiable. </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Fernandez Remon, Roy Linsh</b></p>
