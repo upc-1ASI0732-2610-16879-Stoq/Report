@@ -554,6 +554,48 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 7.1.1. Tools and Practices
 
+En StockWise usamos GitHub como repositorio central para el control de versiones y la colaboración del equipo. La integración continua se plantea como una práctica clave para validar los cambios realizados en el proyecto antes de integrarlos a ramas principales, asegurando que el código compile correctamente y que las pruebas automatizadas puedan ejecutarse de forma constante.
+
+Las pruebas automatizadas son una parte importante de la calidad del producto; por eso el proceso de CI está organizado para considerar la ejecución de:
+
+**Maven** — herramienta principal para gestionar dependencias, compilar el backend y ejecutar las pruebas del proyecto.
+
+**JUnit** — framework utilizado para ejecutar pruebas automatizadas en Java, incluyendo pruebas unitarias y pruebas de integración.
+
+**Cucumber (Gherkin)** — herramienta utilizada para casos BDD; los archivos `.feature` describen escenarios de comportamiento del sistema y se transforman en pruebas ejecutables.
+
+**JUnit Platform** — componente utilizado para descubrir y ejecutar las pruebas dentro del entorno Java.
+
+**GitHub** — plataforma utilizada como repositorio central para almacenar el código fuente, revisar cambios y evidenciar la colaboración del equipo.
+
+**GitHub Actions** — herramienta considerada para automatizar el proceso de Continuous Integration mediante la ejecución del build y las pruebas en eventos como `push` o `pull_request`.
+
+**GitFlow** — flujo de trabajo usado para organizar las ramas del proyecto, separando el desarrollo principal, funcionalidades, pruebas y versiones estables.
+
+**Conventional Commits** — convención usada para mantener mensajes de commit claros, trazables y fáciles de revisar.
+
+Prácticas aplicadas:
+
+- Ejecutar la suite de pruebas antes de integrar cambios a ramas principales.
+
+- Separar las pruebas por tipo según su propósito: Unit Tests, Integration Tests, BDD Tests y System Tests.
+
+- Mantener las pruebas unitarias enfocadas en componentes pequeños, rápidos y aislados.
+
+- Usar pruebas de integración para validar la comunicación entre módulos, servicios y endpoints del backend.
+
+- Utilizar Cucumber y archivos `.feature` para mantener la trazabilidad entre User Stories, Acceptance Criteria y pruebas automatizadas.
+
+- Ejecutar el build del backend con Maven para verificar que el proyecto compile correctamente.
+
+- Revisar los resultados de las pruebas antes de aprobar o integrar cambios.
+
+- Utilizar Conventional Commits para diferenciar cambios de funcionalidad, corrección, configuración o pruebas, por ejemplo: `test: add bdd scenarios for inventory features`.
+
+- Mantener las ramas organizadas bajo GitFlow para evitar cambios directos sobre ramas estables.
+
+- Registrar evidencias de ejecución mediante capturas, resultados de pruebas y commits en GitHub.
+
 ### 7.1.2. Build & Test Suite Pipeline Components
 
 ## 7.2. Continuous Delivery
