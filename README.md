@@ -38,6 +38,7 @@
 
 # Registro de Versiones del Informe
 
+
 | Version | Fecha | Autor | Descripcion de modificaciones |
 |---|---|---|---|
 | TP  |11/05/2026  | - Luciana Carolina Choquehuanca Nuñez <br> - Ronald Joel Peralta Chipa <br> - Sanchez Rios, Camila Cristina <br> - Fabiola Del Rocio Saldaña Ayalan <br> - Roy Linsh Fernandez Remon  <br> | Capitulo I: Introduccion <br> Capitulo II: Requirements Elicitation & Analysis <br> Capítulo III: Requirements Specification <br> Capítulo IV: Product Design <br> Capítulo V: Product Implementation<br> Capítulo VI: Product Verification & Validation <br> Capítulo VII: DevOps Practices     |
@@ -261,8 +262,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       <td><b>Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software</b></td>
       <td>
         <p><b>Peralta Chipa, Ronald Joel </b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1:Demostré compromiso ético y profesional en el desarrollo del proyecto al participar en la configuración del entorno de desarrollo, la gestión del código fuente y la definición de estándares de codificación, promoviendo un trabajo colaborativo ordenado, mantenible y alineado con buenas prácticas de ingeniería de software. Además, aseguré que las configuraciones y convenciones aplicadas facilitaran la trazabilidad de cambios, la integración entre integrantes del equipo y la sostenibilidad del proyecto a largo plazo. </b> </p>
+        <p><b>TB1:Apliqué criterios éticos y profesionales durante la implementación y despliegue del producto, contribuyendo en el documentacion y desarrollo de la landing page, aplicaciones web y mobile, APIs RESTful, pruebas de integración y procesos de despliegue continuo. Asimismo, participé en la documentación técnica y en la coordinación del equipo para asegurar la calidad, confiabilidad y disponibilidad de la solución desarrollada. </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Saldaña Ayalan, Fabiola Del Rocio</b></p>
@@ -276,8 +277,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Choquehuanca Nuñez, Luciana Carolina</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1: Reconocí responsabilidad ética y profesional en situaciones de ingeniería de software al sustentar la propuesta con evidencia obtenida de entrevistas, análisis de competidores y artefactos de needfinding. Esto permitió evitar decisiones basadas en suposiciones y orientar la solución hacia necesidades reales de los usuarios. </b> </p>
+        <p><b>TB1: Reconocí responsabilidad ética y profesional en situaciones de ingeniería de software al aplicar BDD y prácticas de integración continua para comprobar el comportamiento esperado del sistema antes de su entrega. Esto ayudó a reducir errores, mejorar la trazabilidad del desarrollo y fortalecer la confiabilidad del producto. </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Fernandez Remon, Roy Linsh</b></p>
@@ -286,14 +287,14 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
       </td>
-      <td></td>
+      <td> Como equipo, se logró cumplir este criterio porque el desarrollo del proyecto se realizó con responsabilidad profesional, tomando decisiones basadas en evidencia obtenida durante el análisis de usuarios, entrevistas, evaluación del contexto y revisión de buenas prácticas de ingeniería de software. Esto permitió evitar que la solución se construyera únicamente sobre suposiciones, priorizando necesidades reales y problemas identificados en los segmentos objetivo. Además, se consideró la importancia de trabajar con trazabilidad, validación y calidad durante el proceso, fortaleciendo la confiabilidad del producto y el compromiso ético del equipo con una solución útil y bien sustentada. </td>
     </tr>
     <tr>
       <td><b>Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales</b></td>
       <td>
         <p><b>Peralta Chipa, Ronald Joel</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1: Participé en la configuración del entorno de desarrollo, la gestión del código fuente y la definición de estándares de codificación, promoviendo un flujo de trabajo ordenado, mantenible y alineado con buenas prácticas de ingeniería de software. Además, las decisiones técnicas adoptadas permitieron optimizar recursos, facilitar la colaboración entre integrantes del equipo y asegurar una mejor escalabilidad y sostenibilidad del proyecto. </b> </p>
+        <p><b>TB1: Contribuí en la implementación y despliegue de aplicaciones web, mobile y APIs RESTful, priorizando la calidad, disponibilidad y confiabilidad de la solución desarrollada. Asimismo, participé en la documentación técnica, pruebas de integración y procesos de despliegue continuo para garantizar un funcionamiento estable y una experiencia consistente para los usuarios.También impulsé el uso de herramientas y prácticas de integración y despliegue continuo que ayudaron a reducir errores en producción, optimizar tiempos de entrega y mejorar la eficiencia del desarrollo. </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Saldaña Ayalan, Fabiola Del Rocio</b></p>
@@ -307,8 +308,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Choquehuanca Nuñez, Luciana Carolina</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1: Emití juicios informados considerando el impacto de la solución al analizar cómo las necesidades, frustraciones y tareas de los usuarios podían afectar la aceptación del producto. Esto permitió orientar la propuesta hacia una solución útil, viable y alineada al contexto social y económico del público objetivo. </b> </p>
+        <p><b>TB1: Emití juicios informados considerando el impacto de la solución al seleccionar prácticas como BDD e integración continua para mejorar la calidad del software. Esto permitió reducir riesgos técnicos, evitar retrabajo y asegurar que el producto pueda mantenerse y evolucionar de forma más confiable. </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Fernandez Remon, Roy Linsh</b></p>
@@ -317,7 +318,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
       </td>
-      <td></td>
+      <td> Como equipo, se logró cumplir este criterio porque las decisiones del proyecto fueron evaluadas considerando el impacto que la solución puede generar en los usuarios, el negocio y el entorno. Se analizaron aspectos sociales relacionados con la utilidad y accesibilidad del producto, así como aspectos económicos vinculados a la reducción de errores, optimización de procesos y mejora de la eficiencia. También se consideró la sostenibilidad del desarrollo mediante prácticas que favorecen la mantenibilidad, escalabilidad y evolución del software, permitiendo que la propuesta aporte valor de forma responsable y alineada a necesidades reales. </td>
     </tr>
   </tbody>
 </table>
@@ -360,12 +361,12 @@ El Plan B – Localización y predicción inteligente combina dos capacidades cl
   </tr>
   <tr>
     <th>
-      <img src="assets/Chapter-1/.jpg" alt="Foto de perfil de Jeremy" width="800px">
+      <img src="assets/Chapter-1/luciana.jpg" alt="Foto de perfil de Luciana" width="800px">
     </th>
     <td valign="top">
       <p><b>Luciana Carolina Choquehuanca Nuñez</b></p>
       <p>
-        ..
+       Soy estudiante de la carrera de Ingeniería de Software, actualmente cursando el séptimo ciclo, y tengo 20 años. Me considero una persona proactiva, con gran interés en participar en proyectos que impliquen adquirir nuevos conocimientos y seguir aprendiendo constantemente. Me gusta mantener el orden en mi trabajo, por lo que siempre busco entregar resultados que cumplan con los estándares requeridos. Además, disfruto aprender tanto de mis profesores como de mis compañeros, ya que considero que el aprendizaje colaborativo es clave para mi desarrollo profesional.
       </p>
     </td>
   </tr>
