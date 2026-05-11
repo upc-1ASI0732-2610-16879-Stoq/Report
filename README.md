@@ -2791,34 +2791,351 @@ El presente diccionario de clases describe los principales elementos del diagram
 # Capitulo V: Product Implementation
 
 ## 5.1. Software Configuration Management
+En la siguiente sección se describe la ruta de referencia de cada uno de los productos de software para que cualquier miembro del equipo pueda desarrollar cada punto del trabajo.
 
 ### 5.1.1. Software Development Environment Configuration
+  * **UXPressia:** Plataforma colaborativa que nos permitirá crear user personas e integrarlos con los múltiples mapas para evaluar sus prioridades.
+* **Figma:** Herramienta colaborativa que nos permitirá desarrollar wireframes y mockups de la interfaz móvil.
+* **Miro:** Plataforma en línea que facilita la colaboración en tiempo real mediante pizarras digitales para crear diagramas, mapas mentales y flujos de trabajo móvil.
+* **Lucidchart / Diagrams.net:** Aplicaciones destinadas a la elaboración de Wireflows, User Flows móviles y diagramas de clases.
+* **Kotlin and Flutter:** Lenguaje y framework principal utilizado para el desarrollo de la aplicación móvil nativa o híbrida.
+* **Jetpack Compose:** Frameworks modernos utilizados para la construcción de la interfaz de usuario móvil mediante componentes declarativos.
+* **HTML** Es el lenguaje de marcado que se utiliza para estructurar y organizar el contenido de una página web.
+* **CSS** Es el lenguaje de estilos que se utiliza para controlar la apariencia visual de la página.
+
+
+#### Software Deployment
+* **Git:** Herramienta de control de versiones que nos permitirá rastrear cambios, colaborar de manera eficiente y mantener un historial detallado de las modificaciones en el código fuente.
+* **GitHub:** Plataforma de alojamiento que facilitará la colaboración en equipo, la gestión de ramas, el seguimiento de issues y la integración continua (CI/CD).
+
+
 
 ### 5.1.2. Source Code Management
+El proyecto seguirá las convenciones de flujo de trabajo establecidas por el modelo **GitFlow** para el control de versiones, utilizando **GitHub** como plataforma y sistema de control de versiones. A continuación, se detallará cómo se implementará GitFlow como Workflow de control de versiones, además de proporcionar los URL de los repositorios de GitHub para cada producto: Landing Page, Web Services y Frontend Web Applications.
+
+*   **Repositorio Landing Page:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-LandingPage.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Landing-Page)
+*   **Repositorio Web Services:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-Manager-General-BackEnd.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Web-Services)
+*   **Repositorio Mobil Applications:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/MobileAppMobileApp.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Frontend-Web-Applications)
+*   **Repositorio Web Applications:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-FrontendWeb.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Frontend-Web-Applications)
+
+#### GitFlow
+
+**Estructura de branches (Ramas):**
+
+1.  **Master branch (Rama principal):** Esta rama será considerada como la principal para la aplicación, y contendrá versiones estables y finales del desarrollo. Solo se permitirán cambios que hayan sido previamente probados y verificados en otras ramas de prueba.
+2.  **Develop branch (Rama de desarrollo):** El propósito de esta rama es llevar a cabo los avances del proyecto en equipo y de mantener los archivos centrales del desarrollo continuo.
+3.  **Feature branches (Ramas de funcionalidad):** Cada funcionalidad desarrollada por el equipo o separada del enfoque actual del desarrollo tendrá su propia rama. Una vez que una funcionalidad esté completamente trabajada, se fusionará con la rama de desarrollo del proyecto. Las convenciones para nombrar las ramas de funcionalidad seguirán un patrón descriptivo y único, por ejemplo, `feature/nombre-de-la-funcionalidad`.
+4.  **Release branches (Ramas de lanzamiento):** Estas ramas se utilizarán para mantener una instancia de la rama develop que esté próxima a ser incluida en la rama principal. Se seguirá el sistema de versionamiento semántico (Semantic Versioning) para nombrar las Releases.
+
+**Versionamiento Semántico:**
+
+Para nombrar las Releases, se aplicará el sistema de versionamiento semántico (**Semantic Versioning 2.0.0**).
+
+**Convenciones de Commits:**
+
+Para los mensajes de los commits realizados, se utilizará la especificación **Conventional Commits** basada en *Angular Commit Guidelines*. La estructura a seguir será la siguiente:
+
+`git commit -m "<type>[optional scope]:<title>" -m"<description>"`
 
 ### 5.1.3. Source Code Style Guide & Conventions
+#### Mobile Development (UI & Logic)
+Para garantizar la mantenibilidad de la aplicación móvil, se seguirán las siguientes convenciones:
+
+* **Nomenclatura de Recursos:** Todos los archivos de recursos (iconos, layouts, drawables) deben utilizar `snake_case` (ej. `ic_back_button.xml`, `fragment_login.xml`).
+* **Estilo de Código (Kotlin/Swift):** Se seguirá la guía oficial de estilo del lenguaje elegido (ej. Google Kotlin Style Guide). Uso de `camelCase` para variables y funciones, y `PascalCase` para clases.
+* **Arquitectura:** Se implementará el patrón **MVVM (Model-View-ViewModel)** para separar la lógica de negocio de la interfaz de usuario.
+* **Gestión de Strings:** No se debe escribir texto directamente ("hardcoded") en la interfaz. Todos los textos deben estar definidos en archivos de recursos de strings para facilitar la localización (multi-idioma).
+* **Componentes Reutilizables:** Se priorizará la creación de componentes de UI pequeños y reutilizables para mantener la consistencia visual en todas las pantallas de la app.
+
+* **Sintaxis de Elementos HTML:** Todos los elementos deben cerrarse obligatoriamente para garantizar un código coherente y ordenado (ej. `<p>Esto es un párrafo.</p>`).
+* **Nomenclatura y Case Sensitivity:** Se limitará el uso de minúsculas en nombres de elementos y atributos, evitando combinar mayúsculas para mantener la legibilidad y el orden.
+* **Atributos y Comillas:** Se deben utilizar comillas en los atributos, especialmente en casos donde existan espacios entre los valores.
+* **Disponibilidad de Contenido (Multimedia):** Es obligatorio especificar el texto `alt` y las dimensiones `width` y `height` en las imágenes para facilitar la disponibilidad y carga del contenido.
+* **Nomenclatura CSS:** Los nombres de las clases deben ser breves, autodescriptivos y utilizar guiones para separar palabras (ej. `#video-id`, `.hero-shadow`).
+* **Optimización de Unidades:** Se debe evitar especificar la unidad de medida (px, %, em) cuando el valor utilizado sea `0`.
+* **Legibilidad y Estructura CSS:** Las declaraciones y selectores deben separarse en nuevas líneas para agilizar la lectura y el mantenimiento del código.
 
 ### 5.1.4. Software Deployment Configuration
+Para el despliegue de la Landing Page, es necesario contar con una cuenta de GitHub, una organización establecida y un repositorio dedicado. El proceso de despliegue se realizará aprovechando las capacidades de **GitHub Pages**. A continuación, se detallan los requisitos y pasos a seguir:
+
+#### Requisitos de Estructura
+Para un despliegue correcto, el repositorio debe mantener la siguiente estructura de archivos y nomenclaturas:
+* **index.html**: Archivo principal que contiene la estructura y contenido de la landing page.
+* **style.css**: Archivo que contiene las hojas de estilo del sitio.
+* **assets/**: Carpeta raíz para recursos multimedia.
+    * **img/**: Subcarpeta dedicada exclusivamente a las imágenes del sitio.
+
+#### Pasos para el Despliegue
+1. **Creación del Repositorio:** Crear un repositorio específico dentro de la organización de GitHub para alojar exclusivamente el código de la Landing Page.
+2. **Carga de Archivos:** Subir los archivos siguiendo la estructura mencionada anteriormente mediante un `commit` inicial a la rama principal.
+3. **Configuración de GitHub Pages:** 
+   * Dirigirse a la sección de **Settings** del repositorio.
+   * En el menú lateral, seleccionar **Pages**.
+   * En el apartado "Build and deployment", seleccionar la rama correspondiente (generalmente `main` o `master`) y la carpeta raíz (`/root`).
+4. **Verificación y Lanzamiento:** 
+   * Esperar a que GitHub realice las comprobaciones automáticas (*GitHub Actions*). 
+   * Una vez culminado el proceso, GitHub proporcionará una URL pública (ej. `https://nombre-organizacion.github.io/repo-name/`) donde la Landing Page estará oficialmente desplegada.
 
 ## 5.2. Product Implementation & Deployment
 
 ### 5.2.1. Sprint Backlogs
+A continuación, se detallan los Sprint Backlogs trabajados a lo largo del desarrollo de la plataforma Stoq. La planificación abarca desde la configuración inicial y desarrollo del núcleo móvil, hasta la integración de funcionalidades avanzadas como geolocalización y escaneo por código de barras.
+
+### Sprint 1: Núcleo Móvil, APIs Base y Landing Page
+
+El objetivo de este primer sprint fue establecer la infraestructura base, desarrollar los servicios de autenticación y construir los módulos principales de gestión de inventario para la aplicación móvil.
+
+| Story Id | Story Title | Task Id | Task Title | Description | Est. (Hrs) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TS02 | APIs IAM | TSK-11 | Endpoint de Login | Desarrollo de los endpoints para emisión de JWT y validación de credenciales. | 4 | Luciana Choquehuanca | Done |
+| US01 | Registro de Producto | TSK-01 | Formulario de Productos | Interfaz móvil para crear productos con validación de campos obligatorios. | 6 | Fabiola Saldaña | Done |
+| TS03 | APIs Product | TSK-12 | Endpoint de Creación | Construcción del endpoint para almacenar nuevos productos y validar unicidad. | 5 | Roy Fernandez | Done |
+| US06 | Búsqueda en Inventario | TSK-05 | Filtros Avanzados | Implementación de barra de búsqueda en tiempo real por nombre o código. | 5 | Sanchez Camila | Done |
+| US12 | Reportes Base | TSK-08 | Vista de Estadísticas | Visualización de reportes por fecha/categoría y exportación a PDF. | 6 | Ronald Peralta | Done |
+| US17 | Registro por Lotes | TSK-09 | Ingreso Masivo | Interfaz para registro de lotes de productos con proveedor y fecha de vencimiento. | 5 | Fabiola Saldaña | Done |
+
+
+
+### Sprint 2: Funcionalidades Avanzadas y Alertas
+
+Durante este sprint, el equipo se enfocó en optimizar el flujo de inventario, integrando sistemas de alertas tempranas, gestión de roles y la exploración de comandos por voz.
+
+| Story Id | Story Title | Task Id | Task Title | Description | Est. (Hrs) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| US19 | Alertas de Stock | TSK-27 | Lógica de Notificaciones | Sistema de alertas automáticas en la app cuando el stock cae por debajo del mínimo. | 5 | Ronald Peralta | Done |
+| US22 | Alertas de Caducidad | TSK-28 | Control de Vencimientos | Detección de productos perecibles próximos a vencer con alertas visuales. | 5 | Fabiola Saldaña | Done |
+| US18 | Historial de Movimientos | TSK-26 | Gráficas de Evolución | Construcción de la vista histórica con filtros de periodo y gráficas de stock. | 5 | Roy Fernandez | Done |
+| US15 | Configuración de Roles | TSK-24 | Gestión de Usuarios | Pantalla móvil para administrar accesos (Admin/Empleado) vinculada al backend. | 5 | Sanchez Camila | Done |
+| US16 | Proveedores | TSK-25 | Directorio de Contactos | Módulo para registrar y enlazar proveedores con los lotes de ingreso. | 5 | Luciana Choquehuanca | Done |
+| US14 | Devoluciones | TSK-23 | Flujo de Retornos | Funcionalidad para registrar mermas o devoluciones actualizando el stock central. | 5 | Ronald Peralta | Done |
+| SPK01 | Innovación UX | TSK-31 | Entrada por Voz (Spike) | Prototipo de integración Speech-to-Text para comandos básicos de inventario. | 6 | Luciana Choquehuanca | In-Process |
+| US01 | Gestión de Productos (Web) | TSK-W03 | Web Inventory CRUD | Desarrollo de las tablas de gestión de productos (Crear, Editar, Listar) en la versión Web. | 7 | Fabiola Saldaña | Done |
+
+### Sprint 3: Integración de Hardware, Geolocalización y Cierre
+
+El último sprint culminó el desarrollo con el acceso al dispositivo (GPS), mejoras de seguridad y las pruebas integrales y unitarias de calidad.
+
+| Story Id | Story Title | Task Id | Task Title | Description | Est. (Hrs) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TS07 | Quality Assurance | TSK-38 | Testing Final | Pruebas de integración E2E validando la comunicación completa entre app y API. | 6 | Luciana Choquehuanca | Done |
+| US31 | Escáner de Barras | TSK-33 | Lector de Cámara | Integración de la cámara del dispositivo móvil para escanear y registrar ventas. | 6 | Sanchez Camila | Done |
+| US27 | Ubicación | TSK-34 | Geolocalización de Sedes | Integración de mapas para gestionar ubicaciones de sedes y almacenes. | 5 | Roy Fernandez | Done |
+| US33 | Legal & Compliance | TSK-35 | Términos y Condiciones | Checkbox y vista de aceptación obligatoria de T&C durante el proceso de registro. | 4 | Fabiola Saldaña | Done |
+| US34 | Seguridad IAM | TSK-36 | Restricciones de Acceso | Aplicación estricta de permisos por rol en las pantallas críticas de la app. | 5 | Ronald Peralta | Done |
+| US32 | Optimización UI/UX | TSK-37 | Refinamiento Visual | Mejoras finales en la interfaz, optimización de tiempos y fluidez de navegación. | 4 | Sanchez Camila | Done |
 
 ### 5.2.2. Implemented Landing Page Evidence
+En esta sección se presenta la evidencia visual de la Landing Page oficial de Stoq, la cual sirve como el punto de contacto principal para los clientes potenciales. La página ha sido diseñada bajo un enfoque de conversión, resaltando la propuesta de valor de la plataforma (gestión inteligente y movilidad) e integrando internacionalización (i18n) para soportar múltiples idiomas. Se incluyen capturas de las secciones clave: Hero Section, Beneficios, Planes de Suscripción y Footer.
+
+![Landing Page](./assets/Chapter-5/landing_1.png)
+
+Link: [https://landing_page.com](https://stockwiselanding.netlify.app/)
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
+Se detallan a continuación las interfaces que componen el Dashboard Web de Administración. Este componente está orientado al dueño de negocio o administrador, permitiendo una gestión centralizada y profunda del inventario que complementa la operación móvil. Las capturas muestran el panel de control con métricas en tiempo real, la tabla de gestión de productos con opciones avanzadas de filtrado y el módulo de administración de usuarios para la asignación de roles.
+
+![Front_app](./assets/Chapter-5/front_app.png)
+
+Link: [https://front_app.com](https://stocktrack-frontend.vercel.app/auth/register)
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
+El presente Acuerdo de Servicio regula los términos y condiciones bajo los cuales los usuarios acceden y utilizan la plataforma Stoq, una solución SaaS (Software as a Service) desarrollada para optimizar la gestión de inventarios y control de stock en pequeñas y medianas empresas (pymes), startups y bodegas especializadas en el Perú.
+
+Este acuerdo se incorpora como parte integral de los "Términos y Condiciones" disponibles en el sitio web oficial de Stoq, y su aceptación es obligatoria para completar el registro y uso de las aplicaciones web y móviles.
+
+#### 1. Definiciones
+"Plataforma": Ecosistema compuesto por la aplicación móvil (Kotlin/Flutter), el dashboard web y el backend operado por el equipo de desarrollo de Stoq.
+
+"Usuario": Persona natural o jurídica que accede a la plataforma en calidad de Administrador o Empleado.
+
+"Comercio/Pyme": Negocio registrado que utiliza Stoq para la gestión de sus activos y mercadería.
+
+"Cuenta": Perfil de acceso individual vinculado a una organización específica.
+
+"Plan": Modalidad de suscripción (Freemium o Premium) que determina las funcionalidades activas y límites de registros.
+
+#### 2. Objeto del Acuerdo
+Stoq concede al usuario una licencia limitada, no exclusiva, intransferible y revocable para utilizar la plataforma exclusivamente con fines de gestión operativa de inventarios, logística y administración de ventas internas.
+
+#### 3. Registro y Acceso
+El uso de la plataforma requiere la creación de una cuenta mediante el formulario de registro oficial.
+
+Cada usuario es responsable de la confidencialidad de sus credenciales (correo y contraseña) y del uso que se realice bajo su sesión.
+
+Stoq se reserva el derecho de suspender o eliminar cuentas que realicen actividades fraudulentas o infrinjan la integridad del sistema.
+
+#### 4. Tarifas y Planes
+La plataforma opera bajo un modelo de suscripción SaaS. El Plan Premium permite el acceso a funciones avanzadas como el escaneo por código de barras, geolocalización de sedes y reportes de analítica profunda.
+
+Las suscripciones se renuevan automáticamente al finalizar el periodo contratado, a menos que el usuario gestione la cancelación antes del vencimiento.
+
+Ante el impago del servicio, Stoq se reserva el derecho de restringir el acceso a las funciones premium, manteniendo la cuenta en modo de consulta o bajo las limitaciones del plan gratuito.
+
+#### 5. Propiedad Intelectual
+Todos los derechos sobre la plataforma, incluyendo código fuente (Backend, Web y Mobile), diseño de interfaces (UI), marcas y algoritmos de predicción pertenecen exclusivamente al equipo de desarrollo de Stoq.
+
+#### 6. Uso Aceptable
+Queda expresamente prohibido:
+
+- Manipular el código fuente o intentar realizar ingeniería inversa sobre las aplicaciones.
+
+- Utilizar la plataforma para el registro de productos o actividades ilícitas según la normativa peruana.
+
+- Interferir con la operación técnica de los Web Services o realizar ataques de denegación de servicio.
+
+#### 7. Protección de Datos y Privacidad
+Stoq garantiza el cumplimiento estricto de la Ley N.º 29733 - Ley de Protección de Datos Personales del Perú.
+
+Los datos de inventario y personales serán tratados únicamente para fines operativos y estadísticos de la plataforma.
+
+Los usuarios tienen derecho a acceder, rectificar o suprimir sus datos mediante los canales de soporte establecidos.
+
+Se emplean medidas de seguridad técnicas (encriptación y tokens JWT) para proteger la información almacenada.
+
+#### 8. Disponibilidad del Servicio
+Stoq busca mantener una alta disponibilidad del servicio (99.5%). No obstante, el acceso puede interrumpirse temporalmente por mantenimientos programados o fallas en servicios de terceros (hosting/nube).
+
+#### 9. Limitación de Responsabilidad
+Stoq no se responsabiliza por errores en el conteo físico de productos, decisiones financieras basadas en los reportes generados o pérdidas de mercadería derivadas de un mal uso de la plataforma por parte del usuario.
+
+#### 10. Modificaciones del Acuerdo
+Stoq podrá actualizar este acuerdo para reflejar nuevas funcionalidades o cambios legales. Se notificará a los usuarios con al menos 5 días de anticipación a través de la aplicación o correo electrónico registrado.
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
+Este apartado presenta la evidencia de la implementación de la aplicación móvil nativa. Se muestran capturas de la interfaz y funcionalidades principales, destacando la interacción del usuario y el correcto funcionamiento de la aplicación en el entorno móvil.
+
+![Native-Mobile](./assets/Chapter-5/mobile_1.png)
+![Native-Mobile](./assets/Chapter-5/mobile_2.png)
 
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
+Este apartado muestra la evidencia de la implementación de una API RESTful, documentada mediante Swagger. Se presentan los endpoints disponibles, sus métodos HTTP, parámetros y respuestas, lo que facilita la comprensión, prueba e integración del backend del sistema.
+
+![RESTful API](./assets/Chapter-5/swagger_1.png)
+![RESTful API](./assets/Chapter-5/swagger_2.png)
 
 ### 5.2.7. RESTful API documentation
+La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**, accesible desde el entorno de desarrollo. A continuación se detallan todos los endpoints disponibles, agrupados por módulo funcional.
+
+---
+
+#### Authentication
+*Gestión de autenticación y roles de usuario.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `POST` | `/api/v1/authentication/sign-up` | Registrar una nueva cuenta de usuario |
+| `POST` | `/api/v1/authentication/sign-in` | Autenticar e iniciar sesión |
+| `PUT` | `/api/v1/authentication/change-role` | Cambiar el rol de un usuario |
+
+---
+
+#### Products
+*Puntos de acceso disponibles para la gestión de productos.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/products/{productId}` | Obtener Producto por Id |
+| `POST` | `/api/v1/products` | Crear Producto |
+| `GET` | `/api/v1/products` | Obtener todos los Productos |
+| `GET` | `/api/v1/products/by-category/{categoryId}` | Obtener Productos por Categoría |
+| `GET` | `/api/v1/products/by-tag/{tagId}` | Obtener Productos por Etiqueta |
+
+---
+
+#### Combos
+*Puntos de acceso disponibles para la gestión de combos (kits).*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/combos/{comboId}` | Obtener Combo por Id |
+| `POST` | `/api/v1/combos` | Crear Combo |
+| `GET` | `/api/v1/combos` | Obtener todos los Combos |
+
+---
+
+#### Tags
+*Puntos de acceso para la gestión de etiquetas.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/tags` | Obtener todas las etiquetas |
+
+---
+
+#### Units
+*Puntos de acceso para la gestión de unidades de medida.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/units` | Obtener todas las unidades de medida |
+
+---
+
+#### Sales
+*Operaciones de ventas con integración automática de inventario y reportes.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `POST` | `/api/v1/sales` | Realizar venta con stock automático |
+| `GET` | `/api/v1/sales/{id}` | Obtener venta por ID |
+| `GET` | `/api/v1/sales/check-stock/{productId}` | Verificar stock disponible |
+
+---
+
+#### Inventory
+*Operaciones del inventario general, por producto y por lote.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/inventory` | Obtener todos los registros de inventario |
+| `POST` | `/api/v1/inventory/by-product` | Crear Inventario por Producto |
+| `GET` | `/api/v1/inventory/by-product` | Listar todos los Inventarios por Producto con filtros |
+| `GET` | `/api/v1/inventory/by-product/{id}` | Obtener Inventario por Producto por ID |
+| `DELETE` | `/api/v1/inventory/by-product/{id}` | Eliminar Inventario por Producto por ID |
+| `POST` | `/api/v1/inventory/by-batch` | Crear Inventario por Lote |
+| `GET` | `/api/v1/inventory/by-batch` | Listar todos los Inventarios por Lote con filtros |
+| `GET` | `/api/v1/inventory/by-batch/{id}` | Obtener Inventario por Lote por ID |
+| `DELETE` | `/api/v1/inventory/by-batch/{id}` | Eliminar Inventario por Lote por ID |
+
+---
+
+#### StockAlert
+*Gestión de alertas de stock y nivel de inventario.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/alerts` | Obtener alertas de stock |
+| `GET` | `/api/alerts/by-category` | Obtener alertas por categoría |
+| `GET` | `/api/alerts/summary` | Obtener resumen de alertas |
+
+---
+
+#### Report
+*Puntos de acceso disponibles para la gestión de reportes de categoría y de stock promedio.*
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/reports` | Obtener todos los reportes generales |
+| `POST` | `/api/v1/reports/category` | Crear CategoryReport |
+| `GET` | `/api/v1/reports/category` | Listar CategoryReports |
+| `GET` | `/api/v1/reports/category/{id}` | Obtener CategoryReport por ID |
+| `GET` | `/api/v1/reports/category/by-date` | Filtrar CategoryReports por fecha |
+| `POST` | `/api/v1/reports/stock-average` | Crear StockAverageReport |
+| `GET` | `/api/v1/reports/stock-average` | Listar StockAverageReports |
+| `GET` | `/api/v1/reports/stock-average/{id}` | Obtener StockAverageReport por ID |
+| `GET` | `/api/v1/reports/stock-average/by-date` | Filtrar StockAverageReports por fecha |
 
 ### 5.2.8. Team Collaboration Insights
 
 ## 5.3. Video About-the-Product
+StockWise es una aplicación digital y móvil creada para optimizar la gestión de inventarios, permitiendo controlar de manera automática los vencimientos, los niveles mínimos de stock y la organización de kits de productos. Su propuesta está dirigida principalmente a pequeños y medianos negocios, ofreciéndoles una solución práctica, económica y sencilla de utilizar, con el objetivo de disminuir pérdidas y mejorar la toma de decisiones.
+
+A través de la aplicación, los usuarios pueden escanear productos directamente desde su celular, recibir notificaciones anticipadas cuando un artículo está próximo a agotarse o vencer, y acceder a un panel en tiempo real con métricas importantes y reportes completos. En el video se observa cómo el usuario registra productos, verifica el estado del inventario y confirma pedidos de forma rápida con un solo toque, evidenciando la eficiencia y facilidad de uso del sistema. Según comenta uno de los usuarios: “StockWise me ha ayudado a mantener mi inventario organizado sin invertir demasiado tiempo; ahora todo está al alcance de un clic y nunca más se me venció un producto”.
+
+![RESTful API](./assets/Chapter-5/aboutProduct.png)
+
+Link: [https://Video_About_Product.com](https://youtu.be/OPvuExjrxCY)
+
 
 # Part II: Verification, Validation & Pipeline
 
