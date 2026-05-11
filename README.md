@@ -600,6 +600,68 @@ Prácticas aplicadas:
 
 ### 7.1.2. Build & Test Suite Pipeline Components
 
+Nuestro objetivo es Compilar el backend y validar automáticamente que los cambios superen todas las pruebas (Unit, Integration, BDD) antes de permitir un merge o despliegue.
+
+**Activadores (on):** `push` y `pull_request` en ramas `feature/*`, `develop` y `testing`.
+
+**Pasos del pipeline:**
+
+1. `actions/checkout@v4` — Clonar el repositorio.
+2. `actions/setup-java@v4` — Instalar JDK 17 y habilitar caché de Maven.
+3. `mvn clean compile` — Validar sintaxis y dependencias sin ejecutar pruebas.
+4. `mvn verify` — Ejecutar la suite completa de pruebas.
+5. Subir artefactos de resultados (archivos `.xml`) para auditoría.
+6. Reportar estado en el PR.
+
+**YAML de ejemplo** (`.github/workflows/build-test-suite.yml`):
+
+yaml
+name: Build & Test Suite
+
+on:
+  push:
+    branches: [ develop, testing, 'feature/**' ]
+  pull_request:
+    branches: [ develop, testing ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Compile Backend
+        run: mvn clean compile
+
+      - name: Run Tests
+        run: mvn verify
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            target/surefire-reports/*.xml
+            target/failsafe-reports/*.xml
+
+
+**Puntos clave técnicos:**
+
+* Se fija el entorno en Java 17 tanto en el workflow como en el `<java.version>` del `pom.xml`, asegurando compatibilidad nativa con Spring Boot 3.x.
+* Se utiliza `mvn verify` para ejecutar el ciclo completo. El `maven-surefire-plugin` se encarga de las pruebas unitarias y el `maven-failsafe-plugin` (previamente configurado en el POM) de las pruebas de integración y BDD.
+* La caché de Maven reduce los tiempos de build. Los reportes de Surefire y Failsafe se exportan como artefactos para facilitar el análisis.
+*  Si la fase de compilación o alguna prueba falla, el workflow se detiene y las reglas del repositorio impiden el merge.
+
 ## 7.2. Continuous Delivery
 
 ### 7.2.1. Tools and Practices
