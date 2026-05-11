@@ -2688,9 +2688,11 @@ El prototipo web ha sido concebido aplicando principios de arquitectura de infor
 ### 4.8.3. Software Architecture Components Diagrams
 
 - IAM Context
+  
  <img src="assets/Chapter-4/c4/Component-001.png" alt="Sytem Container" width="300px">
 
  - Product Context
+  
  <img src="assets/Chapter-4/c4/Component-002.png" alt="Sytem Container" width="400px">
 
  - Inventory Context
