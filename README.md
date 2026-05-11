@@ -646,6 +646,10 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
 
 ### 7.3.2. Production Deployment Pipeline Components
 
+- **Source Control Management:** Git 
+- **Build and compilation:** Vite, SWC (Speedy Web Compiler) y npm (Node Package Manager)
+- **Artifact repository:** npm Public Registry (Registro público de npm) 
+
 ## 7.4. Continuous Monitoring
 
 ### 7.4.1. Tools and Practices
@@ -738,6 +742,15 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
 
 # Video About-the-Team
 
-# Bibliografia
+# Bibliografia 
 
-# Anexos
+1. Dux Software. (2025, 9 abril). Dux Software: El Sistema de Gestión para tu Negocio. https://www.duxsoftware.com.ar/
+2. Mecalux. (s. f.). Store fulfillment. Mecalux.pe. https://www.mecalux.pe/software/store-fulfillment
+3. SoftDoIt. (s. f.). ▷Vendus: agiliza la gestión de tu punto de venta. https://www.softwaredoit.es/vendus/vendus.html
+
+# Anexos 
+
+Enlace del repositorio repositorio: https://github.com/upc-1ASI0732-2610-16879-Stoq
+
+Enlace directo del reporte: https://github.com/upc-1ASI0732-2610-16879-Stoq/Report.git
+
