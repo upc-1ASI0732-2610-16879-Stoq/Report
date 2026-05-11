@@ -299,8 +299,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Saldaña Ayalan, Fabiola Del Rocio</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1: Demostré responsabilidad profesional al liderar el diseño del producto (Capítulo IV), aplicando estándares como Domain-Driven Design (DDD) y el modelo C4 para la arquitectura de StockWise. Me aseguré de documentar de manera clara y simplificada la alta disponibilidad, el aislamiento de IA, garantizando que el diseño arquitectónico, de bases de datos y de interfaces (UX/UI) responda fielmente a las necesidades del negocio y permita un mantenimiento ordenado y sostenible por parte de todo el equipo.</b> </p>
+        <p><b>TB1: Reconocí mi responsabilidad ética y profesional al implementar los Core System Tests y configurar el Build & Test Suite Pipeline. Al automatizar la validación del código y estructurar las pruebas de los flujos críticos (como las ventas y el descuento de inventario secuencial), garantizo la integridad de los datos de los usuarios, evitando que despliegues con errores técnicos lleguen a producción y afecten las operaciones diarias de las empresas que confían en nuestra plataforma.</b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Sanchez Rios, Camila</b></p>
@@ -330,8 +330,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Saldaña Ayalan, Fabiola Del Rocio</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1: Emití juicios informados durante el diseño arquitectónico y de producto de StockWise, evaluando directamente el impacto económico y operativo en nuestros usuarios finales. Diseñé una arquitectura enfocada en la alta disponibilidad y el procesamiento Edge para que los negocios no detengan sus ventas por falta de conectividad, protegiendo su competitividad y reduciendo drásticamente las pérdidas económicas asociadas a las caídas del sistema o desorganización de la información.</b> </p>
+        <p><b>TB1: Consideré el impacto tecnológico y económico al implementar los componentes del pipeline de Integración Continua (CI) y las pruebas del sistema central. Esta decisión técnica optimiza los recursos tecnológicos del equipo, acelera la entrega de valor de forma segura y, al asegurar matemáticamente que los cálculos de inventario sean exactos en cada despliegue, protege el margen de ganancia y la estabilidad financiera de los negocios que adoptan la solución.</b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Sanchez Rios, Camila</b></p>
