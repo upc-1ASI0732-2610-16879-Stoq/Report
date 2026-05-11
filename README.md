@@ -137,6 +137,12 @@
   - [4.9. Software Object-Oriented Design](#49-software-object-oriented-design)
     - [4.9.1. Class Diagrams](#491-class-diagrams)
     - [4.9.2. Class Dictionary](#492-class-dictionary)
+    - [IAM Context](#iam-context)
+    - [Product Management Context](#product-management-context)
+    - [Inventory Context](#inventory-context)
+    - [Sales Context](#sales-context)
+    - [Alert Stock Context](#alert-stock-context)
+    - [Reports Context](#reports-context)
   - [4.10. Database Design](#410-database-design)
     - [4.10.1. Relational/Non-Relational Database Diagram](#4101-relationalnon-relational-database-diagram)
 - [Capitulo V: Product Implementation](#capitulo-v-product-implementation)
@@ -1495,11 +1501,80 @@ El prototipo web ha sido concebido aplicando principios de arquitectura de infor
 
 ### 4.9.2. Class Dictionary
 
+El presente diccionario de clases describe los principales elementos del diagrama de clases de StockWise. Se incluyen entidades del dominio, servicios, repositorios y enumeraciones agrupadas por contexto, con el objetivo de explicar su responsabilidad dentro del sistema.
+
+<br>
+
+### IAM Context
+
+| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
+|---|---|---|---|---|
+| `User` | Clase | Representa a un usuario registrado en StockWise. Puede ser encargado de ventas, administrador de negocio o configurador del sistema. | `Id`, `Name`, `Email`, `PasswordHash`, `Role`, `IsActive` | `ChangeRole(role)`, `Deactivate()` |
+| `UserRole` | Enum | Define los roles disponibles para los usuarios del sistema. | `SalesManager`, `BusinessAdmin`, `SystemConfigurator` | No aplica |
+| `IUserService` | Interface | Define las operaciones de negocio relacionadas con usuarios, autenticación y cambio de roles. | No aplica | `SignUp(name, email, password)`, `SignIn(email, password)`, `ChangeUserRole(userId, role)` |
+| `IUserRepository` | Interface | Define las operaciones de acceso a datos para usuarios. | No aplica | `FindById(id)`, `FindByEmail(email)`, `Save(user)`, `Update(user)` |
+
+
+### Product Management Context
+
+| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
+|---|---|---|---|---|
+| `Product` | Clase | Representa un producto registrado en el catálogo del negocio. Es una de las entidades centrales del sistema. | `Id`, `Name`, `Description`, `Sku`, `SalePrice`, `MinStock`, `IsActive` | `UpdatePrice(price)`, `ChangeMinStock(minStock)`, `Deactivate()` |
+| `Category` | Clase | Representa la categoría a la que pertenece un producto. | `Id`, `Name` | No aplica |
+| `Unit` | Clase | Representa la unidad de medida utilizada por un producto. | `Id`, `Name`, `Abbreviation` | No aplica |
+| `Tag` | Clase | Representa una etiqueta asociada a productos para facilitar su clasificación o búsqueda. | `Id`, `Name` | No aplica |
+| `IProductService` | Interface | Define las operaciones de negocio para la gestión del catálogo de productos. | No aplica | `CreateProduct(product)`, `UpdateProduct(product)`, `GetProductById(id)`, `GetAllProducts()` |
+| `IProductRepository` | Interface | Define las operaciones de persistencia para productos. | No aplica | `FindById(id)`, `FindAll()`, `Save(product)`, `Update(product)` |
+
+
+### Inventory Context
+
+| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
+|---|---|---|---|---|
+| `InventoryItem` | Clase | Representa el stock actual de un producto dentro del inventario. | `Id`, `ProductId`, `CurrentQuantity`, `MinStock`, `Status`, `LastUpdated` | `IncreaseStock(quantity)`, `DecreaseStock(quantity)`, `IsLowStock()` |
+| `InventoryMovement` | Clase | Representa un movimiento de inventario, como entrada, salida, ajuste o venta. | `Id`, `ProductId`, `Type`, `Quantity`, `UnitCost`, `MovementDate`, `Reason` | No aplica |
+| `MovementType` | Enum | Define los tipos de movimientos que pueden registrarse en el inventario. | `Entry`, `Exit`, `Adjustment`, `Sale` | No aplica |
+| `StockStatus` | Enum | Define el estado del stock de un producto. | `Available`, `LowStock`, `OutOfStock` | No aplica |
+| `IInventoryService` | Interface | Define las operaciones de negocio relacionadas con el inventario. | No aplica | `RegisterEntry(productId, quantity, cost)`, `RegisterExit(productId, quantity, reason)`, `GetInventoryByProduct(productId)`, `GetLowStock()` |
+| `IInventoryRepository` | Interface | Define las operaciones de acceso a datos para el inventario. | No aplica | `FindByProductId(productId)`, `SaveMovement(movement)`, `UpdateStock(item)`, `FindLowStock()` |
+
+
+### Sales Context
+
+| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
+|---|---|---|---|---|
+| `Sale` | Clase | Representa una venta realizada dentro del sistema. Contiene información general de la transacción. | `Id`, `SaleDate`, `CustomerName`, `Total`, `Status` | `AddLine(line)`, `CalculateTotal()`, `Cancel()` |
+| `SaleLine` | Clase | Representa el detalle de una venta, incluyendo producto, cantidad, precio unitario y subtotal. | `Id`, `ProductId`, `ProductName`, `Quantity`, `UnitPrice`, `Subtotal` | `CalculateSubtotal()` |
+| `SaleStatus` | Enum | Define los estados posibles de una venta. | `Created`, `Completed`, `Cancelled` | No aplica |
+| `ISalesService` | Interface | Define las operaciones de negocio relacionadas con el registro y consulta de ventas. | No aplica | `RegisterSale(sale)`, `GetSalesByDate(from, to)` |
+| `ISaleRepository` | Interface | Define las operaciones de persistencia para ventas. | No aplica | `FindById(id)`, `FindByDate(from, to)`, `Save(sale)` |
+
+
+### Alert Stock Context
+
+| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
+|---|---|---|---|---|
+| `StockAlert` | Clase | Representa una alerta generada cuando el stock de un producto está por debajo del mínimo permitido. | `Id`, `ProductId`, `ProductName`, `CurrentStock`, `MinStock`, `Status`, `CreatedAt` | `MarkAsSent()`, `Resolve()` |
+| `AlertStatus` | Enum | Define el estado de una alerta de stock. | `Pending`, `Sent`, `Resolved` | No aplica |
+| `IAlertService` | Interface | Define la lógica para generar, notificar y resolver alertas de bajo stock. | No aplica | `GenerateLowStockAlerts()`, `NotifyAlert(alert)`, `ResolveAlert(alertId)` |
+| `IAlertRepository` | Interface | Define las operaciones de persistencia para las alertas de stock. | No aplica | `FindPending()`, `Save(alert)`, `Update(alert)` |
+
+
+### Reports Context
+
+| Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
+|---|---|---|---|---|
+| `Report` | Clase | Representa un reporte generado por el sistema, basado en ventas, inventario o categorías. | `Id`, `Type`, `GeneratedAt`, `TotalSales`, `TotalProducts`, `Summary` | No aplica |
+| `ReportType` | Enum | Define los tipos de reportes disponibles en StockWise. | `Sales`, `Inventory`, `Category`, `StockAverage` | No aplica |
+| `IReportService` | Interface | Define la lógica para generar y consultar reportes del sistema. | No aplica | `GenerateSalesReport(from, to)`, `GenerateInventoryReport()`, `GetReportsByDate(from, to)` |
+| `IReportRepository` | Interface | Define las operaciones de persistencia para reportes. | No aplica | `Save(report)`, `FindByDate(from, to)` |
+
+
 ## 4.10. Database Design
 
 ### 4.10.1. Relational/Non-Relational Database Diagram
 
-
+ <img src="assets/Chapter-4/databasediagram.png" alt="Sytem Container" width="800px">
 
 # Capitulo V: Product Implementation
 
