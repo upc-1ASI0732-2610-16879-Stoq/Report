@@ -156,27 +156,22 @@
   - [6.1. Testing Suites \& Validation](#61-testing-suites--validation)
     - [6.1.1. Core Entities Unit Tests](#611-core-entities-unit-tests)
     - [6.1.2. Core Integration Tests](#612-core-integration-tests)
+    - [Información General Test-1](#información-general-test-1)
+    - [Escenario 1](#escenario-1)
+    - [Escenario 2](#escenario-2)
+    - [Escenario 3](#escenario-3)
+    - [Escenario 4](#escenario-4)
+      - [Resumen:](#resumen)
+    - [Información General Test-2](#información-general-test-2)
+    - [Escenario 1](#escenario-1-1)
+    - [Escenario 2](#escenario-2-1)
+    - [Escenario 3](#escenario-3-1)
+      - [Resumen:](#resumen-1)
     - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
+      - [Evidence 1: Product Registration Feature File](#evidence-1-product-registration-feature-file)
+      - [Evidence 2: Low Stock Alert Feature File](#evidence-2-low-stock-alert-feature-file)
+      - [Evidence 3: BDD Test Execution Results](#evidence-3-bdd-test-execution-results)
     - [6.1.4. Core System Tests](#614-core-system-tests)
-  - [6.2. Static testing \& Verification](#62-static-testing--verification)
-    - [6.2.1. Static Code Analysis](#621-static-code-analysis)
-      - [6.2.1.1. Coding standard \& Code conventions](#6211-coding-standard--code-conventions)
-      - [6.2.1.2. Code Quality \& Code Security](#6212-code-quality--code-security)
-    - [6.2.2. Reviews](#622-reviews)
-  - [6.3. Validation Interviews](#63-validation-interviews)
-    - [6.3.1. Diseno de Entrevistas](#631-diseno-de-entrevistas)
-    - [6.3.2. Registro de Entrevistas](#632-registro-de-entrevistas)
-    - [6.3.3. Evaluaciones segun heuristicas](#633-evaluaciones-segun-heuristicas)
-  - [6.4. Auditoria de Experiencias de Usuario](#64-auditoria-de-experiencias-de-usuario)
-    - [6.4.1. Auditoria realizada](#641-auditoria-realizada)
-      - [6.4.1.1. Informacion del grupo auditado](#6411-informacion-del-grupo-auditado)
-      - [6.4.1.2. Cronograma de auditoria realizada](#6412-cronograma-de-auditoria-realizada)
-      - [6.4.1.3. Contenido de auditoria realizada](#6413-contenido-de-auditoria-realizada)
-    - [6.4.2. Auditoria recibida](#642-auditoria-recibida)
-      - [6.4.2.1. Informacion del grupo auditor](#6421-informacion-del-grupo-auditor)
-      - [6.4.2.2. Cronograma de auditoria recibida](#6422-cronograma-de-auditoria-recibida)
-      - [6.4.2.3. Contenido de auditoria recibida](#6423-contenido-de-auditoria-recibida)
-      - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
 - [Capitulo VII: DevOps Practices](#capitulo-vii-devops-practices)
   - [7.1. Continuous Integration](#71-continuous-integration)
     - [7.1.1. Tools and Practices](#711-tools-and-practices)
@@ -503,6 +498,28 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 ## 6.1. Testing Suites & Validation
 
 ### 6.1.1. Core Entities Unit Tests
+
+Se muestra evidencia de los test a las historios de usuario del proyecto
+
+US01 - Crear producto válido: valida que el agregado Product se construye correctamente con datos completos y normaliza los valores de texto.
+
+<img src="assets/Chapter-6/core unit tests 1.png" alt="Product Registration Feature File" width="800px">
+
+US01 / US19 - Stock inicial y mínimo: valida que minStock acepta valores válidos, incluyendo cero, y rechaza negativos.
+
+<img src="assets/Chapter-6/core unit tests 2.png" alt="Product Registration Feature File" width="800px">
+
+US19 - Configurar stock mínimo: valida que el producto permita actualizar el límite mínimo de stock correctamente.
+
+<img src="assets/Chapter-6/core unit tests 3.png" alt="Product Registration Feature File" width="800px">
+
+US03 - Registrar salida de producto: valida que Batch descuenta stock correctamente al registrar una salida.
+
+<img src="assets/Chapter-6/core unit tests 4.png" alt="Product Registration Feature File" width="800px">
+
+US14 - Registrar devolución: valida que el stock aumente al registrar una devolución.
+
+<img src="assets/Chapter-6/core unit tests 5.png" alt="Product Registration Feature File" width="800px">
 
 ### 6.1.2. Core Integration Tests
 En esta sección se presentan las pruebas de integración desarrolladas para validar la correcta comunicación e interacción entre los componentes principales de StockWise, garantizando el funcionamiento coordinado y consistente de los distintos módulos que conforman el sistema.
