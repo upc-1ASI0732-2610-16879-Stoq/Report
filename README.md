@@ -678,6 +678,17 @@ Las prácticas aplicadas durante el proceso de integración y despliegue fueron 
 
 ### 7.2.2. Stages Deployment Pipeline Components
 
+El pipeline de despliegue continuo del sistema fue estructurado en diferentes etapas automatizadas que permiten validar, compilar y desplegar la aplicación de manera segura y controlada.
+
+Las etapas implementadas fueron las siguientes:
+
+-  Build: compilación automática del proyecto Java utilizando Maven para verificar la integridad del código fuente.
+- Unit Testing: ejecución automática de pruebas unitarias sobre las entidades principales del sistema, como productos e inventario, utilizando JUnit.
+- Package: generación del artefacto ejecutable .jar para el despliegue del sistema.
+- Deploy to Testing: despliegue automático de la aplicación hacia el entorno de pruebas luego de aprobar correctamente las validaciones.
+- Smoke Tests: ejecución de pruebas básicas para verificar el correcto funcionamiento de los módulos principales del sistema de inventario.
+- Production Deployment: despliegue manual o controlado hacia producción una vez verificadas las pruebas del entorno testing.
+
 ## 7.3. Continuous deployment
 
 ### 7.3.1. Tools and Practices
