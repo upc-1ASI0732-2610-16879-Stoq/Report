@@ -1375,11 +1375,227 @@ El siguiente glosario presenta los términos clave utilizados a lo largo del des
 
 ## 3.1. To-Be Scenario Mapping
 
+Para el desarrollo de esta sección, el equipo llevó a cabo un proceso estructurado centrado en proyectar la experiencia ideal de nuestros User Personas al interactuar con StockWise. El proceso inició con una etapa de preparación, donde se revisaron los problemas identificados en los As-Is Scenario Mappings. Posteriormente, se realizó una lluvia de ideas individual para proponer soluciones tecnológicas directas a través de las funcionalidades de la aplicación (como el escaneo rápido o las alertas de stock). 
+
+Tras esto, el equipo se reunió para una revisión e identificación de fases, agrupando las ideas y estableciendo las columnas cronológicas que representan el nuevo flujo de trabajo. Una vez que procedimos a nombrar las fases, comparamos el mapa resultante con el As-Is, identificando que el To-Be Scenario Mapping ofrece cambios significativos: reduce la carga cognitiva, automatiza el registro de datos y transforma sentimientos de frustración y estrés en tranquilidad y control. A continuación, se presentan los escenarios elaborados para cada User Persona. 
+
+**1. To-Be Scenario Mapping: Carla Dueña de Bodega / Microempresa)** 
+
+Carla acaba de recibir un nuevo pedido de proveedores en su tienda y necesita registrar el ingreso de los productos al inventario rápidamente mientras atiende su negocio. 
+
+ <img src="assets/Chapter-3/Scenario%20Mapping.jpg" alt="ScenarioMapping01" width="800px"> 
+
+**2. To-Be Scenario Mapping: Sebastián (Administrador de Inventario / Startup)**
+
+Sebastián necesita generar un reporte de fin de mes para identificar qué productos tienen baja rotación y cuáles necesitan reabastecimiento urgente antes de la próxima. 
+
+ <img src="assets/Chapter-3/Scenario%20Mapping%2002.jpg" alt="ScenarioMapping02" width="800px">
+
+**Cambios identificados frente al As-Is Scenario Mapping (Comparación)** 
+
+Al contrastar estos mapas con la situación actual (As-Is), destacan los siguientes beneficios del escenario To-Be con StockWise: 
+
+- De manual a automatizado: Se elimina el registro en libretas o la digitación celda por celda en hojas de cálculo, pasando al escaneo de códigos y automatización de sumas. 
+- De reactivo a proactivo: Los usuarios ya no descubren que falta stock cuando el cliente lo pide; el sistema les avisa antes mediante alertas de "Stock Crítico".
+- Cambio emocional drástico: La frustración, el miedo a equivocarse en los cálculos y la pérdida de tiempo se transforman en sentimientos de confianza, eficiencia y tranquilidad. 
+
 ## 3.2. User Stories
+
+Las User Stories son clave en metodologías ágiles porque traducen los requisitos funcionales desde la mirada del usuario. Cada historia especifica una necesidad concreta, lo que permite planificar, priorizar y construir el sistema de forma iterativa. Así se asegura que cada función aporte valor real y permanezca alineada con las expectativas del usuario final.
+
+ <img src="assets/Chapter-3/US01.png" alt="US01" width="800px"> 
+
+ <img src="assets/Chapter-3/US02.png" alt="US02" width="800px"> 
+
+ <img src="assets/Chapter-3/US03.png" alt="US03" width="800px"> 
+
+ <img src="assets/Chapter-3/US04.png" alt="US04" width="800px"> 
+
+ <img src="assets/Chapter-3/US05.png" alt="US05" width="800px"> 
+
+ <img src="assets/Chapter-3/US06.png" alt="US06" width="800px"> 
+
+ <img src="assets/Chapter-3/US07.png" alt="US07" width="800px"> 
+
+ <img src="assets/Chapter-3/US08.png" alt="US08" width="800px"> 
+
+ <img src="assets/Chapter-3/US09.png" alt="US09" width="800px"> 
+
+ <img src="assets/Chapter-3/US10.png" alt="US10" width="800px"> 
+
+ <img src="assets/Chapter-3/US11.png" alt="US11" width="800px"> 
+
+ <img src="assets/Chapter-3/US12.png" alt="US12" width="800px"> 
+
+ <img src="assets/Chapter-3/US13.png" alt="US13" width="800px"> 
+
+ <img src="assets/Chapter-3/US14.png" alt="US14" width="800px">
+
+ <img src="assets/Chapter-3/US15.png" alt="US15" width="800px">
+
+ <img src="assets/Chapter-3/US16.png" alt="US16" width="800px">
+
+ <img src="assets/Chapter-3/US17.png" alt="US17" width="800px">
+
+ <img src="assets/Chapter-3/US18.png" alt="US18" width="800px"> 
+
+ <img src="assets/Chapter-3/US19.png" alt="US19" width="800px"> 
+
+ <img src="assets/Chapter-3/US20.png" alt="US20" width="800px"> 
+
+ <img src="assets/Chapter-3/US21.png" alt="US21" width="800px"> 
+
+ <img src="assets/Chapter-3/US22.png" alt="US22" width="800px"> 
+
+ <img src="assets/Chapter-3/US23.png" alt="US23" width="800px"> 
+
+ <img src="assets/Chapter-3/US24.png" alt="US24" width="800px"> 
+
+ <img src="assets/Chapter-3/US25.png" alt="US25" width="800px"> 
+
+ <img src="assets/Chapter-3/US26.png" alt="US26" width="800px"> 
+
+ <img src="assets/Chapter-3/US27.png" alt="US27" width="800px"> 
+
+ <img src="assets/Chapter-3/US28.png" alt="US28" width="800px"> 
+
+ <img src="assets/Chapter-3/US29.png" alt="US29" width="800px"> 
+
+ <img src="assets/Chapter-3/US30.png" alt="US30" width="800px"> 
+
+ <img src="assets/Chapter-3/US31.png" alt="US31" width="800px"> 
+
+ <img src="assets/Chapter-3/US32.png" alt="US32" width="800px"> 
+
+ <img src="assets/Chapter-3/US33.png" alt="US33" width="800px"> 
+
+ <img src="assets/Chapter-3/US34.png" alt="US34" width="800px"> 
+
+ <img src="assets/Chapter-3/US35.png" alt="US35" width="800px"> 
+
+ <img src="assets/Chapter-3/US36.png" alt="US36" width="800px"> 
+
+ <img src="assets/Chapter-3/US37.png" alt="US37" width="800px"> 
+
+ <img src="assets/Chapter-3/US38.png" alt="US38" width="800px"> 
+
+ <img src="assets/Chapter-3/US39.png" alt="US39" width="800px"> 
+
+ <img src="assets/Chapter-3/US40.png" alt="US40" width="800px"> 
+
+
+**Technical Stories** 
+
+En esta sección se describen las historias técnicas que desarrollamos para implementar las funcionalidades clave. Cada historia define tareas específicas que el equipo de desarrollo debe realizar, como crear endpoints, manejar validaciones, controlar el stock, generar reportes, entre otros.
+
+ <img src="assets/Chapter-3/TS01.png" alt="TS01" width="800px"> 
+
+ <img src="assets/Chapter-3/TS02.png" alt="TS02" width="800px"> 
+
+ <img src="assets/Chapter-3/TS03.png" alt="TS03" width="800px"> 
+
+ <img src="assets/Chapter-3/TS04.png" alt="TS04" width="800px"> 
+
+ <img src="assets/Chapter-3/TS05.png" alt="TS05" width="800px"> 
+
+ <img src="assets/Chapter-3/TS06.png" alt="TS06" width="800px"> 
+
+ <img src="assets/Chapter-3/TS07.png" alt="TS07" width="800px"> 
+
+ <img src="assets/Chapter-3/TS08.png" alt="TS08" width="800px"> 
+
+ <img src="assets/Chapter-3/TS09.png" alt="TS09" width="800px"> 
+
+ <img src="assets/Chapter-3/TS10.png" alt="TS10" width="800px"> 
+
+ <img src="assets/Chapter-3/TS11.png" alt="TS11" width="800px"> 
+
+ <img src="assets/Chapter-3/TS12.png" alt="TS12" width="800px"> 
+
+ <img src="assets/Chapter-3/TS13.png" alt="TS13" width="800px"> 
+
+ <img src="assets/Chapter-3/TS14.png" alt="TS14" width="800px"> 
+
+ <img src="assets/Chapter-3/TS15.png" alt="TS15" width="800px"> 
+
+ <img src="assets/Chapter-3/TS16.png" alt="TS16" width="800px"> 
+
+**Spike Story** 
+
+ <img src="assets/Chapter-3/SPK01.png" alt="SPK01" width="800px"> 
+
+ <img src="assets/Chapter-3/SPK02.png" alt="SPK02" width="800px"> 
+
+ <img src="assets/Chapter-3/SPK03.png" alt="SPK03" width="800px"> 
+
+ <img src="assets/Chapter-3/SPK04.png" alt="SPK04" width="800px"> 
+
+ <img src="assets/Chapter-3/SPK05.png" alt="SPK05" width="800px"> 
 
 ## 3.3. Product Backlog
 
+| #  | User Story ID | Título                                                               | Story Points |
+|----|---------------|----------------------------------------------------------------------|--------------|
+| 1  | US01          | Registrar producto nuevo                                             | 5            |
+| 2  | US05          | Generar alertas por bajo stock                                       | 5            |
+| 3  | US07          | Añadir etiquetas para productos                                      | 5            |
+| 4  | US08          | Generar estadística de productos más vendidos                        | 5            |
+| 5  | US09          | Generar estadística de categoría más vendida                         | 5            |
+| 6  | US11          | Generar estadística de stock promedio                                | 5            |
+| 7  | US15          | Configurar roles y permisos                                          | 5            |
+| 8  | US17          | Registrar lote de productos                                          | 5            |
+| 9  | US20          | Añadir etiquetas a productos                                         | 5            |
+| 10 | US26          | Registrar productos por voz                                          | 5            |
+| 11 | US27          | Registrar geolocalización de productos y entregas                    | 5            |
+| 12 | US28          | Localizar productos con mapa y QR                                    | 5            |
+| 13 | US02          | Editar información de producto                                       | 3            |
+| 14 | US03          | Registrar salida de producto                                         | 3            |
+| 15 | US04          | Ver historial de movimientos                                         | 3            |
+| 16 | US06          | Buscar productos en inventario                                       | 3            |
+| 17 | US10          | Generar ticket promedio                                              | 3            |
+| 18 | US12          | Generar reportes de inventario                                       | 3            |
+| 19 | US13          | Controlar productos caducados                                        | 3            |
+| 20 | US14          | Registrar devolución de productos                                    | 3            |
+| 21 | US16          | Gestionar proveedores                                                | 3            |
+| 22 | US18          | Visualizar historial de stock                                        | 3            |
+| 23 | US19          | Configurar alertas de stock mínimo                                   | 3            |
+| 24 | US21          | Buscar productos en inventario                                       | 3            |
+| 25 | US22          | Generar alertas por productos caducados                              | 3            |
+| 26 | US23          | Registrar ingreso de productos                                       | 3            |
+| 27 | US25          | Comparar ventas entre periodos                                       | 3            |
+| 28 | US29          | Gestionar predicción de reabastecimiento                             | 3            |
+| 29 | TS03          | Generar API Creación de productos                                    | 3            |
+| 30 | TS06          | Generar API Productos por etiqueta                                   | 3            |
+| 31 | SPK01         | Implementar entrada por voz, comandos estructurados e interpretación | 3            |
+| 32 | SPK03         | Geolocalizar y modelar la ubicación                                  | 3            |
+| 33 | SPK04         | Configurar predicción de reabastecimiento                            | 3            |
+| 34 | TS07          | Generar API Registro de inventario                                   | 3            |
+| 35 | US30          | Escanear por lotes con cámara rápida                                 | 3            |
+| 36 | US32          | Optimizar tiempos de respuesta                                       | 3            |
+| 37 | US35          | Alertas en tiempo real                                               | 3            |
+| 38 | TS14          | Generar API Consulta de alertas                                      | 3            |
+| 39 | US24          | Visualizar resumen de stock por categoría                            | 2            |
+
+**Gestión del producto Backlog** 
+
+ <img src="assets/Chapter-3/Trello.png" alt="Trello" width="800px"> 
+
+_Imagen (N°10). Elaboración propia. Realizado en Trello_ 
+
+Trello del Product Backlog:
+https://trello.com/invite/b/69fcb34c3773ca9fb5de2d61/ATTI1644207d65abc14d280915502d0695bc0DE32724/stoq-product-backlog
+
 ## 3.4. Impact Mapping
+
+**Segmento Objetivo 1: Bodegas especializadas por rubro** 
+
+ <img src="assets/Chapter-3/stockwise%20-%20impact%20map-bodeguero.png" alt="Objetivo1" width="800px"> 
+
+_Imagen (N°8). Elaboración propia. Realizado en UXPRESSIA_
+
+ <img src="assets/Chapter-3/stockwise%20-%20impact%20map-emprendedor.png" alt="Objetivo2" width="800px"> 
+
+_Imagen (N°9). Elaboración propia. Realizado en UXPRESSIA_
 
 # Capitulo IV: Product Design
 
