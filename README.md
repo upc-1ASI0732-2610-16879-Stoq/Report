@@ -41,17 +41,18 @@
 
 | Version | Fecha | Autor | Descripcion de modificaciones |
 |---|---|---|---|
-| 1.0 | 2026-05-10 | Luciana Choquehuanca | Se agregó la sección 6.1.3 Core Behavior-Driven Development con la descripción de pruebas BDD aplicadas al proyecto StockWise. |
-|  |  |  |  |
-|  |  |  |  |
-| 1.3 | 2026-05-10 | Luciana Choquehuanca | Se incorporaron escenarios Gherkin para las User Stories US01 Registrar producto nuevo y US05 Generar alertas por bajo stock. |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| 1.0 | 2026-05-10 | Luciana Choquehuanca | Se completó el Capítulo II: Requirements Elicitation & Analysis, incluyendo competidores, entrevistas, needfinding y ubiquitous language. |
+| 1.1 |  |  |  |
+| 1.2 |  |  |  |
+| 1.3 | 2026-05-10 | Luciana Choquehuanca | Se agregó la sección 6.1.3 Core Behavior-Driven Development con la descripción de pruebas BDD aplicadas al proyecto StockWise. |
+| 1.4 |  |  |  |
+| 1.5 |  |  |  |
+| 1.6 |  |  |  |
+| 2.0 | 2026-05-10 | Luciana Choquehuanca | Se incorporaron escenarios Gherkin para las User Stories US01 Registrar producto nuevo y US05 Generar alertas por bajo stock. |
+| 2.1 |  |  |  |
 | 2.2 | 2026-05-10 | Luciana Choquehuanca | Se añadieron evidencias visuales de los archivos feature y de la ejecución exitosa de las pruebas BDD con Cucumber. |
-|  |  |  |  |
+| 2.3 |  |  |  |
 | 2.4 | 2026-05-10 | Luciana Choquehuanca | Se actualizó la sección 7.1.1 Tools and Practices con las herramientas y prácticas de Continuous Integration aplicadas al proyecto. |
-|  |  |  |  |
 
 <div style="page-break-after: always;"></div>
 
