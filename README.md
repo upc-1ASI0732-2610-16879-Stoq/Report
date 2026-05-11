@@ -85,8 +85,12 @@ https://github.com/upc-1ASI0732-2610-16879-Stoq
   - [2.1. Competidores](#21-competidores)
     - [2.1.1. Analisis competitivo](#211-analisis-competitivo)
     - [2.1.2. Estrategias y tacticas frente a competidores](#212-estrategias-y-tacticas-frente-a-competidores)
+      - [Estrategias Generales de Posicionamiento](#estrategias-generales-de-posicionamiento)
+      - [Estrategias Ofensivas frente a Competidores](#estrategias-ofensivas-frente-a-competidores)
+      - [Estrategias Defensivas](#estrategias-defensivas)
   - [2.2. Entrevistas](#22-entrevistas)
     - [2.2.1. Diseno de entrevistas](#221-diseno-de-entrevistas)
+    - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
     - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
     - [2.2.3. Analisis de entrevistas](#223-analisis-de-entrevistas)
   - [2.3. Needfinding](#23-needfinding)
@@ -989,39 +993,6 @@ La finalidad de realizar entrevistas es obtener un alcance más completo sobre l
     <th>Entrevista</th>
     <td>6</td>
     <th>Nombre</th>
-    <td>Eduardo de Rivera Sosa</td>
-  </tr>
-  <tr>
-    <th>Edad</th>
-    <td>No especificada</td>
-    <th>Distrito</th>
-    <td>No especificado</td>
-  </tr>
-  <tr>
-    <th>Captura de la entrevista: <img src="img/seg2.png" alt="Captura de la entrevista" width="200"></th>
-    <td colspan="3">
-      Eduardo de Rivera Sosa, un emprendedor que importa productos desde Asia para venderlos en Perú, comentó que la idea del proyecto le pareció atractiva y muy necesaria para negocios que manejan múltiples referencias de productos. Durante la prueba, resaltó la facilidad de uso y la organización del panel principal, especialmente en el registro de productos y control de stock. Mencionó que actualmente lleva su inventario en Excel y organiza sus pedidos en Notion, por lo que considera que la plataforma podría integrar y simplificar ambos procesos en un solo espacio digital. Valoró la función de alerta de stock bajo y las opciones de historial de movimientos, que le permitirían tener una visión más clara de sus existencias y reducir pérdidas por errores humanos o por actualizaciones tardías. En cuanto a la apariencia visual, Eduardo comentó que la landing page le pareció moderna y atractiva, destacando que transmite confianza y profesionalismo. Sin embargo, sugirió que la exportación de datos a Excel o PDF podría mejorarse con formatos más personalizables.
-    </td>
-  </tr>
-  <tr>
-    <th>URL de la grabación</th>
-    <td colspan="3">
-      <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221g068_upc_edu_pe/EfICOj-xe6REtnBdqmvY7QsB40AX08yJQHh4VQP5k9XQUA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=SCUtfJ">
-        Ver grabación
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <th>Timing</th>
-    <td colspan="3">29:36 - 33:36</td>
-  </tr>
-</table>
-
-<table border="1">
-  <tr>
-    <th>Entrevista</th>
-    <td>7</td>
-    <th>Nombre</th>
     <td>Smith Morales Quispe</td>
   </tr>
   <tr>
@@ -1399,6 +1370,7 @@ El siguiente glosario presenta los términos clave utilizados a lo largo del des
     </tr>
   </tbody>
 </table>
+
 # Capitulo III: Requirements Specification
 
 ## 3.1. To-Be Scenario Mapping
