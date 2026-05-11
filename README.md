@@ -796,6 +796,41 @@ La finalidad de realizar entrevistas es obtener un alcance más completo sobre l
   </tr>
 </table>
 
+<table border="1">
+  <tr>
+    <th>Entrevista</th>
+    <td>7</td>
+    <th>Nombre</th>
+    <td>Smith Morales Quispe</td>
+  </tr>
+  <tr>
+    <th>Edad</th>
+    <td>22</td>
+    <th>Distrito</th>
+    <td>Surco-Lima</td>
+  </tr>
+  <tr>
+    <th>Captura de la entrevista: <img src="img/seg6.png" alt="Captura de la entrevista" width="200"></th>
+    <td colspan="3">
+      Un propietario de una ferretería comentó que la propuesta del proyecto le resultó muy interesante y especialmente útil para negocios que manejan una gran variedad de productos y herramientas. Durante la prueba, destacó la facilidad de uso de la plataforma y la organización del panel principal, sobre todo en el registro de productos y el control del inventario. Mencionó que actualmente administra todo su inventario utilizando Excel, por lo que considera que la plataforma podría simplificar y centralizar el control de stock, pedidos y movimientos en un solo sistema digital. También valoró la función de alertas de stock bajo y el historial de movimientos, ya que le permitirían tener un mejor control de sus existencias, evitar faltantes y reducir errores humanos en la actualización de datos. Respecto al diseño visual, señaló que la landing page le pareció moderna, atractiva y profesional, transmitiendo confianza desde el primer momento. Como sugerencia de mejora, indicó que las opciones de exportación de datos a Excel o PDF podrían ofrecer formatos más personalizables según las necesidades del negocio.
+    </td>
+  </tr>
+  <tr>
+    <th>URL de la grabación</th>
+    <td colspan="3">
+      <a href="https://drive.google.com/file/d/1CU0BlBX412Uo9P1yHLja47PFH4_acMIu/view?usp=sharing">
+        Ver grabación
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <th>Timing</th>
+    <td colspan="3">29:36 - 33:36</td>
+  </tr>
+</table>
+
+
+
 ### 2.2.3. Analisis de entrevistas
 
 **Segmento 1: Bodegas especializadas por rubro**
