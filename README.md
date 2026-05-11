@@ -157,17 +157,44 @@ https://github.com/upc-1ASI0732-2610-16879-Stoq
 - [Capitulo V: Product Implementation](#capitulo-v-product-implementation)
   - [5.1. Software Configuration Management](#51-software-configuration-management)
     - [5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)
+      - [Software Deployment](#software-deployment)
     - [5.1.2. Source Code Management](#512-source-code-management)
+      - [GitFlow](#gitflow)
     - [5.1.3. Source Code Style Guide \& Conventions](#513-source-code-style-guide--conventions)
+      - [Mobile Development (UI \& Logic)](#mobile-development-ui--logic)
     - [5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)
+      - [Requisitos de Estructura](#requisitos-de-estructura)
+      - [Pasos para el Despliegue](#pasos-para-el-despliegue)
   - [5.2. Product Implementation \& Deployment](#52-product-implementation--deployment)
     - [5.2.1. Sprint Backlogs](#521-sprint-backlogs)
+    - [Sprint 1: Núcleo Móvil, APIs Base y Landing Page](#sprint-1-núcleo-móvil-apis-base-y-landing-page)
+    - [Sprint 2: Funcionalidades Avanzadas y Alertas](#sprint-2-funcionalidades-avanzadas-y-alertas)
+    - [Sprint 3: Integración de Hardware, Geolocalización y Cierre](#sprint-3-integración-de-hardware-geolocalización-y-cierre)
     - [5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
     - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)
     - [5.2.4. Acuerdo de Servicio - SaaS](#524-acuerdo-de-servicio---saas)
+      - [1. Definiciones](#1-definiciones)
+      - [2. Objeto del Acuerdo](#2-objeto-del-acuerdo)
+      - [3. Registro y Acceso](#3-registro-y-acceso)
+      - [4. Tarifas y Planes](#4-tarifas-y-planes)
+      - [5. Propiedad Intelectual](#5-propiedad-intelectual)
+      - [6. Uso Aceptable](#6-uso-aceptable)
+      - [7. Protección de Datos y Privacidad](#7-protección-de-datos-y-privacidad)
+      - [8. Disponibilidad del Servicio](#8-disponibilidad-del-servicio)
+      - [9. Limitación de Responsabilidad](#9-limitación-de-responsabilidad)
+      - [10. Modificaciones del Acuerdo](#10-modificaciones-del-acuerdo)
     - [5.2.5. Implemented Native-Mobile Application Evidence](#525-implemented-native-mobile-application-evidence)
     - [5.2.6. Implemented RESTful API and/or Serverless Backend Evidence](#526-implemented-restful-api-andor-serverless-backend-evidence)
     - [5.2.7. RESTful API documentation](#527-restful-api-documentation)
+      - [Authentication](#authentication)
+      - [Products](#products)
+      - [Combos](#combos)
+      - [Tags](#tags)
+      - [Units](#units)
+      - [Sales](#sales)
+      - [Inventory](#inventory)
+      - [StockAlert](#stockalert)
+      - [Report](#report)
     - [5.2.8. Team Collaboration Insights](#528-team-collaboration-insights)
   - [5.3. Video About-the-Product](#53-video-about-the-product)
 - [Part II: Verification, Validation \& Pipeline](#part-ii-verification-validation--pipeline)
@@ -286,8 +313,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Sanchez Rios, Camila</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1:  Reconozco mi responsabilidad ética y profesional de garantizar que la gestión digital de inventarios no excluya a quienes tienen poca experiencia tecnológica. Por eso, he priorizado una interfaz intuitiva, accesible desde cualquier dispositivo y con entrada por voz, asegurando que emprendedores y bodegueros puedan usar la solución sin barreras.  </b> </p>
+        <p><b>TB1: Reconozco que protejer la información comercial de los usuarios mediante prácticas seguras de manejo de datos, respetando la confidencialidad de sus registros de stock, ventas y ganancias. </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Choquehuanca Nuñez, Luciana Carolina</b></p>
@@ -317,8 +344,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Sanchez Rios, Camila</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1: Me encargué de crear la organización y los repositorios en el github. Colaboré con Capítulo I: Introduccion y Capítulo IV: Product Design, del mismo modo de subir la landing actualizada en el repositorio. </b> </p>
+        <p><b>TB1: Contribuí en la implementación de los avances de las pruebas de los Core Entities Unit Tests y colabore en la realizacion del Capítulo VII: DevOps Practices.   </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Choquehuanca Nuñez, Luciana Carolina</b></p>
