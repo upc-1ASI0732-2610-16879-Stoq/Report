@@ -23,13 +23,13 @@
 <div align="center">
     <h5><strong>Integrantes</strong></h5>
     <p>
-        U - Luciana Carolina Choquehuanca Nuñez <br>
+        U202319431 - Luciana Carolina Choquehuanca Nuñez <br>
         U202224619 - Ronald Joel Peralta Chipa <br>
         U202210973 - Sanchez Rios, Camila Cristina <br>
-        U - Fabiola Del Rocio Saldaña Ayalan <br>
+        U202313773 - Fabiola Del Rocio Saldaña Ayalan <br>
         U20221B778 - Roy Linsh Fernandez Remon  <br>
     </p>
-    <p><em>Abril, 2026</em></p>
+    <p><em>Mayo, 2026</em></p>
 </div>
 
 <br>
