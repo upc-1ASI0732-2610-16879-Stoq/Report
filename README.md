@@ -600,7 +600,7 @@ Prácticas aplicadas:
 
 ### 7.1.2. Build & Test Suite Pipeline Components
 
-Nuestro objetivo es Compilar el backend y validar automáticamente que los cambios superen todas las pruebas (Unit, Integration, BDD) antes de permitir un merge o despliegue.
+Nuestro objetivo es compilar el backend y validar automáticamente que los cambios superen todas las pruebas (Unit, Integration, BDD) antes de permitir un merge o despliegue.
 
 **Activadores (on):** `push` y `pull_request` en ramas `feature/*`, `develop` y `testing`.
 
