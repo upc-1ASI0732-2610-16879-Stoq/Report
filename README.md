@@ -186,6 +186,8 @@
     - [7.2.2. Stages Deployment Pipeline Components](#722-stages-deployment-pipeline-components)
   - [7.3. Continuous deployment](#73-continuous-deployment)
     - [7.3.1. Tools and Practices](#731-tools-and-practices)
+      - [Recomendaciones](#recomendaciones)
+      - [Consideraciones adicionales](#consideraciones-adicionales)
     - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
   - [7.4. Continuous Monitoring](#74-continuous-monitoring)
     - [7.4.1. Tools and Practices](#741-tools-and-practices)
@@ -601,6 +603,16 @@ Prácticas aplicadas:
 ## 7.2. Continuous Delivery
 
 ### 7.2.1. Tools and Practices
+
+El pipeline de entrega continua (CD) del sistema de gestión de inventario fue implementado utilizando GitHub Actions como herramienta principal de automatización y orquestación de despliegues. El proyecto backend desarrollado en Java utiliza Maven como gestor de dependencias y compilación.
+
+Las prácticas aplicadas durante el proceso de integración y despliegue fueron las siguientes:
+
+- **Automatización de despliegue:** cada cambio aprobado en la rama testing ejecuta automáticamente el pipeline de despliegue hacia el entorno de pruebas.
+- **Validación previa:** el sistema únicamente permite el despliegue de versiones que hayan superado satisfactoriamente las pruebas unitarias implementadas con JUnit.
+- **Control de versiones:** se utilizó GitHub para la gestión colaborativa del código fuente mediante ramas (main, testing y ramas feature).
+- **Trazabilidad:** los resultados de compilación y pruebas son almacenados automáticamente como artefactos del pipeline para fines de monitoreo y auditoría.
+- **Buenas prácticas DevOps:** se aplicó integración continua y despliegue continuo para asegurar estabilidad, control y rapidez en las actualizaciones del sistema.
 
 ### 7.2.2. Stages Deployment Pipeline Components
 
