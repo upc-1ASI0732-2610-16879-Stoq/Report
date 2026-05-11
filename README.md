@@ -163,12 +163,10 @@
     - [Escenario 2](#escenario-2)
     - [Escenario 3](#escenario-3)
     - [Escenario 4](#escenario-4)
-      - [Resumen:](#resumen)
     - [Información General Test-2](#información-general-test-2)
     - [Escenario 1](#escenario-1-1)
     - [Escenario 2](#escenario-2-1)
     - [Escenario 3](#escenario-3-1)
-      - [Resumen:](#resumen-1)
     - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
       - [Evidence 1: Product Registration Feature File](#evidence-1-product-registration-feature-file)
       - [Evidence 2: Low Stock Alert Feature File](#evidence-2-low-stock-alert-feature-file)
@@ -1451,19 +1449,6 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 |---|---|
 | ![Escenario 4](./assets/Chapter-6/test1_sc4.png) | Este escenario valida que el sistema pueda actualizar correctamente la información de un producto existente, verificando la integración entre el endpoint REST, los servicios de actualización, el aggregate Product, el repositorio JPA y la persistencia en base de datos. Se comprueba que los cambios enviados sean reflejados correctamente y que las validaciones del dominio continúen aplicándose durante la edición. Esta validación es importante porque garantiza que la información del catálogo pueda mantenerse actualizada y consistente a lo largo del tiempo. |
 
-#### Resumen:
-La prueba verifica la comunicación e integración entre:
-
-- endpoints REST
-- controllers
-- command/query services
-- aggregates del dominio
-- repositorios JPA
-- base de datos H2 en memoria
-- validaciones de negocio
-
-Además, se valida que el sistema responda adecuadamente ante datos válidos e inválidos, garantizando la integridad de la información del inventario.
-
 ---
 ### Información General Test-2
 
@@ -1492,17 +1477,6 @@ Además, se valida que el sistema responda adecuadamente ante datos válidos e i
 |---|---|
 | ![Escenario 3](./assets/Chapter-6/test2_sc3.png) | Este escenario valida la integración funcional entre los módulos de productos y proveedores, verificando que un producto solo pueda registrarse cuando se encuentra asociado a un proveedor existente dentro del sistema. La prueba comprueba la interacción entre múltiples aggregates, servicios de aplicación, repositorios y validaciones de negocio relacionadas con integridad referencial. Esta validación es importante porque asegura consistencia entre entidades del inventario y evita relaciones inválidas que puedan afectar procesos de compras, abastecimiento y trazabilidad de productos. |
 
-#### Resumen:
-La prueba verifica el flujo completo de creación y asociación de proveedores y productos, incluyendo:
-
-- validaciones de dominio
-- reglas de integridad entre entidades
-- persistencia de datos
-- manejo de excepciones
-- interacción entre múltiples repositorios y servicios
-
-Asimismo, se comprueba que el sistema impida operaciones inconsistentes, como asociar productos a proveedores inexistentes o registrar información inválida.
-
 ---
 
 ### 6.1.3. Core Behavior-Driven Development
@@ -1523,6 +1497,8 @@ En esta sección se presentan las pruebas Behavior-Driven Development desarrolla
 
 
 ### 6.1.4. Core System Tests
+
+<img src="assets/Chapter-6/core-system-gherkin.png" alt="Core system test gherkin" width="800px">
 
 <img src="assets/Chapter-6/core-system-test1.png" alt="Core system test 1" width="800px">
 
