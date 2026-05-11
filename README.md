@@ -804,6 +804,14 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 ### 5.2.8. Team Collaboration Insights
 
 ## 5.3. Video About-the-Product
+StockWise es una aplicación digital y móvil creada para optimizar la gestión de inventarios, permitiendo controlar de manera automática los vencimientos, los niveles mínimos de stock y la organización de kits de productos. Su propuesta está dirigida principalmente a pequeños y medianos negocios, ofreciéndoles una solución práctica, económica y sencilla de utilizar, con el objetivo de disminuir pérdidas y mejorar la toma de decisiones.
+
+A través de la aplicación, los usuarios pueden escanear productos directamente desde su celular, recibir notificaciones anticipadas cuando un artículo está próximo a agotarse o vencer, y acceder a un panel en tiempo real con métricas importantes y reportes completos. En el video se observa cómo el usuario registra productos, verifica el estado del inventario y confirma pedidos de forma rápida con un solo toque, evidenciando la eficiencia y facilidad de uso del sistema. Según comenta uno de los usuarios: “StockWise me ha ayudado a mantener mi inventario organizado sin invertir demasiado tiempo; ahora todo está al alcance de un clic y nunca más se me venció un producto”.
+
+![RESTful API](./assets/Chapter-5/aboutProduct.png)
+
+Link: [https://Video_About_Product.com](https://youtu.be/OPvuExjrxCY)
+
 
 # Part II: Verification, Validation & Pipeline
 
