@@ -433,14 +433,15 @@ El Plan B – Localización y predicción inteligente combina dos capacidades cl
       </p>
     </td>
   </tr>
+  </tr>
   <tr>
     <th>
-      <img src="assets/Chapter-1/.png" alt="Foto de perfil de Alejandro" width="800px">
+      <img src="assets/Chapter-1/Roy.jpeg" alt="Foto de perfil de Roy" width="800px">
     </th>
     <td valign="top">
-      <p><b>...</b></p>
+      <p><b>Roy Fernández Remón</b></p>
       <p>
-        ...
+        Soy estudiante de la carrera de Ingeniería de Software. Soy una persona muy responsable y mi pasión del día a día es codificar sin errores. Conozco ampliamente los lenguajes de C#, Java, Phyton y Kotlin
       </p>
     </td>
   </tr>
