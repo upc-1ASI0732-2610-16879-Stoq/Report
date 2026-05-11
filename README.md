@@ -27,7 +27,7 @@
         U202224619 - Ronald Joel Peralta Chipa <br>
         U202210973 - Sanchez Rios, Camila Cristina <br>
         U - Fabiola Del Rocio Saldaña Ayalan <br>
-        U - Roy Linsh Fernandez Remon  <br>
+        U20221B778 - Roy Linsh Fernandez Remon  <br>
     </p>
     <p><em>Abril, 2026</em></p>
 </div>
