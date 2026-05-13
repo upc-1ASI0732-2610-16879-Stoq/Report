@@ -49,11 +49,13 @@
 
 ## Enlace del repositorio del informe
 
-https://github.com/upc-1ASI0732-2610-16879-Stoq/Report 
+Link: [https://github.com/upc-1ASI0732-2610-16879-Stoq/Report](https://github.com/upc-1ASI0732-2610-16879-Stoq/Report)
+
 
 ## Enlace de los repositorios de la organizacion
 
-https://github.com/upc-1ASI0732-2610-16879-Stoq 
+Link: [https://github.com/upc-1ASI0732-2610-16879-Stoq](https://github.com/upc-1ASI0732-2610-16879-Stoq)
+
 
 <div style="page-break-after: always;"></div>
 
@@ -3027,6 +3029,8 @@ Este apartado muestra la evidencia de la implementación de una API RESTful, doc
 
 ![RESTful API](./assets/Chapter-5/swagger_1.png)
 ![RESTful API](./assets/Chapter-5/swagger_2.png)
+
+Link: [https://stoq-web-backend.onrender.com/swagger-ui.html](https://stoq-web-backend.onrender.com/swagger-ui.html)
 
 ### 5.2.7. RESTful API documentation
 La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**, accesible desde el entorno de desarrollo. A continuación se detallan todos los endpoints disponibles, agrupados por módulo funcional.
