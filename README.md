@@ -45,28 +45,12 @@
 
 <div style="page-break-after: always;"></div>
 
-# Project Report Collaboration Insights
-
-## Enlace del repositorio del informe
-
-Link: [https://github.com/upc-1ASI0732-2610-16879-Stoq/Report](https://github.com/upc-1ASI0732-2610-16879-Stoq/Report)
-
-
-## Enlace de los repositorios de la organizacion
-
-Link: [https://github.com/upc-1ASI0732-2610-16879-Stoq](https://github.com/upc-1ASI0732-2610-16879-Stoq)
-
-
-<div style="page-break-after: always;"></div>
 
 # Contenido
 
 ## Tabla de contenidos
 
 - [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
-- [Project Report Collaboration Insights](#project-report-collaboration-insights)
-  - [Enlace del repositorio del informe](#enlace-del-repositorio-del-informe)
-  - [Enlace de los repositorios de la organizacion](#enlace-de-los-repositorios-de-la-organizacion)
 - [Contenido](#contenido)
   - [Tabla de contenidos](#tabla-de-contenidos)
 - [Student Outcome](#student-outcome)
@@ -3145,6 +3129,33 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 | `GET` | `/api/v1/reports/stock-average/by-date` | Filtrar StockAverageReports por fecha |
 
 ### 5.2.8. Team Collaboration Insights
+**Enlace del repositorio del informe** <br>
+
+Link: [https://github.com/upc-1ASI0732-2610-16879-Stoq/Report](https://github.com/upc-1ASI0732-2610-16879-Stoq/Report)
+
+
+**Enlace de los repositorios de la organización**<br>
+
+Link: [https://github.com/upc-1ASI0732-2610-16879-Stoq](https://github.com/upc-1ASI0732-2610-16879-Stoq)
+
+
+**TP:**
+- Reporte<br>
+ <img src="assets/Chapter-5/insight-tp-report1.png" alt="Insight TP" width="500px"><br>
+ <img src="assets/Chapter-5/insight-tp-report.png" alt="Insight TP" width="500px">
+<br>
+- Landing Page<br>
+  <img src="assets/Chapter-5/insight-tp-landing1.png" alt="Insight TP" width="500px"><br>
+  <img src="assets/Chapter-5/insight-tp-landing.png" alt="Insight TP" width="500px">
+<br>
+- Backend <br>
+   <img src="assets/Chapter-5/insight-tp-back1.png" alt="Insight TP" width="500px"><br>
+   <img src="assets/Chapter-5/insight-tp-back.png" alt="Insight TP" width="500px">
+
+<br>
+- Frontend<br>
+  <img src="assets/Chapter-5/insight-tp-front1.png" alt="Insight TP" width="500px"><br>
+  <img src="assets/Chapter-5/insight-tp-front.png" alt="Insight TP" width="500px">
 
 ## 5.3. Video About-the-Product
 StockWise es una aplicación digital y móvil creada para optimizar la gestión de inventarios, permitiendo controlar de manera automática los vencimientos, los niveles mínimos de stock y la organización de kits de productos. Su propuesta está dirigida principalmente a pequeños y medianos negocios, ofreciéndoles una solución práctica, económica y sencilla de utilizar, con el objetivo de disminuir pérdidas y mejorar la toma de decisiones.
