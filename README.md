@@ -314,8 +314,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Fernandez Remon, Roy Linsh</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1: Al elaborar la TP1, al trabajar en el capítulo III, ayudar en parte del Core System Test y Production Deployment Pipeline Components, pude indicar cómo las historias de usuario, entre ellas las más relevantes, influren directamente las decisiones de la arquitectura del sistema y en el desarrollo de tests de manera correcta y aplicada en el proyecto. </b> </p>
+        <p><b>TB1: En este proceso, fundamenté la relación directa entre las historias de usuario de mayor relevancia y la configuración de la arquitectura, garantizando una metodología de testing coherente y aplicada a las necesidades del software. </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
       </td>
@@ -345,8 +345,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Fernandez Remon, Roy Linsh</b></p>
-        <p><b>AV1: </b> </p>
-        <p><b>TB1: </b> </p>
+        <p><b>AV1: Reconozco que la realización importante y de manera correcta de estas US ayudan completamente al desarrollo de los tests por los cuales se tienen que desarrollar de manera cuidadosa para poder evitar errores y lograr el trabajo de manera satisfactoria. </b> </p>
+        <p><b>TB1: Soy consciente de que la correcta definición y realización de estas US impacta directamente en la calidad del testing. Por ello, su elaboración debe ser exhaustiva para evitar inconsistencias técnicas y garantizar la entrega exitosa del trabajo. </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
       </td>
