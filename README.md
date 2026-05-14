@@ -211,51 +211,11 @@
     - [7.2.2. Stages Deployment Pipeline Components](#722-stages-deployment-pipeline-components)
   - [7.3. Continuous deployment](#73-continuous-deployment)
     - [7.3.1. Tools and Practices](#731-tools-and-practices)
+      - [Recomendaciones](#recomendaciones)
+      - [Consideraciones adicionales](#consideraciones-adicionales)
     - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
-  - [7.4. Continuous Monitoring](#74-continuous-monitoring)
-    - [7.4.1. Tools and Practices](#741-tools-and-practices)
-    - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
-    - [7.4.3. Alerting Pipeline Components](#743-alerting-pipeline-components)
-    - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
-- [Part III: Experiment-Driven Lifecycle](#part-iii-experiment-driven-lifecycle)
-- [Capitulo VIII: Experiment-Driven Development](#capitulo-viii-experiment-driven-development)
-  - [8.1. Experiment Planning](#81-experiment-planning)
-    - [8.1.1. As-Is Summary](#811-as-is-summary)
-    - [8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims](#812-raw-material-assumptions-knowledge-gaps-ideas-claims)
-    - [8.1.3. Experiment-Ready Questions](#813-experiment-ready-questions)
-    - [8.1.4. Question Backlog](#814-question-backlog)
-    - [8.1.5. Experiment Cards](#815-experiment-cards)
-  - [8.2. Experiment Design](#82-experiment-design)
-    - [8.2.1. Hypotheses](#821-hypotheses)
-    - [8.2.2. Domain Business Metrics](#822-domain-business-metrics)
-    - [8.2.3. Measures](#823-measures)
-    - [8.2.4. Conditions](#824-conditions)
-    - [8.2.5. Scale Calculations and Decisions](#825-scale-calculations-and-decisions)
-    - [8.2.6. Methods Selection](#826-methods-selection)
-    - [8.2.7. Data Analytics: Goals, KPIs and Metrics Selection](#827-data-analytics-goals-kpis-and-metrics-selection)
-    - [8.2.8. Web and Mobile Tracking Plan](#828-web-and-mobile-tracking-plan)
-  - [8.3. Experimentation](#83-experimentation)
-    - [8.3.1. To-Be User Stories](#831-to-be-user-stories)
-    - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)
-    - [8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle](#833-pipeline-supported-experiment-driven-to-be-software-platform-lifecycle)
-      - [8.3.3.1. To-Be Sprint Backlogs](#8331-to-be-sprint-backlogs)
-      - [8.3.3.2. Implemented To-Be Landing Page Evidence](#8332-implemented-to-be-landing-page-evidence)
-    - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence-1)
-      - [8.3.3.4. Implemented To-Be Native-Mobile Application Evidence](#8334-implemented-to-be-native-mobile-application-evidence)
-      - [8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence](#8335-implemented-to-be-restful-api-andor-serverless-backend-evidence)
-      - [8.3.3.6. Team Collaboration Insights](#8336-team-collaboration-insights)
-    - [8.3.4. To-Be Validation Interviews](#834-to-be-validation-interviews)
-      - [8.3.4.1. Diseno de Entrevistas](#8341-diseno-de-entrevistas)
-      - [8.3.4.2. Registro de Entrevistas](#8342-registro-de-entrevistas)
-  - [8.4. Experiment Aftermath \& Analysis](#84-experiment-aftermath--analysis)
-    - [8.4.1. Analysis and Interpretation of Results](#841-analysis-and-interpretation-of-results)
-    - [8.4.2. Re-scored and Re-prioritized Question Backlog](#842-re-scored-and-re-prioritized-question-backlog)
-  - [8.5. Continuous Learning](#85-continuous-learning)
-    - [8.5.1. Shareback Session Artifacts: Learning Workflow](#851-shareback-session-artifacts-learning-workflow)
-  - [8.6. To-Be Software Platform Pre-launch](#86-to-be-software-platform-pre-launch)
-    - [8.6.1. About-the-Product Intro Video](#861-about-the-product-intro-video)
 - [Conclusiones](#conclusiones)
-- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Recomendaciones](#recomendaciones-1)
 - [Bibliografia](#bibliografia)
 - [Anexos](#anexos)
 
@@ -280,28 +240,28 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       <td><b>Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software</b></td>
       <td>
         <p><b>Peralta Chipa, Ronald Joel </b></p>
-        <p><b>AV1:Demostré compromiso ético y profesional en el desarrollo del proyecto al participar en la configuración del entorno de desarrollo, la gestión del código fuente y la definición de estándares de codificación, promoviendo un trabajo colaborativo ordenado, mantenible y alineado con buenas prácticas de ingeniería de software. Además, aseguré que las configuraciones y convenciones aplicadas facilitaran la trazabilidad de cambios, la integración entre integrantes del equipo y la sostenibilidad del proyecto a largo plazo. </b> </p>
-        <p><b>TB1:Apliqué criterios éticos y profesionales durante la implementación y despliegue del producto, contribuyendo en el documentacion y desarrollo de la landing page, aplicaciones web y mobile, APIs RESTful, pruebas de integración y procesos de despliegue continuo. Asimismo, participé en la documentación técnica y en la coordinación del equipo para asegurar la calidad, confiabilidad y disponibilidad de la solución desarrollada. </b> </p>
+        <p><b>AV1:</b> Demostré compromiso ético y profesional en el desarrollo del proyecto al participar en la configuración del entorno de desarrollo, la gestión del código fuente y la definición de estándares de codificación, promoviendo un trabajo colaborativo ordenado, mantenible y alineado con buenas prácticas de ingeniería de software. Además, aseguré que las configuraciones y convenciones aplicadas facilitaran la trazabilidad de cambios, la integración entre integrantes del equipo y la sostenibilidad del proyecto a largo plazo.  </p>
+        <p><b>TB1:</b> Apliqué criterios éticos y profesionales durante la implementación y despliegue del producto, contribuyendo en el documentacion y desarrollo de la landing page, aplicaciones web y mobile, APIs RESTful, pruebas de integración y procesos de despliegue continuo. Asimismo, participé en la documentación técnica y en la coordinación del equipo para asegurar la calidad, confiabilidad y disponibilidad de la solución desarrollada. </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Saldaña Ayalan, Fabiola Del Rocio</b></p>
-        <p><b>AV1: Demostré responsabilidad profesional al liderar el diseño del producto (Capítulo IV), aplicando estándares como Domain-Driven Design (DDD) y el modelo C4 para la arquitectura de StockWise. Me aseguré de documentar de manera clara y simplificada la alta disponibilidad, el aislamiento de IA, garantizando que el diseño arquitectónico, de bases de datos y de interfaces (UX/UI) responda fielmente a las necesidades del negocio y permita un mantenimiento ordenado y sostenible por parte de todo el equipo.</b> </p>
-        <p><b>TB1: Reconocí mi responsabilidad ética y profesional al implementar los Core System Tests y configurar el Build & Test Suite Pipeline. Al automatizar la validación del código y estructurar las pruebas de los flujos críticos (como las ventas y el descuento de inventario secuencial), garantizo la integridad de los datos de los usuarios, evitando que despliegues con errores técnicos lleguen a producción y afecten las operaciones diarias de las empresas que confían en nuestra plataforma.</b> </p>
+        <p><b>AV1: </b> Demostré responsabilidad profesional al liderar el diseño del producto (Capítulo IV), aplicando estándares como Domain-Driven Design (DDD) y el modelo C4 para la arquitectura de StockWise. Me aseguré de documentar de manera clara y simplificada la alta disponibilidad, el aislamiento de IA, garantizando que el diseño arquitectónico, de bases de datos y de interfaces (UX/UI) responda fielmente a las necesidades del negocio y permita un mantenimiento ordenado y sostenible por parte de todo el equipo.</p>
+        <p><b>TB1: </b> Reconocí mi responsabilidad ética y profesional al implementar los Core System Tests y configurar el Build & Test Suite Pipeline. Al automatizar la validación del código y estructurar las pruebas de los flujos críticos (como las ventas y el descuento de inventario secuencial), garantizo la integridad de los datos de los usuarios, evitando que despliegues con errores técnicos lleguen a producción y afecten las operaciones diarias de las empresas que confían en nuestra plataforma.</p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Sanchez Rios, Camila</b></p>
-        <p><b>AV1:  Reconozco mi responsabilidad ética y profesional de garantizar que la gestión digital de inventarios no excluya a quienes tienen poca experiencia tecnológica. Por eso, he priorizado una interfaz intuitiva, accesible desde cualquier dispositivo y con entrada por voz, asegurando que emprendedores y bodegueros puedan usar la solución sin barreras.  </b> </p>
-        <p><b>TB1: Reconozco que protejer la información comercial de los usuarios mediante prácticas seguras de manejo de datos, respetando la confidencialidad de sus registros de stock, ventas y ganancias. </b> </p>
+        <p><b>AV1:</b>  Reconozco mi responsabilidad ética y profesional de garantizar que la gestión digital de inventarios no excluya a quienes tienen poca experiencia tecnológica. Por eso, he priorizado una interfaz intuitiva, accesible desde cualquier dispositivo y con entrada por voz, asegurando que emprendedores y bodegueros puedan usar la solución sin barreras.  </p>
+        <p><b>TB1:</b>  Reconozco que protejer la información comercial de los usuarios mediante prácticas seguras de manejo de datos, respetando la confidencialidad de sus registros de stock, ventas y ganancias.  </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Choquehuanca Nuñez, Luciana Carolina</b></p>
-        <p><b>AV1: Reconocí responsabilidad ética y profesional en situaciones de ingeniería de software al sustentar la propuesta con evidencia obtenida de entrevistas, análisis de competidores y artefactos de needfinding. Esto permitió evitar decisiones basadas en suposiciones y orientar la solución hacia necesidades reales de los usuarios. </b> </p>
-        <p><b>TB1: Reconocí responsabilidad ética y profesional en situaciones de ingeniería de software al aplicar BDD y prácticas de integración continua para comprobar el comportamiento esperado del sistema antes de su entrega. Esto ayudó a reducir errores, mejorar la trazabilidad del desarrollo y fortalecer la confiabilidad del producto. </b> </p>
+        <p><b>AV1:</b> Reconocí responsabilidad ética y profesional en situaciones de ingeniería de software al sustentar la propuesta con evidencia obtenida de entrevistas, análisis de competidores y artefactos de needfinding. Esto permitió evitar decisiones basadas en suposiciones y orientar la solución hacia necesidades reales de los usuarios. </p>
+        <p><b>TB1:</b> Reconocí responsabilidad ética y profesional en situaciones de ingeniería de software al aplicar BDD y prácticas de integración continua para comprobar el comportamiento esperado del sistema antes de su entrega. Esto ayudó a reducir errores, mejorar la trazabilidad del desarrollo y fortalecer la confiabilidad del producto.  </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Fernandez Remon, Roy Linsh</b></p>
-        <p><b>AV1: Al elaborar la TP1, al trabajar en el capítulo III, ayudar en parte del Core System Test y Production Deployment Pipeline Components, pude indicar cómo las historias de usuario, entre ellas las más relevantes, influren directamente las decisiones de la arquitectura del sistema y en el desarrollo de tests de manera correcta y aplicada en el proyecto. </b> </p>
-        <p><b>TB1: En este proceso, fundamenté la relación directa entre las historias de usuario de mayor relevancia y la configuración de la arquitectura, garantizando una metodología de testing coherente y aplicada a las necesidades del software. </b> </p>
+        <p><b>AV1: </b> Al elaborar la TP1, al trabajar en el capítulo III, ayudar en parte del Core System Test y Production Deployment Pipeline Components, pude indicar cómo las historias de usuario, entre ellas las más relevantes, influren directamente las decisiones de la arquitectura del sistema y en el desarrollo de tests de manera correcta y aplicada en el proyecto.</p>
+        <p><b>TB1: </b> En este proceso, fundamenté la relación directa entre las historias de usuario de mayor relevancia y la configuración de la arquitectura, garantizando una metodología de testing coherente y aplicada a las necesidades del software.</p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
       </td>
@@ -311,28 +271,28 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       <td><b>Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales</b></td>
       <td>
         <p><b>Peralta Chipa, Ronald Joel</b></p>
-        <p><b>AV1: Participé en la configuración del entorno de desarrollo, la gestión del código fuente y la definición de estándares de codificación, promoviendo un flujo de trabajo ordenado, mantenible y alineado con buenas prácticas de ingeniería de software. Además, las decisiones técnicas adoptadas permitieron optimizar recursos, facilitar la colaboración entre integrantes del equipo y asegurar una mejor escalabilidad y sostenibilidad del proyecto. </b> </p>
-        <p><b>TB1: Contribuí en la implementación y despliegue de aplicaciones web, mobile y APIs RESTful, priorizando la calidad, disponibilidad y confiabilidad de la solución desarrollada. Asimismo, participé en la documentación técnica, pruebas de integración y procesos de despliegue continuo para garantizar un funcionamiento estable y una experiencia consistente para los usuarios.También impulsé el uso de herramientas y prácticas de integración y despliegue continuo que ayudaron a reducir errores en producción, optimizar tiempos de entrega y mejorar la eficiencia del desarrollo. </b> </p>
+        <p><b>AV1:</b> Participé en la configuración del entorno de desarrollo, la gestión del código fuente y la definición de estándares de codificación, promoviendo un flujo de trabajo ordenado, mantenible y alineado con buenas prácticas de ingeniería de software. Además, las decisiones técnicas adoptadas permitieron optimizar recursos, facilitar la colaboración entre integrantes del equipo y asegurar una mejor escalabilidad y sostenibilidad del proyecto. </p>
+        <p><b>TB1:</b> Contribuí en la implementación y despliegue de aplicaciones web, mobile y APIs RESTful, priorizando la calidad, disponibilidad y confiabilidad de la solución desarrollada. Asimismo, participé en la documentación técnica, pruebas de integración y procesos de despliegue continuo para garantizar un funcionamiento estable y una experiencia consistente para los usuarios.También impulsé el uso de herramientas y prácticas de integración y despliegue continuo que ayudaron a reducir errores en producción, optimizar tiempos de entrega y mejorar la eficiencia del desarrollo. </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Saldaña Ayalan, Fabiola Del Rocio</b></p>
-        <p><b>AV1: Emití juicios informados durante el diseño arquitectónico y de producto de StockWise, evaluando directamente el impacto económico y operativo en nuestros usuarios finales. Diseñé una arquitectura enfocada en la alta disponibilidad y el procesamiento Edge para que los negocios no detengan sus ventas por falta de conectividad, protegiendo su competitividad y reduciendo drásticamente las pérdidas económicas asociadas a las caídas del sistema o desorganización de la información.</b> </p>
-        <p><b>TB1: Consideré el impacto tecnológico y económico al implementar los componentes del pipeline de Integración Continua (CI) y las pruebas del sistema central. Esta decisión técnica optimiza los recursos tecnológicos del equipo, acelera la entrega de valor de forma segura y, al asegurar matemáticamente que los cálculos de inventario sean exactos en cada despliegue, protege el margen de ganancia y la estabilidad financiera de los negocios que adoptan la solución.</b> </p>
+        <p><b>AV1: </b>Emití juicios informados durante el diseño arquitectónico y de producto de StockWise, evaluando directamente el impacto económico y operativo en nuestros usuarios finales. Diseñé una arquitectura enfocada en la alta disponibilidad y el procesamiento Edge para que los negocios no detengan sus ventas por falta de conectividad, protegiendo su competitividad y reduciendo drásticamente las pérdidas económicas asociadas a las caídas del sistema o desorganización de la información. </p>
+        <p><b>TB1: </b>Consideré el impacto tecnológico y económico al implementar los componentes del pipeline de Integración Continua (CI) y las pruebas del sistema central. Esta decisión técnica optimiza los recursos tecnológicos del equipo, acelera la entrega de valor de forma segura y, al asegurar matemáticamente que los cálculos de inventario sean exactos en cada despliegue, protege el margen de ganancia y la estabilidad financiera de los negocios que adoptan la solución.</p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Sanchez Rios, Camila</b></p>
-        <p><b>AV1: Me encargué de crear la organización y los repositorios en el github. Colaboré con Capítulo I: Introduccion y Capítulo IV: Product Design, del mismo modo de subir la landing actualizada en el repositorio. </b> </p>
-        <p><b>TB1: Contribuí en la implementación de los avances de las pruebas de los Core Entities Unit Tests y colabore en la realizacion del Capítulo VII: DevOps Practices.   </b> </p>
+        <p><b>AV1:</b>Me encargué de crear la organización y los repositorios en el github. Colaboré con Capítulo I: Introduccion y Capítulo IV: Product Design, del mismo modo de subir la landing actualizada en el repositorio. </p>
+        <p><b>TB1:</b> Contribuí en la implementación de los avances de las pruebas de los Core Entities Unit Tests y colabore en la realizacion del Capítulo VII: DevOps Practices.  </b> </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Choquehuanca Nuñez, Luciana Carolina</b></p>
-        <p><b>AV1: Emití juicios informados considerando el impacto de la solución al analizar cómo las necesidades, frustraciones y tareas de los usuarios podían afectar la aceptación del producto. Esto permitió orientar la propuesta hacia una solución útil, viable y alineada al contexto social y económico del público objetivo. </b> </p>
-        <p><b>TB1: Emití juicios informados considerando el impacto de la solución al seleccionar prácticas como BDD e integración continua para mejorar la calidad del software. Esto permitió reducir riesgos técnicos, evitar retrabajo y asegurar que el producto pueda mantenerse y evolucionar de forma más confiable. </b> </p>
+        <p><b>AV1: </b> Emití juicios informados considerando el impacto de la solución al analizar cómo las necesidades, frustraciones y tareas de los usuarios podían afectar la aceptación del producto. Esto permitió orientar la propuesta hacia una solución útil, viable y alineada al contexto social y económico del público objetivo.  </p>
+        <p><b>TB1: </b> Emití juicios informados considerando el impacto de la solución al seleccionar prácticas como BDD e integración continua para mejorar la calidad del software. Esto permitió reducir riesgos técnicos, evitar retrabajo y asegurar que el producto pueda mantenerse y evolucionar de forma más confiable.</p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
         <p><b>Fernandez Remon, Roy Linsh</b></p>
-        <p><b>AV1: Reconozco que la realización importante y de manera correcta de estas US ayudan completamente al desarrollo de los tests por los cuales se tienen que desarrollar de manera cuidadosa para poder evitar errores y lograr el trabajo de manera satisfactoria. </b> </p>
-        <p><b>TB1: Soy consciente de que la correcta definición y realización de estas US impacta directamente en la calidad del testing. Por ello, su elaboración debe ser exhaustiva para evitar inconsistencias técnicas y garantizar la entrega exitosa del trabajo. </b> </p>
+        <p><b>AV1:</b> Reconozco que la realización importante y de manera correcta de estas US ayudan completamente al desarrollo de los tests por los cuales se tienen que desarrollar de manera cuidadosa para poder evitar errores y lograr el trabajo de manera satisfactoria. </p>
+        <p><b>TB1:</b> Soy consciente de que la correcta definición y realización de estas US impacta directamente en la calidad del testing. Por ello, su elaboración debe ser exhaustiva para evitar inconsistencias técnicas y garantizar la entrega exitosa del trabajo. </p>
         <p><b>AV2: </b> </p>
         <p><b>TB2: </b> </p>
       </td>
@@ -585,6 +545,9 @@ _Imagen (N°1). Elaboración propia. Realizado en Canva_
 - Valoran las soluciones tecnológicas que profesionalicen su negocio y les permitan competir a mayor escala.
 
 Además de definir los segmentos por criterios psicográficos, hemos incorporado datos demográficos concretos para fundamentar mejor la selección de segmentos y mejorar las estrategias de mercado hacia los usuarios reales de nuestra app.
+
+<div style="page-break-after: always;"></div>
+
 
 # Capitulo II: Requirements Elicitation & Analysis
 
@@ -1386,6 +1349,8 @@ El siguiente glosario presenta los términos clave utilizados a lo largo del des
   </tbody>
 </table>
 
+<div style="page-break-after: always;"></div>
+
 # Capitulo III: Requirements Specification
 
 ## 3.1. To-Be Scenario Mapping
@@ -1611,6 +1576,9 @@ _Imagen (N°8). Elaboración propia. Realizado en UXPRESSIA_
  <img src="assets/Chapter-3/stockwise%20-%20impact%20map-emprendedor.png" alt="Objetivo2" width="800px"> 
 
 _Imagen (N°9). Elaboración propia. Realizado en UXPRESSIA_
+
+<div style="page-break-after: always;"></div>
+
 
 # Capitulo IV: Product Design
 
@@ -2788,6 +2756,7 @@ El presente diccionario de clases describe los principales elementos del diagram
  <img src="assets/Chapter-4/databasediagram.png" alt="Sytem Container" width="800px">
 
 
+<div style="page-break-after: always;"></div>
 
 # Capitulo V: Product Implementation
 
@@ -3129,10 +3098,6 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 | `GET` | `/api/v1/reports/stock-average/by-date` | Filtrar StockAverageReports por fecha |
 
 ### 5.2.8. Team Collaboration Insights
-**Enlace del repositorio del informe** <br>
-
-Link: [https://github.com/upc-1ASI0732-2610-16879-Stoq/Report](https://github.com/upc-1ASI0732-2610-16879-Stoq/Report)
-
 
 **Enlace de los repositorios de la organización**<br>
 
@@ -3150,10 +3115,8 @@ Link: [https://github.com/upc-1ASI0732-2610-16879-Stoq](https://github.com/upc-1
 <br>
 - Backend <br>
    <img src="assets/Chapter-5/insight-tp-back1.png" alt="Insight TP" width="500px"><br>
-   <img src="assets/Chapter-5/insight-tp-back.png" alt="Insight TP" width="500px">
-
-<br>
-- Frontend<br>
+   <img src="assets/Chapter-5/insight-tp-back.png" alt="Insight TP" width="500px"><br>
+- Frontend <br>
   <img src="assets/Chapter-5/insight-tp-front1.png" alt="Insight TP" width="500px"><br>
   <img src="assets/Chapter-5/insight-tp-front.png" alt="Insight TP" width="500px">
 
@@ -3166,6 +3129,7 @@ A través de la aplicación, los usuarios pueden escanear productos directamente
 
 Link: [https://Video_About_Product.com](https://youtu.be/OPvuExjrxCY)
 
+<div style="page-break-after: always;"></div>
 
 # Part II: Verification, Validation & Pipeline
 
@@ -3288,114 +3252,226 @@ En esta sección se presentan las pruebas Behavior-Driven Development desarrolla
 <img src="assets/Chapter-6/core-system-test-evidencia.png" alt="Core system test 1 evidence" width="800px">
 
 
+<div style="page-break-after: always;"></div>
+
+
 # Capitulo VII: DevOps Practices
 
 ## 7.1. Continuous Integration
 
 ### 7.1.1. Tools and Practices
 
+En StockWise usamos GitHub como repositorio central para el control de versiones y la colaboración del equipo. La integración continua se plantea como una práctica clave para validar los cambios realizados en el proyecto antes de integrarlos a ramas principales, asegurando que el código compile correctamente y que las pruebas automatizadas puedan ejecutarse de forma constante.
+
+Las pruebas automatizadas son una parte importante de la calidad del producto; por eso el proceso de CI está organizado para considerar la ejecución de:
+
+**Maven** — herramienta principal para gestionar dependencias, compilar el backend y ejecutar las pruebas del proyecto.
+
+**JUnit** — framework utilizado para ejecutar pruebas automatizadas en Java, incluyendo pruebas unitarias y pruebas de integración.
+
+**Cucumber (Gherkin)** — herramienta utilizada para casos BDD; los archivos `.feature` describen escenarios de comportamiento del sistema y se transforman en pruebas ejecutables.
+
+**JUnit Platform** — componente utilizado para descubrir y ejecutar las pruebas dentro del entorno Java.
+
+**GitHub** — plataforma utilizada como repositorio central para almacenar el código fuente, revisar cambios y evidenciar la colaboración del equipo.
+
+**GitHub Actions** — herramienta considerada para automatizar el proceso de Continuous Integration mediante la ejecución del build y las pruebas en eventos como `push` o `pull_request`.
+
+**GitFlow** — flujo de trabajo usado para organizar las ramas del proyecto, separando el desarrollo principal, funcionalidades, pruebas y versiones estables.
+
+**Conventional Commits** — convención usada para mantener mensajes de commit claros, trazables y fáciles de revisar.
+
+Prácticas aplicadas:
+
+- Ejecutar la suite de pruebas antes de integrar cambios a ramas principales.
+
+- Separar las pruebas por tipo según su propósito: Unit Tests, Integration Tests, BDD Tests y System Tests.
+
+- Mantener las pruebas unitarias enfocadas en componentes pequeños, rápidos y aislados.
+
+- Usar pruebas de integración para validar la comunicación entre módulos, servicios y endpoints del backend.
+
+- Utilizar Cucumber y archivos `.feature` para mantener la trazabilidad entre User Stories, Acceptance Criteria y pruebas automatizadas.
+
+- Ejecutar el build del backend con Maven para verificar que el proyecto compile correctamente.
+
+- Revisar los resultados de las pruebas antes de aprobar o integrar cambios.
+
+- Utilizar Conventional Commits para diferenciar cambios de funcionalidad, corrección, configuración o pruebas, por ejemplo: `test: add bdd scenarios for inventory features`.
+
+- Mantener las ramas organizadas bajo GitFlow para evitar cambios directos sobre ramas estables.
+
+- Registrar evidencias de ejecución mediante capturas, resultados de pruebas y commits en GitHub.
+
 ### 7.1.2. Build & Test Suite Pipeline Components
+
+Nuestro objetivo es Compilar el backend y validar automáticamente que los cambios superen todas las pruebas (Unit, Integration, BDD) antes de permitir un merge o despliegue.
+
+**Activadores (on):** `push` y `pull_request` en ramas `feature/*`, `develop` y `testing`.
+
+**Pasos del pipeline:**
+
+1. `actions/checkout@v4` — Clonar el repositorio.
+2. `actions/setup-java@v4` — Instalar JDK 17 y habilitar caché de Maven.
+3. `mvn clean compile` — Validar sintaxis y dependencias sin ejecutar pruebas.
+4. `mvn verify` — Ejecutar la suite completa de pruebas.
+5. Subir artefactos de resultados (archivos `.xml`) para auditoría.
+6. Reportar estado en el PR.
+
+**YAML de ejemplo** (`.github/workflows/build-test-suite.yml`):
+
+yaml
+name: Build & Test Suite
+
+on:
+  push:
+    branches: [ develop, testing, 'feature/**' ]
+  pull_request:
+    branches: [ develop, testing ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Compile Backend
+        run: mvn clean compile
+
+      - name: Run Tests
+        run: mvn verify
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            target/surefire-reports/*.xml
+            target/failsafe-reports/*.xml
+
+
+**Puntos clave técnicos:**
+
+* Se fija el entorno en Java 17 tanto en el workflow como en el `<java.version>` del `pom.xml`, asegurando compatibilidad nativa con Spring Boot 3.x.
+* Se utiliza `mvn verify` para ejecutar el ciclo completo. El `maven-surefire-plugin` se encarga de las pruebas unitarias y el `maven-failsafe-plugin` (previamente configurado en el POM) de las pruebas de integración y BDD.
+* La caché de Maven reduce los tiempos de build. Los reportes de Surefire y Failsafe se exportan como artefactos para facilitar el análisis.
+*  Si la fase de compilación o alguna prueba falla, el workflow se detiene y las reglas del repositorio impiden el merge.
 
 ## 7.2. Continuous Delivery
 
 ### 7.2.1. Tools and Practices
 
+El pipeline de entrega continua (CD) del sistema de gestión de inventario fue implementado utilizando GitHub Actions como herramienta principal de automatización y orquestación de despliegues. El proyecto backend desarrollado en Java utiliza Maven como gestor de dependencias y compilación.
+
+Las prácticas aplicadas durante el proceso de integración y despliegue fueron las siguientes:
+
+- **Automatización de despliegue:** cada cambio aprobado en la rama testing ejecuta automáticamente el pipeline de despliegue hacia el entorno de pruebas.
+- **Validación previa:** el sistema únicamente permite el despliegue de versiones que hayan superado satisfactoriamente las pruebas unitarias implementadas con JUnit.
+- **Control de versiones:** se utilizó GitHub para la gestión colaborativa del código fuente mediante ramas (main, testing y ramas feature).
+- **Trazabilidad:** los resultados de compilación y pruebas son almacenados automáticamente como artefactos del pipeline para fines de monitoreo y auditoría.
+- **Buenas prácticas DevOps:** se aplicó integración continua y despliegue continuo para asegurar estabilidad, control y rapidez en las actualizaciones del sistema.
+
 ### 7.2.2. Stages Deployment Pipeline Components
+
+El pipeline de despliegue continuo del sistema fue estructurado en diferentes etapas automatizadas que permiten validar, compilar y desplegar la aplicación de manera segura y controlada.
+
+Las etapas implementadas fueron las siguientes:
+
+-  Build: compilación automática del proyecto Java utilizando Maven para verificar la integridad del código fuente.
+- Unit Testing: ejecución automática de pruebas unitarias sobre las entidades principales del sistema, como productos e inventario, utilizando JUnit.
+- Package: generación del artefacto ejecutable .jar para el despliegue del sistema.
+- Deploy to Testing: despliegue automático de la aplicación hacia el entorno de pruebas luego de aprobar correctamente las validaciones.
+- Smoke Tests: ejecución de pruebas básicas para verificar el correcto funcionamiento de los módulos principales del sistema de inventario.
+- Production Deployment: despliegue manual o controlado hacia producción una vez verificadas las pruebas del entorno testing.
 
 ## 7.3. Continuous deployment
 
 ### 7.3.1. Tools and Practices
+El proceso de Continuous Deployment (CD) automático hacia producción únicamente deberá habilitarse cuando la suite de pruebas y los *smoke scenarios* presenten un nivel adecuado de robustez, confiabilidad y cobertura.
+
+#### Recomendaciones
+
+- No habilitar despliegues automáticos hacia producción sin mecanismos de control adicionales, tales como:
+  - aprobación humana (*approval gate*),
+  - estrategias de *feature flags*,
+  - validaciones previas obligatorias.
+
+- En caso de habilitar CD automático:
+  - la rama `main` deberá ejecutar un workflow automatizado responsable de:
+    1. construir la aplicación,
+    2. ejecutar pruebas Unit, Integration y Specs,
+    3. generar y publicar artefactos,
+    4. y realizar el despliegue automático hacia la plataforma objetivo (por ejemplo, Railway o Azure).
+
+- El pipeline de despliegue deberá incluir mecanismos de rollback automático:
+  - ante la detección de fallos en los *smoke tests* posteriores al despliegue,
+  - el sistema deberá revertir automáticamente a la última versión estable disponible.
+
+#### Consideraciones adicionales
+
+- Todo despliegue a producción deberá generar trazabilidad mediante logs, métricas y registros de auditoría.
+- Se recomienda integrar monitoreo continuo y alertas automáticas para detectar degradaciones funcionales o de rendimiento posteriores al despliegue.
 
 ### 7.3.2. Production Deployment Pipeline Components
 
-## 7.4. Continuous Monitoring
+- **Source Control Management:** Git 
+- **Build and compilation:** Vite, SWC (Speedy Web Compiler) y npm (Node Package Manager)
+- **Artifact repository:** npm Public Registry (Registro público de npm) 
 
-### 7.4.1. Tools and Practices
 
-### 7.4.2. Monitoring Pipeline Components
-
-### 7.4.3. Alerting Pipeline Components
-
-### 7.4.4. Notification Pipeline Components
-
-# Part III: Experiment-Driven Lifecycle
-
-# Capitulo VIII: Experiment-Driven Development
-
-## 8.1. Experiment Planning
-
-### 8.1.1. As-Is Summary
-
-### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
-
-### 8.1.3. Experiment-Ready Questions
-
-### 8.1.4. Question Backlog
-
-### 8.1.5. Experiment Cards
-
-## 8.2. Experiment Design
-
-### 8.2.1. Hypotheses
-
-### 8.2.2. Domain Business Metrics
-
-### 8.2.3. Measures
-
-### 8.2.4. Conditions
-
-### 8.2.5. Scale Calculations and Decisions
-
-### 8.2.6. Methods Selection
-
-### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
-
-### 8.2.8. Web and Mobile Tracking Plan
-
-## 8.3. Experimentation
-
-### 8.3.1. To-Be User Stories
-
-### 8.3.2. To-Be Product Backlog
-
-### 8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle
-
-#### 8.3.3.1. To-Be Sprint Backlogs
-
-#### 8.3.3.2. Implemented To-Be Landing Page Evidence
-
-### 5.2.3. Implemented Frontend-Web Application Evidence
-
-#### 8.3.3.4. Implemented To-Be Native-Mobile Application Evidence
-
-#### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
-
-#### 8.3.3.6. Team Collaboration Insights
-
-### 8.3.4. To-Be Validation Interviews
-
-#### 8.3.4.1. Diseno de Entrevistas
-
-#### 8.3.4.2. Registro de Entrevistas
-
-## 8.4. Experiment Aftermath & Analysis
-
-### 8.4.1. Analysis and Interpretation of Results
-
-### 8.4.2. Re-scored and Re-prioritized Question Backlog
-
-## 8.5. Continuous Learning
-
-### 8.5.1. Shareback Session Artifacts: Learning Workflow
-
-## 8.6. To-Be Software Platform Pre-launch
-
-### 8.6.1. About-the-Product Intro Video
+<div style="page-break-after: always;"></div>
 
 # Conclusiones
 
-# Conclusiones y recomendaciones
+El informe consolida el ciclo de vida de StockWise como solución SaaS orientada a pymes, startups y bodegas que hoy dependen de registros manuales o herramientas poco especializadas. La evidencia documentada (Lean UX, entrevistas, needfinding y especificación con user stories, backlog e impact mapping) muestra que el problema no es solo “falta de software”, sino falta de trazabilidad, consistencia de datos y visibilidad en tiempo real, lo que se traduce en quiebres de stock, sobrecostos y decisiones de compra poco informadas.
 
-# Bibliografia
+En términos de diseño e implementación, el trabajo demuestra que es viable abordar el dominio con arquitectura y modelado centrados en el negocio (contextos delimitados, diseño orientado a objetos y modelo de datos), complementados con experiencias diferenciadas en web y móvil y una API REST que actúa como contrato estable entre capas. La planificación por sprints y la entrega de evidencias (landing, frontends, app móvil nativa, backend y documentación de API) reflejan un producto coherente con la propuesta de valor: digitalizar inventario, ventas y alertas sin exigir al usuario una curva de adopción propia de un ERP tradicional.
 
-# Anexos
+La verificación y validación aportan un cierre técnico sólido: las pruebas unitarias cubren reglas del núcleo del dominio (producto, stock mínimo, movimientos y devoluciones); las pruebas de integración validan flujos HTTP–persistencia y reglas de negocio transversales; y el enfoque BDD con Gherkin conecta explícitamente historias de usuario con comportamiento observable. En conjunto, esto reduce el riesgo de regresiones y da trazabilidad entre requisitos y pruebas.
+
+Finalmente, las prácticas DevOps descritas (GitFlow, commits convencionales, pipeline de build/test con Maven y GitHub Actions, CD hacia un entorno de pruebas y cautela frente al despliegue automático a producción) muestran una madurez razonable para un proyecto académico-profesional: se prioriza automatización con controles, en línea con la complejidad del dominio y la necesidad de mantener calidad al escalar el equipo y el código.
+
+# Recomendaciones
+
+1. Medición de valor en campo: validar con usuarios reales las hipótesis Lean UX (alertas, reportes, freemium) mediante encuestas o entrevistas de seguimiento y métricas de producto (activación, retención, conversión a planes premium), no solo con pruebas técnicas.
+
+2. Cobertura y calidad de pruebas: mantener la separación Unit / Integration / BDD / System y ampliar gradualmente escenarios críticos (concurrencia, permisos IAM, reportes y alertas en condiciones límite) antes de aspirar a continuous deployment pleno hacia producción.
+
+3. Observabilidad: al acercarse a despliegues productivos, incorporar de forma explícita logs estructurados, métricas y alertas de servicio (como ya se sugiere en el capítulo de DevOps), de modo que los fallos posteriores al despliegue sean detectables y reversibles.
+
+4. Continuidad del pipeline: asegurar que el workflow de GitHub Actions y la publicación de artefactos de pruebas formen parte del flujo habitual del equipo (revisión en PR), de modo que la integración continua sea un requisito de merge, no solo documentación.
+   
+<div style="page-break-after: always;"></div>
+
+# Bibliografia 
+
+1. Dux Software. (2025, 9 abril). Dux Software: El Sistema de Gestión para tu Negocio. https://www.duxsoftware.com.ar/
+2. Mecalux. (s. f.). Store fulfillment. Mecalux.pe. https://www.mecalux.pe/software/store-fulfillment
+3. SoftDoIt. (s. f.). ▷Vendus: agiliza la gestión de tu punto de venta. https://www.softwaredoit.es/vendus/vendus.html
+
+
+<div style="page-break-after: always;"></div>
+
+
+# Anexos 
+
+Enlace del repositorio repositorio: [https://github.com/upc-1ASI0732-2610-16879-Stoq](https://github.com/upc-1ASI0732-2610-16879-Stoq)
+
+Enlace directo del reporte: [https://github.com/upc-1ASI0732-2610-16879-Stoq/Report.git](https://github.com/upc-1ASI0732-2610-16879-Stoq/Report.git)
+
+Enlace Landing: [https://stockwiselanding.netlify.app/](https://stockwiselanding.netlify.app/)
+
+Enlace Frontend: [https://stocktrack-frontend.vercel.app/auth/register](https://stocktrack-frontend.vercel.app/auth/register)
+
+Enlace Backend: [https://stoq-web-backend.onrender.com/swagger-ui.html](https://stoq-web-backend.onrender.com/swagger-ui.html)
+
