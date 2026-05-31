@@ -785,6 +785,49 @@ El proceso de Continuous Monitoring tiene como objetivo supervisar de manera con
 
 ### 7.4.4. Notification Pipeline Components
 
+El componente de notificaciones tiene como finalidad comunicar de forma automática eventos relevantes detectados durante la ejecución de los procesos de integración, despliegue y monitoreo continuo, permitiendo una respuesta rápida ante incidentes o situaciones que requieran atención del equipo de desarrollo.
+
+#### Flujo general de notificaciones
+
+1. Un evento es detectado por el sistema de monitoreo o por un pipeline automatizado.
+2. El evento es clasificado según su nivel de severidad.
+3. Se genera una notificación asociada al incidente.
+4. La notificación es enviada al canal correspondiente.
+5. El equipo responsable evalúa la situación y ejecuta las acciones necesarias.
+
+#### Componentes principales
+
+* Sistema de monitoreo encargado de detectar eventos y anomalías.
+* Motor de alertas responsable de generar las notificaciones.
+* Canales de comunicación utilizados para distribuir los mensajes.
+* Equipo responsable de recibir y gestionar los incidentes reportados.
+
+#### Canales de notificación
+
+Las notificaciones podrán enviarse mediante:
+
+* correo electrónico,
+* paneles de monitoreo,
+* sistemas de mensajería corporativa,
+* plataformas colaborativas utilizadas por el equipo de desarrollo.
+
+#### Eventos que generan notificaciones
+
+* Fallos durante la ejecución de pipelines.
+* Errores detectados durante despliegues.
+* Interrupciones del servicio.
+* Incremento anormal en los tiempos de respuesta.
+* Consumo excesivo de recursos de infraestructura.
+* Fallos de conectividad con servicios externos o bases de datos.
+* Resultados negativos obtenidos durante verificaciones posteriores al despliegue.
+
+#### Consideraciones adicionales
+
+* Las notificaciones deberán priorizarse según el nivel de criticidad del evento detectado.
+* Se recomienda evitar la generación excesiva de alertas para reducir el riesgo de fatiga operacional.
+* Los registros de notificaciones deberán conservarse para fines de auditoría y análisis posterior.
+* El sistema deberá permitir la trazabilidad completa desde la detección del incidente hasta su resolución.
+
 
 # Part III: Experiment-Driven Lifecycle
 
