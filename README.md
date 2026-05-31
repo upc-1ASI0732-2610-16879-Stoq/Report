@@ -694,6 +694,13 @@ Las etapas implementadas fueron las siguientes:
 ### 7.3.1. Tools and Practices
 El proceso de Continuous Deployment (CD) automático hacia producción únicamente deberá habilitarse cuando la suite de pruebas y los *smoke scenarios* presenten un nivel adecuado de robustez, confiabilidad y cobertura.
 
+#### Herramientas
+
+- GitHub será utilizado como repositorio central de código fuente y gestión de versiones.
+- Jenkins será utilizado para la automatización y orquestación de los pipelines de CI/CD.
+- La plataforma de despliegue podrá ser Railway, Azure u otra infraestructura definida por el proyecto.
+- Las herramientas de monitoreo y observabilidad deberán proporcionar métricas, logs y alertas para supervisar el estado de la aplicación después de cada despliegue.
+
 #### Recomendaciones
 
 - No habilitar despliegues automáticos hacia producción sin mecanismos de control adicionales, tales como:
@@ -701,12 +708,16 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
   - estrategias de *feature flags*,
   - validaciones previas obligatorias.
 
+- La rama `main` deberá representar en todo momento una versión estable y desplegable de la aplicación.
+
 - En caso de habilitar CD automático:
-  - la rama `main` deberá ejecutar un workflow automatizado responsable de:
+  - la rama `main` deberá activar un pipeline automatizado responsable de:
     1. construir la aplicación,
     2. ejecutar pruebas Unit, Integration y Specs,
     3. generar y publicar artefactos,
-    4. y realizar el despliegue automático hacia la plataforma objetivo (por ejemplo, Railway o Azure).
+    4. desplegar automáticamente la aplicación hacia la plataforma objetivo.
+
+- Los artefactos generados durante el proceso de construcción deberán almacenarse y versionarse para garantizar la reproducibilidad de los despliegues.
 
 - El pipeline de despliegue deberá incluir mecanismos de rollback automático:
   - ante la detección de fallos en los *smoke tests* posteriores al despliegue,
@@ -716,6 +727,8 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
 
 - Todo despliegue a producción deberá generar trazabilidad mediante logs, métricas y registros de auditoría.
 - Se recomienda integrar monitoreo continuo y alertas automáticas para detectar degradaciones funcionales o de rendimiento posteriores al despliegue.
+- Los resultados de las ejecuciones del pipeline deberán mantenerse disponibles para facilitar auditorías, diagnósticos y análisis posteriores.
+- Se recomienda utilizar estrategias de despliegue progresivo (*rolling*, *blue-green* o *canary deployments*) cuando la criticidad del sistema lo requiera.
 
 ### 7.3.2. Production Deployment Pipeline Components
 
@@ -726,12 +739,52 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
 ## 7.4. Continuous Monitoring
 
 ### 7.4.1. Tools and Practices
+El proceso de Continuous Monitoring tiene como objetivo supervisar de manera continua el comportamiento de la aplicación, la infraestructura y los servicios desplegados, permitiendo identificar oportunamente errores, degradaciones de rendimiento e incidentes que puedan afectar la experiencia de los usuarios.
+
+#### Herramientas
+
+- Jenkins podrá integrarse con herramientas de monitoreo y observabilidad para proporcionar información relacionada con la ejecución de pipelines y despliegues.
+- La plataforma de despliegue (Railway, Azure u otra infraestructura seleccionada) deberá proporcionar métricas operativas sobre disponibilidad, consumo de recursos y estado de los servicios.
+- Los sistemas de logging centralizado deberán recopilar y almacenar eventos generados por la aplicación para facilitar tareas de diagnóstico, auditoría y análisis de incidentes.
+- Las herramientas de observabilidad deberán permitir la recopilación y visualización de métricas, trazas y registros mediante paneles de monitoreo centralizados.
+- Las herramientas de monitoreo deberán soportar la generación de alertas automáticas ante condiciones anómalas o umbrales previamente definidos.
+
+#### Prácticas recomendadas
+
+- Implementar monitoreo continuo de los principales componentes del sistema:
+  - disponibilidad de la aplicación,
+  - utilización de CPU y memoria,
+  - tiempos de respuesta,
+  - errores HTTP,
+  - estado de la base de datos,
+  - consumo de recursos de la infraestructura.
+
+- Establecer métricas base (*baseline metrics*) que permitan comparar el comportamiento normal del sistema frente a posibles anomalías.
+
+- Definir indicadores clave de desempeño (*KPIs*) y objetivos de nivel de servicio (*SLOs*) para medir la calidad y confiabilidad del sistema.
+
+- Registrar eventos relevantes generados por la aplicación para facilitar el análisis de incidentes y la identificación de causas raíz.
+
+- Mantener paneles de observabilidad actualizados que permitan visualizar indicadores operativos en tiempo real.
+
+- Configurar alertas automáticas para notificar oportunamente degradaciones de rendimiento, errores críticos o interrupciones del servicio.
+
+- Revisar periódicamente las métricas recolectadas para detectar tendencias, cuellos de botella y oportunidades de mejora.
+
+#### Consideraciones adicionales
+
+- El monitoreo deberá mantenerse activo durante todo el ciclo de vida de la aplicación.
+- Los datos recolectados deberán conservarse durante un período suficiente para realizar análisis históricos, auditorías técnicas e investigaciones de incidentes.
+- Se recomienda complementar el monitoreo técnico con métricas relacionadas con el comportamiento de los usuarios y el uso de las funcionalidades principales del sistema.
+- Toda la información obtenida deberá servir como insumo para actividades de mejora continua, optimización del producto y toma de decisiones operativas.
+- Los mecanismos de monitoreo y observabilidad deberán formar parte de la estrategia general de confiabilidad y operación del sistema.
 
 ### 7.4.2. Monitoring Pipeline Components
 
 ### 7.4.3. Alerting Pipeline Components
 
 ### 7.4.4. Notification Pipeline Components
+
 
 # Part III: Experiment-Driven Lifecycle
 
