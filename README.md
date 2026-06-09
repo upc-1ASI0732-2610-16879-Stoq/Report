@@ -165,11 +165,41 @@
     - [Escenario 1](#escenario-1-1)
     - [Escenario 2](#escenario-2-1)
     - [Escenario 3](#escenario-3-1)
+    - [Información General Test-3](#información-general-test-3)
+    - [Escenario 1](#escenario-1-2)
+    - [Escenario 2](#escenario-2-2)
+    - [Escenario 3](#escenario-3-2)
+    - [Información General Test-4](#información-general-test-4)
+    - [Escenario 1](#escenario-1-3)
+    - [Escenario 2](#escenario-2-3)
+    - [Información General Test-5](#información-general-test-5)
+    - [Escenario 1](#escenario-1-4)
+    - [Escenario 2](#escenario-2-4)
+    - [Escenario 3](#escenario-3-3)
     - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
       - [Evidence 1: Product Registration Feature File](#evidence-1-product-registration-feature-file)
       - [Evidence 2: Low Stock Alert Feature File](#evidence-2-low-stock-alert-feature-file)
       - [Evidence 3: BDD Test Execution Results](#evidence-3-bdd-test-execution-results)
     - [6.1.4. Core System Tests](#614-core-system-tests)
+  - [6.2. Static testing \& Verification](#62-static-testing--verification)
+    - [6.2.1. Static Code Analysis](#621-static-code-analysis)
+      - [6.2.1.1. Coding standard \& Code conventions.](#6211-coding-standard--code-conventions)
+      - [6.2.1.2. Code Quality \& Code Security.](#6212-code-quality--code-security)
+    - [6.2.2. Reviews](#622-reviews)
+  - [6.3. Validation Interviews.](#63-validation-interviews)
+    - [6.3.1. Diseño de Entrevistas.](#631-diseño-de-entrevistas)
+    - [6.3.2. Registro de Entrevistas.](#632-registro-de-entrevistas)
+    - [6.3.3. Evaluaciones segun heuristicas.](#633-evaluaciones-segun-heuristicas)
+  - [6.4. Auditoria de Experiencias de Usuario.](#64-auditoria-de-experiencias-de-usuario)
+    - [6.4.1. Auditoria realizada.](#641-auditoria-realizada)
+      - [6.4.1.1. Información del grupo auditado.](#6411-información-del-grupo-auditado)
+      - [6.4.1.2. Cronograma de auditoria realizada.](#6412-cronograma-de-auditoria-realizada)
+      - [6.4.1.3. Contenido de auditoría realizada.](#6413-contenido-de-auditoría-realizada)
+    - [6.4.2. Auditoria recibida.](#642-auditoria-recibida)
+      - [6.4.2.1. Información del grupo auditor.](#6421-información-del-grupo-auditor)
+      - [6.4.2.2. Cronograma de auditoría recibida.](#6422-cronograma-de-auditoría-recibida)
+      - [6.4.2.3. Contenido de auditoría recibida.](#6423-contenido-de-auditoría-recibida)
+      - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos.](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
 - [Capitulo VII: DevOps Practices](#capitulo-vii-devops-practices)
   - [7.1. Continuous Integration](#71-continuous-integration)
     - [7.1.1. Tools and Practices](#711-tools-and-practices)
@@ -682,6 +712,287 @@ En esta sección se presentan las pruebas Behavior-Driven Development desarrolla
 <img src="assets/Chapter-6/core-system-test1.png" alt="Core system test 1" width="800px">
 
 <img src="assets/Chapter-6/core-system-test-evidencia.png" alt="Core system test 1 evidence" width="800px">
+
+## 6.2. Static testing & Verification
+### 6.2.1. Static Code Analysis
+#### 6.2.1.1. Coding standard & Code conventions.
+#### 6.2.1.2. Code Quality & Code Security.
+### 6.2.2. Reviews
+
+## 6.3. Validation Interviews.
+### 6.3.1. Diseño de Entrevistas.
+
+**Segmento #1: Bodegas especializadas por rubro**
+
+**Presentación del entrevistado:**
+
+¿Cuál es tu nombre?
+
+¿Qué edad tienes?
+
+¿Desde cuándo gestionas esta bodega?
+
+¿Cuál es el rubro principal de tu bodega?
+
+El usuario interactúa con la app móvil de la plataforma para gestión de inventarios.
+
+Landing page
+
+Acciones clave dentro del sistema
+
+Navegación interactivo por la interfaz app móvil
+
+**User Goal: Registrar**
+
+El usuario selecciona la opción "Register", completa los campos solicitados y hace clic en el botón "Registrar".
+
+A continuación, se muestra el panel "Add Card", donde debe llenar los campos relacionados con su tarjeta y correo electrónico.
+
+Una vez que el proceso de pago se complete exitosamente, se notifica al usuario con un mensaje confirmando el vínculo de su tarjeta con la plataforma.
+
+Del mismo modo, si el usuario desea retirar su información o actualizarla, lo podrá hacer a través de su perfil.
+
+Finalmente, hacer clic en el botón "Aceptar".
+
+**User Goal: Iniciar sesión**
+
+El usuario introduce su correo y contraseña.
+
+Luego hace clic en el botón "Log In".
+
+Después, se le redirige al panel de perfil.
+
+Allí puede editar su información personal y acceder a herramientas según su perfil ("Administrador" o "Empleado").
+
+**User Goal: Navegar por el Dashboard**
+
+El usuario inicia sesión desde la Landing Page.
+
+Ingresa a la vista principal del Dashboard.
+
+Visualiza el total de productos registrados y la fecha del último proveedor.
+
+Visualiza un resumen de productos próximos a caducar con su respectiva fecha y stock disponible.
+
+Accede a botones de acción rápida como “Historial”, “Inventario”, “Añadir Productos”, “Kits” y “Devolución de productos”.
+
+**User Goal: Inventario (Producto / Lote)**
+
+Ingresa a la sección de Inventario.
+
+Revisa el listado de productos presionando el botón "por producto".
+
+Filtra los productos por categoría, nombre del producto, fecha o stock mínimo.
+
+Consulta el listado con información clave: fecha de entrada, cantidad por unidad, precio, stock mínimo y unidad de medida.
+
+User Goal: Botones Principales (Agregar Producto y Kits)
+
+Pulsa el botón "Agregar Producto".
+
+Rellena los campos solicitados para registrar uno nuevo.
+
+Pulsa el botón "Crear Kit".
+
+Combina productos existentes para crear un kit nuevo.
+
+El usuario pulsa el botón “Añadir Productos” desde el Dashboard.
+
+Visualiza una galería de productos existentes y accede a opciones para editarlos o duplicarlos.
+
+Puede agregar uno nuevo haciendo clic en el botón “+”, donde se despliega un formulario con campos como nombre, etiquetas, cantidad, lote, precios, fecha de caducidad y notas.
+
+Desde el menú principal, también accede a la opción “Kits”.
+
+En esta sección, selecciona productos existentes y los combina mediante el botón “Seleccionar para kit”, indicando cantidad e inventario disponible.
+
+**User Goal: Historial de Movimientos**
+
+Navega a la sección de Historial.
+
+Visualiza entradas y salidas de productos.
+
+Filtra movimientos por fecha, producto o lote.
+
+El usuario accede a la sección de Historial desde el panel principal.
+
+Filtra los registros por tipo de gestión, categoría, stock promedio y fecha.
+
+Visualiza los movimientos realizados, incluyendo datos como nombre del producto, fecha de consulta, precio unitario, cantidad y total.
+
+Consulta métricas como el stock promedio, estado del producto y stock ideal.
+
+Cuenta con botones para editar o eliminar cada registro y, para los stock promedio, exportar la información y realiza un ticket promedio.
+
+**User Goal: Alerta de Stock**
+
+El usuario accede a la sección de Alertas desde el menú superior.
+
+Consulta una lista de productos que presentan alertas por stock mínimo o por cercanía a su fecha de vencimiento.
+
+Visualiza detalles como categoría de alerta, tipo de producto, nombre y fecha de alerta.
+
+Puede ingresar a una vista de detalles, generar reportes o confirmar acciones desde botones individuales por producto.
+
+También puede eliminar una alerta específica luego de una confirmación emergente.
+
+Preguntas principales:
+
+- ¿Te resultó fácil encontrar cómo agregar un producto?
+- ¿Qué tal fue el proceso para registrar el stock por producto y por lote?
+- ¿Te resultó claro el apartado de “Próximos a caducar”? ¿Te pareció útil?
+- ¿Probaste la sección de kits? ¿Te resultó útil combinar productos?
+- ¿Hubo algo que no entendiste o que te confundió mientras usabas la app?
+- ¿Qué te pareció el diseño general de la landing page?
+- ¿Tuviste alguna dificultad visual o técnica durante la navegación?
+
+Valoración de experiencia
+
+- Del 1 al 10, ¿qué tan útil te pareció la app para tu bodega?
+- ¿Qué funcionalidad te pareció más valiosa?
+- ¿Qué función le agregarías sí o sí?
+- ¿Recomendarías esta plataforma a otros dueños de bodegas? ¿Por qué?
+- 
+**Segmento #2: Startups y emprendedores con necesidades logísticas**
+
+Presentación del entrevistado
+
+- ¿Cuál es tu nombre?
+- ¿Qué edad tienes?
+- ¿Qué tipo de producto vendes o almacenas?
+- ¿Tienes local físico, almacén propio o trabajas con terceros?
+- Interactúa el usuario con la landing page y la versión web de nuestra plataforma para gestión gestionar stock, registrar compras y generar reportes.
+
+Landing page
+
+Acciones clave dentro del sistema
+
+Navegación interactivo por la interfaz app móvil
+
+**User Goal: Registrar**
+
+El usuario selecciona la opción "Register", completa los campos solicitados y hace clic en el botón "Registrar".
+
+A continuación, se muestra el panel "Add Card", donde debe llenar los campos relacionados con su tarjeta y correo electrónico.
+
+Una vez que el proceso de pago se complete exitosamente, se notifica al usuario con un mensaje confirmando el vínculo de su tarjeta con la plataforma.
+
+Del mismo modo, si el usuario desea retirar su información o actualizarla, lo podrá hacer a través de su perfil.
+
+Finalmente, hacer clic en el botón "Aceptar".
+
+**User Goal: Iniciar sesión**
+
+El usuario introduce su correo y contraseña.
+
+Luego hace clic en el botón "Log In".
+
+Después, se le redirige al panel de perfil.
+
+Allí puede editar su información personal y acceder a herramientas según su perfil ("Administrador" o "Empleado").
+
+**User Goal: Navegar por el Dashboard**
+
+El usuario inicia sesión desde la Landing Page.
+
+Ingresa a la vista principal del Dashboard.
+
+Visualiza el total de productos registrados y la fecha del último proveedor.
+
+Visualiza un resumen de productos próximos a caducar con su respectiva fecha y stock disponible.
+
+Accede a botones de acción rápida como “Historial”, “Inventario”, “Añadir Productos”, “Kits” y “Devolución de productos”.
+
+**User Goal: Inventario (Lote)**
+
+Accede a la sección de Inventario por lote.
+
+Filtra los lotes por nombre del producto, proveedor, fecha de entrada, cantidad o precio.
+
+Consulta el listado con información detallada como proveedor, producto, fecha, cantidad por unidad, precio y unidad de medida.
+
+Gestiona las acciones disponibles para cada lote desde la columna correspondiente.
+
+**User Goal: Botones Principales (Agregar Producto y Kits)**
+
+Pulsa el botón "Agregar Producto".
+
+Rellena los campos solicitados para registrar uno nuevo.
+
+Pulsa el botón "Crear Kit".
+
+Combina productos existentes para crear un kit nuevo.
+
+El usuario pulsa el botón “Añadir Productos” desde el Dashboard.
+
+Visualiza una galería de productos existentes y accede a opciones para editarlos o duplicarlos.
+
+Puede agregar uno nuevo haciendo clic en el botón “+”, donde se despliega un formulario con campos como nombre, etiquetas, cantidad, lote, precios, fecha de caducidad y notas.
+
+Desde el menú principal, también accede a la opción “Kits”.
+
+En esta sección, selecciona productos existentes y los combina mediante el botón “Seleccionar para kit”, indicando cantidad e inventario disponible.
+
+**User Goal: Historial de Movimientos**
+
+Navega a la sección de Historial.
+
+Visualiza entradas y salidas de productos.
+
+Filtra movimientos por fecha, producto o lote.
+
+El usuario accede a la sección de Historial desde el panel principal.
+
+Filtra los registros por tipo de gestión, categoría, stock promedio y fecha.
+
+Visualiza los movimientos realizados, incluyendo datos como nombre del producto, fecha de consulta, precio unitario, cantidad y total.
+
+Consulta métricas como el stock promedio, estado del producto y stock ideal.
+
+Cuenta con botones para editar o eliminar cada registro y, para los stock promedio, exportar la información y realiza un ticket promedio.
+
+**User Goal: Alerta de Stock**
+
+El usuario accede a la sección de Alertas desde el menú superior.
+
+Consulta una lista de productos que presentan alertas por stock mínimo o por cercanía a su fecha de vencimiento.
+
+Visualiza detalles como categoría de alerta, tipo de producto, nombre y fecha de alerta.
+
+Puede ingresar a una vista de detalles, generar reportes o confirmar acciones desde botones individuales por producto.
+
+También puede eliminar una alerta específica luego de una confirmación emergente.
+
+**Preguntas principales:**
+
+- ¿Qué opinas de las alertas de stock mínimo/máximo y vencimiento? ¿Son suficientes?
+- ¿La sección de historial de movimientos te pareció útil para revisar tus registros?
+- ¿Te resultó útil la opción de devolución de productos?
+- ¿Los reportes del historial son útiles para tomar decisiones?
+- ¿Hubo algo que no entendiste o que te confundió mientras usabas la app?
+- ¿Qué te pareció el diseño general de la landing page?
+- ¿Tuviste alguna dificultad visual o técnica durante la navegación?
+
+**Valoración de experiencia**
+
+- Del 1 al 10, ¿qué tan útil te pareció la app móvil para tu bodega?
+- ¿Qué funcionalidad te pareció más valiosa?
+- ¿Qué función le agregarías sí o sí?
+- ¿Recomendarías esta plataforma a otros emprendedores? ¿Por qué?
+
+### 6.3.2. Registro de Entrevistas.
+### 6.3.3. Evaluaciones segun heuristicas.
+
+## 6.4. Auditoria de Experiencias de Usuario.
+### 6.4.1. Auditoria realizada.
+#### 6.4.1.1. Información del grupo auditado.
+#### 6.4.1.2. Cronograma de auditoria realizada.
+#### 6.4.1.3. Contenido de auditoría realizada.
+### 6.4.2. Auditoria recibida.
+#### 6.4.2.1. Información del grupo auditor.
+#### 6.4.2.2. Cronograma de auditoría recibida.
+#### 6.4.2.3. Contenido de auditoría recibida.
+#### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos.
 
 
 # Capitulo VII: DevOps Practices
