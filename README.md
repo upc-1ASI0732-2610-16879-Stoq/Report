@@ -186,14 +186,23 @@
     - [7.2.2. Stages Deployment Pipeline Components](#722-stages-deployment-pipeline-components)
   - [7.3. Continuous deployment](#73-continuous-deployment)
     - [7.3.1. Tools and Practices](#731-tools-and-practices)
+      - [Herramientas](#herramientas)
       - [Recomendaciones](#recomendaciones)
       - [Consideraciones adicionales](#consideraciones-adicionales)
     - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
   - [7.4. Continuous Monitoring](#74-continuous-monitoring)
     - [7.4.1. Tools and Practices](#741-tools-and-practices)
+      - [Herramientas](#herramientas-1)
+      - [Prácticas recomendadas](#prácticas-recomendadas)
+      - [Consideraciones adicionales](#consideraciones-adicionales-1)
     - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
     - [7.4.3. Alerting Pipeline Components](#743-alerting-pipeline-components)
     - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
+      - [Flujo general de notificaciones](#flujo-general-de-notificaciones)
+      - [Componentes principales](#componentes-principales)
+      - [Canales de notificación](#canales-de-notificación)
+      - [Eventos que generan notificaciones](#eventos-que-generan-notificaciones)
+      - [Consideraciones adicionales](#consideraciones-adicionales-2)
 - [Part III: Experiment-Driven Lifecycle](#part-iii-experiment-driven-lifecycle)
 - [Capitulo VIII: Experiment-Driven Development](#capitulo-viii-experiment-driven-development)
   - [8.1. Experiment Planning](#81-experiment-planning)
@@ -553,6 +562,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 # Capitulo VII: DevOps Practices
 
 ## 7.1. Continuous Integration
+En StockWise, la Integración Continua se implementa como un proceso automatizado para salvaguardar la integridad del código fuente a lo largo del ciclo de desarrollo. Esta práctica asegura que cada propuesta de cambio o nueva funcionalidad sea verificada en sintaxis, compilaciónñ así como una suite exhaustiva de pruebas antes de su incorporación definitiva.A continuación, se detallan las herramientas, las convenciones de trabajo y la estructura técnica del pipeline diseñado bajo GitHub Actions para dar soporte a esta estrategia.
+
 
 ### 7.1.1. Tools and Practices
 
@@ -738,6 +749,9 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
 
 ## 7.4. Continuous Monitoring
 
+A continuacion se describirán las herramientas, prácticas y componentes implementados para garantizar una estrategia efectiva de monitoreo continuo, enfocada en asegurar la disponibilidad del sistema, detectar fallas de forma proactiva y mejorar la confiabilidad general del servicio.
+
+
 ### 7.4.1. Tools and Practices
 El proceso de Continuous Monitoring tiene como objetivo supervisar de manera continua el comportamiento de la aplicación, la infraestructura y los servicios desplegados, permitiendo identificar oportunamente errores, degradaciones de rendimiento e incidentes que puedan afectar la experiencia de los usuarios.
 
@@ -780,6 +794,8 @@ El proceso de Continuous Monitoring tiene como objetivo supervisar de manera con
 - Los mecanismos de monitoreo y observabilidad deberán formar parte de la estrategia general de confiabilidad y operación del sistema.
 
 ### 7.4.2. Monitoring Pipeline Components
+
+
 
 ### 7.4.3. Alerting Pipeline Components
 
