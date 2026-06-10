@@ -183,7 +183,7 @@
     - [6.1.4. Core System Tests](#614-core-system-tests)
   - [6.2. Static testing \& Verification](#62-static-testing--verification)
     - [6.2.1. Static Code Analysis](#621-static-code-analysis)
-      - [6.2.1.1. Coding standard \& Code conventions.](#6211-coding-standard--code-conventions)
+      - [6.2.1.1. .Coding standard \& Code conventions](#6211-coding-standard--code-conventions)
       - [6.2.1.2. Code Quality \& Code Security.](#6212-code-quality--code-security)
     - [6.2.2. Reviews](#622-reviews)
   - [6.3. Validation Interviews.](#63-validation-interviews)
@@ -517,6 +517,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ## 5.3. Video About-the-Product
 
+<div style="page-break-after: always;"></div>
+
 # Part II: Verification, Validation & Pipeline
 
 # Capitulo VI: Product Verification & Validation
@@ -713,11 +715,71 @@ En esta sección se presentan las pruebas Behavior-Driven Development desarrolla
 
 <img src="assets/Chapter-6/core-system-test-evidencia.png" alt="Core system test 1 evidence" width="800px">
 
-## 6.2. Static testing & Verification
+## 6.2. Static testing & Verification 
+Esta sección describe las actividades de control de calidad que se ejecutan directamente sobre el código fuente, especificaciones y artefactos del proyecto sin necesidad de poner el sistema en marcha. Su objetivo es identificar de manera temprana ambigüedades, defectos de diseño, vulnerabilidades de seguridad y desviaciones de las pautas de desarrollo establecidas.
+
 ### 6.2.1. Static Code Analysis
-#### 6.2.1.1. Coding standard & Code conventions.
+
+Consiste en la evaluación automatizada del código base utilizando herramientas especializadas. A través de este análisis se audita la mantenibilidad, el cumplimiento de reglas sintácticas, la deuda técnica y los posibles riesgos de seguridad antes de que el código sea integrado a las ramas principales del repositorio.
+
+#### 6.2.1.1. .Coding standard & Code conventions
+
+**Backend - Java/Spring Boot** <br>
+El backend implementa convenciones de código rigurosas basadas en los estándares oficiales de Spring Framework y las mejores prácticas de la arquitectura limpia. La nomenclatura sigue patrones semánticos y descriptivos: los controladores utilizan el sufijo Controller, los servicios emplean Service o la distinción CommandService / QueryService para segregar las operaciones de lectura y escritura (patrón CQRS), y los componentes de transformación adoptan el sufijo Assembler para la conversión eficiente entre entidades del dominio y recursos REST (DTOs).
+
+La estructura de paquetes refleja fielmente una arquitectura hexagonal, donde cada contexto acotado (Bounded Context) está claramente delimitado en los paquetes domain, application, interfaces.rest e infrastructure, facilitando una estricta separación de responsabilidades. Adicionalmente, todos los métodos públicos incluyen documentación técnica mediante Javadoc, detallando parámetros y valores de retorno. El manejo de excepciones es homogéneo mediante una capa global de captura de errores, la cual procesa excepciones de negocio específicas (tales como ProductAlreadyExistsException o ProductNotFoundException) y las traduce en códigos de estado HTTP semánticos (201, 400, 404, 500).
+
+Las anotaciones nativas de Spring (@RestController, @PostMapping, @GetMapping) y de documentación (@Operation, @ApiResponse) se aplican de forma transversal para generar de manera automática el contrato de la API mediante OpenAPI/Swagger. Finalmente, la inyección de dependencias se realiza exclusivamente a través de constructores, promoviendo la inmutabilidad de los componentes y simplificando el diseño de pruebas unitarias.
+
+<img src="assets/Chapter-6/code-backend1.png" alt="Carpetas Backend" width="250px">
+<img src="assets/Chapter-6/code-backend2.png" alt="Code Backend" width="700px">
+
+
+**Frontend - Angular/TypeScript** <br>
+El frontend se alinea con las convenciones oficiales recomendadas por el equipo de Angular y las directrices de TypeScript, estructurándose mediante una arquitectura modular orientada a características (Features). Cada módulo de negocio (auth, inventory, dashboard, etc.) replica la filosofía de separación de responsabilidades en las capas de presentation, domain, infrastructure y application.
+
+Los archivos se nombran estrictamente utilizando la convención kebab-case (auth-api.ts, auth-guard.ts, inventory.store.ts), mientras que las clases e interfaces emplean PascalCase (AuthApi, InventoryStore, AuthGuard). Los servicios inyectables se configuran mediante el decorador @Injectable({ providedIn: 'root' }), lo que optimiza el empaquetado mediante tree-shaking y previene la duplicidad de instancias. Se destaca el uso de Angular Signals para la gestión del estado reactivo de la interfaz, adoptando así la API moderna del framework para reducir la complejidad operativa frente a patrones RxJS tradicionales.
+
+La documentación mediante JSDoc es mandatoria en métodos críticos, especialmente en guards y servicios de dominio. Los guards de protección de rutas implementan la interfaz funcional CanActivateFn, validando la vigencia del token JWT, los estados de autenticación y los roles del usuario antes de permitir el acceso a las vistas. El código prohíbe la lógica compleja dentro de los templates HTML, delegando dicha responsabilidad a los componentes y almacenes (stores) fuertemente tipados.
+
+<img src="assets/Chapter-6/code-frontend1.png" alt="Carpetas Frontend" width="250px">
+<img src="assets/Chapter-6/code-frontend2.png" alt="Code Frontend" width="700px">
+
+
+**Landing Page - React/TypeScript** <br>
+La landing page se construye mediante componentes funcionales de React basados en TypeScript, asegurando la tipación estática (type safety) en toda la capa de presentación. Los componentes se nombran en PascalCase (Header, HeroSection, PricingSection) y se centralizan dentro del directorio src/components/. Cada componente declara y recibe propiedades (Props) fuertemente tipadas, mitigando errores comunes en tiempo de compilación.
+
+Para el diseño visual se utiliza Tailwind CSS, aplicando clases utilitarias directamente sobre el atributo className, lo que resulta en un estilo cohesivo, ágil y libre de archivos CSS externos innecesarios. Los colores corporativos de la marca se encuentran centralizados en el archivo de configuración de Tailwind, evitando valores arbitrarios dispersos.
+
+La internacionalización del sitio se gestiona a través de un LanguageContext que expone el hook personalizado useLanguage(), permitiendo a los componentes acceder y alternar el idioma de manera global sin incurrir en prop drilling. El código mantiene un acceso unificado a las variables de entorno y URLs de redirección mediante constantes globales. Asimismo, componentes clave como ImageWithFallback implementan patrones defensivos para mitigar fallos en la carga de recursos multimedia externos, garantizando una experiencia de usuario fluida.
+
+<img src="assets/Chapter-6/code-landing.png" alt="Carpetas Landing" width="250px">
+
+
 #### 6.2.1.2. Code Quality & Code Security.
+
+**Backend - Java/Spring Boot** <br>
+La calidad en el backend se asegura mediante el desacoplamiento de la arquitectura hexagonal y el uso de DTOs, lo que reduce la complejidad ciclomática y la deuda técnica. En el ámbito de la seguridad a nivel de código, el sistema destaca por:
+- Control de Acceso: Integración de Spring Security y tokens JWT. Los endpoints se protegen mediante autorización basada en roles con la anotación @PreAuthorize.
+- Validación Defensiva: Aplicación estricta de Bean Validation (@Valid, @NotNull) en controladores para sanitizar los datos de entrada y prevenir ataques de inyección (SQLi) o XSS.
+- Transparencia: Todos los flujos de autorización y códigos de respuesta están completamente documentados y declarados en el contrato de OpenAPI/Swagger.
+
+**Frontend - Angular/TypeScript** <br>
+La calidad del frontend se basa en una arquitectura modular por features y en el uso estricto de TypeScript (strict: true), garantizando un tipado fuerte que elimina errores en tiempo de compilación. Las prácticas de seguridad y estabilidad aplicadas incluyen:
+
+- Protección de Navegación: Implementación de guards funcionales (CanActivateFn) que interceptan las rutas y validan la vigencia del JWT y los permisos antes de renderizar cualquier vista.
+- Gestión de Estado Inmutable: El uso de Angular Signals previene fugas de memoria (memory leaks) y asegura un flujo de datos reactivo y predecible.
+- Saneamiento: Confianza en los mecanismos nativos del framework para sanitizar el DOM y neutralizar vulnerabilidades de Client-Side XSS.
+
+**Landing Page - React/TypeScript** <br>
+A pesar de su naturaleza informativa, la landing page se rige por estándares de calidad basados en componentes funcionales reutilizables y tipados estáticos que evitan caídas de la interfaz. Sus medidas de seguridad y buenas prácticas comprenden:
+
+- Navegación Segura: Uso mandatorio del atributo rel="noopener noreferrer" en enlaces externos para mitigar ataques de manipulación de pestañas (Tabnabbing).
+- Gestión de Contexto: Centralización de traducciones mediante LanguageContext fuertemente tipado, evitando referencias nulas en la interfaz.
+- Aislamiento: Configuración hermética de variables de entorno para evitar la filtración accidental de URLs o credenciales de desarrollo en el build de producción.
+
 ### 6.2.2. Reviews
+
 
 ## 6.3. Validation Interviews.
 ### 6.3.1. Diseño de Entrevistas.
