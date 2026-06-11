@@ -588,7 +588,179 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
 
+En esta sección se recopilan los insumos iniciales que orientan la planificación de los experimentos para StockWise. Estos elementos provienen del análisis As-Is, entrevistas, problemáticas identificadas y funcionalidades propuestas para los segmentos objetivo: bodegas especializadas por rubro y startups/emprendedores en expansión con necesidades logísticas. El objetivo no es validar directamente una solución, sino identificar creencias, vacíos de información, ideas y afirmaciones que puedan convertirse posteriormente en preguntas experimentales.
+
+## Assumptions
+
+1. Los dueños de bodegas y emprendedores necesitan digitalizar su gestión de inventario, pero requieren una solución simple, accesible y de rápida adopción.
+
+2. Los usuarios estarían dispuestos a reemplazar cuadernos, hojas de cálculo o registros manuales si la plataforma reduce errores y tiempo operativo.
+
+3. Las alertas de stock bajo y productos próximos a vencer pueden ayudar a disminuir pérdidas económicas por desabastecimiento o caducidad.
+
+4. Los emprendedores en crecimiento valoran más una herramienta centralizada que una solución compleja con demasiadas funciones avanzadas.
+
+5. La trazabilidad de movimientos, roles y permisos es importante para negocios donde varias personas modifican productos, precios o cantidades.
+
+6. Los reportes visuales pueden mejorar la toma de decisiones sobre compras, ventas, rotación de productos y reabastecimiento.
+
+7. La adopción tecnológica depende más de la facilidad de uso y del onboarding que del interés inicial por digitalizar el negocio.
+
+8. Las funcionalidades como QR, ubicación por estantería, escaneo por cámara y predicción de reabastecimiento pueden diferenciar a StockWise frente a herramientas genéricas.
+
+## Knowledge Gaps
+
+1. ¿Qué tan dispuestos están los usuarios a dejar sus métodos actuales como Excel, cuadernos o registros físicos?
+
+2. ¿Cuáles son las funcionalidades mínimas que los usuarios consideran indispensables para usar StockWise de forma diaria?
+
+3. ¿Qué nivel de dificultad perciben los usuarios al registrar productos, salidas, lotes o vencimientos dentro de la plataforma?
+
+4. ¿Qué tan valiosas resultan las alertas automáticas frente al control manual que actualmente realizan los negocios?
+
+5. ¿Cuánto tiempo operativo se podría reducir al centralizar inventario, movimientos y reportes en una sola plataforma?
+
+6. ¿Qué tan importante es para los usuarios contar con roles, permisos e historial de cambios dentro del sistema?
+
+7. ¿Qué tipo de reportes consideran más útiles los usuarios: ventas, stock, ganancias, productos más vendidos, vencimientos o movimientos?
+
+8. ¿Qué canales generan mayor intención de registro para StockWise: landing page, redes sociales, recomendaciones, comunidades de emprendedores o contacto directo?
+
+9. ¿Qué precio o modelo de pago sería aceptable para bodegas y emprendimientos pequeños?
+
+10. ¿Qué funciones avanzadas, como QR, escaneo por cámara, geolocalización o predicción inteligente, realmente serían usadas por los segmentos objetivo?
+
+## Ideas
+
+1. Implementar un onboarding guiado que explique paso a paso cómo registrar productos, configurar stock mínimo y revisar alertas.
+
+2. Incluir alertas automáticas de stock bajo y productos próximos a vencer para prevenir pérdidas y mejorar el reabastecimiento.
+
+3. Diseñar un dashboard simple con indicadores clave como productos críticos, próximos vencimientos, movimientos recientes y productos más vendidos.
+
+4. Permitir el registro rápido de productos mediante formularios simples, duplicado de productos, carga por lote o escaneo.
+
+5. Incorporar roles y permisos para que el administrador controle qué acciones pueden realizar sus empleados.
+
+6. Agregar historial de movimientos para identificar quién modificó productos, precios, cantidades o registros de entrada y salida.
+
+7. Usar códigos QR o ubicación por estantería para acelerar la búsqueda física de productos en almacenes o bodegas.
+
+8. Implementar reportes exportables en PDF o Excel para facilitar el análisis de ventas, stock y ganancias.
+
+9. Probar una landing page orientada a beneficios concretos: reducir pérdidas, ahorrar tiempo y controlar el inventario desde cualquier dispositivo.
+
+10. Evaluar un modelo freemium o planes escalables que permitan iniciar gratis y pagar por funciones avanzadas.
+
+## Claims
+
+1. “StockWise permite a pequeños negocios controlar su inventario de forma más ordenada y confiable que los métodos manuales.”
+
+2. “Las alertas de stock bajo y vencimiento reducen pérdidas económicas y errores operativos en bodegas y emprendimientos.”
+
+3. “Una plataforma simple y accesible puede facilitar la adopción tecnológica en negocios que actualmente usan cuadernos o Excel.”
+
+4. “La trazabilidad de movimientos mejora el control interno cuando varias personas participan en la gestión del inventario.”
+
+5. “Los reportes visuales ayudan a los usuarios a tomar mejores decisiones de compra, venta y reabastecimiento.”
+
+6. “StockWise ofrece una experiencia más adecuada para pymes que herramientas complejas como ERPs tradicionales.”
+
+7. “La centralización de inventario, ventas, alertas y reportes en una sola plataforma aumenta la eficiencia operativa.”
+
+8. “Las funcionalidades avanzadas como QR, escaneo por cámara y predicción inteligente pueden mejorar la diferenciación del producto si responden a necesidades reales del usuario.”
+
 ### 8.1.3. Experiment-Ready Questions
+
+Esta sección presenta preguntas listas para ser convertidas en experimentos. Las preguntas se organizan según el tipo de aprendizaje que se desea obtener: validación de utilidad del producto, facilidad de uso, adopción, modelo de negocio, impacto operativo y atracción de usuarios. Estas preguntas permitirán diseñar experimentos como entrevistas de validación, pruebas de usabilidad, análisis de eventos en la plataforma, encuestas, pruebas A/B en landing page y medición de métricas de uso.
+
+## Validación del problema y utilidad del producto
+
+1. ¿Los dueños de bodegas y emprendedores consideran que la gestión manual de inventario es un problema suficientemente importante como para cambiar de herramienta?
+
+2. ¿Los usuarios perciben que StockWise resuelve mejor sus problemas actuales que Excel, cuadernos o registros físicos?
+
+3. ¿La centralización de productos, movimientos, alertas y reportes en una sola plataforma genera una mejora percibida en la organización del negocio?
+
+4. ¿Los usuarios consideran que StockWise les ayuda a reducir errores en el control de stock?
+
+5. ¿Los usuarios identifican valor inmediato en poder consultar su inventario desde cualquier dispositivo?
+
+## Validación de funcionalidades principales
+
+1. ¿Las alertas de stock bajo son entendidas y consideradas útiles por los usuarios durante la gestión diaria?
+
+2. ¿Las alertas de productos próximos a vencer ayudan a los usuarios a prevenir pérdidas por caducidad?
+
+3. ¿El historial de movimientos permite a los usuarios comprender mejor quién realizó cambios en el inventario?
+
+4. ¿Los reportes de ventas, stock y productos más vendidos son considerados útiles para tomar decisiones de compra o reposición?
+
+5. ¿El registro por lotes facilita la gestión de productos con proveedor, fecha de ingreso y fecha de vencimiento?
+
+6. ¿La búsqueda por nombre, código, categoría o etiqueta permite encontrar productos más rápido que el método actual?
+
+## Validación de usabilidad y adopción
+
+1. ¿Los usuarios pueden registrar un producto nuevo sin ayuda externa durante su primera interacción con la plataforma?
+
+2. ¿Los usuarios entienden fácilmente cómo configurar el stock mínimo de un producto?
+
+3. ¿El flujo para registrar entradas y salidas de productos es claro para personas con poca experiencia tecnológica?
+
+4. ¿El onboarding reduce la confusión inicial al usar la plataforma?
+
+5. ¿Qué partes del flujo generan mayor fricción: registro de producto, control de stock, alertas, reportes o configuración de usuarios?
+
+6. ¿Los usuarios consideran que la interfaz es suficientemente simple para usarla durante la atención diaria del negocio?
+
+## Validación de funciones avanzadas
+
+1. ¿Los usuarios consideran útil ubicar productos mediante QR o ubicación por estantería?
+
+2. ¿El escaneo por cámara reduce el tiempo de registro frente al ingreso manual de productos?
+
+3. ¿La predicción de reabastecimiento genera confianza en los usuarios o prefieren seguir decidiendo manualmente?
+
+4. ¿Los usuarios realmente usarían comandos por voz para registrar productos o movimientos de inventario?
+
+5. ¿Qué funciones avanzadas generan mayor interés: QR, cámara, geolocalización, reportes o predicción inteligente?
+
+## Validación del modelo de negocio
+
+1. ¿Los usuarios estarían dispuestos a pagar por StockWise si perciben reducción de errores y ahorro de tiempo?
+
+2. ¿Qué modelo de pago resulta más atractivo para bodegas y emprendedores: freemium, suscripción mensual, plan anual o pago por funcionalidad?
+
+3. ¿El precio de los planes premium representa una barrera para pequeños negocios?
+
+4. ¿Qué funcionalidades justificarían que un usuario pase de un plan gratuito a un plan de pago?
+
+5. ¿Los usuarios aceptarían pagar más por funcionalidades avanzadas como reportes, QR, alertas inteligentes o predicción de reabastecimiento?
+
+## Validación de impacto operativo
+
+1. ¿El uso de StockWise reduce el tiempo necesario para registrar productos o movimientos de inventario?
+
+2. ¿Los usuarios cometen menos errores al registrar entradas y salidas usando la plataforma?
+
+3. ¿La plataforma ayuda a reducir pérdidas por productos vencidos o por falta de stock?
+
+4. ¿Los usuarios revisan con mayor frecuencia el estado de su inventario cuando cuentan con dashboard y alertas?
+
+5. ¿El uso de reportes mejora la planificación de compras y reposición?
+
+## Validación de atracción, conversión y recomendación
+
+1. ¿La landing page comunica claramente el valor principal de StockWise para bodegas y emprendedores?
+
+2. ¿Qué mensaje de la landing page genera mayor intención de registro: ahorro de tiempo, reducción de pérdidas, control desde cualquier dispositivo o reportes automáticos?
+
+3. ¿Qué canal genera mayor cantidad de registros: redes sociales, recomendaciones, comunidades de emprendedores o búsqueda orgánica?
+
+4. ¿Los usuarios recomendarían StockWise a otros dueños de bodegas o emprendedores?
+
+5. ¿Qué elemento genera mayor confianza antes del registro: testimonios, demostración del producto, precios claros o beneficios medibles?
 
 ### 8.1.4. Question Backlog
 
