@@ -765,6 +765,65 @@ Esta sección presenta preguntas listas para ser convertidas en experimentos. La
 ### 8.1.4. Question Backlog
 
 ### 8.1.5. Experiment Cards
+Las Experiment Cards son el artefacto central del proceso de experimentación. Cada tarjeta captura la información esencial de un experimento antes de su ejecución, estructurando tanto la pregunta que se busca responder como la configuración operativa del experimento.
+
+A continuación se presentan las Experiment Cards definidas para StockWise, alineadas con las hipótesis de negocio y el Question Backlog priorizado.
+
+#### Experiment Card #1
+
+| Campo | Detalle |
+|--------|---------|
+| ID | EXP-01 |
+| Pregunta | ¿Las alertas push de stock bajo generan una reducción medible en los quiebres de inventario de los usuarios de StockWise? |
+| Por qué | La Hipótesis 1 del Lean UX Process establece que las alertas inteligentes push resolverán el problema de pérdidas económicas por quiebres de stock inesperados en pymes. Si esta hipótesis es incorrecta, el equipo estaría priorizando una funcionalidad de alto costo de desarrollo con bajo impacto real. |
+| Hipótesis | Creemos que activar las alertas push de stock bajo reducirá en al menos un 40% la frecuencia de quiebres de inventario reportados por los usuarios activos de StockWise en un período de 4 semanas. |
+| Simplest Useful Thing | Implementar y habilitar las notificaciones push de stock bajo en la app mobile y medir la variación en la tasa de quiebres de inventario entre usuarios que reciben alertas (grupo experimental) y usuarios que no (grupo control). |
+
+##### Configuración del experimento
+
+| Campo | Detalle |
+|--------|---------|
+| Medidas | Tasa de quiebres de inventario por usuario por semana; Tasa de reabastecimiento a tiempo (dentro de las 24 h posteriores a la alerta); Tasa de apertura de la notificación push. |
+| Condiciones | Experimental: usuarios con alertas push activas. Control: usuarios sin alertas push activadas. |
+| Escala | Mínimo 30 usuarios por condición (60 en total), durante 4 semanas. Nivel de significancia: α = 0.05. Potencia estadística: 80%. MDE: 15% de diferencia en tasa de quiebres. |
+
+--- 
+#### Experiment Card #2
+
+| Campo | Detalle |
+|--------|---------|
+| ID | EXP-02 |
+| Pregunta | ¿Los reportes visuales de inventario aumentan la frecuencia con la que los usuarios toman decisiones de reabastecimiento basadas en datos? |
+| Por qué | La Hipótesis 2 del Lean UX Process indica que los reportes visuales móviles resolverán la falta de visibilidad sobre el rendimiento del inventario. Sin evidencia de que los usuarios los utilizan y actúan en base a ellos, la funcionalidad no demuestra valor de negocio real. |
+| Hipótesis | Creemos que los usuarios que acceden semanalmente a los reportes visuales de StockWise realizarán al menos un 30% más de ajustes de reabastecimiento por semana, en comparación con usuarios que no utilizan esta funcionalidad. |
+| Simplest Useful Thing | Comparar la frecuencia de acciones de reabastecimiento entre usuarios que acceden a reportes (≥1 vez/semana) y usuarios que no los consultan, durante un período de 3 semanas. |
+
+##### Configuración del experimento
+
+| Campo | Detalle |
+|--------|---------|
+| Medidas | Número de acciones de reabastecimiento por usuario por semana; Frecuencia de acceso al módulo de reportes; Tiempo promedio de sesión en el módulo de reportes. |
+| Condiciones | Experimental: usuarios que acceden a reportes al menos una vez por semana. Control: usuarios que no acceden a reportes en el período observado. |
+| Escala | Mínimo 25 usuarios por condición, durante 3 semanas. Nivel de significancia: α = 0.05. Potencia estadística: 80%. MDE: 20% de diferencia en acciones de reabastecimiento. |
+
+--- 
+#### Experiment Card #3
+
+| Campo | Detalle |
+|--------|---------|
+| ID | EXP-03 |
+| Pregunta | ¿El modelo freemium de StockWise logra una tasa de conversión a planes de pago de al menos 15% dentro de los primeros 60 días de uso? |
+| Por qué | La Hipótesis 3 plantea que el modelo freemium resolverá la barrera económica de acceso. Si la tasa de conversión es significativamente menor al 15%, el modelo de monetización actual requiere revisión antes de escalar. |
+| Hipótesis | Creemos que al menos el 15% de los usuarios que inician con el plan gratuito de StockWise realizará una conversión a un plan de pago dentro de los primeros 60 días de uso activo. |
+| Simplest Useful Thing | Observar y registrar la tasa de conversión de usuarios freemium a premium durante los primeros 60 días post-registro, sin modificar el flujo actual. |
+
+##### Configuración del experimento
+
+| Campo | Detalle |
+|--------|---------|
+| Medidas | Tasa de conversión freemium → premium en 60 días; Tiempo promedio hasta la primera conversión; Funcionalidades más utilizadas antes de la conversión. |
+| Condiciones | Exploratoria: se observa el comportamiento de todos los usuarios freemium registrados en el período de 60 días. No hay grupo de control separado; se compara contra el criterio de éxito definido (15%). |
+| Escala | Mínimo 80 usuarios freemium registrados durante el período de observación. Nivel de significancia: α = 0.05. MDE: diferencia del 5% respecto al umbral objetivo del 15%. |
 
 ## 8.2. Experiment Design
 
