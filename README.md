@@ -1071,7 +1071,147 @@ La auditoría de experiencias de usuario fue llevada a cabo con el objetivo de o
 | Evaluación integral del flujo funcional de la aplicación | 13/06/2026 | Ronald Peralta Chipa | 1 hora            |
 | Implementación de mejoras y corrección de incidencias    | 13/06/2026 | Equipo Stoq          | 30 minutos        |
 
-### 6.4.1.3. Contenido de la auditoría realizada
+#### 6.4.1.3. Contenido de la auditoría realizada
+La presente auditoría tuvo como objetivo evaluar la usabilidad y experiencia de usuario del producto desarrollado por el grupo auditado. Para ello, se analizaron los principales flujos de interacción de la aplicación, identificando problemas relacionados con navegación, retroalimentación del sistema, accesibilidad, consistencia visual y comprensión de la interfaz.
+
+#### Tareas evaluadas
+
+Durante la auditoría se ejecutaron las siguientes tareas representativas del flujo de uso de la aplicación:
+
+| N.° | Tarea evaluada       | Descripción                            |
+| --- | -------------------- | -------------------------------------- |
+| 1   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
+| 2   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
+| 3   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
+| 4   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
+
+
+#### Escala de severidad utilizada
+
+| Nivel | Descripción                                                                       |
+| ----- | --------------------------------------------------------------------------------- |
+| 1     | Problema superficial que no afecta significativamente la experiencia del usuario. |
+| 2     | Problema menor que genera cierta dificultad pero permite completar la tarea.      |
+| 3     | Problema importante que dificulta considerablemente la interacción.               |
+| 4     | Problema crítico que impide completar la tarea o continuar utilizando el sistema. |
+
+
+#### Resumen de hallazgos identificados
+
+| ID   | Tarea            | Problema identificado            | Severidad | Heurística vulnerada      |
+| ---- | ---------------- | -------------------------------- | --------- | ------------------------- |
+| H-01 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
+| H-02 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
+| H-03 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
+| H-04 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
+| H-05 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
+
+---
+
+### Detalle de hallazgos
+
+#### Hallazgo H-01
+
+| Campo                   | Detalle                                                                          |
+| ----------------------- | -------------------------------------------------------------------------------- |
+| Tarea evaluada          | [Nombre de la tarea]                                                             |
+| Ubicación               | [Pantalla, módulo o sección]                                                     |
+| Problema identificado   | [Título breve del problema]                                                      |
+| Severidad               | [1-4]                                                                            |
+| Heurística vulnerada    | [Nombre de la heurística]                                                        |
+| Descripción             | [Explicar qué ocurrió, cómo se identificó el problema y cómo afecta al usuario.] |
+| Impacto para el usuario | [Consecuencias que genera el problema durante el uso de la aplicación.]          |
+| Recomendación           | [Acción correctiva sugerida.]                                                    |
+
+**Evidencia**
+
+![Figura 1 - Hallazgo H-01](evidencias/hallazgo-h01.png)
+
+*Figura 1. [Descripción de la evidencia observada].*
+
+---
+
+#### Hallazgo H-02
+
+| Campo                   | Detalle                                                                          |
+| ----------------------- | -------------------------------------------------------------------------------- |
+| Tarea evaluada          | [Nombre de la tarea]                                                             |
+| Ubicación               | [Pantalla, módulo o sección]                                                     |
+| Problema identificado   | [Título breve del problema]                                                      |
+| Severidad               | [1-4]                                                                            |
+| Heurística vulnerada    | [Nombre de la heurística]                                                        |
+| Descripción             | [Explicar qué ocurrió, cómo se identificó el problema y cómo afecta al usuario.] |
+| Impacto para el usuario | [Consecuencias que genera el problema durante el uso de la aplicación.]          |
+| Recomendación           | [Acción correctiva sugerida.]                                                    |
+
+**Evidencia**
+
+![Figura 2 - Hallazgo H-02](evidencias/hallazgo-h02.png)
+
+*Figura 2. [Descripción de la evidencia observada].*
+
+---
+
+#### Hallazgo H-03
+
+| Campo                   | Detalle                                                                          |
+| ----------------------- | -------------------------------------------------------------------------------- |
+| Tarea evaluada          | [Nombre de la tarea]                                                             |
+| Ubicación               | [Pantalla, módulo o sección]                                                     |
+| Problema identificado   | [Título breve del problema]                                                      |
+| Severidad               | [1-4]                                                                            |
+| Heurística vulnerada    | [Nombre de la heurística]                                                        |
+| Descripción             | [Explicar qué ocurrió, cómo se identificó el problema y cómo afecta al usuario.] |
+| Impacto para el usuario | [Consecuencias que genera el problema durante el uso de la aplicación.]          |
+| Recomendación           | [Acción correctiva sugerida.]                                                    |
+
+**Evidencia**
+
+![Figura 3 - Hallazgo H-03](evidencias/hallazgo-h03.png)
+
+*Figura 3. [Descripción de la evidencia observada].*
+
+---
+
+#### Hallazgo H-04
+
+| Campo                   | Detalle                                                                          |
+| ----------------------- | -------------------------------------------------------------------------------- |
+| Tarea evaluada          | [Nombre de la tarea]                                                             |
+| Ubicación               | [Pantalla, módulo o sección]                                                     |
+| Problema identificado   | [Título breve del problema]                                                      |
+| Severidad               | [1-4]                                                                            |
+| Heurística vulnerada    | [Nombre de la heurística]                                                        |
+| Descripción             | [Explicar qué ocurrió, cómo se identificó el problema y cómo afecta al usuario.] |
+| Impacto para el usuario | [Consecuencias que genera el problema durante el uso de la aplicación.]          |
+| Recomendación           | [Acción correctiva sugerida.]                                                    |
+
+**Evidencia**
+
+![Figura 4 - Hallazgo H-04](evidencias/hallazgo-h04.png)
+
+*Figura 4. [Descripción de la evidencia observada].*
+
+---
+
+#### Hallazgo H-05
+
+| Campo                   | Detalle                                                                          |
+| ----------------------- | -------------------------------------------------------------------------------- |
+| Tarea evaluada          | [Nombre de la tarea]                                                             |
+| Ubicación               | [Pantalla, módulo o sección]                                                     |
+| Problema identificado   | [Título breve del problema]                                                      |
+| Severidad               | [1-4]                                                                            |
+| Heurística vulnerada    | [Nombre de la heurística]                                                        |
+| Descripción             | [Explicar qué ocurrió, cómo se identificó el problema y cómo afecta al usuario.] |
+| Impacto para el usuario | [Consecuencias que genera el problema durante el uso de la aplicación.]          |
+| Recomendación           | [Acción correctiva sugerida.]                                                    |
+
+**Evidencia**
+
+![Figura 5 - Hallazgo H-05](evidencias/hallazgo-h05.png)
+
+*Figura 5. [Descripción de la evidencia observada].*
 
 ### 6.4.2. Auditoria recibida.
 
