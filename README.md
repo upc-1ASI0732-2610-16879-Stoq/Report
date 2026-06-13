@@ -916,6 +916,104 @@ El **Tracking Plan** define los eventos, propiedades y canales de recolección d
 
 ### 8.3.1. To-Be User Stories
 
+Las **To-Be User Stories** representan los nuevos requisitos funcionales derivados de las hipótesis de experimentación de StockWise. Estas historias permiten implementar las condiciones experimentales definidas en las Experiment Cards y habilitan la captura de eventos necesarios para validar las hipótesis planteadas.
+
+#### Backlog de To-Be User Stories
+
+| Story ID | User Story | Prioridad | Epic |
+|-----------|------------|------------|------|
+| **US-TB01** | Como usuario de StockWise, quiero recibir una notificación push cuando el stock de un producto baje del umbral mínimo configurado, para poder reabastecer a tiempo y evitar quiebres de inventario. | Alta | EP-EXP01: Alertas inteligentes de stock |
+| **US-TB02** | Como usuario de StockWise, quiero poder configurar el umbral mínimo de stock para cada producto de forma individual, para personalizar las alertas según las necesidades de mi negocio. | Alta | EP-EXP01: Alertas inteligentes de stock |
+| **US-TB03** | Como usuario de StockWise, quiero ver un historial de alertas de stock bajo recibidas en los últimos 30 días, para evaluar cuáles productos generan más quiebres frecuentes. | Media | EP-EXP01: Alertas inteligentes de stock |
+| **US-TB04** | Como usuario de StockWise, quiero acceder a un dashboard de reportes visuales que muestre el movimiento de inventario de la semana actual, para tomar decisiones de reabastecimiento basadas en datos. | Alta | EP-EXP02: Reportes visuales de inventario |
+| **US-TB05** | Como usuario de StockWise, quiero que el sistema registre automáticamente cuándo accedo al módulo de reportes, para que el equipo pueda analizar el patrón de uso de esta funcionalidad. | Alta | EP-EXP02: Reportes visuales de inventario |
+| **US-TB06** | Como visitante con plan gratuito de StockWise, quiero ver una comparativa clara entre el plan gratuito y los planes de pago antes de decidir hacer upgrade, para evaluar si el costo adicional vale el beneficio. | Alta | EP-EXP03: Conversión freemium |
+| **US-TB07** | Como usuario de StockWise, quiero que el sistema registre de forma automática cuando inicio el proceso de upgrade de plan, para que el equipo pueda medir la tasa de conversión freemium a premium. | Alta | EP-EXP03: Conversión freemium |
+
+---
+
+#### Relación entre Epics y User Stories
+
+| Epic | Objetivo | User Stories asociadas |
+|--------|-----------|-----------------------|
+| **EP-EXP01: Alertas inteligentes de stock** | Validar el impacto de las alertas push en la reducción de quiebres de inventario. | US-TB01, US-TB02, US-TB03 |
+| **EP-EXP02: Reportes visuales de inventario** | Validar si los reportes visuales incrementan las decisiones de reabastecimiento basadas en datos. | US-TB04, US-TB05 |
+| **EP-EXP03: Conversión freemium** | Medir la efectividad del modelo freemium para convertir usuarios a planes de pago. | US-TB06, US-TB07 |
+
+---
+
+#### Criterios de Aceptación — US-TB01
+
+**Historia:** Notificación push de stock bajo.
+
+```gherkin
+Feature: Notificación push de stock bajo
+
+  Scenario: Usuario recibe alerta cuando el stock cae por debajo del umbral
+
+    Given que el usuario tiene configurado un umbral mínimo de 5 unidades para el producto "Arroz 1kg"
+    And el stock actual del producto es de 10 unidades
+
+    When se registra una salida de 6 unidades del producto "Arroz 1kg"
+
+    Then el sistema envía una notificación push al dispositivo del usuario
+    And la notificación indica el nombre del producto y el stock actual
+    And se registra el evento "alert_received" con el user_id y el product_id correspondientes
+
+  Scenario: Usuario no recibe alerta cuando el stock se mantiene por encima del umbral
+
+    Given que el umbral mínimo es de 5 unidades para el producto "Leche evaporada"
+    And el stock actual es de 20 unidades
+
+    When se registra una salida de 10 unidades
+
+    Then el sistema no envía ninguna notificación push
+    And el stock resultante (10 unidades) permanece por encima del umbral configurado
+```
+
+---
+
+#### Criterios de Aceptación — US-TB04
+
+**Historia:** Dashboard de reportes visuales de inventario.
+
+```gherkin
+Feature: Dashboard de reportes visuales de inventario
+
+  Scenario: Usuario accede al módulo de reportes y visualiza el movimiento semanal
+
+    Given que el usuario ha iniciado sesión en StockWise
+    And existen movimientos de inventario registrados en los últimos 7 días
+
+    When el usuario navega al módulo "Reportes"
+
+    Then el sistema muestra un gráfico con las entradas y salidas de inventario de la semana actual
+    And se registra el evento "report_viewed" con el user_id, el tipo de reporte y el timestamp
+
+  Scenario: Usuario sin movimientos registrados accede al módulo de reportes
+
+    Given que el usuario ha iniciado sesión en StockWise
+    And no existen movimientos de inventario en los últimos 7 días
+
+    When el usuario navega al módulo "Reportes"
+
+    Then el sistema muestra un mensaje indicando que no hay datos para el período seleccionado
+    And el evento "report_viewed" se registra igualmente
+```
+
+---
+
+#### Trazabilidad con los Experimentos
+
+| Experimento | User Stories relacionadas |
+|-------------|--------------------------|
+| **EXP-01 — Alertas push de stock bajo** | US-TB01, US-TB02, US-TB03 |
+| **EXP-02 — Reportes visuales de inventario** | US-TB04, US-TB05 |
+| **EXP-03 — Conversión freemium** | US-TB06, US-TB07 |
+
+Esta trazabilidad garantiza que cada funcionalidad implementada contribuya directamente a la validación de una hipótesis experimental definida en el proceso Lean UX.
+
+
 ### 8.3.2. To-Be Product Backlog
 
 ### 8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle
