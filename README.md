@@ -843,6 +843,76 @@ A continuación se presentan las Experiment Cards definidas para StockWise, alin
 
 ### 8.2.8. Web and Mobile Tracking Plan
 
+El **Tracking Plan** define los eventos, propiedades y canales de recolección de datos que StockWise utilizará para medir el comportamiento de los usuarios durante la ejecución de los experimentos definidos. Su propósito es garantizar que los datos recopilados sean suficientes, precisos y estén directamente alineados con las métricas de evaluación de cada experimento.
+
+#### Principios del Tracking Plan
+
+- Se rastrea únicamente la información necesaria para responder las preguntas de investigación definidas en los experimentos (**economía de datos**).
+- Los nombres de los eventos siguen la convención **objeto_acción** utilizando formato **snake_case** (por ejemplo: `alert_opened`).
+- Cada evento incorpora únicamente las propiedades mínimas requeridas para segmentar, filtrar y analizar los datos.
+- La recolección de datos se realiza únicamente durante el período definido en la escala de cada experimento.
+- Todos los eventos deben contar con una marca temporal (`timestamp`) para garantizar la trazabilidad y el análisis cronológico.
+
+---
+
+#### Eventos del Frontend Web (Vue.js — Vercel)
+
+| Evento | Descripción | Propiedades | Experimentos relacionados |
+|----------|-------------|-------------|---------------------------|
+| `session_started` | El usuario inicia sesión en la aplicación web. | `user_id`, `plan_type`, `timestamp` | EXP-01, EXP-02, EXP-03 |
+| `product_viewed` | El usuario visualiza el detalle de un producto en el inventario. | `user_id`, `product_id`, `timestamp` | EXP-01 |
+| `inventory_restocked` | El usuario registra un reabastecimiento de un producto. | `user_id`, `product_id`, `quantity_added`, `timestamp` | EXP-01, EXP-02 |
+| `report_viewed` | El usuario accede al módulo de reportes visuales. | `user_id`, `report_type`, `timestamp` | EXP-02 |
+| `plan_upgrade_started` | El usuario inicia el proceso de actualización a un plan de pago. | `user_id`, `current_plan`, `target_plan`, `timestamp` | EXP-03 |
+| `plan_upgrade_completed` | El usuario completa la conversión a un plan de pago. | `user_id`, `previous_plan`, `new_plan`, `timestamp` | EXP-03 |
+
+---
+
+#### Eventos de la Aplicación Mobile
+
+| Evento | Descripción | Propiedades | Experimentos relacionados |
+|----------|-------------|-------------|---------------------------|
+| `app_session_started` | El usuario abre la aplicación móvil. | `user_id`, `platform`, `plan_type`, `timestamp` | EXP-01, EXP-02, EXP-03 |
+| `alert_received` | El sistema envía una notificación push de stock bajo al dispositivo del usuario. | `user_id`, `product_id`, `current_stock`, `min_stock_threshold`, `timestamp` | EXP-01 |
+| `alert_opened` | El usuario abre una notificación push recibida. | `user_id`, `product_id`, `time_to_open`, `timestamp` | EXP-01 |
+| `alert_dismissed` | El usuario descarta la notificación sin interactuar con ella. | `user_id`, `product_id`, `timestamp` | EXP-01 |
+| `stock_out_detected` | El sistema detecta que un producto alcanza cero unidades en inventario. | `user_id`, `product_id`, `timestamp` | EXP-01 |
+| `report_viewed_mobile` | El usuario accede al módulo de reportes desde la aplicación móvil. | `user_id`, `report_type`, `timestamp` | EXP-02 |
+| `inventory_restocked_mobile` | El usuario registra un reabastecimiento desde la aplicación móvil. | `user_id`, `product_id`, `quantity_added`, `timestamp` | EXP-01, EXP-02 |
+
+> **Nota:** El atributo `platform` permite identificar si la sesión corresponde a Android o iOS.
+
+---
+
+#### Eventos y Logs del Backend (Spring Boot — Render)
+
+| Evento / Endpoint | Descripción | Captura registrada | Experimentos relacionados |
+|------------------|-------------|-------------------|---------------------------|
+| `POST /api/v1/alerts` | Creación de una nueva alerta de stock bajo. | Log con `user_id`, `product_id`, `timestamp`. | EXP-01 |
+| `GET /api/v1/reports` | Consulta del módulo de reportes. | Log con `user_id`, `report_type`, `timestamp`. | EXP-02 |
+| `POST /api/v1/inventory/restock` | Registro de una operación de reabastecimiento. | Log con `user_id`, `product_id`, `quantity`, `timestamp`. | EXP-01, EXP-02 |
+| `POST /api/v1/subscriptions/upgrade` | Solicitud de actualización a un plan de pago. | Log con `user_id`, `new_plan`, `timestamp`. | EXP-03 |
+
+---
+
+#### Resumen del Tracking Plan por Experimento
+
+| Experimento | Eventos principales a rastrear | Canal de recolección | Duración |
+|-------------|-------------------------------|---------------------|----------|
+| **EXP-01 — Impacto de alertas push de stock bajo** | `alert_received`, `alert_opened`, `stock_out_detected`, `inventory_restocked` | Aplicación Mobile + Backend | 4 semanas |
+| **EXP-02 — Uso de reportes visuales para reabastecimiento** | `report_viewed`, `report_viewed_mobile`, `inventory_restocked`, `inventory_restocked_mobile` | Web + Mobile + Backend | 3 semanas |
+| **EXP-03 — Conversión del modelo freemium** | `session_started`, `plan_upgrade_started`, `plan_upgrade_completed` | Web + Mobile + Backend | 60 días |
+
+---
+
+#### Trazabilidad entre Experimentos y Eventos
+
+| Experimento | Objetivo de medición | Eventos clave |
+|-------------|---------------------|---------------|
+| **EXP-01** | Reducir quiebres de inventario mediante alertas inteligentes. | `alert_received`, `alert_opened`, `stock_out_detected`, `inventory_restocked` |
+| **EXP-02** | Incrementar decisiones de reabastecimiento basadas en datos. | `report_viewed`, `report_viewed_mobile`, `inventory_restocked`, `inventory_restocked_mobile` |
+| **EXP-03** | Validar la efectividad del modelo freemium para la conversión a planes de pago. | `session_started`, `plan_upgrade_started`, `plan_upgrade_completed` |
+
 ## 8.3. Experimentation
 
 ### 8.3.1. To-Be User Stories
