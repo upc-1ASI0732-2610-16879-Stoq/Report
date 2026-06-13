@@ -844,6 +844,14 @@ Las notificaciones podrán enviarse mediante:
 * Los registros de notificaciones deberán conservarse para fines de auditoría y análisis posterior.
 * El sistema deberá permitir la trazabilidad completa desde la detección del incidente hasta su resolución.
 
+| Componente                         | Herramienta      | Tipo de evento notificado                                   | Destinatarios                         |
+|------------------------------------|------------------|-------------------------------------------------------------|----------------------------------------|
+| Notificación de CI fallido         | GitHub Actions   | Workflow fallido en `push` o `pull_request`                 | Ronald Peralta            |
+| Notificación de deploy exitoso     | Render           | Backend desplegado correctamente en producción              | Fabiola Del Rocio                 |
+| Notificación de deploy fallido     | Render           | Error durante el redeploy del backend                       | Fabiola Del Rocio                |
+| Notificación de deploy frontend    | Vercel           | Deploy completado                       | Fabiola Del Rocio                   |
+| Notificación de deploy landing     | Netlify          | Build completado                                            | Equipo               |
+
 
 # Part III: Experiment-Driven Lifecycle
 
