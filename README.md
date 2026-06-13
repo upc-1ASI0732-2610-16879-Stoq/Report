@@ -1046,11 +1046,36 @@ También puede eliminar una alerta específica luego de una confirmación emerge
 ### 6.3.3. Evaluaciones segun heuristicas.
 
 ## 6.4. Auditoria de Experiencias de Usuario.
+La auditoría de experiencias de usuario fue llevada a cabo con el objetivo de obtener retroalimentación externa sobre la calidad de la interfaz y la arquitectura de información de StockWise, así como de brindar retroalimentación a otro equipo de trabajo. El proceso contempló dos dimensiones: la auditoría realizada a un grupo externo y la auditoría recibida por parte de otro grupo evaluador.
+
 ### 6.4.1. Auditoria realizada.
 #### 6.4.1.1. Información del grupo auditado.
-#### 6.4.1.2. Cronograma de auditoria realizada.
-#### 6.4.1.3. Contenido de auditoría realizada.
+
+| Campo                    | Detalle                                                       |
+| ------------------------ | ------------------------------------------------------------- |
+| Grupo auditado           | Grupo 2                                                       |
+| Startup                  | Pendiente de confirmación                                     |
+| Producto evaluado        | Pendiente de confirmación                                     |
+| Integrantes del equipo   | Persona 1, Persona 2, Persona 3, Persona 4 y Persona 5        |
+| Repositorio del proyecto | Pendiente de confirmación                                     |
+| Landing Page             | https://demy-edulabs.netlify.app/                             |
+| Aplicación web           | https://edulabs-experimentos.github.io/demy-admin-web/sign-up |
+
+#### 6.4.1.2. Cronograma de auditoría realizada
+
+| Actividad                                                | Fecha      | Responsable          | Duración estimada |
+| -------------------------------------------------------- | ---------- | -------------------- | ----------------- |
+| Recepción del informe de auditoría externa               | 11/06/2026 | Ronald Peralta Chipa | 30 minutos        |
+| Revisión y análisis de hallazgos identificados           | 11/06/2026 | Ronald Peralta Chipa | 1 hora            |
+| Priorización de observaciones y acciones correctivas     | 12/06/2026 | Equipo Stoq          | 30 minutos        |
+| Evaluación integral del flujo funcional de la aplicación | 13/06/2026 | Ronald Peralta Chipa | 1 hora            |
+| Implementación de mejoras y corrección de incidencias    | 13/06/2026 | Equipo Stoq          | 30 minutos        |
+
+### 6.4.1.3. Contenido de la auditoría realizada
+
 ### 6.4.2. Auditoria recibida.
+
+
 #### 6.4.2.1. Información del grupo auditor.
 #### 6.4.2.2. Cronograma de auditoría recibida.
 #### 6.4.2.3. Contenido de auditoría recibida.
