@@ -880,7 +880,6 @@ El **Tracking Plan** define los eventos, propiedades y canales de recolección d
 | `report_viewed_mobile` | El usuario accede al módulo de reportes desde la aplicación móvil. | `user_id`, `report_type`, `timestamp` | EXP-02 |
 | `inventory_restocked_mobile` | El usuario registra un reabastecimiento desde la aplicación móvil. | `user_id`, `product_id`, `quantity_added`, `timestamp` | EXP-01, EXP-02 |
 
-> **Nota:** El atributo `platform` permite identificar si la sesión corresponde a Android o iOS.
 
 ---
 
