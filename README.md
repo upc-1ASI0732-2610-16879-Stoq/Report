@@ -1016,6 +1016,45 @@ Esta trazabilidad garantiza que cada funcionalidad implementada contribuya direc
 
 ### 8.3.2. To-Be Product Backlog
 
+El **To-Be Product Backlog** incorpora las User Stories experimentales al backlog existente de StockWise, priorizadas según su valor para la validación de las hipótesis de negocio.
+
+#### Backlog Priorizado
+
+| Orden | Story ID | Título | Descripción | Story Points |
+|--------|-----------|---------|-------------|--------------|
+| 1 | US-TB01 | Notificación push de stock bajo | Como usuario quiero recibir una notificación push cuando el stock de un producto baje del umbral mínimo configurado, para evitar quiebres de inventario. | 5 |
+| 2 | US-TB06 | Comparativa de planes freemium vs premium | Como visitante con plan gratuito quiero ver una comparativa clara entre planes antes de hacer upgrade, para evaluar si el beneficio justifica el costo. | 3 |
+| 3 | US-TB04 | Dashboard de reportes visuales de inventario | Como usuario quiero acceder a un dashboard que muestre el movimiento de inventario semanal, para tomar decisiones de reabastecimiento basadas en datos. | 5 |
+| 4 | US-TB02 | Configuración de umbral mínimo por producto | Como usuario quiero configurar el umbral mínimo de stock por producto de forma individual, para personalizar las alertas según mi negocio. | 3 |
+| 5 | US-TB07 | Registro de evento de upgrade de plan | Como usuario quiero que el sistema registre cuando inicio el proceso de upgrade, para que el equipo mida la tasa de conversión freemium a premium. | 2 |
+| 6 | US-TB05 | Registro de evento de acceso a reportes | Como usuario quiero que el sistema registre cuando accedo al módulo de reportes, para que el equipo analice el patrón de uso. | 2 |
+| 7 | US-TB03 | Historial de alertas de stock bajo | Como usuario quiero ver un historial de alertas recibidas en los últimos 30 días, para identificar los productos con más quiebres frecuentes. | 3 |
+
+#### Resumen del Backlog
+
+| Métrica | Valor |
+|----------|--------|
+| Total de User Stories | 7 |
+| Total de Story Points | 23 |
+| Historias de prioridad alta | 6 |
+| Historias de prioridad media | 1 |
+
+#### Distribución por Epic
+
+| Epic | User Stories | Story Points |
+|--------|--------------|--------------|
+| EP-EXP01: Alertas inteligentes de stock | US-TB01, US-TB02, US-TB03 | 11 |
+| EP-EXP02: Reportes visuales de inventario | US-TB04, US-TB05 | 7 |
+| EP-EXP03: Conversión freemium | US-TB06, US-TB07 | 5 |
+
+#### Trazabilidad con los Experimentos
+
+| Experimento | Historias asociadas |
+|-------------|---------------------|
+| EXP-01 — Alertas push de stock bajo | US-TB01, US-TB02, US-TB03 |
+| EXP-02 — Reportes visuales de inventario | US-TB04, US-TB05 |
+| EXP-03 — Conversión freemium a premium | US-TB06, US-TB07 |
+
 ### 8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle
 
 #### 8.3.3.1. To-Be Sprint Backlogs
