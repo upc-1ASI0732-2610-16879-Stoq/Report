@@ -1136,7 +1136,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 **Evidencia**
 
-![Figura 1 - Hallazgo H-01](evidencias/hallazgo-h01.png)
+![Figura 1 - Hallazgo H-01](assets/Chapter-6/hallazgo-h01.png)
 
 *Figura 1. Barra de navegación donde se observa el logotipo estático.*
 
@@ -1157,7 +1157,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 **Evidencia**
 
-![Figura 2 - Hallazgo H-02](evidencias/hallazgo-h02.png)
+![Figura 1 - Hallazgo H-02](assets/Chapter-6/hallazgo-h02.png)
 
 *Figura 2. Sección "Nosotros" evidenciando el error de carga del recurso multimedia.*
 
@@ -1178,7 +1178,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 **Evidencia**
 
-![Figura 3 - Hallazgo H-03](evidencias/hallazgo-h03.png)
+![Figura 1 - Hallazgo H-03](assets/Chapter-6/hallazgo-h03.png)
 
 *Figura 3. Resultados del análisis de Google Lighthouse.*
 
@@ -1199,7 +1199,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 **Evidencia**
 
-![Figura 4 - Hallazgo H-04](evidencias/hallazgo-h04.png)
+![Figura 1 - Hallazgo H-03](assets/Chapter-6/hallazgo-h04.png)
 
 *Figura 4. Sección "Pasos" que aporta baja relevancia al flujo de la página.*
 
@@ -1220,7 +1220,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 **Evidencia**
 
-![Figura 5 - Hallazgo H-05](evidencias/hallazgo-h05.png)
+![Figura 1 - Hallazgo H-03](assets/Chapter-6/hallazgo-h05.png)
 
 *Figura 5. Ausencia de botones de registro en el primer impacto visual de la página.*
 
