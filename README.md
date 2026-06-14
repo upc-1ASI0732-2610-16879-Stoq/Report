@@ -969,6 +969,149 @@ Para evaluar el éxito de los experimentos planteados en el marco XDPD, se defin
 
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
 
+En esta sección se definen los objetivos de análisis, KPIs y métricas que permitirán evaluar el desempeño del producto StockWise. Estas métricas están alineadas con el enfoque experiment-driven del proyecto y permiten validar la adopción, el uso, la eficiencia operativa y la viabilidad del modelo SaaS para la gestión de inventarios en PYMES y emprendedores.
+
+El objetivo de estas métricas es medir el comportamiento real de los usuarios dentro de la plataforma, identificar oportunidades de mejora y validar si la solución propuesta resuelve efectivamente los problemas de control de inventario, trazabilidad y gestión operativa.
+
+### 1. Tasa de activación de usuarios (Activation Rate)
+
+**Descripción:**  
+Porcentaje de usuarios registrados que completan el onboarding y realizan su primera acción relevante (crear producto, registrar inventario o visualizar dashboard).
+
+**Fórmula:**  
+Usuarios activos iniciales / Usuarios registrados * 100
+
+**Meta:**  
+Alcanzar una tasa de activación mínima del 45% en los primeros 60 días.
+
+**Objetivo del KPI:**  
+Medir la efectividad del proceso de onboarding y la facilidad de adopción inicial del sistema.
+
+### 2. Tasa de uso del módulo de inventario (Feature Adoption Rate)
+
+**Descripción:**  
+Porcentaje de usuarios activos que utilizan el módulo principal de inventario para registrar, editar o eliminar productos.
+
+**Fórmula:**  
+Usuarios que usan inventario / Usuarios activos * 100
+
+**Meta:**  
+Alcanzar al menos un 70% de uso semanal del módulo de inventario.
+
+**Objetivo del KPI:**  
+Validar que la funcionalidad principal del producto es realmente utilizada en la operación diaria.
+
+### 3. Frecuencia de operaciones de inventario (Inventory Interaction Frequency)
+
+**Descripción:**  
+Número promedio de acciones relacionadas al inventario realizadas por usuario activo por semana.
+
+**Fórmula:**  
+Total de acciones de inventario / Usuarios activos
+
+**Meta:**  
+Lograr un promedio mínimo de 5 interacciones por usuario por semana.
+
+**Objetivo del KPI:**  
+Medir el nivel de dependencia del sistema en la gestión operativa del negocio.
+
+### 4. Efectividad del sistema de alertas (Alert Response Rate)
+
+**Descripción:**  
+Porcentaje de alertas de stock bajo o productos próximos a vencer que generan acción por parte del usuario.
+
+**Fórmula:**  
+Alertas atendidas / Alertas generadas * 100
+
+**Meta:**  
+Alcanzar una tasa de respuesta del 60% o superior.
+
+**Objetivo del KPI:**  
+Evaluar si el sistema de alertas aporta valor real en la prevención de pérdidas.
+
+
+### 5. Retención de usuarios (User Retention Rate)
+
+**Descripción:**  
+Porcentaje de usuarios que continúan utilizando la plataforma después de su primera semana de uso.
+
+**Fórmula:**  
+Usuarios activos semana 2 / Usuarios activos semana 1 * 100
+
+**Meta:**  
+Mantener una retención mínima del 50% en la segunda semana.
+
+**Objetivo del KPI:**  
+Medir la capacidad del producto para generar uso recurrente.
+
+### 6. Tiempo de operación por tarea (Task Completion Time)
+
+**Descripción:**  
+Tiempo promedio que tarda un usuario en completar una operación de inventario (registro o actualización de producto).
+
+**Fórmula:**  
+Tiempo total de operaciones / Número de operaciones
+
+**Meta:**  
+Reducir el tiempo promedio a menos de 2 minutos por operación.
+
+**Objetivo del KPI:**  
+Evaluar la eficiencia del sistema y la experiencia de usuario en tareas críticas.
+
+### 7. Tasa de conversión a plan pago (Conversion Rate)
+
+**Descripción:**  
+Porcentaje de usuarios gratuitos que migran a un plan de pago dentro de la plataforma SaaS.
+
+**Fórmula:**  
+Usuarios de pago / Usuarios totales * 100
+
+**Meta:**  
+Alcanzar una conversión inicial del 8% en los primeros 3 meses.
+
+**Objetivo del KPI:**  
+Validar la viabilidad del modelo de negocio del producto.
+
+### 8. Nivel de satisfacción del usuario (User Satisfaction Score - CSAT)
+
+**Descripción:**  
+Evaluación del nivel de satisfacción del usuario respecto al uso del sistema.
+
+**Fórmula:**  
+Promedio de encuestas de satisfacción (escala 1 a 5)
+
+**Meta:**  
+Obtener un puntaje mínimo de 4.2 sobre 5.
+
+**Objetivo del KPI:**  
+Medir la percepción de calidad del producto y la experiencia de usuario.
+
+### 9. Disponibilidad del sistema (System Availability)
+
+**Descripción:**  
+Porcentaje de tiempo en el que la plataforma se encuentra operativa y disponible para los usuarios.
+
+**Fórmula:**  
+Tiempo activo del sistema / Tiempo total * 100
+
+**Meta:**  
+Mantener una disponibilidad mínima del 95%.
+
+**Objetivo del KPI:**  
+Garantizar confiabilidad del sistema en entornos de uso real.
+
+## Relación con el enfoque experiment-driven
+
+Estas métricas permiten validar hipótesis del producto StockWise mediante datos reales de uso, facilitando la toma de decisiones basada en evidencia. Asimismo, permiten:
+
+- Medir la adopción real del sistema
+- Evaluar la eficiencia de los flujos de inventario
+- Validar la efectividad de alertas y automatización
+- Determinar la viabilidad del modelo SaaS
+- Identificar fricciones en la experiencia de usuario
+
+De esta manera, el producto puede evolucionar de forma iterativa basada en métricas objetivas y no en suposiciones.
+
 ### 8.2.8. Web and Mobile Tracking Plan
 
 El **Tracking Plan** define los eventos, propiedades y canales de recolección de datos que StockWise utilizará para medir el comportamiento de los usuarios durante la ejecución de los experimentos definidos. Su propósito es garantizar que los datos recopilados sean suficientes, precisos y estén directamente alineados con las métricas de evaluación de cada experimento.
