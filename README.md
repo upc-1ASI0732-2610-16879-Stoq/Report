@@ -1085,7 +1085,6 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 | 3   | Análisis de rendimiento | Evaluación de métricas de carga, accesibilidad y SEO utilizando la herramienta Google Lighthouse. |
 | 4   | Arquitectura de la información | Recorrido por las secciones de la Landing Page para evaluar la carga cognitiva y relevancia del contenido. |
 | 5   | Flujo de conversión | Búsqueda del enlace o botón principal (Call to Action) para iniciar el proceso de registro en la Web App. |
-
 | 6   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
 | 7   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
 | 8   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
