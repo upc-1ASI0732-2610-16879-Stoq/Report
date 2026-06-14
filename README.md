@@ -197,9 +197,26 @@
   - [8.1. Experiment Planning](#81-experiment-planning)
     - [8.1.1. As-Is Summary](#811-as-is-summary)
     - [8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims](#812-raw-material-assumptions-knowledge-gaps-ideas-claims)
+  - [Assumptions](#assumptions)
+  - [Knowledge Gaps](#knowledge-gaps)
+  - [Ideas](#ideas)
+  - [Claims](#claims)
     - [8.1.3. Experiment-Ready Questions](#813-experiment-ready-questions)
+  - [Validación del problema y utilidad del producto](#validación-del-problema-y-utilidad-del-producto)
+  - [Validación de funcionalidades principales](#validación-de-funcionalidades-principales)
+  - [Validación de usabilidad y adopción](#validación-de-usabilidad-y-adopción)
+  - [Validación de funciones avanzadas](#validación-de-funciones-avanzadas)
+  - [Validación del modelo de negocio](#validación-del-modelo-de-negocio)
+  - [Validación de impacto operativo](#validación-de-impacto-operativo)
+  - [Validación de atracción, conversión y recomendación](#validación-de-atracción-conversión-y-recomendación)
     - [8.1.4. Question Backlog](#814-question-backlog)
     - [8.1.5. Experiment Cards](#815-experiment-cards)
+      - [Experiment Card #1](#experiment-card-1)
+        - [Configuración del experimento](#configuración-del-experimento)
+      - [Experiment Card #2](#experiment-card-2)
+        - [Configuración del experimento](#configuración-del-experimento-1)
+      - [Experiment Card #3](#experiment-card-3)
+        - [Configuración del experimento](#configuración-del-experimento-2)
   - [8.2. Experiment Design](#82-experiment-design)
     - [8.2.1. Hypotheses](#821-hypotheses)
     - [8.2.2. Domain Business Metrics](#822-domain-business-metrics)
@@ -209,9 +226,24 @@
     - [8.2.6. Methods Selection](#826-methods-selection)
     - [8.2.7. Data Analytics: Goals, KPIs and Metrics Selection](#827-data-analytics-goals-kpis-and-metrics-selection)
     - [8.2.8. Web and Mobile Tracking Plan](#828-web-and-mobile-tracking-plan)
+      - [Principios del Tracking Plan](#principios-del-tracking-plan)
+      - [Eventos del Frontend Web (Vue.js — Vercel)](#eventos-del-frontend-web-vuejs--vercel)
+      - [Eventos de la Aplicación Mobile](#eventos-de-la-aplicación-mobile)
+      - [Eventos y Logs del Backend (Spring Boot — Render)](#eventos-y-logs-del-backend-spring-boot--render)
+      - [Resumen del Tracking Plan por Experimento](#resumen-del-tracking-plan-por-experimento)
+      - [Trazabilidad entre Experimentos y Eventos](#trazabilidad-entre-experimentos-y-eventos)
   - [8.3. Experimentation](#83-experimentation)
     - [8.3.1. To-Be User Stories](#831-to-be-user-stories)
+      - [Backlog de To-Be User Stories](#backlog-de-to-be-user-stories)
+      - [Relación entre Epics y User Stories](#relación-entre-epics-y-user-stories)
+      - [Criterios de Aceptación — US-TB01](#criterios-de-aceptación--us-tb01)
+      - [Criterios de Aceptación — US-TB04](#criterios-de-aceptación--us-tb04)
+      - [Trazabilidad con los Experimentos](#trazabilidad-con-los-experimentos)
     - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)
+      - [Backlog Priorizado](#backlog-priorizado)
+      - [Resumen del Backlog](#resumen-del-backlog)
+      - [Distribución por Epic](#distribución-por-epic)
+      - [Trazabilidad con los Experimentos](#trazabilidad-con-los-experimentos-1)
     - [8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle](#833-pipeline-supported-experiment-driven-to-be-software-platform-lifecycle)
       - [8.3.3.1. To-Be Sprint Backlogs](#8331-to-be-sprint-backlogs)
       - [8.3.3.2. Implemented To-Be Landing Page Evidence](#8332-implemented-to-be-landing-page-evidence)
@@ -229,7 +261,6 @@
     - [8.5.1. Shareback Session Artifacts: Learning Workflow](#851-shareback-session-artifacts-learning-workflow)
   - [8.6. To-Be Software Platform Pre-launch](#86-to-be-software-platform-pre-launch)
     - [8.6.1. About-the-Product Intro Video](#861-about-the-product-intro-video)
-- [Conclusiones](#conclusiones)
 - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Video App Validation](#video-app-validation)
 - [Video About-the-Team](#video-about-the-team)
@@ -829,7 +860,104 @@ A continuación se presentan las Experiment Cards definidas para StockWise, alin
 
 ### 8.2.1. Hypotheses
 
+**Experimento 1: Alertas Inteligentes Push de Stock Bajo y Vencimientos**
+
+| Componente | Detalle de la Hipótesis |
+| :--- | :--- |
+| **Question** | ¿Reducirá la frecuencia de desabastecimiento y pérdidas por caducidad en las bodegas la implementación de alertas push automáticas? |
+| **Belief** | Al implementar un sistema de alertas push automáticas en tiempo real, se proporciona un recordatorio inmediato a los dueños de los negocios antes de que se agoten sus productos críticos o venzan sus lotes. Esto optimiza los tiempos operativos de reposición y disminuye las mermas económicas. |
+| **Hypothesis** | Creemos que activar las alertas push en la aplicación móvil reducirá la frecuencia de quiebres de inventario en al menos un 40% en un período de 4 semanas, y se observará que un 70% de los reabastecimientos ocurren dentro de las primeras 24 horas posteriores a la notificación. |
+| **Null Hypothesis** | La implementación de las alertas push no afectará significativamente la tasa de quiebres de inventario ni acelerará el tiempo de reposición de los productos por parte de los usuarios. |
+
+<br>
+
+**Experimento 2: Dashboard con Reportes Visuales de Rendimiento y Rotación**
+
+| Componente | Detalle de la Hipótesis |
+| :--- | :--- |
+| **Question** | ¿Aumentará la frecuencia de decisiones de compra basadas en datos si los usuarios disponen de un dashboard con reportes visuales simples? |
+| **Belief** | Al permitir que los usuarios visualicen gráficos sencillos sobre sus productos más vendidos, rotación y fluctuaciones de stock, se elimina la complejidad del análisis manual en cuadernos o Excel. Esto incrementa la confianza en sus decisiones comerciales y reduce la acumulación de stock muerto. |
+| **Hypothesis** | Creemos que ofrecer un módulo de reportes visuales integrados en el dashboard principal aumentará en un 30% la frecuencia semanal con la que los usuarios ajustan sus solicitudes de reabastecimiento basándose en datos del sistema, logrando una tasa de adopción de la función de al menos el 50% de los usuarios activos. |
+| **Null Hypothesis** | La presencia de un dashboard con reportes visuales de inventario no alterará significativamente el comportamiento de compra de los usuarios ni el volumen de ajustes en su stock. |
+
+<br>
+
+**Experimento 3: Sistema de Trazabilidad, Roles e Historial de Movimientos**
+| Componente | Detalle de la Hipótesis |
+| :--- | :--- |
+| **Question** | ¿Reducirá los errores de inventario e inconsistencias operativas la implementación de roles, permisos y un historial de movimientos detallado? |
+| **Belief** | Al otorgar visibilidad completa sobre qué empleado modificó un precio, entrada o salida, se incrementa la responsabilidad del personal y se identifican anomalías rápidamente. Esto soluciona la desconfianza del administrador cuando delega la gestión de la tienda a terceros. |
+| **Hypothesis** | Creemos que la implementación de un módulo de control de roles con historial de auditoría disminuirá las discrepancias de stock (inventario teórico vs. físico) en un 50% en negocios operados por más de dos personas tras un periodo de 30 días de uso continuo. |
+| **Null Hypothesis** | La introducción de roles, permisos e historial de movimientos no tendrá un impacto estadísticamente significativo en la reducción de discrepancias de inventario o errores cometidos por los colaboradores. |
+
+<br>
+
+**Experimento 4: Ubicación por Estanterías y Distribución del Almacén**
+
+| Componente | Detalle de la Hipótesis |
+| :--- | :--- |
+| **Question** | ¿Reducirá el tiempo de preparación de pedidos (picking) y la desorganización física la digitalización de la ubicación por estanterías en StockWise? |
+| **Belief** | Al asociar cada producto registrado a una estantería, nivel o sector específico dentro de la plataforma, los usuarios y empleados nuevos evitarán perder tiempo buscando físicamente los artículos. Esto agilizará los flujos diarios de despacho tanto en bodegas como en pequeños almacenes de startups.|
+| **Hypothesis** | Creemos que estructurar la información con un indicador de ubicación física por estantería reducirá en un 35% el tiempo promedio empleado en localizar y despachar productos durante la preparación de pedidos en los primeros 15 días de uso. |
+| **Null Hypothesis** | El registro de la ubicación por estanterías en la plataforma no generará cambios estadísticamente significativos en los tiempos de búsqueda y despacho físico de la mercadería. |
+
+
+<br>
+
+**Experimento 5: Modelo de Adquisición Freemium para Escalabilidad**
+
+| Componente | Detalle de la Hipótesis |
+| :--- | :--- |
+| **Question** | ¿Mitigará la barrera económica inicial y generará conversión a planes de pago la introducción de un modelo de adquisición freemium? |
+| **Belief** | Al ofrecer un acceso inicial sin costo enfocado en las funciones operativas esenciales de StockWise, los dueños de negocios pueden experimentar el valor real de la herramienta en su rutina diaria sin arriesgar capital. Esto genera confianza para invertir en el plan premium cuando su inventario crezca.  |
+| **Hypothesis** | Creemos que al implementar un modelo de plan gratuito con topes de almacenamiento de productos, al menos un 15% de los usuarios activos freemium migrará voluntariamente a un plan de pago premium dentro de sus primeros 60 días de uso para desbloquear funciones avanzadas. |
+| **Null Hypothesis** | La disponibilidad de un modelo freemium no generará un impacto significativo en la tasa de conversión a planes de pago, manteniendo métricas equivalentes a un modelo tradicional de prueba por tiempo limitado (Free Trial). |
+
 ### 8.2.2. Domain Business Metrics
+
+Para evaluar el éxito de los experimentos planteados en el marco XDPD, se definen las siguientes métricas de negocio y de dominio. Estas variables permiten cuantificar el impacto directo de las funcionalidades de StockWise sobre la eficiencia operativa y la rentabilidad de las bodegas especializadas y startups del segmento objetivo.
+
+
+
+**1. Métricas de Gestión de Inventario y Pérdidas (Dominio Logístico)**
+* Tasa de Quiebre de Stock (Inventory Stockout Rate):
+    *  Descripción: Mide el porcentaje de productos críticos que se agotan completamente en el inventario, generando ventas perdidas.
+    * Fórmula: $\left( \frac{\text{Número de productos sin stock}}{\text{Total de productos en catálogo}} \right) \times 100$
+    * Objetivo Vinculado (EXP-01): Reducir esta tasa en un 40% en un periodo de 4 semanas mediante la activación de alertas push inteligentes.
+
+* Tasa de Mermas por Caducidad (Waste/Expired Product Rate):
+    * Descripción: Cuantifica las pérdidas económicas directas causadas por productos que vencen en los estantes o almacenes sin ser vendidos.
+    * Fórmula: $\left( \frac{\text{Costo total de productos vencidos}}{\text{Costo total del inventario adquirido}} \right) \times 100$
+    * Objetivo Vinculado (EXP-01): Disminuir la merma financiera al asegurar un reabastecimiento proactivo antes del vencimiento del lote.
+
+
+ **2. Métricas de Eficiencia Operativa y Control Interno**
+
+* Índice de Discrepancia de Stock (Inventory Discrepancy Rate):
+    * Descripción: Evalúa la precisión del control de inventario midiendo la diferencia entre el stock teórico registrado en el software y el stock físico real de la tienda.
+    * Fórmula: $\left( \frac{\text{Unidades de stock físico} - \text{Unidades de stock en sistema}}{\text{Unidades de stock físico}} \right) \times 100$
+    * Objetivo Vinculado (EXP-03): Reducir este índice en un 50% en negocios multifuncionales tras 30 días de implementar el control de roles e historial de auditoría.
+
+* Tiempo Promedio de Picking y Despacho (Average Order Picking Time):
+    * Descripción Mide el tiempo que le toma a un operario o dueño de bodega localizar físicamente un producto dentro del almacén para preparar un pedido.
+    * Fórmula: $\frac{\text{Tiempo total empleado en preparación de pedidos}}{\text{Total de pedidos preparados}}$
+    * Objetivo Vinculado (EXP-04): Lograr una reducción del 35% en el tiempo de localización física gracias a la organización por estanterías digitalizadas.
+
+
+**3. Métricas de Producto y Adopción Digital**
+
+* Frecuencia de Ajustes Basados en Datos (Data-Driven Decisions Rate):
+    * Descripción: Mide el número de veces a la semana que un usuario realiza modificaciones, compras o pedidos de reabastecimiento basándose explícitamente en la consulta del dashboard de reportes visuales de StockWise.
+    * Fórmula: $\frac{\text{Número de órdenes de reabastecimiento guiadas por reportes}}{\text{Total de órdenes de reabastecimiento generadas}}$
+    * Objetivo Vinculado (EXP-02): Incrementar este comportamiento comercial en un 30% semanal, fomentando la migración del cuaderno al análisis digital.
+
+
+**4. Métricas de Negocio y Monetización (SaaS Growth)**
+
+* Tasa de Conversión de Freemium a Premium (Freemium-to-Paid Conversion Rate):
+    * Descripción: Evalúa la viabilidad del modelo de negocio calculando el porcentaje de pequeños negocios que deciden pasar del plan gratuito a un plan de pago para expandir sus límites de almacenamiento.
+    * Fórmula: $\left( \frac{\text{Usuarios freemium que compran un plan premium en } 60 \text{ días}}{\text{Total de usuarios freemium registrados en el mismo periodo}} \right) \times 100$
+    * Objetivo Vinculado (EXP-05): Alcanzar o superar una tasa de conversión del 15% dentro de los primeros 60 días de uso activo en la plataforma.
 
 ### 8.2.3. Measures
 
