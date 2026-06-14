@@ -1404,12 +1404,446 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 
 ### 6.4.2. Auditoria recibida.
-
-
 #### 6.4.2.1. Información del grupo auditor.
+| Campo                    | Detalle                                                       |
+| ------------------------ | ------------------------------------------------------------- |
+| Grupo auditado           | Grupo 3                                                       |
+| Startup                  | Stoq                                     |
+| Producto evaluado        | StockWise                                  |
+| Integrantes del equipo   | Ronald Peralta, Luciana Choquehuanca, Camila Rios, Fabiola Del Rocio y Roy Fernandes|
+| Repositorio del proyecto | https://github.com/orgs/upc-1ASI0732-2610-16879-Stoq/repositories                                  |
+| Landing Page             | https://stockwiselanding.netlify.app/                            |
+| Aplicación web           | https://stocktrack-frontend.vercel.app/auth/register |
+
 #### 6.4.2.2. Cronograma de auditoría recibida.
+
+| Actividad                                                | Fecha      | Responsable          | Duración estimada |
+| -------------------------------------------------------- | ---------- | -------------------- | ----------------- |
+| Recepción del informe de auditoría externa de StockWise  | 11/06/2026 | Rafael Dominguez       | 30 minutos        |
+| Revisión, análisis y catalogación de hallazgos           | 11/06/2026 | Rafael Dominguez       | 1 hora            |
+| Priorización de observaciones según escala de severidad  | 12/06/2026 | Diego Vilca      | 30 minutos        |
+| Asignación de tareas al equipo y planificación del plan correctivo | 12/06/2026 | Diego Vilca       | 1 hora            |
+| Implementación de mejoras y corrección de incidencias críticas | 13/06/2026 | Equipo EduLabs  | 6 horas           |
+| Validación final y pruebas de regresión de los flujos corregidos | 14/06/2026 | Equipo EduLabs       | 1 hora y 30 min   |
+
 #### 6.4.2.3. Contenido de auditoría recibida.
+#### Hallazgo H-01
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Inicio de sesión (Login)                                                                                                                                                                                                                                 |
+| Ubicación               | Web App - Pantalla de Login                                                                                                                                                                                                                              |
+| Problema identificado   | Espera prolongada con spinner infinito sin mensaje de contexto ni manejo de tiempo de espera (timeout)                                                                                                                                                   |
+| Severidad               | 2                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Visibilidad del estado del sistema / Control y libertad del usuario                                                                                                                                                                                      |
+| Descripción             | Al realizar el primer intento de inicio de sesión, el sistema muestra correctamente un indicador de carga (spinner) en el botón. Sin embargo, debido a una alta latencia del servidor, este spinner se mantiene girando indefinidamente (más de 30 segundos) sin ofrecer ninguna actualización de estado. Al no existir un límite de tiempo de espera (timeout) ni un botón para cancelar la petición, el usuario percebe que la aplicación se ha "congelado", obligándolo a cerrar y recargar la página manualmente para poder continuar. |
+| Impacto para el usuario | Causa frustración y desorientación al no saber si el proceso sigue activo, obligándolo a abandonar la tarea actual y realizar acciones manuales de recuperación (recarga de página) para desbloquear la interfaz.                                         |
+| Recomendación           | Establecer un tiempo máximo de espera para la petición HTTP (por ejemplo, 10 o 15 segundos). Si el servidor no responde en ese lapso, se debe detener el spinner y mostrar un mensaje de error claro al usuario (ej. "El servidor está tardando más de lo esperado, por favor intenta nuevamente"). Alternativamente, si se sabe que el servidor puede tener un "arranque en frío", mostrar un aviso temporal que diga "Conectando con el servidor, esto puede tomar unos segundos...". |
+
+**Evidencia**
+
+![Figura 1 - Hallazgo H-01](assets/Chapter-6/hallazgo-m1.png)
+
+*Figura 1. Interfaz de inicio de sesión evidenciando un indicador de carga indefinido y falta de manejo de timeout.*
+
+---
+
+#### Hallazgo H-02
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Recuperación de credenciales                                                                                                                                                                                                                             |
+| Ubicación               | Web App - Pantalla de Login (Enlace "¿Olvidaste tu contraseña?")                                                                                                                                                                                         |
+| Problema identificado   | El enlace de "Olvidaste tu contraseña" no dirige al flujo de recuperación, recargando la vista actual                                                                                                                                                    |
+| Severidad               | 3                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Control y libertad del usuario                                                                                                                                                                                                                           |
+| Descripción             | Al hacer clic en la opción "¿Olvidaste tu contraseña?", el sistema no redirige al usuario a la vista correspondiente para restablecer sus credenciales. En su lugar, el enlace simplemente recarga la página de login actual y altera la URL agregando un parámetro (ej. ?returnUrl=%2Fdashboard). Esto atrapa al usuario en un bucle sin salida si realmente ha perdido su contraseña, impidiendo su recuperación. |
+| Impacto para el usuario | Bloquea por completo el acceso a los usuarios que no recuerdan sus credenciales, generando un flujo roto que impide la autonomía del usuario para recuperar su cuenta.                                                                                   |
+| Recomendación           | Revisar el enrutamiento (routing) en el frontend de la aplicación web. Se debe asegurar que el enlace tenga la ruta correcta hacia el componente de recuperación (por ejemplo, /auth/recovery) en lugar de apuntar a la misma vista de login, eliminando la recarga innecesaria de la página. |
+
+**Evidencia**
+
+![Figura 2 - Hallazgo H-02](assets/Chapter-6/hallazgo-m2.png)
+
+*Figura 2. Enlace de recuperación de contraseña que genera un bucle de redirección en la misma pantalla.*
+
+---
+
+#### Hallazgo H-03
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Configuración de idioma / Interacción general                                                                                                                                                                                                            |
+| Ubicación               | Web App - Esquina superior derecha de la interfaz                                                                                                                                                                                                         |
+| Problema identificado   | Elemento interactivo superpuesto o muy cerca de un elemento gráfico decorativo                                                                                                                                                                           |
+| Severidad               | 1                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Diseño estético y minimalista                                                                                                                                                                                                                            |
+| Descripción             | En la esquina superior derecha, el selector de idioma (ES/EN) se encuentra visualmente sobrepuesto o demasiado pegado al elemento gráfico decorativo (el círculo amarillo de fondo). Esto genera ruido visual, reduce la claridad de la interfaz y da una apariencia poco pulida al diseño, aunque no impide la funcionalidad del botón. |
+| Impacto para el usuario | Genera ruido visual y reduce la legibilidad de los controles, proyectando una imagen de falta de pulido estético y descuido en el diseño visual de la aplicación.                                                                                         |
+| Recomendación           | Ajustar los estilos CSS del contenedor del botón. Se debe aumentar el margen (margin) o el espaciado interno (padding) para separarlo del círculo decorativo, o en su defecto, ajustar el posicionamiento absoluto y el z-index de los elementos de fondo para que no interfieran con las áreas de interacción de los componentes superiores. |
+
+**Evidencia**
+
+![Figura 3 - Hallazgo H-03](assets/Chapter-6/hallazgo-m3.png)
+
+*Figura 3. Superposición visual entre el selector de idioma y el elemento gráfico decorativo de fondo.*
+
+---
+
+#### Hallazgo H-04
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Navegación y persistencia de ruta                                                                                                                                                                                                                        |
+| Ubicación               | Web App - Sección Dashboard                                                                                                                                                                                                                              |
+| Problema identificado   | Redirección inesperada a la vista de "Ajustes" al refrescar el Dashboard                                                                                                                                                                                 |
+| Severidad               | 3                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Control y libertad del usuario                                                                                                                                                                                                                           |
+| Descripción             | Estando en la vista principal del Dashboard, si el usuario recarga la página (F5 o botón de refresh del navegador), el sistema pierde el contexto de la ruta actual y lo redirige automáticamente a la sección de "Settings" (Ajustes). Esto interrumpe el flujo de trabajo del usuario, causándole desorientación y obligándolo a hacer clics adicionales para volver a la pantalla de inicio. |
+| Impacto para el usuario | Interrumpe drásticamente el flujo de trabajo operativo, obligando al usuario a reorientarse y a realizar acciones repetitivas de navegación para regresar a su ubicación original.                                                                       |
+| Recomendación           | Revisar la configuración del enrutador del frontend (ej. Vue Router, React Router). Se debe asegurar que el estado de la aplicación o el manejo de rutas privadas/autenticadas respete la URL actual (/dashboard) durante la recarga del navegador, en lugar de usar una redirección por defecto hacia /settings. |
+
+**Evidencia**
+
+![Figura 4 - Hallazgo H-04](assets/Chapter-6/hallazgo-m41.png)
+![Figura 4 - Hallazgo H-04](assets/Chapter-6/hallazgo-m42.png)
+
+*Figura 4. Pérdida del contexto de navegación al actualizar la página desde el Dashboard principal.*
+
+---
+
+#### Hallazgo H-05
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Configuración global (Cambio de idioma)                                                                                                                                                                                                                  |
+| Ubicación               | Web App - Menú lateral izquierdo (Sidebar)                                                                                                                                                                                                               |
+| Problema identificado   | Control global (cambio de idioma) oculto al colapsar el menú lateral                                                                                                                                                                                     |
+| Severidad               | 2                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Consistencia y estándares / Flexibilidad y eficiencia de uso                                                                                                                                                                                             |
+| Descripción             | El botón para alternar el idioma (ES/EN) está ubicado dentro del menú lateral izquierdo (sidebar). El problema de diseño radica en que, si el usuario decide colapsar este menú para tener más espacio de visualización, el control de idioma desaparece. Los controles de configuración global no deben depender de elementos colapsables de navegación específica. |
+| Impacto para el usuario | Limita el acceso a funciones globales del sistema, forzando al usuario a desplegar elementos de navegación secundarios únicamente para poder interactuar con una preferencia básica de la interfaz.                                                      |
+| Recomendación           | Reubicar el selector de idiomas. El estándar en el diseño de interfaces web (UI) dicta que este tipo de controles globales se coloquen en la barra superior (Header o Topbar), preferiblemente alineado a la derecha, cerca del icono de notificaciones o del perfil del usuario, garantizando su visibilidad y acceso en todo momento. |
+
+**Evidencia**
+
+![Figura 5 - Hallazgo H-05](assets/Chapter-6/hallazgo-m5.png)
+
+*Figura 5. Ocultamiento del selector de idioma global debido al colapso del menú de navegación lateral.*
+
+---
+
+#### Hallazgo H-06
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Visualización de alertas y notificaciones                                                                                                                                                                                                                |
+| Ubicación               | Web App - Sección Dashboard (Panel derecho y Barra superior)                                                                                                                                                                                             |
+| Problema identificado   | Duplicidad innecesaria de la interfaz de notificaciones en la misma vista                                                                                                                                                                                |
+| Severidad               | 2                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Diseño estético y minimalista                                                                                                                                                                                                                            |
+| Descripción             | La pantalla del Dashboard presenta redundancia de información. Existe un panel estático en el lado derecho que muestra una lista de notificaciones (ej. "Product running out") y, simultáneamente, en la barra superior hay un icono de campana que despliega exactamente la misma lista en un menú flotante. Esta duplicidad satura la interfaz con información repetida y desperdicia espacio valioso en la pantalla principal. |
+| Impacto para el usuario | Sobrecarga cognitivamente al usuario debido a la redundancia visual, reduciendo además el espacio útil en pantalla que podría destinarse a información analítica relevante.                                                                              |
+| Recomendación           | Eliminar el panel estático de notificaciones del cuerpo del Dashboard. Se recomienda mantener únicamente el icono de la campana en la barra superior con su respectivo menú desplegable (que es el estándar de la industria). El espacio liberado en el lado derecho del Dashboard puede aprovecharse para expandir los gráficos de métricas o incluir un nuevo indicador de negocio. |
+
+**Evidencia**
+
+![Figura 6 - Hallazgo H-06](assets/Chapter-6/hallazgo-m6.png)
+
+*Figura 6. Redundancia de componentes informativos al mostrar notificaciones de forma paralela en dos secciones de la pantalla.*
+
+---
+
+#### Hallazgo H-07
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Navegación por menú lateral                                                                                                                                                                                                                              |
+| Ubicación               | Web App - Menú lateral de navegación (Sidebar)                                                                                                                                                                                                           |
+| Problema identificado   | Texto truncado e incompleto en una opción del menú lateral                                                                                                                                                                                               |
+| Severidad               | 1                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Diseño estético y minimalista                                                                                                                                                                                                                            |
+| Descripción             | En la parte inferior del menú de navegación lateral (sidebar), la etiqueta del último botón ("Administración d...") o ("Personal adminis...") es demasiado larga para el ancho predeterminado del contenedor. Al no caber, el texto se corta abruptamente con puntos suspensivos. Aunque esto no impide hacer clic en el botón, da un aspecto visual poco profesional y descuidado a la interfaz. |
+| Impacto para el usuario | Afecta negativamente la estética visual y la legibilidad inmediata de las opciones de menú, requiriendo que el usuario adivine o deduzca el significado completo de la etiqueta.                                                                         |
+| Recomendación           | La mejor práctica en diseño de menús es utilizar etiquetas cortas y directas. Se recomienda cambiar el texto a una alternativa más concisa (por ejemplo, "Administración", "Personal" o "Usuarios"). Si por reglas de negocio es obligatorio mantener el texto original completo, se debe implementar un atributo de accesibilidad tipo tooltip (título emergente) nativo en HTML (title="Personal administration") o (title="Administración de personal") que se muestre cuando el usuario pase el cursor (hover) sobre el botón. |
+
+**Evidencia**
+
+![Figura 7 - Hallazgo H-07](assets/Chapter-6/hallazgo-m7.png)
+
+*Figura 7. Etiqueta de navegación truncada por restricciones de ancho en el menú lateral.*
+
+---
+
+#### Hallazgo H-08
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Gestión de inventario (Edición de productos)                                                                                                                                                                                                             |
+| Ubicación               | Web App - Menú contextual de acciones en listado de productos                                                                                                                                                                                            |
+| Problema identificado   | La acción "Editar" producto en el menú contextual no responde ni ofrece retroalimentación                                                                                                                                                                |
+| Severidad               | 4                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Visibilidad del estado del sistema / Control y libertad del usuario                                                                                                                                                                                      |
+| Descripción             | Al abrir el menú de acciones (icono de tres puntos) en un producto específico y seleccionar la opción "Editar", la interfaz no responde de ninguna manera. No se abre ningún modal, ni se redirige a otra vista, ni se muestra ningún mensaje de error. Esta falta de respuesta bloquea por completo la capacidad del usuario para actualizar la información del inventario. |
+| Impacto para el usuario | Bloqueo crítico de una función principal del sistema, rompiendo la confianza del usuario al no proveer ningún tipo de respuesta o indicativo de fallo tras ejecutar una acción.                                                                          |
+| Recomendación           | Revisar el evento de clic asociado a la opción "Editar" en el código (ej. @click en Vue). Asegurar que el componente modal de edición esté correctamente importado y que la variable reactiva que controla su visibilidad cambie a verdadero (true). Además, verificar en la consola del navegador si existe algún error de JavaScript bloqueando la ejecución del evento. |
+
+**Evidencia**
+
+![Figura 8 - Hallazgo H-08](assets/Chapter-6/hallazgo-m8.png)
+
+*Figura 8. Interfaz de listado de productos donde la opción del menú contextual no gatilla acción alguna.*
+
+---
+
+#### Hallazgo H-09
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Gestión de inventario (Eliminación de productos)                                                                                                                                                                                                         |
+| Ubicación               | Web App - Menú contextual de acciones en listado de productos                                                                                                                                                                                            |
+| Problema identificado   | Fallo en la funcionalidad de eliminación y uso de alertas nativas del navegador                                                                                                                                                                          |
+| Severidad               | 4                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Prevención de errores / Diseño estético y minimalista                                                                                                                                                                                                    |
+| Descripción             | Al intentar eliminar un producto mediante el menú de acciones, ocurren dos problemas graves: primero, el sistema lanza un cuadro de diálogo alert() nativo del navegador para confirmar la acción, lo cual rompe completamente la estética y consistencia del diseño de la aplicación. Segundo, tras confirmar la acción en dicho cuadro, el producto no se elimina del listado, fallando en su propósito principal. |
+| Impacto para el usuario | Pérdida de integridad funcional (error crítico al no eliminar el elemento solicitado) acoplada a una experiencia visual deficiente que devalúa el estándar de diseño de la plataforma.                                                                    |
+| Recomendación           | Reemplazar el uso de alert() o confirm() nativos de JavaScript por un componente modal de confirmación diseñado específicamente para la aplicación (que siga el sistema de diseño actual). En cuanto a la funcionalidad, se debe depurar la petición HTTP de tipo DELETE hacia el servidor para identificar por qué no se está completando la eliminación, y actualizar el estado local del listado (la tabla) para que el producto desaparezca de la vista inmediatamente después de una respuesta exitosa. |
+
+**Evidencia**
+
+![Figura 9 - Hallazgo H-09](assets/Chapter-6/hallazgo-m9.png)
+
+*Figura 9. Cuadro de diálogo nativo del navegador interfiriendo con la interfaz gráfica en un flujo de eliminación fallido.*
+
+---
+
+#### Hallazgo H-10
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Creación y registro de "Kits"                                                                                                                                                                                                                            |
+| Ubicación               | Web App - Formulario de nuevo Kit                                                                                                                                                                                                                        |
+| Problema identificado   | Falta de validación y mensajería de error al intentar guardar un "Kit" con campos obligatorios vacíos                                                                                                                                                    |
+| Severidad               | 3                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores                                                                                                                                                                                  |
+| Descripción             | En el formulario de creación de un nuevo "Kit", si el usuario omite un campo obligatorio (como el nombre del kit) e intenta guardar los cambios, el sistema simplemente falla silenciosamente. No se guarda el registro, pero tampoco se resalta el campo faltante ni se muestra ningún mensaje de advertencia. El usuario se queda sin saber qué hizo mal o por qué su acción no tuvo efecto. |
+| Impacto para el usuario | Genera incertidumbre y desprotección operativa al procesar envíos inválidos de manera silenciosa, impidiendo que el usuario sepa cómo corregir la información errónea introducida.                                                                       |
+| Recomendación           | Implementar validación de formularios en el frontend antes de enviar los datos. Se debe deshabilitar el botón de guardar si los campos obligatorios están vacíos o, preferiblemente, si el usuario hace clic en guardar, resaltar los campos faltantes en color rojo y mostrar un mensaje de error explícito debajo del campo (ej. "El nombre del kit es obligatorio"), indicándole claramente cómo corregir el problema. |
+
+**Evidencia**
+
+![Figura 10 - Hallazgo H-10](assets/Chapter-6/hallazgo-m10.png)
+
+*Figura 10. Formulario de creación procesando datos inválidos de forma silenciosa sin indicar campos obligatorios omitidos.*
+
+--- 
+
+#### Hallazgo H-11
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Visualización de la sección de Proveedores                                                                                                                                                                                                               |
+| Ubicación               | Web App - Sección Proveedores                                                                                                                                                                                                                            |
+| Problema identificado   | Duplicidad innecesaria del título de la sección en la cabecera                                                                                                                                                                                           |
+| Severidad               | 1                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Diseño estético y minimalista                                                                                                                                                                                                                            |
+| Descripción             | En la vista actual, el título "Proveedores" aparece repetido dos veces de forma casi consecutiva: una vez en la barra superior (Topbar) junto al icono de notificaciones, y otra vez inmediatamente debajo, en rojo, como encabezado del contenedor principal. Esta redundancia no aporta valor informativo, genera ruido visual y desperdicia espacio vertical en la pantalla. |
+| Impacto para el usuario | Sobrecarga la interfaz con información repetida de manera adyacente y reduce el área útil vertical destinada a la visualización de los datos operativos de los proveedores.                                                                               |
+| Recomendación           | Eliminar el segundo título ("Proveedores" en texto rojo) del área de contenido para mantener un diseño más limpio, dejando únicamente el título de la barra superior como indicador global de la vista. Alternativamente, ese espacio inferior puede usarse para un componente de breadcrumbs (migas de pan) si la navegación se vuelve más profunda. |
+
+**Evidencia**
+
+![Figura 11 - Hallazgo H-11](assets/Chapter-6/hallazgo-m11.png)
+
+*Figura 11. Redundancia visual por duplicidad del título identificador de la sección en la cabecera de la pantalla.*
+
+---
+
+#### Hallazgo H-12
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Búsqueda y filtrado de proveedores                                                                                                                                                                                                                       |
+| Ubicación               | Web App - Barra de búsqueda en la sección Proveedores                                                                                                                                                                                                    |
+| Problema identificado   | Falta de interactividad y retroalimentación en el botón "Filtrar"                                                                                                                                                                                        |
+| Severidad               | 3                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Visibilidad del estado del sistema / Flexibilidad y eficiencia de uso                                                                                                                                                                                    |
+| Descripción             | El usuario puede ingresar texto en el campo de búsqueda ("Buscar"), pero al hacer clic en el botón contiguo de "Filtrar", el sistema no ejecuta ninguna acción. La tabla no se actualiza, la página no recarga y no se muestra ningún mensaje de error o estado de "cargando". El botón actúa como un elemento estático, lo que rompe la expectativa del usuario y frustra la tarea de búsqueda. |
+| Impacto para el usuario | Bloquea la capacidad de filtrar registros rápidamente, forzando al usuario a realizar una lectura visual manual y reduciendo drásticamente la eficiencia en la localización de datos.                                                                    |
+| Recomendación           | Asegurar que el evento de clic del botón esté correctamente enlazado a la función de filtrado en el controlador del componente. Si la funcionalidad de búsqueda aún está en desarrollo, el botón debe estar visualmente deshabilitado (disabled) o, al hacer clic, debería mostrar una notificación tipo toast indicando que la función estará disponible próximamente. |
+
+**Evidencia**
+
+![Figura 12 - Hallazgo H-12](assets/Chapter-6/hallazgo-m12.png)
+
+*Figura 12. Componente de filtrado inactivo que no procesa el texto ingresado en el campo de búsqueda.*
+
+---
+
+#### Hallazgo H-13
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Gestión de proveedores (Eliminación de registros)                                                                                                                                                                                                        |
+| Ubicación               | Web App - Listado de la sección Proveedores                                                                                                                                                                                                              |
+| Problema identificado   | Uso de alertas nativas para confirmar eliminación y ausencia de estado de carga durante el procesamiento                                                                                                                                                 |
+| Severidad               | 3                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Consistencia y estándares / Visibilidad del estado del sistema                                                                                                                                                                                           |
+| Descripción             | La acción de eliminar un proveedor presenta dos fallos de experiencia. Primero, invoca un cuadro de diálogo nativo del navegador (confirm()) en lugar de un modal propio, rompiendo la consistencia visual del sistema. Segundo, tras aceptar la alerta, el sistema tarda entre 3 y 5 segundos en remover el registro de la tabla sin mostrar ningún indicador visual de carga (spinner), dejando al usuario con la incertidumbre de si el clic funcionó o si el sistema se colgó. |
+| Impacto para el usuario | Provoca incertidumbre operativa prolongada al no dar señales de que la solicitud está en proceso, lo que puede inducir al usuario a presionar el botón repetidamente o a asumir que la aplicación falló.                                                 |
+| Recomendación           | Al desarrollar sistemas CRUD integrales para el control de operaciones, el estándar en frameworks modernos exige mantener todo el flujo dentro de la interfaz gráfica propia. Se debe reemplazar la alerta nativa por un componente modal personalizado para la confirmación. Además, es obligatorio inyectar un estado de carga local (por ejemplo, deshabilitar el icono del basurero y cambiarlo por un spinner) durante los segundos que tarde la petición HTTP, actualizando la tabla de inmediato al recibir la respuesta exitosa 200 OK. |
+
+**Evidencia**
+
+![Figura 13 - Hallazgo H-13](assets/Chapter-6/hallazgo-m13.png)
+
+*Figura 13. Flujo de eliminación que utiliza cuadros nativos de confirmación y procesa el borrado con retraso y sin retroalimentación.*
+
+---
+
+#### Hallazgo H-14
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Visualización de la sección de Ventas                                                                                                                                                                                                                    |
+| Ubicación               | Web App - Sección Gestión de Ventas                                                                                                                                                                                                                      |
+| Problema identificado   | Duplicidad innecesaria del título de la sección ("Gestión de Ventas")                                                                                                                                                                                    |
+| Severidad               | 1                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Diseño estético y minimalista                                                                                                                                                                                                                            |
+| Descripción             | Al igual que en la vista de Proveedores, la pantalla de Ventas presenta el título "Gestión de Ventas" repetido dos veces seguidas (en la barra superior y como encabezado del área de trabajo). Esto es redundante y ocupa espacio vertical que podría ser aprovechado para mostrar más productos en la tabla sin necesidad de hacer scroll. |
+| Impacto para el usuario | Degrada la armonía visual de la interfaz mediante repetición de datos y limita artificialmente el espacio disponible para desplegar las filas de la tabla de ventas.                                                                                     |
+| Recomendación           | Mantener la consistencia en el diseño de las plantillas (layouts). Se debe remover el título secundario del contenedor principal y conservar únicamente el título de la barra superior.                                                                  |
+
+**Evidencia**
+
+![Figura 14 - Hallazgo H-14](assets/Chapter-6/hallazgo-m14.png)
+
+*Figura 14. Pantalla de ventas con redundancia estructural en la ubicación y despliegue del título principal.*
+
+---
+
+#### Hallazgo H-15
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Búsqueda y filtrado de productos para la venta                                                                                                                                                                                                           |
+| Ubicación               | Web App - Módulo de ventas (Barra de búsqueda)                                                                                                                                                                                                           |
+| Problema identificado   | Falta de interactividad en el botón "Filtro" de la barra de búsqueda                                                                                                                                                                                     |
+| Severidad               | 3                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Visibilidad del estado del sistema / Flexibilidad y eficiencia de uso                                                                                                                                                                                    |
+| Descripción             | El usuario puede ingresar el nombre de un producto (ej. "Bolsa Papitas") en el input de texto, pero al presionar el botón "Filtro", la acción es ignorada por el sistema. La tabla de productos no se filtra ni se muestra ningún mensaje, lo que obliga al usuario a buscar el ítem manualmente entre toda la lista, reduciendo drásticamente la eficiencia en el proceso de venta. |
+| Impacto para el usuario | Genera fricción operativa severa y retrasos en la atención al cliente, forzando búsquedas manuales ineficientes dentro de catálogos extensos de productos.                                                                                                |
+| Recomendación           | Vincular correctamente el evento @click (o equivalente según el framework utilizado) del botón al método de filtrado. Dado que los productos ya están listados en el DOM, se recomienda implementar un filtrado local (procesando el array de datos en el cliente) para que la búsqueda sea instantánea, en lugar de hacer una nueva petición al servidor. |
+
+**Evidencia**
+
+![Figura 15 - Hallazgo H-15](assets/Chapter-6/hallazgo-m15.png)
+
+*Figura 15. Botón de filtro de productos inerte ante las solicitudes de interacción del usuario.*
+
+---
+
+#### Hallazgo H-16
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Configuración del carrito de compras (Añadir/Modificar ítems)                                                                                                                                                                                            |
+| Ubicación               | Web App - Sección Ventas (Panel central de productos y Panel derecho de carrito)                                                                                                                                                                         |
+| Problema identificado   | Latencia excesiva sin retroalimentación visual al agregar productos o modificar cantidades en el carrito                                                                                                                                                 |
+| Severidad               | 3                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Visibilidad del estado del sistema / Flexibilidad y eficiencia de uso                                                                                                                                                                                    |
+| Descripción             | Al hacer clic en el ícono verde para agregar un producto al "Borrador salida de productos" (carrito), o al intentar aumentar su cantidad, el sistema sufre una latencia aproximada de 3 segundos antes de reflejar el cambio en el panel derecho. Durante este tiempo, la interfaz no bloquea el botón ni muestra un indicador de carga, lo que genera confusión e invita al usuario a hacer múltiples clics accidentales pensando que la acción no funcionó. |
+| Impacto para el usuario | Induce a la carga errónea o duplicada de cantidades en el carrito de compras debido a la falta de respuesta en tiempo real, entorpeciendo el flujo de checkout.                                                                                         |
+| Recomendación           | Implementar un patrón de diseño de Interfaz de Usuario Optimista (Optimistic UI). Cuando se desarrolla un sistema transaccional donde la agilidad operativa es clave, las actualizaciones de estado (como añadir a un carrito) deben reflejarse instantáneamente en la pantalla manipulando el estado local del frontend. La sincronización de estos datos con la base de datos a través de peticiones HTTP debe ocurrir en segundo plano. Adicionalmente, si es estrictamente necesario esperar al servidor, se debe cambiar el icono del carrito por un pequeño spinner de carga durante esos 3 segundos. |
+
+**Evidencia**
+
+![Figura 16 - Hallazgo H-16](assets/Chapter-6/hallazgo-m16.png)
+
+*Figura 16. Retraso visual en la actualización del desglose de productos añadidos al carrito de salida.*
+
+---
+
+#### Hallazgo H-17
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Gestión de inventario multiidioma (Creación de categorías/productos)                                                                                                                                                                                     |
+| Ubicación               | Web App - Sección Inventario (Modales "New Category" y "New product" en idioma inglés)                                                                                                                                                                    |
+| Problema identificado   | Exposición de variables internas de código (llaves de traducción) al cambiar el idioma a inglés                                                                                                                                                          |
+| Severidad               | 3                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Relación entre el sistema y el mundo real / Prevención de errores                                                                                                                                                                                        |
+| Descripción             | Al cambiar el idioma de la aplicación a inglés (botón "EN") y abrir los modales de creación en la sección de Inventario (como "New Category" o "New product"), el sistema falla al renderizar los textos. En lugar de mostrar lenguaje natural, expone las llaves o variables internas del diccionario de internacionalización (por ejemplo: inventory.newCategory, inventory.categoryNamePlaceholder, inventory.isActive). Esto confunde gravemente al usuario final, quien no tiene por qué entender la estructura del código, dificultando la correcta inserción de datos. |
+| Impacto para el usuario | Rompe la comprensión de la interfaz de usuario, impidiendo que operadores angloparlantes entiendan qué datos introducir en los campos del formulario.                                                                                                    |
+| Recomendación           | Revisar la configuración del paquete de internacionalización (i18n) en el código fuente. Se debe verificar el archivo del diccionario correspondiente al idioma inglés (ej. en.json o en.js) e incluir todas las llaves faltantes que se están utilizando en la vista de inventario con sus respectivas traducciones legibles. Adicionalmente, configurar un valor de retroceso (fallback locale) para que, en caso de faltar una traducción en inglés, el sistema muestre el texto en español por defecto en lugar de la variable de código. |
+
+**Evidencia**
+
+![Figura 17 - Hallazgo H-17](assets/Chapter-6/hallazgo-m17.png)
+
+*Figura 17. Despliegue de variables lógicas e identificadores del sistema de traducción en lugar de cadenas de texto adaptadas.*
+
+---
+
+#### Hallazgo H-18
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Visualización de la sección de Reportes                                                                                                                                                                                                                  |
+| Ubicación               | Web App - Sección Reports                                                                                                                                                                                                                                |
+| Problema identificado   | Duplicidad innecesaria del título de la sección ("Reports")                                                                                                                                                                                              |
+| Severidad               | 1                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Diseño estético y minimalista                                                                                                                                                                                                                            |
+| Descripción             | Siguiendo el mismo patrón de error visual encontrado en las vistas de Proveedores y Ventas, la pantalla de Reportes muestra el título duplicado: uno en la barra superior y otro en texto rojo justo debajo, en el área de contenido. Esta repetición es redundante, no aporta nueva información al usuario y resta espacio valioso que podría utilizarse para visualizar los datos o los gráficos de los reportes. |
+| Impacto para el usuario | Satura de manera reiterada la visualización del entorno de trabajo, restando espacio para gráficos analíticos complejos o tablas de datos consolidadas.                                                                                                  |
+| Recomendación           | Estandarizar el diseño (layout) de las vistas principales del sistema. Se debe eliminar el título secundario (el texto rojo dentro del contenedor) en esta y todas las demás pantallas, centralizando la indicación de la vista actual únicamente en la barra de navegación superior. |
+
+**Evidencia**
+
+![Figura 18 - Hallazgo H-18](assets/Chapter-6/hallazgo-m18.png)
+
+*Figura 18. Sección analítica que presenta duplicidad estética de su título descriptivo.*
+
+---
+
+#### Hallazgo H-19
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Registro de personal y asignación de permisos                                                                                                                                                                                                            |
+| Ubicación               | Web App - Modal "Nuevo Personal"                                                                                                                                                                                                                         |
+| Problema identificado   | Modal de creación de personal atascado en estado de carga indefinido tras una operación exitosa                                                                                                                                                          |
+| Severidad               | 3                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Visibilidad del estado del sistema / Prevención de errores                                                                                                                                                                                               |
+| Descripción             | Al completar el formulario para "Nuevo Personal", asignar los permisos correspondientes y hacer clic en "Guardar", el botón cambia a un estado de carga (spinner) y se congela indefinidamente. La ventana modal nunca se cierra ni se muestra un mensaje de confirmación. Sin embargo, si el usuario observa la tabla atenuada en el fondo, puede notar que el nuevo registro sí fue creado y añadido al sistema. Esta falsa retroalimentación de "procesando" hace creer al administrador que el sistema falló, lo que puede inducirlo a cancelar, refrescar la página o intentar crear al mismo usuario duplicado. |
+| Impacto para el usuario | Genera desconfianza e incertidumbre en operaciones críticas de personal, propiciando que el administrador intente registrar al mismo empleado varias veces de manera redundante.                                                                         |
+| Recomendación           | Corregir la resolución de la promesa (Promise) de la petición HTTP en el frontend. La lógica del componente debe actualizar el estado de carga (isLoading = false) e invocar la función para cerrar el modal automáticamente tan pronto como el servidor devuelva un código de éxito (ej. 201 Created o 200 OK). Adicionalmente, se debe limpiar el formulario para futuras inserciones y mostrar una notificación temporal (toast) que confirme explícitamente: "Usuario creado con éxito". |
+
+**Evidencia**
+
+![Figura 19 - Hallazgo H-19](assets/Chapter-6/hallazgo-m19.png)
+
+*Figura 19. Bloqueo visual indefinido del formulario de alta a pesar del correcto registro de la entidad en segundo plano.*
+
+
 #### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos.
+A partir de los hallazgos recibidos en la auditoría externa, el equipo Stoq priorizó los recursos del Sprint actual en resolver las fallas críticas de severidad alta (3 y 4), las cuales impactaban directamente la operabilidad y transaccionalidad de StockWise. 
+
+| # | Hallazgo original | Severidad | Acción tomada | Estado |
+| :--- | :--- | :---: | :--- | :--- |
+| **2** | El enlace de "Olvidaste tu contraseña" no dirige al flujo de recuperación, recargando la vista actual. | 3 | Se corrigió el enrutamiento (routing) en el frontend, asignando la ruta `/auth/recovery` al enlace para dirigir correctamente al usuario al flujo de restablecimiento de credenciales. | Completado |
+| **4** | Redirección inesperada a la vista de "Ajustes" al refrescar el Dashboard. | 3 | Se reconfiguraron los guards y las condiciones del enrutador para asegurar que el sistema retenga y respete la URL activa (`/dashboard`) tras un refresco de página. | Completado |
+| **8** | La acción "Editar" producto en el menú contextual no responde ni ofrece retroalimentación. | 4 | Se corrigió el evento de escucha (`@click`) en el menú contextual del inventario y se reparó la variable reactiva que controla la apertura del modal de edición. | Completado |
+| **9** | Fallo en la funcionalidad de eliminación y uso de alertas nativas del navegador en Productos. | 4 | Se reemplazó la alerta nativa por un modal de confirmación integrado en la UI y se depuró la petición HTTP `DELETE` junto con la actualización inmediata del estado local de la tabla. | Completado |
+| **10** | Falta de validación y mensajería de error al intentar guardar un "Kit" con campos obligatorios vacíos. | 3 | Se integró validación de formularios en el frontend que resalta los campos vacíos obligatorios en rojo, bloquea el botón de guardado y despliega mensajes guía específicos. | Completado |
+| **12** | Falta de interactividad y retroalimentación en el botón "Filtrar". | 3 | Se vinculó la función de filtrado al evento de clic del botón y se configuró un estado visual deshabilitado (`disabled`) en caso de que el campo de búsqueda se encuentre vacío. | Completado |
+| **13** | Uso de alertas nativas para confirmar eliminación y ausencia de estado de carga durante el procesamiento en Proveedores. | 3 | Se sustituyó la confirmación nativa por un componente modal y se inyectó un spinner de carga local en la tabla para indicar que la petición de borrado está en proceso. | Completado |
+| **15** | Falta de interactividad en el botón "Filtro" de la barra de búsqueda de Ventas. | 3 | Se enlazó el botón de filtrado a un método de procesamiento local sobre el arreglo de datos del cliente para ofrecer búsquedas e iteraciones instantáneas. | Completado |
+| **16** | Latencia excesiva sin retroalimentación visual al agregar productos o modificar cantidades en el carrito. | 3 | Se aplicó un patrón de Interfaz de Usuario Optimista (Optimistic UI) para reflejar los cambios en el carrito de inmediato en el cliente mientras la petición se procesa en segundo plano. | Completado |
+| **17** | Exposición de variables internas de código (llaves de traducción) al cambiar el idioma a inglés. | 3 | Se completaron los diccionarios de internacionalización (`en.json`) en las vistas de inventario y se configuró un *fallback locale* hacia el español para prevenir la visualización de código. | Completado |
+| **19** | Modal de creación de personal atascado en estado de carga indefinido tras una operación exitosa. | 3 | Se corrigió la resolución de la promesa en el envío del formulario para forzar el cierre automático del modal, limpiar los inputs y disparar una notificación toast de éxito. | Completado |
+
+Los cambios de mayor prioridad (severidad 3 o 4) fueron atendidos en su totalidad y desplegados antes del cierre del Sprint actual. Por otro lado, los hallazgos de severidad menor (1 y 2), asociados principalmente a duplicidades visuales y ajustes menores de diseño estético, fueron trasladados al Product Backlog para ser planificados en futuras iteraciones de mantenimiento UI.
 
 
 # Capitulo VII: DevOps Practices
