@@ -193,8 +193,21 @@
   - [6.4. Auditoria de Experiencias de Usuario.](#64-auditoria-de-experiencias-de-usuario)
     - [6.4.1. Auditoria realizada.](#641-auditoria-realizada)
       - [6.4.1.1. Información del grupo auditado.](#6411-información-del-grupo-auditado)
-      - [6.4.1.2. Cronograma de auditoria realizada.](#6412-cronograma-de-auditoria-realizada)
-      - [6.4.1.3. Contenido de auditoría realizada.](#6413-contenido-de-auditoría-realizada)
+      - [6.4.1.2. Cronograma de auditoría realizada](#6412-cronograma-de-auditoría-realizada)
+      - [6.4.1.3. Contenido de la auditoría realizada](#6413-contenido-de-la-auditoría-realizada)
+      - [Tareas evaluadas](#tareas-evaluadas)
+      - [Escala de severidad utilizada](#escala-de-severidad-utilizada)
+      - [Resumen de hallazgos identificados](#resumen-de-hallazgos-identificados)
+    - [Detalle de hallazgos](#detalle-de-hallazgos)
+      - [Hallazgo H-01](#hallazgo-h-01)
+      - [Hallazgo H-02](#hallazgo-h-02)
+      - [Hallazgo H-03](#hallazgo-h-03)
+      - [Hallazgo H-04](#hallazgo-h-04)
+      - [Hallazgo H-05](#hallazgo-h-05)
+      - [Hallazgo H-06](#hallazgo-h-06)
+      - [Hallazgo H-07](#hallazgo-h-07)
+      - [Hallazgo H-08](#hallazgo-h-08)
+      - [Hallazgo H-09](#hallazgo-h-09)
     - [6.4.2. Auditoria recibida.](#642-auditoria-recibida)
       - [6.4.2.1. Información del grupo auditor.](#6421-información-del-grupo-auditor)
       - [6.4.2.2. Cronograma de auditoría recibida.](#6422-cronograma-de-auditoría-recibida)
@@ -558,7 +571,7 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 |---|---|
 | Clase de Test | `ProductControllerIntegrationTest` |
 | Módulo(s) | inventory, shared, iam - US12, US13 |
-| Descripción General | Validar la integración completa del módulo de productos dentro del sistema StockTrack, comprobando que las operaciones relacionadas con la gestión de productos funcionen correctamente desde la capa HTTP hasta la persistencia en base de datos. |
+| Descripción General | Validar la integración completa del módulo de productos dentro del sistema StockWise, comprobando que las operaciones relacionadas con la gestión de productos funcionen correctamente desde la capa HTTP hasta la persistencia en base de datos. |
 
 
 ### Escenario 1 
@@ -779,7 +792,72 @@ A pesar de su naturaleza informativa, la landing page se rige por estándares de
 - Aislamiento: Configuración hermética de variables de entorno para evitar la filtración accidental de URLs o credenciales de desarrollo en el build de producción.
 
 ### 6.2.2. Reviews
+## 6.2.2. Reviews
 
+Durante el desarrollo del sistema **NorthEye**, se realizaron revisiones continuas del producto con el objetivo de asegurar la calidad del código, validar el cumplimiento de los requerimientos funcionales y no funcionales, y detectar de manera temprana posibles errores de diseño, implementación o integración.
+
+Estas revisiones se ejecutaron en distintos niveles del ciclo de desarrollo, abarcando tanto el código fuente como los artefactos de diseño y la integración de componentes del sistema (backend, frontend y landing page).
+
+### Peer Code Reviews
+
+Cada funcionalidad implementada en el backend (FastAPI) y en el frontend (React/Angular según módulo) pasó por un proceso de revisión entre pares antes de ser integrada a la rama principal del repositorio.
+
+Durante estas revisiones se evaluaron los siguientes aspectos:
+
+- Cumplimiento de las convenciones de codificación establecidas en el proyecto.
+- Correcta implementación de la lógica de negocio en servicios y controladores.
+- Uso adecuado de DTOs y separación de responsabilidades.
+- Legibilidad, mantenibilidad y estructura del código.
+- Detección de posibles errores lógicos o redundancias.
+- Validación del manejo de excepciones y respuestas HTTP consistentes.
+
+Asimismo, se verificó que los cambios realizados no generen conflictos con funcionalidades existentes y que el código cumpla con los estándares definidos dentro del flujo GitFlow antes de su merge a la rama principal.
+
+### Sprint Reviews
+
+Al final de cada sprint del proyecto se realizaron sesiones de Sprint Review con el equipo de desarrollo, en las cuales se presentó el incremento funcional del sistema NorthEye.
+
+En estas sesiones se llevaron a cabo las siguientes actividades:
+
+- Demostración de las funcionalidades implementadas en el sprint.
+- Validación del cumplimiento de las historias de usuario definidas en el Product Backlog.
+- Revisión del comportamiento del sistema en escenarios reales de uso.
+- Recolección de feedback por parte del equipo y ajustes necesarios para el siguiente sprint.
+- Validación de la integración entre backend, frontend y servicios REST.
+
+Estas revisiones permitieron asegurar la alineación del producto con los objetivos del proyecto y facilitaron la toma de decisiones sobre mejoras en la arquitectura y experiencia de usuario.
+
+### Design & Architecture Reviews
+
+Además de las revisiones de código y funcionalidad, se realizaron revisiones de diseño y arquitectura del sistema, enfocadas en garantizar la coherencia del modelo propuesto.
+
+En este proceso se validaron:
+
+- Consistencia del diseño basado en arquitectura hexagonal en el backend.
+- Correcta separación de capas (domain, application, infrastructure, interfaces).
+- Definición adecuada de entidades, agregados y relaciones en el modelo de datos.
+- Coherencia entre el diseño del frontend y los servicios expuestos por la API.
+- Alineación entre los diagramas de arquitectura y la implementación real.
+
+### Quality Assurance Reviews
+
+Como parte del aseguramiento de calidad, se realizaron revisiones orientadas a verificar el cumplimiento de criterios de calidad del sistema, incluyendo:
+
+- Correcto funcionamiento de endpoints mediante pruebas manuales.
+- Validación de respuestas de la API en escenarios exitosos y de error.
+- Revisión de consistencia en la interfaz de usuario.
+- Evaluación de usabilidad básica en flujos principales del sistema.
+- Verificación de integración entre módulos del sistema.
+
+### Resultado de las revisiones
+
+Gracias a las revisiones realizadas a lo largo del desarrollo, se logró:
+
+- Reducir errores en etapas tempranas del ciclo de desarrollo.
+- Mejorar la calidad del código antes de su integración.
+- Asegurar coherencia entre diseño, implementación y requisitos.
+- Incrementar la estabilidad del sistema en cada sprint.
+- Mantener trazabilidad entre historias de usuario y entregables funcionales.
 
 ## 6.3. Validation Interviews.
 ### 6.3.1. Diseño de Entrevistas.
@@ -1043,6 +1121,23 @@ También puede eliminar una alerta específica luego de una confirmación emerge
 - ¿Recomendarías esta plataforma a otros emprendedores? ¿Por qué?
 
 ### 6.3.2. Registro de Entrevistas.
+
+**Segmento #1: Dueños de bodegas**
+
+| Nº | Datos del entrevistado | Resumen de la entrevista | Evidencia de entrevista |
+|----|------------------------|------------------------------------------| ----------------------- |
+| 1  | - **Nombre:** Ariana Agreda <br> - **Edad:** 20 años | Ariana ayuda a su familia en el negocio familiar el cual es una bodega. Comenta que le resulta amigable y sencillo el flujo de la aplicación. Le ha gustado las notificaciones acerca de los productos que están por vencerse y agotarse. De igual forma, le ha parecido bueno como funciona lo de ingresar productos. Ella nos sugiere que para los reportes y pantalla de proveedores deberían mostrarse qué productos distribuye cada proveedor para un mayor seguimiento. | ![Entrevista 1 - Dueños de bodegas](./assets/Chapter-6/entrevista-Ariana.png)  <br> <a href="https://drive.google.com/file/d/1V4lmrnzp-ti0Fky-YqT2-ltAyMjlksPa/view?usp=sharing">Validation Interview Ariana</a>| 
+| 2  | - **Nombre:** Mauricio Elera <br> - **Edad:** 25 años | Mauricio administra el inventario de un negocio en crecimiento y percibe que StockWise le brinda una experiencia profesional y confiable gracias a su diseño ordenado y fácil de navegar. Destaca que las métricas rápidas y las alertas inteligentes le permiten reaccionar a tiempo ante riesgos como el bajo stock o productos por vencer. Considera muy intuitivo el proceso para registrar productos y gestionar roles de personal. Aunque está satisfecho con la estructura general del sistema, señala que un módulo de facturación y la integración con software contable harían la plataforma mucho más completa. Para él, la mayor ventaja de StockWise es centralizar toda la operación en un solo lugar, lo que le ayuda a reducir errores y mantener una gestión mucho más eficiente. | ![Entrevista 2 - Dueños de bodegas](./assets/Chapter-6/entrevista-Mauricio-Elera.png) <br> <a href="https://drive.google.com/file/d/1w0eSBDppZk9Z8G-TsmMfLN1sAYyxbZXt/view?usp=sharing">Validation Interview Mauricio</a> | 
+
+<br>
+
+
+**Segmento #2: Startups y emprendedores en expansión con necesidades logísticas**
+
+| Nº | Datos del entrevistado | Resumen de la entrevista | Evidencia de entrevista |
+|----|------------------------|------------------------------------------| ----------------------- |
+| 1  | - **Nombre:** Alexander Miranda Vivanco <br> - **Edad:** 27 años | Alexander posee un emprendimiento de venta de artículos para mascotas. Durante la entrevista reconoció que StockWise le sería de mucha ayuda por la logística del inventario. Las métricas del dashboard le parecieron idóneas. Sugirió facilitar el flujo de cuando se crea un producto y se agrega una reposición. Asimismo, comentó que le sería de mucha utlidad generar reportes acerca de aquellos productos que se hayan vencido. También especificó que poder agregar etiquetas personalizables sería adecuado y recomendó implementar una mejor lógica respecto a la reposición del stock. | ![Entrevista 1 - Startups y emprendedores en expansión con necesidades logísticas](./assets/Chapter-6/entrevista-Alexander-Miranda.png) <br> <a href="https://drive.google.com/file/d/14zPKDtkD_IFM2UjiPwRLCzG2cnPtis6E/view?usp=sharing">Validation Interview Alexander</a> |
+
 ### 6.3.3. Evaluaciones segun heuristicas.
 
 ## 6.4. Auditoria de Experiencias de Usuario.
