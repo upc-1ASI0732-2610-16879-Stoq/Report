@@ -962,6 +962,35 @@ Para evaluar el éxito de los experimentos planteados en el marco XDPD, se defin
 ### 8.2.3. Measures
 
 ### 8.2.4. Conditions
+Las condiciones describen los estados o grupos bajo los cuales se recopilará la evidencia en cada experimento. Para experimentos basados en creencias (*belief-led*), se distingue entre la condición experimental y la condición de control. Para experimentos exploratorios, se describen los límites o características del grupo estudiado.
+
+---
+
+#### Condiciones para EXP-01 — Alertas push de stock bajo
+
+La condición experimental busca obtener evidencia a favor de la hipótesis alternativa (las alertas reducen los quiebres). La condición de control opera bajo la suposición de que la hipótesis nula es correcta (no hay diferencia significativa).
+
+| Condición | Descripción | Criterio de asignación |
+| :--- | :--- | :--- |
+| **Experimental** | Usuarios con las notificaciones push de stock bajo habilitadas en la app mobile de StockWise. Estos usuarios reciben alertas automáticas cuando un producto cae por debajo del umbral de stock mínimo configurado. | Usuarios que activan las notificaciones push en la configuración de la app. |
+| **Control** | Usuarios que no tienen habilitadas las notificaciones push de stock bajo. Continúan gestionando su inventario sin recibir alertas automáticas del sistema. | Usuarios que no han activado las notificaciones push o las tienen desactivadas. |
+
+---
+
+#### Condiciones para EXP-02 — Reportes visuales
+
+| Condición | Descripción | Criterio de asignación |
+| :--- | :--- | :--- |
+| **Experimental** | Usuarios que acceden al módulo de reportes visuales al menos una vez por semana durante el período de observación. | Comportamiento observado a través del tracking de eventos en la app (evento: `report_viewed`). |
+| **Control** | Usuarios que no acceden al módulo de reportes en ninguna ocasión durante el período de observación de 3 semanas. | Ausencia del evento `report_viewed` en el período definido. |
+
+---
+
+#### Condiciones para EXP-03 — Conversión freemium a premium
+
+| Condición | Descripción |
+| :--- | :--- |
+| **Exploratoria** | Se observa a todos los usuarios que se registraron con el plan gratuito de StockWise durante el período de 60 días. No se aplica ninguna intervención; el objetivo es describir el comportamiento natural de conversión bajo el modelo freemium actual.<br><br>**Límite del grupo:** Usuarios activos (al menos una sesión por semana) con plan gratuito en el período de observación. |
 
 ### 8.2.5. Scale Calculations and Decisions
 
