@@ -792,7 +792,72 @@ A pesar de su naturaleza informativa, la landing page se rige por estándares de
 - Aislamiento: Configuración hermética de variables de entorno para evitar la filtración accidental de URLs o credenciales de desarrollo en el build de producción.
 
 ### 6.2.2. Reviews
+## 6.2.2. Reviews
 
+Durante el desarrollo del sistema **NorthEye**, se realizaron revisiones continuas del producto con el objetivo de asegurar la calidad del código, validar el cumplimiento de los requerimientos funcionales y no funcionales, y detectar de manera temprana posibles errores de diseño, implementación o integración.
+
+Estas revisiones se ejecutaron en distintos niveles del ciclo de desarrollo, abarcando tanto el código fuente como los artefactos de diseño y la integración de componentes del sistema (backend, frontend y landing page).
+
+### Peer Code Reviews
+
+Cada funcionalidad implementada en el backend (FastAPI) y en el frontend (React/Angular según módulo) pasó por un proceso de revisión entre pares antes de ser integrada a la rama principal del repositorio.
+
+Durante estas revisiones se evaluaron los siguientes aspectos:
+
+- Cumplimiento de las convenciones de codificación establecidas en el proyecto.
+- Correcta implementación de la lógica de negocio en servicios y controladores.
+- Uso adecuado de DTOs y separación de responsabilidades.
+- Legibilidad, mantenibilidad y estructura del código.
+- Detección de posibles errores lógicos o redundancias.
+- Validación del manejo de excepciones y respuestas HTTP consistentes.
+
+Asimismo, se verificó que los cambios realizados no generen conflictos con funcionalidades existentes y que el código cumpla con los estándares definidos dentro del flujo GitFlow antes de su merge a la rama principal.
+
+### Sprint Reviews
+
+Al final de cada sprint del proyecto se realizaron sesiones de Sprint Review con el equipo de desarrollo, en las cuales se presentó el incremento funcional del sistema NorthEye.
+
+En estas sesiones se llevaron a cabo las siguientes actividades:
+
+- Demostración de las funcionalidades implementadas en el sprint.
+- Validación del cumplimiento de las historias de usuario definidas en el Product Backlog.
+- Revisión del comportamiento del sistema en escenarios reales de uso.
+- Recolección de feedback por parte del equipo y ajustes necesarios para el siguiente sprint.
+- Validación de la integración entre backend, frontend y servicios REST.
+
+Estas revisiones permitieron asegurar la alineación del producto con los objetivos del proyecto y facilitaron la toma de decisiones sobre mejoras en la arquitectura y experiencia de usuario.
+
+### Design & Architecture Reviews
+
+Además de las revisiones de código y funcionalidad, se realizaron revisiones de diseño y arquitectura del sistema, enfocadas en garantizar la coherencia del modelo propuesto.
+
+En este proceso se validaron:
+
+- Consistencia del diseño basado en arquitectura hexagonal en el backend.
+- Correcta separación de capas (domain, application, infrastructure, interfaces).
+- Definición adecuada de entidades, agregados y relaciones en el modelo de datos.
+- Coherencia entre el diseño del frontend y los servicios expuestos por la API.
+- Alineación entre los diagramas de arquitectura y la implementación real.
+
+### Quality Assurance Reviews
+
+Como parte del aseguramiento de calidad, se realizaron revisiones orientadas a verificar el cumplimiento de criterios de calidad del sistema, incluyendo:
+
+- Correcto funcionamiento de endpoints mediante pruebas manuales.
+- Validación de respuestas de la API en escenarios exitosos y de error.
+- Revisión de consistencia en la interfaz de usuario.
+- Evaluación de usabilidad básica en flujos principales del sistema.
+- Verificación de integración entre módulos del sistema.
+
+### Resultado de las revisiones
+
+Gracias a las revisiones realizadas a lo largo del desarrollo, se logró:
+
+- Reducir errores en etapas tempranas del ciclo de desarrollo.
+- Mejorar la calidad del código antes de su integración.
+- Asegurar coherencia entre diseño, implementación y requisitos.
+- Incrementar la estabilidad del sistema en cada sprint.
+- Mantener trazabilidad entre historias de usuario y entregables funcionales.
 
 ## 6.3. Validation Interviews.
 ### 6.3.1. Diseño de Entrevistas.
