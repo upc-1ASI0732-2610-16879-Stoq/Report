@@ -1085,11 +1085,10 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 | 3   | Análisis de rendimiento | Evaluación de métricas de carga, accesibilidad y SEO utilizando la herramienta Google Lighthouse. |
 | 4   | Arquitectura de la información | Recorrido por las secciones de la Landing Page para evaluar la carga cognitiva y relevancia del contenido. |
 | 5   | Flujo de conversión | Búsqueda del enlace o botón principal (Call to Action) para iniciar el proceso de registro en la Web App. |
-| 6   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
-| 7   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
-| 8   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
-| 9   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
-| 10  | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
+| 6   | Navegación interna | Exploración de las opciones secundarias del menú de navegación ("Configuración" y "Ayuda"). |
+| 7   | Registro de datos de usuario | Ingreso de información demográfica y de contacto en el formulario de la sección "ESTUDIANTES". |
+| 8   | Gestión de disponibilidad | Configuración de rangos de tiempo (hora de inicio y fin) en la sección de "Horarios". |
+| 9   | Adaptabilidad visual |Evaluación de la legibilidad de la interfaz al alternar el esquema de colores (Modo Oscuro) en la sección "Cobranzas".|
 
 
 #### Escala de severidad utilizada
@@ -1111,11 +1110,10 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 | H-03 | Análisis de rendimiento  | Bajo puntaje de rendimiento (59/100) en la métrica de Lighthouse.   | 3         | Flexibilidad y eficiencia de uso  |
 | H-04 | Arquitectura de la información | Exceso de secciones y contenido redundante (sección "Pasos"). | 1         | Diseño estético y minimalista     |
 | H-05 | Flujo de conversión      | Ausencia total de botón CTA hacia el registro de la aplicación web. | 4         | Control y libertad del usuario    |
-| H-01 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
-| H-02 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
-| H-03 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
-| H-04 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
-| H-05 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
+| H-06 | Navegación interna | Enlaces inactivos en el menú de navegación principal. | 3 | Control y libertad del usuario |
+| H-07 | Registro de datos de usuario | Ausencia de validaciones lógicas en campos de teléfono y fecha de nacimiento. | 3 | Prevención de errores |
+| H-08 | Gestión de disponibilidad | Interfaz de selección de horas (Time Picker) poco intuitiva y demandante. | 2 | Flexibilidad y eficiencia de uso |
+| H-09 | Adaptabilidad visual | Deficiencia de contraste y pérdida de claridad en el modo oscuro (Módulo de facturas). | 2 | Diseño estético y minimalista |
 
 ---
 
@@ -1223,6 +1221,91 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 ![Figura 1 - Hallazgo H-03](assets/Chapter-6/hallazgo-h05.png)
 
 *Figura 5. Ausencia de botones de registro en el primer impacto visual de la página.*
+
+---
+
+#### Hallazgo H-06
+
+| Campo                   | Detalle                                                                                                                                                                                                                              |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Tarea evaluada          | Navegación interna                                                                                                                                                                                                                   |
+| Ubicación               | Web App - Barra de navegación lateral/superior                                                                                                                                                                                       |
+| Problema identificado   | Secciones "Configuración" y "Ayuda" sin funcionalidad                                                                                                                                                                                |
+| Severidad               | 3                                                                                                                                                                                                                                    |
+| Heurística vulnerada    | Control y libertad del usuario                                                                                                                                                                                                       |
+| Descripción             | Al intentar acceder a las opciones de "Configuración" y "Ayuda" desde el menú principal, los enlaces no ejecutan ninguna acción, no redirigen a ninguna vista, ni muestran un mensaje indicando que la función está en construcción. |
+| Impacto para el usuario | Genera confusión y frustración. El usuario percibe la aplicación como incompleta o defectuosa al no poder acceder a herramientas críticas de gestión de su cuenta o soporte.                                                         |
+| Recomendación           | Implementar las vistas correspondientes para estas rutas. Si las funcionalidades aún no están desarrolladas, se deben ocultar temporalmente los enlaces del menú o mostrar un modal informativo de "Próximamente" (Coming soon).     |
+
+**Evidencia**
+
+![Figura 1 - Hallazgo H-06](assets/Chapter-6/hallazgo-h06.png)
+
+*Figura 6. Elementos del menú de navegación que no presentan interactividad.*
+
+---
+
+#### Hallazgo H-07
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Registro de datos de usuario                                                                                                                                                                                                                                                                                              |
+| Ubicación               | Web App - Sección "ESTUDIANTES" (Formulario de creación/edición)                                                                                                                                                                                                                                                          |
+| Problema identificado   | Falta de validación lógica en inputs de teléfono y fecha de nacimiento                                                                                                                                                                                                                                                    |
+| Severidad               | 3                                                                                                                                                                                                                                                                                                                         |
+| Heurística vulnerada    | Prevención de errores                                                                                                                                                                                                                                                                                                     |
+| Descripción             | El formulario presenta dos fallas críticas de validación: 1) El campo de número de celular restringe la entrada estrictamente a 9 dígitos y no permite ingresar códigos de país (ej. +51), limitando la internacionalización. 2) El selector de fecha de cumpleaños permite seleccionar la fecha actual o fechas futuras. |
+| Impacto para el usuario | Compromete la integridad de la base de datos al permitir el ingreso de información irreal o malformada. Limita el uso de la plataforma a un formato telefónico local, excluyendo posibles usuarios extranjeros.                                                                                                           |
+| Recomendación           | Implementar validaciones de fecha (ej. `max="[fecha-actual]"` en el input de tipo date) para bloquear fechas futuras en los cumpleaños. Incorporar un componente de Input Phone que incluya un selector desplegable de códigos de país y ajuste la longitud esperada según la región.                                     |
+
+**Evidencia**
+
+![Figura 1 - Hallazgo H-07](assets/Chapter-6/hallazgo-h07.png)
+
+*Figura 7. Formulario aceptando datos incongruentes en los campos de contacto y nacimiento.*
+
+---
+
+#### Hallazgo H-08
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Gestión de disponibilidad                                                                                                                                                                                                                                |
+| Ubicación               | Web App - Sección "Horarios"                                                                                                                                                                                                                             |
+| Problema identificado   | Interfaz de selección de horas (Time Picker) incómoda y poco fluida                                                                                                                                                                                      |
+| Severidad               | 2                                                                                                                                                                                                                                                        |
+| Heurística vulnerada    | Flexibilidad y eficiencia de uso                                                                                                                                                                                                                         |
+| Descripción             | El componente utilizado para ingresar la "Hora de inicio" y "Hora de fin" en las sesiones requiere múltiples clics o una manipulación poco ergonómica, dificultando la entrada rápida de datos, especialmente si se deben configurar múltiples horarios. |
+| Impacto para el usuario | Incrementa innecesariamente el tiempo y el esfuerzo requerido para completar una tarea repetitiva, degradando la experiencia de uso (fricción operativa).                                                                                                |
+| Recomendación           | Reemplazar el componente actual por un Time Picker más intuitivo (por ejemplo, selectores visuales de reloj, campos con autocompletado en formato HH:MM, o incrementos rápidos de 15/30 minutos mediante botones).                                       |
+
+**Evidencia**
+
+![Figura 1 - Hallazgo H-08](assets/Chapter-6/hallazgo-h08.png)
+
+*Figura 8. Interfaz de configuración de horarios evidenciando un flujo de selección ineficiente.*
+
+---
+
+#### Hallazgo H-09
+
+| Campo                   | Detalle                                                                                                                                                                                                                                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Adaptabilidad visual                                                                                                                                                                                                                                                                      |
+| Ubicación               | Web App - Sección "Cobranzas" (Apartado de facturas)                                                                                                                                                                                                                                      |
+| Problema identificado   | Pérdida de claridad y legibilidad en el esquema de Modo Oscuro                                                                                                                                                                                                                            |
+| Severidad               | 3                                                                                                                                                                                                                                                                                         |
+| Heurística vulnerada    | Diseño estético y minimalista (Accesibilidad)                                                                                                                                                                                                                                             |
+| Descripción             | Al activar el tema oscuro (Dark Mode), los estilos CSS específicos del apartado de facturas no se adaptan correctamente. El texto y los elementos de la interfaz carecen del contraste necesario contra los fondos oscuros, volviendo la información difícil o imposible de leer.         |
+| Impacto para el usuario | Impide la correcta visualización de datos financieros sensibles. Causa fatiga visual severa y vulnera las pautas de accesibilidad (WCAG) sobre el ratio de contraste mínimo requerido.                                                                                                    |
+| Recomendación           | Auditar y ajustar la paleta de colores del Modo Oscuro utilizando variables CSS. Asegurar que los colores de texto principales (ej. blanco o gris claro) tengan un ratio de contraste de al menos 4.5:1 sobre los fondos oscuros correspondientes a las tablas y tarjetas de facturación. |
+
+**Evidencia**
+
+![Figura 1 - Hallazgo H-09](assets/Chapter-6/hallazgo-h09.png)
+
+*Figura 9. Problemas de contraste en el módulo de facturas al utilizar el tema oscuro.*
+
 
 
 ### 6.4.2. Auditoria recibida.
