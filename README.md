@@ -1065,11 +1065,11 @@ La auditoría de experiencias de usuario fue llevada a cabo con el objetivo de o
 
 | Actividad                                                | Fecha      | Responsable          | Duración estimada |
 | -------------------------------------------------------- | ---------- | -------------------- | ----------------- |
-| Recepción del informe de auditoría externa               | 11/06/2026 | Ronald Peralta Chipa | 30 minutos        |
-| Revisión y análisis de hallazgos identificados           | 11/06/2026 | Ronald Peralta Chipa | 1 hora            |
-| Priorización de observaciones y acciones correctivas     | 12/06/2026 | Equipo Stoq          | 30 minutos        |
-| Evaluación integral del flujo funcional de la aplicación | 13/06/2026 | Ronald Peralta Chipa | 1 hora            |
-| Implementación de mejoras y corrección de incidencias    | 13/06/2026 | Equipo Stoq          | 30 minutos        |
+| Recepción del informe de auditoría externa               | 11/06/2026 | Ronald Peralta  | 30 minutos        |
+| Revisión y análisis de hallazgos identificados           | 11/06/2026 | Ronald Peralta  | 1 hora            |
+| Priorización de observaciones y acciones correctivas     | 12/06/2026 | Ronald Peralta  | 30 minutos        |
+| Evaluación integral del flujo funcional de la aplicación | 13/06/2026 | Ronald Peralta  | 1 hora            |
+| Implementación de mejoras y corrección de incidencias    | 13/06/2026 | Ronald Peralta  | 30 minutos        |
 
 #### 6.4.1.3. Contenido de la auditoría realizada
 La presente auditoría tuvo como objetivo evaluar la usabilidad y experiencia de usuario del producto desarrollado por el grupo auditado. Para ello, se analizaron los principales flujos de interacción de la aplicación, identificando problemas relacionados con navegación, retroalimentación del sistema, accesibilidad, consistencia visual y comprensión de la interfaz.
@@ -1080,10 +1080,17 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 | N.° | Tarea evaluada       | Descripción                            |
 | --- | -------------------- | -------------------------------------- |
-| 1   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
-| 2   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
-| 3   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
-| 4   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
+| 1   | Navegación global | Interacción con la barra de navegación (Header) para retornar a la vista principal. |
+| 2   | Visualización de contenido | Carga y renderizado de los recursos multimedia en las distintas secciones informativas. |
+| 3   | Análisis de rendimiento | Evaluación de métricas de carga, accesibilidad y SEO utilizando la herramienta Google Lighthouse. |
+| 4   | Arquitectura de la información | Recorrido por las secciones de la Landing Page para evaluar la carga cognitiva y relevancia del contenido. |
+| 5   | Flujo de conversión | Búsqueda del enlace o botón principal (Call to Action) para iniciar el proceso de registro en la Web App. |
+
+| 6   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
+| 7   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
+| 8   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
+| 9   | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
+| 10  | [Nombre de la tarea] | [Acciones realizadas por el evaluador] |
 
 
 #### Escala de severidad utilizada
@@ -1098,8 +1105,13 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 #### Resumen de hallazgos identificados
 
-| ID   | Tarea            | Problema identificado            | Severidad | Heurística vulnerada      |
-| ---- | ---------------- | -------------------------------- | --------- | ------------------------- |
+| ID   | Tarea                    | Problema identificado                                                | Severidad | Heurística vulnerada              |
+| ---- | ------------------------ | ------------------------------------------------------------------- | --------- | --------------------------------- |
+| H-01 | Navegación global        | Logotipo inactivo sin redirección a la página de inicio.            | 2         | Consistencia y estándares         |
+| H-02 | Visualización de contenido | Imagen rota o no renderizada en la sección "Nosotros".             | 2         | Diseño estético y minimalista     |
+| H-03 | Análisis de rendimiento  | Bajo puntaje de rendimiento (59/100) en la métrica de Lighthouse.   | 3         | Flexibilidad y eficiencia de uso  |
+| H-04 | Arquitectura de la información | Exceso de secciones y contenido redundante (sección "Pasos"). | 1         | Diseño estético y minimalista     |
+| H-05 | Flujo de conversión      | Ausencia total de botón CTA hacia el registro de la aplicación web. | 4         | Control y libertad del usuario    |
 | H-01 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
 | H-02 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
 | H-03 | [Tarea evaluada] | [Descripción breve del problema] | [1-4]     | [Nombre de la heurística] |
@@ -1112,106 +1124,107 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 #### Hallazgo H-01
 
-| Campo                   | Detalle                                                                          |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| Tarea evaluada          | [Nombre de la tarea]                                                             |
-| Ubicación               | [Pantalla, módulo o sección]                                                     |
-| Problema identificado   | [Título breve del problema]                                                      |
-| Severidad               | [1-4]                                                                            |
-| Heurística vulnerada    | [Nombre de la heurística]                                                        |
-| Descripción             | [Explicar qué ocurrió, cómo se identificó el problema y cómo afecta al usuario.] |
-| Impacto para el usuario | [Consecuencias que genera el problema durante el uso de la aplicación.]          |
-| Recomendación           | [Acción correctiva sugerida.]                                                    |
+| Campo                   | Detalle                                                                                                                                                                                                                |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Navegación global                                                                                                                                                                                                      |
+| Ubicación               | Landing Page - Barra de navegación superior (Header)                                                                                                                                                                   |
+| Problema identificado   | Logotipo de la marca inactivo sin hipervínculo al Home                                                                                                                                                                 |
+| Severidad               | 2                                                                                                                                                                                                                      |
+| Heurística vulnerada    | Consistencia y estándares                                                                                                                                                                                              |
+| Descripción             | Al navegar por las distintas secciones de la página, el usuario intenta hacer clic en el logotipo "Demy" para regresar rápidamente al inicio, pero este elemento es estático y no contiene un enlace (etiqueta `<a>`). |
+| Impacto para el usuario | Genera fricción en la navegación. El usuario se ve obligado a hacer scroll manual hacia arriba o buscar alternativas para regresar, rompiendo una convención estándar de diseño web.                                   |
+| Recomendación           | Envolver el logotipo en una etiqueta de ancla (`<a>`) o componente de enrutamiento que apunte a la ruta raíz (`/` o `#home`).                                                                                          |
 
 **Evidencia**
 
 ![Figura 1 - Hallazgo H-01](evidencias/hallazgo-h01.png)
 
-*Figura 1. [Descripción de la evidencia observada].*
+*Figura 1. Barra de navegación donde se observa el logotipo estático.*
 
 ---
 
 #### Hallazgo H-02
 
-| Campo                   | Detalle                                                                          |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| Tarea evaluada          | [Nombre de la tarea]                                                             |
-| Ubicación               | [Pantalla, módulo o sección]                                                     |
-| Problema identificado   | [Título breve del problema]                                                      |
-| Severidad               | [1-4]                                                                            |
-| Heurística vulnerada    | [Nombre de la heurística]                                                        |
-| Descripción             | [Explicar qué ocurrió, cómo se identificó el problema y cómo afecta al usuario.] |
-| Impacto para el usuario | [Consecuencias que genera el problema durante el uso de la aplicación.]          |
-| Recomendación           | [Acción correctiva sugerida.]                                                    |
+| Campo                   | Detalle                                                                                                                                                                                                         |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Visualización de contenido                                                                                                                                                                                      |
+| Ubicación               | Landing Page - Sección "Nosotros"                                                                                                                                                                               |
+| Problema identificado   | Elemento de imagen no disponible (Enlace roto)                                                                                                                                                                  |
+| Severidad               | 2                                                                                                                                                                                                               |
+| Heurística vulnerada    | Diseño estético y minimalista / Prevención de errores                                                                                                                                                           |
+| Descripción             | Dentro del apartado "Nosotros", uno de los recursos gráficos no logra cargar correctamente, mostrando el icono estándar de "imagen rota" o un espacio en blanco en el navegador.                                |
+| Impacto para el usuario | Disminuye la percepción de calidad y profesionalismo del producto. Puede generar desconfianza en el usuario sobre el mantenimiento del sitio.                                                                   |
+| Recomendación           | Verificar la ruta del atributo `src` en la etiqueta `<img>`. Asegurar que el archivo exista en el directorio de despliegue o proveer un atributo `alt` descriptivo junto con una imagen de respaldo (fallback). |
 
 **Evidencia**
 
 ![Figura 2 - Hallazgo H-02](evidencias/hallazgo-h02.png)
 
-*Figura 2. [Descripción de la evidencia observada].*
+*Figura 2. Sección "Nosotros" evidenciando el error de carga del recurso multimedia.*
 
 ---
 
 #### Hallazgo H-03
 
-| Campo                   | Detalle                                                                          |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| Tarea evaluada          | [Nombre de la tarea]                                                             |
-| Ubicación               | [Pantalla, módulo o sección]                                                     |
-| Problema identificado   | [Título breve del problema]                                                      |
-| Severidad               | [1-4]                                                                            |
-| Heurística vulnerada    | [Nombre de la heurística]                                                        |
-| Descripción             | [Explicar qué ocurrió, cómo se identificó el problema y cómo afecta al usuario.] |
-| Impacto para el usuario | [Consecuencias que genera el problema durante el uso de la aplicación.]          |
-| Recomendación           | [Acción correctiva sugerida.]                                                    |
+| Campo                   | Detalle                                                                                                                                                                                                                      |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Análisis de rendimiento                                                                                                                                                                                                      |
+| Ubicación               | Landing Page - Entorno global                                                                                                                                                                                                |
+| Problema identificado   | Puntaje deficiente de Performance (59/100) en Lighthouse                                                                                                                                                                     |
+| Severidad               | 3                                                                                                                                                                                                                            |
+| Heurística vulnerada    | Flexibilidad y eficiencia de uso                                                                                                                                                                                             |
+| Descripción             | La auditoría técnica con Google Lighthouse arroja resultados contrastantes: Accesibilidad (90), Buenas prácticas (77), SEO (91), pero el Rendimiento cae a 59/100, indicando tiempos de carga lentos para el hilo principal. |
+| Impacto para el usuario | Un bajo rendimiento impacta directamente en los Core Web Vitals (como el LCP). Los usuarios con conexiones inestables pueden abandonar la página antes de que termine de cargar.                                             |
+| Recomendación           | Optimizar el tamaño y formato de las imágenes (usar WebP), diferir la carga de JavaScript no crítico y minificar los archivos estáticos CSS/JS para mejorar el First Contentful Paint (FCP).                                 |
 
 **Evidencia**
 
 ![Figura 3 - Hallazgo H-03](evidencias/hallazgo-h03.png)
 
-*Figura 3. [Descripción de la evidencia observada].*
+*Figura 3. Resultados del análisis de Google Lighthouse.*
 
 ---
 
 #### Hallazgo H-04
 
-| Campo                   | Detalle                                                                          |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| Tarea evaluada          | [Nombre de la tarea]                                                             |
-| Ubicación               | [Pantalla, módulo o sección]                                                     |
-| Problema identificado   | [Título breve del problema]                                                      |
-| Severidad               | [1-4]                                                                            |
-| Heurística vulnerada    | [Nombre de la heurística]                                                        |
-| Descripción             | [Explicar qué ocurrió, cómo se identificó el problema y cómo afecta al usuario.] |
-| Impacto para el usuario | [Consecuencias que genera el problema durante el uso de la aplicación.]          |
-| Recomendación           | [Acción correctiva sugerida.]                                                    |
+| Campo                   | Detalle                                                                                                                                                                                                                                                          |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Arquitectura de la información                                                                                                                                                                                                                                   |
+| Ubicación               | Landing Page - Cuerpo de la página (Sección "Pasos")                                                                                                                                                                                                             |
+| Problema identificado   | Sobrecarga de información y redundancia de secciones                                                                                                                                                                                                             |
+| Severidad               | 1                                                                                                                                                                                                                                                                |
+| Heurística vulnerada    | Diseño estético y minimalista                                                                                                                                                                                                                                    |
+| Descripción             | La página presenta un volumen excesivo de secciones verticales (Características, Pasos, Testimonios, Nosotros, Precios, Preguntas, Contacto). Específicamente, la sección "Pasos" describe un proceso que resulta ser demasiado trivial, sin aportar valor real. |
+| Impacto para el usuario | Incrementa la fatiga visual y la carga cognitiva del usuario al tener que hacer demasiado scroll. Diluye la atención y desvía al usuario de la acción principal que debe realizar.                                                                               |
+| Recomendación           | Simplificar la estructura de la Landing Page. Eliminar la sección "Pasos" y condensar u ocultar información secundaria en acordeones o enlaces internos para mantener un flujo más directo.                                                                      |
 
 **Evidencia**
 
 ![Figura 4 - Hallazgo H-04](evidencias/hallazgo-h04.png)
 
-*Figura 4. [Descripción de la evidencia observada].*
+*Figura 4. Sección "Pasos" que aporta baja relevancia al flujo de la página.*
 
 ---
 
 #### Hallazgo H-05
 
-| Campo                   | Detalle                                                                          |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| Tarea evaluada          | [Nombre de la tarea]                                                             |
-| Ubicación               | [Pantalla, módulo o sección]                                                     |
-| Problema identificado   | [Título breve del problema]                                                      |
-| Severidad               | [1-4]                                                                            |
-| Heurística vulnerada    | [Nombre de la heurística]                                                        |
-| Descripción             | [Explicar qué ocurrió, cómo se identificó el problema y cómo afecta al usuario.] |
-| Impacto para el usuario | [Consecuencias que genera el problema durante el uso de la aplicación.]          |
-| Recomendación           | [Acción correctiva sugerida.]                                                    |
+| Campo                   | Detalle                                                                                                                                                                                                             |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tarea evaluada          | Flujo de conversión                                                                                                                                                                                                 |
+| Ubicación               | Landing Page - Menú de navegación y Hero Section                                                                                                                                                                    |
+| Problema identificado   | Ausencia de un botón de llamada a la acción (CTA) hacia la aplicación web                                                                                                                                           |
+| Severidad               | 4                                                                                                                                                                                                                   |
+| Heurística vulnerada    | Control y libertad del usuario / Prevención de errores                                                                                                                                                              |
+| Descripción             | El propósito principal de la Landing Page es captar usuarios, pero no existe un botón prominente (como "Regístrate" o "Ingresar a la App") que dirija al usuario al flujo de registro (`/sign-up`) de la Web App.   |
+| Impacto para el usuario | Impide por completo la conversión. El usuario interesado en el producto se queda estancado en la Landing Page sin un camino claro para comenzar a utilizar la aplicación, frustrando el objetivo de negocio.        |
+| Recomendación           | Implementar botones CTA de alto contraste y tamaño adecuado tanto en la esquina superior derecha del menú de navegación como en la sección principal (Hero Section), enlazados directamente a la vista de registro. |
 
 **Evidencia**
 
 ![Figura 5 - Hallazgo H-05](evidencias/hallazgo-h05.png)
 
-*Figura 5. [Descripción de la evidencia observada].*
+*Figura 5. Ausencia de botones de registro en el primer impacto visual de la página.*
+
 
 ### 6.4.2. Auditoria recibida.
 
