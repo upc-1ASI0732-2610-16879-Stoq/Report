@@ -1054,10 +1054,10 @@ La auditoría de experiencias de usuario fue llevada a cabo con el objetivo de o
 | Campo                    | Detalle                                                       |
 | ------------------------ | ------------------------------------------------------------- |
 | Grupo auditado           | Grupo 2                                                       |
-| Startup                  | Pendiente de confirmación                                     |
-| Producto evaluado        | Pendiente de confirmación                                     |
-| Integrantes del equipo   | Persona 1, Persona 2, Persona 3, Persona 4 y Persona 5        |
-| Repositorio del proyecto | Pendiente de confirmación                                     |
+| Startup                  | EduLabs                                     |
+| Producto evaluado        | Demy                                  |
+| Integrantes del equipo   | Daniel Crispin, Rafael Dominguez, Henry Esteban, Renso Julca y Diego Vilca |
+| Repositorio del proyecto | https://github.com/orgs/EduLabs-Experimentos/repositories                                   |
 | Landing Page             | https://demy-edulabs.netlify.app/                             |
 | Aplicación web           | https://edulabs-experimentos.github.io/demy-admin-web/sign-up |
 
