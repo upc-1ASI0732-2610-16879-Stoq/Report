@@ -805,7 +805,8 @@ El ecosistema de monitoreo de StockWise está diseñado para garantizar la obser
 
 El pipeline de alertas se encarga de procesar los eventos críticos detectados durante la integración continua, el despliegue y la monitorización en vivo, distribuyéndolos de forma automatizada al equipo de desarrollo. Su objetivo es minimizar el tiempo medio de resolución (MTTR) de incidentes. Está compuesto por: 
 
-
+- Generadores de Eventos (Event Triggers): Son los motores que evalúan el estado del sistema frente a reglas predefinidas. Los eventos primarios se originan en GitHub Actions (al detectar un fallo en el pipeline de CI tras un push o pull request), en Render (cuando ocurre un error o éxito de redespliegue del backend) y en Vercel / Netlify (al finalizar la compilación del frontend o la landing page). 
+- 
 
 ### 7.4.4. Notification Pipeline Components
 
