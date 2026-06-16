@@ -799,7 +799,7 @@ El ecosistema de monitoreo de StockWise está diseñado para garantizar la obser
 
 - Infraestructura y Plataforma (PaaS Monitoring): Se hace uso de las herramientas de telemetría nativas proporcionadas por las plataformas de despliegue. Render actúa como el componente principal para monitorear el backend, proveyendo métricas en tiempo real sobre el uso de CPU, consumo de memoria RAM y el tráfico de red de los contenedores de Spring Boot. Por su parte, Vercel y Netlify monitorizan el rendimiento del tráfico web, los tiempos de carga y el estado de la distribución de los archivos estáticos de Angular y React. 
 - Application Performance Monitoring (APM) y Health Checks: Para la capa de negocio y acceso a datos, el backend integra librerías como Spring Boot Actuator, la cual expone endpoints estandarizados (como /actuator/health y /actuator/metrics). Estos componentes permiten verificar el estado de conexión con la base de datos relacional y el estado de la Máquina Virtual de Java (JVM). En el lado del cliente, se utilizan las analíticas de Vercel para evaluar métricas de experiencia de usuario (Core Web Vitals) y prevenir las regresiones de rendimiento identificadas en auditorías previas. 
-- 
+- Log Management (Gestión de Registros): Se emplea un sistema de agregación de logs de ejecución estandarizado. Los logs generados por los errores de integración o pruebas unitarias se almacenan temporalmente en los artefactos de GitHub Actions. Simultáneamente, Render actúa como el consolidador de los logs transaccionales (stdout y stderr) del entorno de pruebas y producción, lo que permite la trazabilidad completa de errores, como fallos en el registro de inventario o en la ejecución de alertas de stock mínimo.
 
 ### 7.4.3. Alerting Pipeline Components
 
