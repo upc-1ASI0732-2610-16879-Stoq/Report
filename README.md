@@ -1120,7 +1120,11 @@ Para el diseño de los experimentos de StockWise, la determinación de la cantid
     En conclusión, estas decisiones de escala aseguran que StockWise sea evaluado bajo el marco de experimentación continua con rigor matemático, balanceando la obtención de tamaños de muestra factibles (50 a 80 usuarios) con la capacidad de detectar impactos radicales en los dolores logísticos de sus clientes.
 
 
-### 8.2.6. Methods Selection
+### 8.2.6. Methods Selection 
+
+En esta sección se detalla la estrategia metodológica empleada para ejecutar los experimentos en StockWise. El diseño de la investigación se rige por la optimización de recursos técnicos y el rigor analítico, asegurando que los datos recopilados sean válidos para evaluar las hipótesis de negocio establecidas. 
+
+
 
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
 
