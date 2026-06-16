@@ -222,9 +222,22 @@
     - [8.2.2. Domain Business Metrics](#822-domain-business-metrics)
     - [8.2.3. Measures](#823-measures)
     - [8.2.4. Conditions](#824-conditions)
+      - [Condiciones para EXP-01 — Alertas push de stock bajo](#condiciones-para-exp-01--alertas-push-de-stock-bajo)
+      - [Condiciones para EXP-02 — Reportes visuales](#condiciones-para-exp-02--reportes-visuales)
+      - [Condiciones para EXP-03 — Conversión freemium a premium](#condiciones-para-exp-03--conversión-freemium-a-premium)
     - [8.2.5. Scale Calculations and Decisions](#825-scale-calculations-and-decisions)
     - [8.2.6. Methods Selection](#826-methods-selection)
     - [8.2.7. Data Analytics: Goals, KPIs and Metrics Selection](#827-data-analytics-goals-kpis-and-metrics-selection)
+    - [1. Tasa de activación de usuarios (Activation Rate)](#1-tasa-de-activación-de-usuarios-activation-rate)
+    - [2. Tasa de uso del módulo de inventario (Feature Adoption Rate)](#2-tasa-de-uso-del-módulo-de-inventario-feature-adoption-rate)
+    - [3. Frecuencia de operaciones de inventario (Inventory Interaction Frequency)](#3-frecuencia-de-operaciones-de-inventario-inventory-interaction-frequency)
+    - [4. Efectividad del sistema de alertas (Alert Response Rate)](#4-efectividad-del-sistema-de-alertas-alert-response-rate)
+    - [5. Retención de usuarios (User Retention Rate)](#5-retención-de-usuarios-user-retention-rate)
+    - [6. Tiempo de operación por tarea (Task Completion Time)](#6-tiempo-de-operación-por-tarea-task-completion-time)
+    - [7. Tasa de conversión a plan pago (Conversion Rate)](#7-tasa-de-conversión-a-plan-pago-conversion-rate)
+    - [8. Nivel de satisfacción del usuario (User Satisfaction Score - CSAT)](#8-nivel-de-satisfacción-del-usuario-user-satisfaction-score---csat)
+    - [9. Disponibilidad del sistema (System Availability)](#9-disponibilidad-del-sistema-system-availability)
+  - [Relación con el enfoque experiment-driven](#relación-con-el-enfoque-experiment-driven)
     - [8.2.8. Web and Mobile Tracking Plan](#828-web-and-mobile-tracking-plan)
       - [Principios del Tracking Plan](#principios-del-tracking-plan)
       - [Eventos del Frontend Web (Vue.js — Vercel)](#eventos-del-frontend-web-vuejs--vercel)
@@ -617,6 +630,50 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 8.1.1. As-Is Summary
 
+**Estado actual de la gestión de inventarios**
+
+Actualmente, los administradores y operadores de bodegas (dueños de negocio, encargados de logística) gestionan su inventario de forma predominantemente manual. Los métodos tradicionales como cuadernos físicos, hojas de papel sueltas y la memoria son las herramientas más comunes. El uso de hojas de cálculo (Excel) es limitado, principalmente porque los usuarios no tienen la familiaridad técnica o el tiempo para implementarlas correctamente. Esta operación se realiza a diario, con picos de actividad durante los momentos de atención al cliente, recepción de mercadería o al cierre del día.
+
+**Principales dolores y procesos actuales**
+
+- **Registro de productos y movimientos:** Los usuarios anotan entradas y salidas en papel o confían en su memoria. Este proceso es lento y propenso a errores de anotación, cálculo u omisión, especialmente cuando el negocio está en horas de mayor afluencia de clientes. La falta de un registro digital inmediato provoca que la información del stock esté casi siempre desactualizada.
+
+- **Búsqueda y localización de productos: **No existe un sistema de ubicación dentro del almacén. Los operadores dependen de su conocimiento empírico o recorren las estanterías de forma manual para encontrar un producto. Cuando no logran localizar un artículo, lo dan por hecho como "perdido" o asumen que ya no está disponible, lo que se traduce directamente en una pérdida de venta o un quiebre de stock no detectado a tiempo.
+
+- **Conteo y control de stock:** El proceso de conteo físico para verificar existencias es lento y se realiza de manera esporádica. Los usuarios invierten una cantidad considerable de tiempo (sin un registro métrico preciso, pero reconocido como significativo) en estas auditorías manuales, lo que resta horas operativas al negocio.
+
+- **Frecuencia de quiebres de stock y sobrecompras:** Según los testimonios de los entrevistados, los quiebres de stock (productos agotados que el cliente solicita) ocurren con una frecuencia estimada de 2 veces por mes. Esta cifra, aunque pueda parecer baja, representa pérdidas de venta recurrentes y una señal de alerta sobre la falta de previsión. Las sobrecompras ocurren como consecuencia de no tener visibilidad del stock real.
+
+- **Reacción ante problemas:** Cuando un producto no se encuentra (quiebre no detectado), la reacción inmediata es darlo por perdido. No existen mecanismos de búsqueda sistemática ni alertas que anticipen el problema. Esta conducta genera una normalización de la pérdida y una baja en la competitividad del negocio.
+
+**Comportamientos y actitudes observadas**
+
+- **Proactividad limitada**: La gestión es reactiva. Los usuarios no planifican el reabastecimiento basándose en datos históricos o tendencias, sino en la urgencia del momento ("se me acabó, pido más").
+
+- **Resignación ante la pérdida**: La frase "lo doy por perdido" es recurrente, evidenciando una aceptación tácita de que el desorden y los errores son parte inevitable de la operación.
+
+- **Alta dependencia cognitiva:** La memoria del dueño o encargado es el principal "sistema de información", lo que vuelve el negocio vulnerable al ausentismo o al cansancio.
+
+**Limitaciones y barreras para adoptar una solución digital**
+
+A pesar de que los usuarios reconocen los problemas del método manual, existen barreras que han impedido su migración a un sistema digital:
+
+- **Falta de tiempo:** El principal obstáculo no es el costo ni la complejidad tecnológica (de hecho, la mayoría usa smartphones y está adaptada a la tecnología). La barrera crítica es la falta de tiempo para investigar, seleccionar e implementar un sistema que se adapte a sus necesidades, ya que la operación diaria del negocio les absorbe por completo.
+
+- **Necesidad de simplicidad extrema:** Los usuarios no buscan un ERP complejo. Requieren una solución intuitiva, que funcione "desde el primer día" y que no exija una curva de aprendizaje técnica. La entrada por voz y el escaneo rápido son altamente valorados como alternativas al tipeo manual.
+
+- **Desconfianza en sistemas genéricos:** Existe la percepción de que las aplicaciones de inventario existentes son "para grandes empresas" o demasiado complicadas para su operación del día a día.
+
+Fuentes de información
+
+Este resumen se fundamenta en las siguientes actividades de investigación documentadas en el Capítulo II (Sección 2.2 y 2.3):
+
+- Entrevistas en profundidad realizadas a dueños de bodegas (Ariana, Mauricio, Marcelo) y emprendedores (Alexander), donde se identificaron los patrones de uso actuales, dolores y expectativas.
+- Análisis de entrevistas (2.2.3) que cuantificó que el 100% de los usuarios del segmento de bodegas utiliza control manual (cuaderno/Excel) y sufre pérdidas por falta de alertas.
+- As-Is Scenario Mapping (2.3.5) que detalló, paso a paso, las fricciones del proceso actual de registro, control, vencimiento y búsqueda.
+- User Journey Mapping (2.3.3) que evidenció los picos de frustración y el esfuerzo cognitivo en las etapas de "gestión de inventario" y "búsqueda de productos".
+
+
 ### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
 
 En esta sección se recopilan los insumos iniciales que orientan la planificación de los experimentos para StockWise. Estos elementos provienen del análisis As-Is, entrevistas, problemáticas identificadas y funcionalidades propuestas para los segmentos objetivo: bodegas especializadas por rubro y startups/emprendedores en expansión con necesidades logísticas. El objetivo no es validar directamente una solución, sino identificar creencias, vacíos de información, ideas y afirmaciones que puedan convertirse posteriormente en preguntas experimentales.
@@ -795,6 +852,21 @@ Esta sección presenta preguntas listas para ser convertidas en experimentos. La
 
 ### 8.1.4. Question Backlog
 
+| # | Pregunta | Área de incertidumbre | Prioridad | Relación con hipótesis |
+|---|----------|----------------------|-----------|------------------------|
+| 1 | ¿Los usuarios de bodegas realmente usarán la entrada por voz como método principal de registro, o preferirán el escaneo por cámara? | Adopción de funcionalidad innovadora | Alta | Hipótesis 1 (Alertas anti-quiebre) |
+| 2 | ¿El porcentaje del 15% de conversión de freemium a premium en 60 días es realista para el mercado de bodegas peruano? | Modelo de negocio | Alta | Hipótesis 3 (Freemium) |
+| 3 | ¿Los reportes visuales móviles serán utilizados semanalmente por el 70% de los usuarios, o la frecuencia será menor? | Engagement del usuario | Alta | Hipótesis 2 (Reportes para decidir) |
+| 4 | ¿Qué tiempo real dedican hoy los usuarios al control manual de stock (línea base) para poder medir una reducción del 40%? | Métrica base | Alta | Hipótesis 4 (Automatización) |
+| 5 | ¿Los usuarios confían en las alertas predictivas de reabastecimiento o prefieren seguir usando su criterio empírico? | Confianza en IA/predicción | Media | Hipótesis 1 y 4 |
+| 6 | ¿La falta de tiempo para implementar un sistema es la verdadera barrera, o existen otros factores no detectados (ej. desconfianza en la nube)? | Barreras de adopción | Alta | Todas |
+| 7 | ¿Los usuarios están dispuestos a pagar por funcionalidades como geolocalización o escaneo por lotes, o las consideran "nice to have"? | Propuesta de valor de planes premium | Media | Hipótesis 3 |
+| 8 | ¿El onboarding guiado dentro de la app reduce efectivamente la curva de aprendizaje para usuarios con baja experiencia tecnológica? | Usabilidad | Media | Hipótesis 1 |
+| 9 | ¿Los usuarios realmente consultan el historial de movimientos con frecuencia, o es una funcionalidad de respaldo poco utilizada? | Valor real de funcionalidad | Baja | Hipótesis 2 |
+| 10 | ¿La generación de boletas digitales desde el móvil reduce errores de facturación en un 50%, o la mayoría de los negocios ya usan sistemas alternativos? | Impacto real | Media | Hipótesis 5 |
+
+
+
 ### 8.1.5. Experiment Cards
 Las Experiment Cards son el artefacto central del proceso de experimentación. Cada tarjeta captura la información esencial de un experimento antes de su ejecución, estructurando tanto la pregunta que se busca responder como la configuración operativa del experimento.
 
@@ -960,6 +1032,27 @@ Para evaluar el éxito de los experimentos planteados en el marco XDPD, se defin
     * Objetivo Vinculado (EXP-05): Alcanzar o superar una tasa de conversión del 15% dentro de los primeros 60 días de uso activo en la plataforma.
 
 ### 8.2.3. Measures
+
+Para validar las hipótesis definidas en el Lean UX Hypothesis Statements (sección 1.2.2.3), se establecen las siguientes medidas cuantitativas y cualitativas. Cada métrica incluye su línea base (estado actual sin StockWise), el objetivo de éxito y el método de medición.
+
+**Métricas de Validación de Hipótesis**
+
+| Hipótesis | Métrica | Línea base (As-Is) | Objetivo (To-Be) | Método de medición | Frecuencia |
+|------------|----------|--------------------|------------------|--------------------|------------|
+| **H1 – Alertas anti-quiebre** | Reducción de pérdidas por productos agotados | Pérdidas actuales sin cuantificar; 83% de precisión de inventario (NetSuite, 2024) | 80% de usuarios reportan 25% menos pérdidas | Encuesta trimestral a usuarios activos + análisis de movimientos de stock en la app | Trimestral |
+| **H2 – Reportes para decidir** | Tasa de uso de reportes + mejora en decisiones de compra | 0% (no usan reportes digitales) | 70% de usuarios usan reportes semanalmente y mejoran un 30% sus decisiones de compra | Eventos de uso en la app (analytics) + encuesta de autopercepción | Mensual |
+| **H3 – Freemium como puerta de entrada** | Tasa de conversión de gratuitos a premium | No aplica (no existe producto previo) | 15% de usuarios gratuitos convierten a premium en 60 días | Seguimiento de suscripciones en backend (evento de upgrade) | Diario (acumulado a 60 días) |
+| **H4 – Automatización que ahorra tiempo** | Reducción de tiempo en control manual + eliminación de quiebres críticos | Tiempo de control manual no medido, pero identificado como significativo; 2 quiebres críticos por mes (estimado) | 40% menos tiempo en control manual; 90% menos quiebres críticos | Tiempo registrado en la app (desde login hasta cierre) vs. estimación inicial; conteo de alertas de stock bajo resueltas | Semanal |
+| **H5 – Boleta digital sin errores** | Reducción de errores de facturación + mejora en precisión de ingresos | Errores frecuentes por anotación manual (sin cifra exacta) | 50% menos errores de facturación; 35% más precisión en ingresos | Comparación de boletas emitidas vs. conciliación bancaria; encuesta trimestral | Trimestral |
+
+**Métricas adicionales de producto (para monitoreo continuo):**
+
+| Métrica | Descripción | Línea base | Objetivo | Método |
+|----------|-------------|-------------|----------|---------|
+| **Tiempo de registro de un producto** | Tiempo transcurrido desde que el usuario abre el formulario hasta que guarda el producto | > 2 minutos (proceso manual) | < 30 segundos utilizando voz o escaneo | Tracing de eventos dentro de la aplicación |
+| **Tasa de adopción de funcionalidades clave** | Porcentaje de usuarios que utilizan voz, escaneo, geolocalización y predicción de stock | 0% | > 40% de adopción para cada funcionalidad | Segmentación por tipo de plan y análisis de eventos de uso |
+| **Net Promoter Score (NPS)** | Probabilidad de que los usuarios recomienden StockWise a otros negocios | No aplica | > 50 (nivel excelente) | Encuesta integrada en la aplicación después del primer mes de uso |
+| **Churn Rate (Tasa de abandono)** | Porcentaje de usuarios que dejan de utilizar la aplicación después de 30 días | No aplica | < 10% | Seguimiento de la última sesión registrada y cancelaciones de cuenta |
 
 ### 8.2.4. Conditions
 Las condiciones describen los estados o grupos bajo los cuales se recopilará la evidencia en cada experimento. Para experimentos basados en creencias (*belief-led*), se distingue entre la condición experimental y la condición de control. Para experimentos exploratorios, se describen los límites o características del grupo estudiado.
