@@ -1091,6 +1091,7 @@ Para el diseño de los experimentos de StockWise, la determinación de la cantid
 
 
 
+
 ### 8.2.6. Methods Selection
 
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
