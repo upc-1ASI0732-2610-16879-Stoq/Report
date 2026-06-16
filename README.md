@@ -810,7 +810,8 @@ El pipeline de alertas se encarga de procesar los eventos críticos detectados d
 3. Canales de Distribución (Delivery Channels): Las plataformas de CI/CD utilizan webhooks e integraciones nativas para enrutar los eventos hacia plataformas colaborativas y de mensajería del equipo. Esto permite una trazabilidad inmediata desde que se detecta el incidente hasta su notificación. 
 4. Matriz de Escalamiento y Destinatarios: El componente de enrutamiento distribuye la alerta al responsable correspondiente según la matriz de configuración del proyecto: 
    - Alertas de CI (GitHub Actions): Notificaciones de workflows fallidos dirigidas al responsable de integración (Ronald Peralta). 
-   - 
+   - Alertas de Despliegue de Aplicación (Render y Vercel): Notificaciones sobre despliegues exitosos o caídas en los entornos de Backend y Frontend, dirigidas a la encargada de la distribución (Fabiola Del Rocio). 
+   - Alertas de Landing Page (Netlify): Notificaciones de finalización de compilación dirigidas a todo el equipo en general.
 
 ### 7.4.4. Notification Pipeline Components
 
