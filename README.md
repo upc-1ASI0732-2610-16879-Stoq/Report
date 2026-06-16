@@ -1111,7 +1111,13 @@ Para el diseño de los experimentos de StockWise, la determinación de la cantid
      - Precisión (MDE): Un incremento mínimo del 20% en acciones de reabastecimiento por parte de los usuarios que consumen reportes. 
      - Escala Calculada: Un mínimo de 25 usuarios por condición (50 usuarios en total). 
      - Duración: 3 semanas de monitoreo continuo mediante el tracking de eventos web y móvil. 
-   - 
+   - Experimento 3 (EXP-03): Viabilidad del modelo Freemium 
+     - Métrica Principal: Tasa de conversión de freemium a premium. 
+     - Precisión (MDE): Se admite un margen de diferencia del 5% respecto a la meta central de negocio (15% de conversión). 
+     - Escala Calculada: Mínimo 80 usuarios freemium registrados. A diferencia de los anteriores, este estudio es de naturaleza exploratoria, por lo que se observará a la totalidad de la muestra contra el criterio de éxito en lugar de usar un grupo de control aislado. 
+     - Duración: 60 días, permitiendo que el usuario madure en el uso de la herramienta y perciba el límite de valor del plan básico.
+
+    En conclusión, estas decisiones de escala aseguran que StockWise sea evaluado bajo el marco de experimentación continua con rigor matemático, balanceando la obtención de tamaños de muestra factibles (50 a 80 usuarios) con la capacidad de detectar impactos radicales en los dolores logísticos de sus clientes.
 
 
 ### 8.2.6. Methods Selection
