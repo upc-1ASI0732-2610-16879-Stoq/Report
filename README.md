@@ -803,6 +803,10 @@ El ecosistema de monitoreo de StockWise está diseñado para garantizar la obser
 
 ### 7.4.3. Alerting Pipeline Components
 
+El pipeline de alertas se encarga de procesar los eventos críticos detectados durante la integración continua, el despliegue y la monitorización en vivo, distribuyéndolos de forma automatizada al equipo de desarrollo. Su objetivo es minimizar el tiempo medio de resolución (MTTR) de incidentes. Está compuesto por: 
+
+
+
 ### 7.4.4. Notification Pipeline Components
 
 El componente de notificaciones tiene como finalidad comunicar de forma automática eventos relevantes detectados durante la ejecución de los procesos de integración, despliegue y monitoreo continuo, permitiendo una respuesta rápida ante incidentes o situaciones que requieran atención del equipo de desarrollo.
