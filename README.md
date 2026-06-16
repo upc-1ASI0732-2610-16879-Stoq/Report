@@ -807,7 +807,8 @@ El pipeline de alertas se encarga de procesar los eventos críticos detectados d
 
 1. Generadores de Eventos (Event Triggers): Son los motores que evalúan el estado del sistema frente a reglas predefinidas. Los eventos primarios se originan en GitHub Actions (al detectar un fallo en el pipeline de CI tras un push o pull request), en Render (cuando ocurre un error o éxito de redespliegue del backend) y en Vercel / Netlify (al finalizar la compilación del frontend o la landing page). 
 2. Reglas de Filtrado y Umbrales: Para evitar la fatiga por notificaciones redundantes, el pipeline evalúa el nivel de criticidad del evento. Solo se emiten notificaciones ante eventos determinantes: interrupciones de servicio, errores de compilación, fallos en las pruebas automatizadas (Unit/Integration Tests) o confirmaciones de puestas a producción exitosas. 
-3. 
+3. Canales de Distribución (Delivery Channels): Las plataformas de CI/CD utilizan webhooks e integraciones nativas para enrutar los eventos hacia plataformas colaborativas y de mensajería del equipo. Esto permite una trazabilidad inmediata desde que se detecta el incidente hasta su notificación. 
+4. 
 
 ### 7.4.4. Notification Pipeline Components
 
