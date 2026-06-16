@@ -795,6 +795,8 @@ El proceso de Continuous Monitoring tiene como objetivo supervisar de manera con
 
 ### 7.4.2. Monitoring Pipeline Components
 
+El ecosistema de monitoreo de StockWise está diseñado para garantizar la observabilidad continua en las diferentes capas de la plataforma: Backend, Frontend Web y Landing Page. Este enfoque permite identificar proactivamente cuellos de botella en el rendimiento y asegurar la disponibilidad del sistema. Los componentes principales de este pipeline son: 
+
 
 
 ### 7.4.3. Alerting Pipeline Components
