@@ -1089,7 +1089,12 @@ La condición experimental busca obtener evidencia a favor de la hipótesis alte
 
 Para el diseño de los experimentos de StockWise, la determinación de la cantidad de evidencia (tamaño de la muestra y duración) se fundamenta en un equilibrio estadístico riguroso entre la Certeza y la Precisión. Esto asegura que las métricas obtenidas tras la interacción de los usuarios (dueños de bodegas y startups) con el software sean confiables para la toma de decisiones tecnológicas y de negocio, y no el resultado de fluctuaciones aleatorias. 
 
+1. Definición de la Certeza (Certainty)
+   La certeza representa la probabilidad de error aceptable dentro de las pruebas. Para mitigar los riesgos de falsos descubrimientos o de ignorar validaciones exitosas, los experimentos cuantitativos del proyecto operan bajo dos constantes estadísticas estándar: 
+   - Nivel de Significación ($\alpha$): Se ha establecido en 0.05 para todos los experimentos. Esto actúa como un control directo contra el Error Tipo I (falso positivo), brindando un 95% de confianza en que, si se detecta una mejora en métricas (como la reducción de quiebres de stock), esta se debe realmente a la funcionalidad implementada en StockWise. 
+   - Poder Estadístico ($1 - \beta$): Se ha configurado en 80% para las pruebas comparativas. Este parámetro previene el Error Tipo II (falso negativo), garantizando que si una característica como las alertas push o los reportes tiene un impacto real en la operación del usuario, el experimento posee una alta probabilidad de detectarlo exitosamente. 
 
+2. 
 
 
 ### 8.2.6. Methods Selection
