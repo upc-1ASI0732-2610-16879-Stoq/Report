@@ -1098,7 +1098,15 @@ Para el diseño de los experimentos de StockWise, la determinación de la cantid
    
     La precisión se materializa a través del Efecto Mínimo Detectable (MDE). Este indicador define la granularidad del cambio operativo que StockWise considera "valioso" para justificar la integración definitiva de una característica al Core del producto. Al tratarse de un SaaS B2B en etapa de validación, se buscan impactos amplios que venzan la barrera de la "falta de tiempo" que tienen los negocios manuales.
 
-
+3. Cálculos de Escala por Experimento
+   
+    Aplicando los criterios de certeza y precisión mencionados, se han tomado las siguientes decisiones de escala para ejecutar las Experiment Cards: 
+   - Experimento 1 (EXP-01): Alertas push de stock bajo 
+     - Métrica Principal: Tasa de quiebres de inventario. 
+     - Precisión (MDE): Se busca detectar una diferencia mínima del 15% en la tasa de quiebres entre el grupo experimental y el de control. 
+     - Escala Calculada: Se requiere un mínimo de 30 usuarios por condición (60 usuarios en total). 
+     - Duración: 4 semanas, periodo determinado para abarcar la variabilidad mensual clásica del ciclo de reabastecimiento logístico en bodegas. 
+   - 
 
 
 ### 8.2.6. Methods Selection
