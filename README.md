@@ -797,7 +797,8 @@ El proceso de Continuous Monitoring tiene como objetivo supervisar de manera con
 
 El ecosistema de monitoreo de StockWise está diseñado para garantizar la observabilidad continua en las diferentes capas de la plataforma: Backend, Frontend Web y Landing Page. Este enfoque permite identificar proactivamente cuellos de botella en el rendimiento y asegurar la disponibilidad del sistema. Los componentes principales de este pipeline son: 
 
-
+- Infraestructura y Plataforma (PaaS Monitoring): Se hace uso de las herramientas de telemetría nativas proporcionadas por las plataformas de despliegue. Render actúa como el componente principal para monitorear el backend, proveyendo métricas en tiempo real sobre el uso de CPU, consumo de memoria RAM y el tráfico de red de los contenedores de Spring Boot. Por su parte, Vercel y Netlify monitorizan el rendimiento del tráfico web, los tiempos de carga y el estado de la distribución de los archivos estáticos de Angular y React. 
+- 
 
 ### 7.4.3. Alerting Pipeline Components
 
