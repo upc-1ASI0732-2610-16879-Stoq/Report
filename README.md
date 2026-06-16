@@ -1133,7 +1133,10 @@ En esta sección se detalla la estrategia metodológica empleada para ejecutar l
    - Para EXP-03 (Conversión Freemium): Análisis de Embudo (Funnel Analysis) Longitudinal. Al ser un experimento exploratorio, el método consiste en monitorear la tasa de conversión natural de todos los usuarios registrados en el plan gratuito a lo largo de un periodo de 60 días, rastreando los eventos desde session_started hasta plan_upgrade_completed. 
 3. Aislamiento de Experimentos (Control de Colisiones)
    Para garantizar la integridad estadística, se aplica una estricta norma de no concurrencia cruzada: ningún usuario será expuesto simultáneamente a dos alteraciones en el mismo flujo de trabajo que puedan sesgar los resultados. Si bien un usuario puede participar en el EXP-01 (alertas) y en el EXP-03 (conversión), los parámetros de evaluación están aislados. La asignación a grupos experimentales se realizará de forma aleatoria y se vinculará unívocamente al identificador del usuario (user_id), garantizando que la experiencia de un cliente de StockWise sea consistente durante todas las semanas que dure la prueba. 
-
+4. Consideraciones Éticas y Operativas (Do No Harm)
+   La ejecución de los métodos de experimentación en un entorno B2B requiere un diseño responsable. Dado que StockWise maneja el inventario real de bodegas y startups, los experimentos se rigen por el principio de "no causar daño" a la operatividad del cliente: 
+   - Integridad de la data: Las pruebas A/B o el tracking de eventos no interferirán, bloquearán ni alterarán los registros de base de datos de los movimientos de inventario reales (entradas y salidas). 
+   - Transparencia (Opt-out): Aunque las funcionalidades experimentales se desplieguen, los usuarios mantienen el control de su configuración (por ejemplo, pudiendo desactivar o silenciar las alertas push del EXP-01 si consideran que interrumpen su atención en tienda).
 
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
 
