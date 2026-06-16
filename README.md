@@ -1103,6 +1103,10 @@ También puede eliminar una alerta específica luego de una confirmación emerge
 |----|------------------------|------------------------------------------| ----------------------- |
 | 1  | - **Nombre:** Alexander Miranda Vivanco <br> - **Edad:** 27 años | Alexander posee un emprendimiento de venta de artículos para mascotas. Durante la entrevista reconoció que StockWise le sería de mucha ayuda por la logística del inventario. Las métricas del dashboard le parecieron idóneas. Sugirió facilitar el flujo de cuando se crea un producto y se agrega una reposición. Asimismo, comentó que le sería de mucha utlidad generar reportes acerca de aquellos productos que se hayan vencido. También especificó que poder agregar etiquetas personalizables sería adecuado y recomendó implementar una mejor lógica respecto a la reposición del stock. | ![Entrevista 1 - Startups y emprendedores en expansión con necesidades logísticas](./assets/Chapter-6/entrevista-Alexander-Miranda.png) <br> <a href="https://drive.google.com/file/d/14zPKDtkD_IFM2UjiPwRLCzG2cnPtis6E/view?usp=sharing">Validation Interview Alexander</a> |
 
+| Nº | Datos del entrevistado | Resumen de la entrevista | Evidencia de entrevista |
+|----|------------------------|------------------------------------------| ----------------------- |
+| 1  | - **Nombre:** Briseth Hurtado <br> - **Edad:** 27 años | Briseth, quien cuenta con un emprendimiento de venta de artículos para mascotas, señaló que StockWise le resultaría de gran utilidad para gestionar su inventario y valoró positivamente las métricas presentadas en el dashboard. Además, sugirió simplificar el proceso de creación de productos y reposiciones, incorporar reportes de productos vencidos, permitir etiquetas personalizables y mejorar la lógica de reposición de stock para optimizar la administración del negocio. | ![Entrevista 2 - Startups y emprendedores en expansión con necesidades logísticas](./assets/Chapter-6/entrevista-Briseth.png) <br> <a href="https://drive.google.com/file/d/14zPKDtkD_IFM2UjiPwRLCzG2cnPtis6E/view?usp=sharing">Validation Interview Alexander</a> |
+
 ### 6.3.3. Evaluaciones segun heuristicas.
 
 
