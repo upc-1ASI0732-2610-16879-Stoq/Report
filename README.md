@@ -1094,7 +1094,11 @@ Para el diseño de los experimentos de StockWise, la determinación de la cantid
    - Nivel de Significación ($\alpha$): Se ha establecido en 0.05 para todos los experimentos. Esto actúa como un control directo contra el Error Tipo I (falso positivo), brindando un 95% de confianza en que, si se detecta una mejora en métricas (como la reducción de quiebres de stock), esta se debe realmente a la funcionalidad implementada en StockWise. 
    - Poder Estadístico ($1 - \beta$): Se ha configurado en 80% para las pruebas comparativas. Este parámetro previene el Error Tipo II (falso negativo), garantizando que si una característica como las alertas push o los reportes tiene un impacto real en la operación del usuario, el experimento posee una alta probabilidad de detectarlo exitosamente. 
 
-2. 
+2. Definición de la Precisión (Precision) 
+   
+    La precisión se materializa a través del Efecto Mínimo Detectable (MDE). Este indicador define la granularidad del cambio operativo que StockWise considera "valioso" para justificar la integración definitiva de una característica al Core del producto. Al tratarse de un SaaS B2B en etapa de validación, se buscan impactos amplios que venzan la barrera de la "falta de tiempo" que tienen los negocios manuales.
+
+
 
 
 ### 8.2.6. Methods Selection
