@@ -1106,6 +1106,11 @@ Para el diseño de los experimentos de StockWise, la determinación de la cantid
      - Precisión (MDE): Se busca detectar una diferencia mínima del 15% en la tasa de quiebres entre el grupo experimental y el de control. 
      - Escala Calculada: Se requiere un mínimo de 30 usuarios por condición (60 usuarios en total). 
      - Duración: 4 semanas, periodo determinado para abarcar la variabilidad mensual clásica del ciclo de reabastecimiento logístico en bodegas. 
+   - Experimento 2 (EXP-02): Reportes visuales de inventario 
+     - Métrica Principal: Frecuencia de acciones de reabastecimiento. 
+     - Precisión (MDE): Un incremento mínimo del 20% en acciones de reabastecimiento por parte de los usuarios que consumen reportes. 
+     - Escala Calculada: Un mínimo de 25 usuarios por condición (50 usuarios en total). 
+     - Duración: 3 semanas de monitoreo continuo mediante el tracking de eventos web y móvil. 
    - 
 
 
