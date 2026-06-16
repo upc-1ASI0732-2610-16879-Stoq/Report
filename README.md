@@ -156,30 +156,7 @@
   - [6.1. Testing Suites \& Validation](#61-testing-suites--validation)
     - [6.1.1. Core Entities Unit Tests](#611-core-entities-unit-tests)
     - [6.1.2. Core Integration Tests](#612-core-integration-tests)
-    - [Información General Test-1](#información-general-test-1)
-    - [Escenario 1](#escenario-1)
-    - [Escenario 2](#escenario-2)
-    - [Escenario 3](#escenario-3)
-    - [Escenario 4](#escenario-4)
-    - [Información General Test-2](#información-general-test-2)
-    - [Escenario 1](#escenario-1-1)
-    - [Escenario 2](#escenario-2-1)
-    - [Escenario 3](#escenario-3-1)
-    - [Información General Test-3](#información-general-test-3)
-    - [Escenario 1](#escenario-1-2)
-    - [Escenario 2](#escenario-2-2)
-    - [Escenario 3](#escenario-3-2)
-    - [Información General Test-4](#información-general-test-4)
-    - [Escenario 1](#escenario-1-3)
-    - [Escenario 2](#escenario-2-3)
-    - [Información General Test-5](#información-general-test-5)
-    - [Escenario 1](#escenario-1-4)
-    - [Escenario 2](#escenario-2-4)
-    - [Escenario 3](#escenario-3-3)
     - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
-      - [Evidence 1: Product Registration Feature File](#evidence-1-product-registration-feature-file)
-      - [Evidence 2: Low Stock Alert Feature File](#evidence-2-low-stock-alert-feature-file)
-      - [Evidence 3: BDD Test Execution Results](#evidence-3-bdd-test-execution-results)
     - [6.1.4. Core System Tests](#614-core-system-tests)
   - [6.2. Static testing \& Verification](#62-static-testing--verification)
     - [6.2.1. Static Code Analysis](#621-static-code-analysis)
@@ -187,11 +164,6 @@
       - [6.2.1.2. Code Quality \& Code Security.](#6212-code-quality--code-security)
     - [6.2.2. Reviews](#622-reviews)
   - [6.2.2. Reviews](#622-reviews-1)
-    - [Peer Code Reviews](#peer-code-reviews)
-    - [Sprint Reviews](#sprint-reviews)
-    - [Design \& Architecture Reviews](#design--architecture-reviews)
-    - [Quality Assurance Reviews](#quality-assurance-reviews)
-    - [Resultado de las revisiones](#resultado-de-las-revisiones)
   - [6.3. Validation Interviews.](#63-validation-interviews)
     - [6.3.1. Diseño de Entrevistas.](#631-diseño-de-entrevistas)
     - [6.3.2. Registro de Entrevistas.](#632-registro-de-entrevistas)
@@ -201,42 +173,10 @@
       - [6.4.1.1. Información del grupo auditado.](#6411-información-del-grupo-auditado)
       - [6.4.1.2. Cronograma de auditoría realizada](#6412-cronograma-de-auditoría-realizada)
       - [6.4.1.3. Contenido de la auditoría realizada](#6413-contenido-de-la-auditoría-realizada)
-      - [Tareas evaluadas](#tareas-evaluadas)
-      - [Escala de severidad utilizada](#escala-de-severidad-utilizada)
-      - [Resumen de hallazgos identificados](#resumen-de-hallazgos-identificados)
-    - [Detalle de hallazgos](#detalle-de-hallazgos)
-      - [Hallazgo H-01](#hallazgo-h-01)
-      - [Hallazgo H-02](#hallazgo-h-02)
-      - [Hallazgo H-03](#hallazgo-h-03)
-      - [Hallazgo H-04](#hallazgo-h-04)
-      - [Hallazgo H-05](#hallazgo-h-05)
-      - [Hallazgo H-06](#hallazgo-h-06)
-      - [Hallazgo H-07](#hallazgo-h-07)
-      - [Hallazgo H-08](#hallazgo-h-08)
-      - [Hallazgo H-09](#hallazgo-h-09)
     - [6.4.2. Auditoria recibida.](#642-auditoria-recibida)
       - [6.4.2.1. Información del grupo auditor.](#6421-información-del-grupo-auditor)
       - [6.4.2.2. Cronograma de auditoría recibida.](#6422-cronograma-de-auditoría-recibida)
       - [6.4.2.3. Contenido de auditoría recibida.](#6423-contenido-de-auditoría-recibida)
-      - [Hallazgo H-01](#hallazgo-h-01-1)
-      - [Hallazgo H-02](#hallazgo-h-02-1)
-      - [Hallazgo H-03](#hallazgo-h-03-1)
-      - [Hallazgo H-04](#hallazgo-h-04-1)
-      - [Hallazgo H-05](#hallazgo-h-05-1)
-      - [Hallazgo H-06](#hallazgo-h-06-1)
-      - [Hallazgo H-07](#hallazgo-h-07-1)
-      - [Hallazgo H-08](#hallazgo-h-08-1)
-      - [Hallazgo H-09](#hallazgo-h-09-1)
-      - [Hallazgo H-10](#hallazgo-h-10)
-      - [Hallazgo H-11](#hallazgo-h-11)
-      - [Hallazgo H-12](#hallazgo-h-12)
-      - [Hallazgo H-13](#hallazgo-h-13)
-      - [Hallazgo H-14](#hallazgo-h-14)
-      - [Hallazgo H-15](#hallazgo-h-15)
-      - [Hallazgo H-16](#hallazgo-h-16)
-      - [Hallazgo H-17](#hallazgo-h-17)
-      - [Hallazgo H-18](#hallazgo-h-18)
-      - [Hallazgo H-19](#hallazgo-h-19)
       - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos.](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
 - [Capitulo VII: DevOps Practices](#capitulo-vii-devops-practices)
   - [7.1. Continuous Integration](#71-continuous-integration)
@@ -590,7 +530,7 @@ US14 - Registrar devolución: valida que el stock aumente al registrar una devol
 ### 6.1.2. Core Integration Tests
 En esta sección se presentan las pruebas de integración desarrolladas para validar la correcta comunicación e interacción entre los componentes principales de StockWise, garantizando el funcionamiento coordinado y consistente de los distintos módulos que conforman el sistema.
 
-### Información General Test-1
+**Información General Test-1**
 
 | Elemento | Descripción |
 |---|---|
@@ -599,31 +539,30 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 | Descripción General | Validar la integración completa del módulo de productos dentro del sistema StockWise, comprobando que las operaciones relacionadas con la gestión de productos funcionen correctamente desde la capa HTTP hasta la persistencia en base de datos. |
 
 
-### Escenario 1 
-
+**Escenario 1**
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 1](./assets/Chapter-6/test1_sc1.png)  | Este escenario valida que el sistema pueda registrar correctamente un nuevo producto cuando se envían datos válidos, verificando el flujo completo desde la solicitud HTTP hasta la persistencia en base de datos. Se comprueba la integración entre controller, servicios de aplicación, aggregate Product, repositorios JPA y la base de datos H2. Esta validación es importante porque asegura que la funcionalidad principal de creación de productos opere correctamente y que la información registrada mantenga consistencia dentro del inventario. |
 
-### Escenario 2
+**Escenario 2**
 
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 2](./assets/Chapter-6/test1_sc2.png) | Este escenario valida que el sistema rechace productos con un precio unitario inválido, específicamente valores negativos, comprobando que las reglas de negocio definidas en el dominio sean respetadas antes de persistir información. La prueba garantiza que las validaciones del aggregate y el manejo de excepciones funcionen correctamente a través de toda la integración del sistema. Esto es importante para proteger la integridad de los datos financieros y evitar inconsistencias en cálculos de ventas, reportes y valorización de inventario. |
 
-### Escenario 3 
+**Escenario 3**
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 3](./assets/Chapter-6/test1_sc3.png) | Este escenario verifica que el sistema no permita registrar productos sin nombre o con nombres vacíos, validando las restricciones obligatorias del dominio y el correcto manejo de respuestas HTTP ante entradas inválidas. La prueba asegura que los datos esenciales del catálogo sean obligatorios y que el sistema prevenga registros incompletos que puedan afectar búsquedas, clasificación de productos y operaciones posteriores dentro del inventario.|
 
-### Escenario 4 
+**Escenario 4** 
 
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 4](./assets/Chapter-6/test1_sc4.png) | Este escenario valida que el sistema pueda actualizar correctamente la información de un producto existente, verificando la integración entre el endpoint REST, los servicios de actualización, el aggregate Product, el repositorio JPA y la persistencia en base de datos. Se comprueba que los cambios enviados sean reflejados correctamente y que las validaciones del dominio continúen aplicándose durante la edición. Esta validación es importante porque garantiza que la información del catálogo pueda mantenerse actualizada y consistente a lo largo del tiempo. |
 
 ---
-### Información General Test-2
+**Información General Test-2**
 
 | Elemento | Descripción |
 |---|---|
@@ -632,19 +571,19 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 | Descripción General | Validar la integración entre los módulos de proveedores y productos, asegurando que las relaciones funcionales entre ambos aggregates se comporten correctamente dentro del sistema. |
 
 
-### Escenario 1 
+**Escenario 1** 
 
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 1](./assets/Chapter-6/test2_sc1.png) | Este escenario valida que el sistema pueda registrar correctamente un nuevo proveedor utilizando datos válidos, comprobando el flujo completo desde la solicitud HTTP hasta la persistencia en base de datos. La prueba verifica la integración entre controller, servicios de aplicación, aggregate Provider, value objects, repositorios JPA y la base de datos H2. Esta validación es importante porque garantiza que los proveedores puedan ser gestionados correctamente y que la información crítica de abastecimiento quede almacenada de manera consistente y segura. |
 
-### Escenario 2
+**Escenario 2**
 
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 2](./assets/Chapter-6/test2_sc2.png) | Este escenario valida que el sistema rechace proveedores con correos electrónicos inválidos, comprobando que las reglas de validación implementadas en los value objects del dominio funcionen correctamente durante todo el flujo de integración. La prueba asegura que las excepciones generadas por datos inconsistentes sean manejadas adecuadamente y que la información inválida no llegue a persistirse en la base de datos. Esta validación es importante porque protege la calidad de los datos y evita problemas posteriores relacionados con notificaciones, contacto con proveedores y trazabilidad del sistema. |
 
-### Escenario 3
+**Escenario 3**
 
 | Evidencia | Descripción |
 |---|---|
@@ -652,7 +591,7 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 
 ---
 
-### Información General Test-3
+**Información General Test-3**
 
 | Elemento | Descripción |
 |---|---|
@@ -660,19 +599,19 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 | Módulo(s) | inventory, sales - US03, US14 |
 | Descripción General | Validar la integración entre los módulos de inventario y ventas, comprobando que los movimientos de entrada y salida de stock actualicen correctamente la cantidad disponible en base de datos, y que el sistema rechace operaciones que excedan el stock disponible. |
 
-### Escenario 1
+**Escenario 1**
 
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 1](./assets/Chapter-6/test3_sc1.png) | Este escenario valida que el sistema descuente correctamente el stock de un producto cuando se registra una venta válida, verificando el flujo completo desde la solicitud HTTP hasta la persistencia en base de datos H2. Se comprueba la integración entre el controlador de ventas, los servicios de aplicación, el repositorio de lotes y la lógica de descuento del aggregate. Esta validación es importante porque garantiza que cada transacción de salida mantenga la consistencia del inventario y refleje el stock real disponible para operaciones posteriores. |
 
-### Escenario 2
+**Escenario 2**
 
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 2](./assets/Chapter-6/test3_sc2.png) | Este escenario valida que el sistema incremente correctamente el stock de un producto cuando se registra un lote de reposición, comprobando la integración entre el endpoint de lotes, los servicios de aplicación, el repositorio JPA y la base de datos H2. La prueba verifica que la cantidad del nuevo lote se sume correctamente al stock existente del producto. Esta validación es importante porque asegura que el proceso de reabastecimiento opere de forma confiable y que el inventario refleje en todo momento las entradas registradas por el equipo de almacén. |
 
-### Escenario 3
+**Escenario 3**
 
 | Evidencia | Descripción |
 |---|---|
@@ -680,7 +619,7 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 
 ---
 
-### Información General Test-4
+**Información General Test-4**
 
 | Elemento | Descripción |
 |---|---|
@@ -688,13 +627,13 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 | Módulo(s) | inventory, alertstock - US05 |
 | Descripción General | Validar la integración entre los módulos de inventario y alertas de stock, comprobando que el sistema genere y persista automáticamente una alerta cuando una salida de stock deja el nivel por debajo del mínimo configurado, y que no genere alertas innecesarias cuando el stock se mantiene dentro del rango aceptable. |
 
-### Escenario 1
+**Escenario 1**
 
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 1](./assets/Chapter-6/test4_sc1.png) | Este escenario valida que el sistema genere y persista automáticamente una alerta de stock bajo cuando una venta reduce el inventario por debajo del mínimo configurado para el producto, comprobando la integración entre el módulo de ventas, el servicio de alertas y el repositorio de alertas en base de datos H2. Esta validación es importante porque garantiza que el mecanismo de alerta temprana funcione de forma automática y confiable, permitiendo al equipo de almacén reaccionar oportunamente ante situaciones de desabastecimiento. |
 
-### Escenario 2
+**Escenario 2**
 
 | Evidencia | Descripción |
 |---|---|
@@ -702,7 +641,7 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 
 ---
 
-### Información General Test-5
+**Información General Test-5**
 
 | Elemento | Descripción |
 |---|---|
@@ -710,19 +649,19 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 | Módulo(s) | iam, inventory - US01, US12 |
 | Descripción General | Validar la integración entre el módulo de autenticación y autorización (IAM) y los endpoints de inventario, comprobando que el sistema proteja correctamente el acceso a los recursos según el token y los permisos del usuario autenticado. |
 
-### Escenario 1
+**Escenario 1**
 
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 1](./assets/Chapter-6/test5_sc1.png) | Este escenario valida que el sistema rechace con HTTP 401 cualquier solicitud al endpoint de productos que no incluya un token de autenticación, comprobando que los filtros de seguridad estén activos y configurados correctamente. Esta validación es importante porque garantiza que los recursos del inventario estén protegidos frente a accesos anónimos y que el sistema cumpla con los requisitos de seguridad definidos para la plataforma SaaS. |
 
-### Escenario 2
+**Escenario 2**
 
 | Evidencia | Descripción |
 |---|---|
 | ![Escenario 2](./assets/Chapter-6/test5_sc2.png) | Este escenario valida que un usuario autenticado con permisos de inventario pueda acceder correctamente al endpoint de productos, recibiendo una respuesta HTTP 200 con el listado correspondiente. La prueba comprueba la integración completa entre el proceso de registro, la generación del token JWT y la autorización en el endpoint protegido. Esta validación es importante porque asegura que el flujo de autenticación funcione de extremo a extremo y que los usuarios con los permisos correctos puedan operar sin restricciones. |
 
-### Escenario 3
+**Escenario 3**
 
 | Evidencia | Descripción |
 |---|---|
@@ -732,15 +671,15 @@ En esta sección se presentan las pruebas de integración desarrolladas para val
 
 En esta sección se presentan las pruebas Behavior-Driven Development desarrolladas para validar el comportamiento esperado de las funcionalidades principales de StockWise desde la perspectiva del usuario. El desarrollo de estas pruebas se basó en las User Stories priorizadas del Product Backlog, específicamente US01 - Registrar producto nuevo y US05 - Generar alertas por bajo stock, ambas pertenecientes al epic EP01 - Funciones básicas de inventario. Estas historias fueron seleccionadas porque representan funciones centrales del sistema de inventario.
 
-#### Evidence 1: Product Registration Feature File
+**Evidence 1: Product Registration Feature File**
 
 <img src="assets/Chapter-6/prueba-3.png" alt="Product Registration Feature File" width="800px">
 
-#### Evidence 2: Low Stock Alert Feature File
+**Evidence 2: Low Stock Alert Feature File**
 
 <img src="assets/Chapter-6/prueba-2.png" alt="Low Stock Alert Feature File" width="800px">
 
-#### Evidence 3: BDD Test Execution Results
+**Evidence 3: BDD Test Execution Results**
 
 <img src="assets/Chapter-6/prueba-1.png" alt="BDD Test Execution Results" width="800px">
 
@@ -823,7 +762,7 @@ Durante el desarrollo del sistema **NorthEye**, se realizaron revisiones continu
 
 Estas revisiones se ejecutaron en distintos niveles del ciclo de desarrollo, abarcando tanto el código fuente como los artefactos de diseño y la integración de componentes del sistema (backend, frontend y landing page).
 
-### Peer Code Reviews
+**Peer Code Reviews**
 
 Cada funcionalidad implementada en el backend (FastAPI) y en el frontend (React/Angular según módulo) pasó por un proceso de revisión entre pares antes de ser integrada a la rama principal del repositorio.
 
@@ -838,7 +777,7 @@ Durante estas revisiones se evaluaron los siguientes aspectos:
 
 Asimismo, se verificó que los cambios realizados no generen conflictos con funcionalidades existentes y que el código cumpla con los estándares definidos dentro del flujo GitFlow antes de su merge a la rama principal.
 
-### Sprint Reviews
+**Sprint Reviews**
 
 Al final de cada sprint del proyecto se realizaron sesiones de Sprint Review con el equipo de desarrollo, en las cuales se presentó el incremento funcional del sistema NorthEye.
 
@@ -852,7 +791,7 @@ En estas sesiones se llevaron a cabo las siguientes actividades:
 
 Estas revisiones permitieron asegurar la alineación del producto con los objetivos del proyecto y facilitaron la toma de decisiones sobre mejoras en la arquitectura y experiencia de usuario.
 
-### Design & Architecture Reviews
+**Design & Architecture Reviews**
 
 Además de las revisiones de código y funcionalidad, se realizaron revisiones de diseño y arquitectura del sistema, enfocadas en garantizar la coherencia del modelo propuesto.
 
@@ -864,7 +803,7 @@ En este proceso se validaron:
 - Coherencia entre el diseño del frontend y los servicios expuestos por la API.
 - Alineación entre los diagramas de arquitectura y la implementación real.
 
-### Quality Assurance Reviews
+**Quality Assurance Reviews**
 
 Como parte del aseguramiento de calidad, se realizaron revisiones orientadas a verificar el cumplimiento de criterios de calidad del sistema, incluyendo:
 
@@ -874,7 +813,7 @@ Como parte del aseguramiento de calidad, se realizaron revisiones orientadas a v
 - Evaluación de usabilidad básica en flujos principales del sistema.
 - Verificación de integración entre módulos del sistema.
 
-### Resultado de las revisiones
+**Resultado de las revisiones**
 
 Gracias a las revisiones realizadas a lo largo del desarrollo, se logró:
 
@@ -1334,7 +1273,7 @@ La auditoría de experiencias de usuario fue llevada a cabo con el objetivo de o
 #### 6.4.1.3. Contenido de la auditoría realizada
 La presente auditoría tuvo como objetivo evaluar la usabilidad y experiencia de usuario del producto desarrollado por el grupo auditado. Para ello, se analizaron los principales flujos de interacción de la aplicación, identificando problemas relacionados con navegación, retroalimentación del sistema, accesibilidad, consistencia visual y comprensión de la interfaz.
 
-#### Tareas evaluadas
+**Tareas evaluadas**
 
 Durante la auditoría se ejecutaron las siguientes tareas representativas del flujo de uso de la aplicación:
 
@@ -1351,7 +1290,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 | 9   | Adaptabilidad visual |Evaluación de la legibilidad de la interfaz al alternar el esquema de colores (Modo Oscuro) en la sección "Cobranzas".|
 
 
-#### Escala de severidad utilizada
+**Escala de severidad utilizada**
 
 | Nivel | Descripción                                                                       |
 | ----- | --------------------------------------------------------------------------------- |
@@ -1361,7 +1300,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 | 4     | Problema crítico que impide completar la tarea o continuar utilizando el sistema. |
 
 
-#### Resumen de hallazgos identificados
+ **Resumen de hallazgos identificados**
 
 | ID   | Tarea                    | Problema identificado                                                | Severidad | Heurística vulnerada              |
 | ---- | ------------------------ | ------------------------------------------------------------------- | --------- | --------------------------------- |
@@ -1377,9 +1316,8 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-### Detalle de hallazgos
-
-#### Hallazgo H-01
+** Detalle de hallazgos**
+- **Hallazgo H-01**
 
 | Campo                   | Detalle                                                                                                                                                                                                                |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1400,7 +1338,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-02
+- **Hallazgo H-02**
 
 | Campo                   | Detalle                                                                                                                                                                                                         |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1421,7 +1359,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-03
+- **Hallazgo H-03**
 
 | Campo                   | Detalle                                                                                                                                                                                                                      |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1442,7 +1380,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-04
+- **Hallazgo H-04**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                          |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1463,7 +1401,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-05
+- **Hallazgo H-05**
 
 | Campo                   | Detalle                                                                                                                                                                                                             |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1484,7 +1422,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-06
+- **Hallazgo H-06**
 
 | Campo                   | Detalle                                                                                                                                                                                                                              |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1505,7 +1443,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-07
+- **Hallazgo H-07**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                                                                                   |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1526,7 +1464,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-08
+- **Hallazgo H-08**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1547,7 +1485,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-09
+- **Hallazgo H-09**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                                                   |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1592,7 +1530,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 | Validación final y pruebas de regresión de los flujos corregidos | 14/06/2026 | Equipo EduLabs       | 1 hora y 30 min   |
 
 #### 6.4.2.3. Contenido de auditoría recibida.
-#### Hallazgo H-01
+- **Hallazgo H-01**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1613,7 +1551,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-02
+- **Hallazgo H-02**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1634,7 +1572,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-03
+- **Hallazgo H-03**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1655,7 +1593,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-04
+- **Hallazgo H-04**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1677,7 +1615,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-05
+- **Hallazgo H-05**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1698,7 +1636,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-06
+- **Hallazgo H-06**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1719,7 +1657,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-07
+- **Hallazgo H-07**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1740,7 +1678,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-08
+- **Hallazgo H-08**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1761,7 +1699,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-09
+- **Hallazgo H-09**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1782,7 +1720,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-10
+- **Hallazgo H-10**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1803,7 +1741,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 --- 
 
-#### Hallazgo H-11
+- **Hallazgo H-11**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1824,7 +1762,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-12
+- **Hallazgo H-12**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1845,7 +1783,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-13
+- **Hallazgo H-13**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1866,7 +1804,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-14
+- **Hallazgo H-14**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1887,7 +1825,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-15
+- **Hallazgo H-15**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1908,7 +1846,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-16
+- **Hallazgo H-16**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1929,7 +1867,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-17
+- **Hallazgo H-17**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1950,7 +1888,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-18
+- **Hallazgo H-18**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1971,7 +1909,7 @@ Durante la auditoría se ejecutaron las siguientes tareas representativas del fl
 
 ---
 
-#### Hallazgo H-19
+- **Hallazgo H-19**
 
 | Campo                   | Detalle                                                                                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
