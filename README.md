@@ -1124,6 +1124,8 @@ Para el diseño de los experimentos de StockWise, la determinación de la cantid
 
 En esta sección se detalla la estrategia metodológica empleada para ejecutar los experimentos en StockWise. El diseño de la investigación se rige por la optimización de recursos técnicos y el rigor analítico, asegurando que los datos recopilados sean válidos para evaluar las hipótesis de negocio establecidas. 
 
+1. El Principio del "Simplest Useful Thing" (La solución más simple y útil)
+   Para alcanzar el tamaño de muestra requerido y recopilar evidencia contundente, los métodos seleccionados priorizan la menor complejidad técnica posible que aún garantice la precisión de los datos. En lugar de desarrollar sistemas predictivos complejos desde la primera iteración, StockWise utiliza activadores lógicos directos. Por ejemplo, para el EXP-01, la "cosa más simple y útil" es disparar una notificación push basada en un umbral estático (min_stock) configurado por el usuario, evitando el esfuerzo de implementar un modelo de Inteligencia Artificial hasta que el comportamiento básico de respuesta a alertas haya sido validado. 
 
 
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
