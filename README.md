@@ -1033,6 +1033,27 @@ Para evaluar el éxito de los experimentos planteados en el marco XDPD, se defin
 
 ### 8.2.3. Measures
 
+Para validar las hipótesis definidas en el Lean UX Hypothesis Statements (sección 1.2.2.3), se establecen las siguientes medidas cuantitativas y cualitativas. Cada métrica incluye su línea base (estado actual sin StockWise), el objetivo de éxito y el método de medición.
+
+**Métricas de Validación de Hipótesis**
+
+| Hipótesis | Métrica | Línea base (As-Is) | Objetivo (To-Be) | Método de medición | Frecuencia |
+|------------|----------|--------------------|------------------|--------------------|------------|
+| **H1 – Alertas anti-quiebre** | Reducción de pérdidas por productos agotados | Pérdidas actuales sin cuantificar; 83% de precisión de inventario (NetSuite, 2024) | 80% de usuarios reportan 25% menos pérdidas | Encuesta trimestral a usuarios activos + análisis de movimientos de stock en la app | Trimestral |
+| **H2 – Reportes para decidir** | Tasa de uso de reportes + mejora en decisiones de compra | 0% (no usan reportes digitales) | 70% de usuarios usan reportes semanalmente y mejoran un 30% sus decisiones de compra | Eventos de uso en la app (analytics) + encuesta de autopercepción | Mensual |
+| **H3 – Freemium como puerta de entrada** | Tasa de conversión de gratuitos a premium | No aplica (no existe producto previo) | 15% de usuarios gratuitos convierten a premium en 60 días | Seguimiento de suscripciones en backend (evento de upgrade) | Diario (acumulado a 60 días) |
+| **H4 – Automatización que ahorra tiempo** | Reducción de tiempo en control manual + eliminación de quiebres críticos | Tiempo de control manual no medido, pero identificado como significativo; 2 quiebres críticos por mes (estimado) | 40% menos tiempo en control manual; 90% menos quiebres críticos | Tiempo registrado en la app (desde login hasta cierre) vs. estimación inicial; conteo de alertas de stock bajo resueltas | Semanal |
+| **H5 – Boleta digital sin errores** | Reducción de errores de facturación + mejora en precisión de ingresos | Errores frecuentes por anotación manual (sin cifra exacta) | 50% menos errores de facturación; 35% más precisión en ingresos | Comparación de boletas emitidas vs. conciliación bancaria; encuesta trimestral | Trimestral |
+
+**Métricas adicionales de producto (para monitoreo continuo):**
+
+| Métrica | Descripción | Línea base | Objetivo | Método |
+|----------|-------------|-------------|----------|---------|
+| **Tiempo de registro de un producto** | Tiempo transcurrido desde que el usuario abre el formulario hasta que guarda el producto | > 2 minutos (proceso manual) | < 30 segundos utilizando voz o escaneo | Tracing de eventos dentro de la aplicación |
+| **Tasa de adopción de funcionalidades clave** | Porcentaje de usuarios que utilizan voz, escaneo, geolocalización y predicción de stock | 0% | > 40% de adopción para cada funcionalidad | Segmentación por tipo de plan y análisis de eventos de uso |
+| **Net Promoter Score (NPS)** | Probabilidad de que los usuarios recomienden StockWise a otros negocios | No aplica | > 50 (nivel excelente) | Encuesta integrada en la aplicación después del primer mes de uso |
+| **Churn Rate (Tasa de abandono)** | Porcentaje de usuarios que dejan de utilizar la aplicación después de 30 días | No aplica | < 10% | Seguimiento de la última sesión registrada y cancelaciones de cuenta |
+
 ### 8.2.4. Conditions
 Las condiciones describen los estados o grupos bajo los cuales se recopilará la evidencia en cada experimento. Para experimentos basados en creencias (*belief-led*), se distingue entre la condición experimental y la condición de control. Para experimentos exploratorios, se describen los límites o características del grupo estudiado.
 
