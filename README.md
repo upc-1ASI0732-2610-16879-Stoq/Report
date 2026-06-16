@@ -186,6 +186,12 @@
       - [6.2.1.1. .Coding standard \& Code conventions](#6211-coding-standard--code-conventions)
       - [6.2.1.2. Code Quality \& Code Security.](#6212-code-quality--code-security)
     - [6.2.2. Reviews](#622-reviews)
+  - [6.2.2. Reviews](#622-reviews-1)
+    - [Peer Code Reviews](#peer-code-reviews)
+    - [Sprint Reviews](#sprint-reviews)
+    - [Design \& Architecture Reviews](#design--architecture-reviews)
+    - [Quality Assurance Reviews](#quality-assurance-reviews)
+    - [Resultado de las revisiones](#resultado-de-las-revisiones)
   - [6.3. Validation Interviews.](#63-validation-interviews)
     - [6.3.1. Diseño de Entrevistas.](#631-diseño-de-entrevistas)
     - [6.3.2. Registro de Entrevistas.](#632-registro-de-entrevistas)
@@ -212,6 +218,25 @@
       - [6.4.2.1. Información del grupo auditor.](#6421-información-del-grupo-auditor)
       - [6.4.2.2. Cronograma de auditoría recibida.](#6422-cronograma-de-auditoría-recibida)
       - [6.4.2.3. Contenido de auditoría recibida.](#6423-contenido-de-auditoría-recibida)
+      - [Hallazgo H-01](#hallazgo-h-01-1)
+      - [Hallazgo H-02](#hallazgo-h-02-1)
+      - [Hallazgo H-03](#hallazgo-h-03-1)
+      - [Hallazgo H-04](#hallazgo-h-04-1)
+      - [Hallazgo H-05](#hallazgo-h-05-1)
+      - [Hallazgo H-06](#hallazgo-h-06-1)
+      - [Hallazgo H-07](#hallazgo-h-07-1)
+      - [Hallazgo H-08](#hallazgo-h-08-1)
+      - [Hallazgo H-09](#hallazgo-h-09-1)
+      - [Hallazgo H-10](#hallazgo-h-10)
+      - [Hallazgo H-11](#hallazgo-h-11)
+      - [Hallazgo H-12](#hallazgo-h-12)
+      - [Hallazgo H-13](#hallazgo-h-13)
+      - [Hallazgo H-14](#hallazgo-h-14)
+      - [Hallazgo H-15](#hallazgo-h-15)
+      - [Hallazgo H-16](#hallazgo-h-16)
+      - [Hallazgo H-17](#hallazgo-h-17)
+      - [Hallazgo H-18](#hallazgo-h-18)
+      - [Hallazgo H-19](#hallazgo-h-19)
       - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos.](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
 - [Capitulo VII: DevOps Practices](#capitulo-vii-devops-practices)
   - [7.1. Continuous Integration](#71-continuous-integration)
@@ -1140,6 +1165,145 @@ También puede eliminar una alerta específica luego de una confirmación emerge
 | 1  | - **Nombre:** Alexander Miranda Vivanco <br> - **Edad:** 27 años | Alexander posee un emprendimiento de venta de artículos para mascotas. Durante la entrevista reconoció que StockWise le sería de mucha ayuda por la logística del inventario. Las métricas del dashboard le parecieron idóneas. Sugirió facilitar el flujo de cuando se crea un producto y se agrega una reposición. Asimismo, comentó que le sería de mucha utlidad generar reportes acerca de aquellos productos que se hayan vencido. También especificó que poder agregar etiquetas personalizables sería adecuado y recomendó implementar una mejor lógica respecto a la reposición del stock. | ![Entrevista 1 - Startups y emprendedores en expansión con necesidades logísticas](./assets/Chapter-6/entrevista-Alexander-Miranda.png) <br> <a href="https://drive.google.com/file/d/14zPKDtkD_IFM2UjiPwRLCzG2cnPtis6E/view?usp=sharing">Validation Interview Alexander</a> |
 
 ### 6.3.3. Evaluaciones segun heuristicas.
+
+
+**TAREAS A EVALUAR:**
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+1. Navegación entre módulos del dashboard (Inicio, Inventario, Proveedores, etc.)
+2. Creación de un Kit de productos
+3. Búsqueda y filtrado en la sección de Proveedores
+4. Gestión de usuarios
+5. Generación de reportes avanzados
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+1. Registro de nuevo usuario
+2. Proceso de pago
+3. Integraciones con APIs
+
+---
+
+**ESCALA DE SEVERIDAD:**
+
+| Nivel | Descripción |
+|-------|-------------|
+| 1     | Problema superficial: puede ser fácilmente superado por el usuario ó ocurre con muy poco frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2     | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3     | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4     | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+
+
+**TABLA RESUMEN:**
+
+| # | Problema                                                                                             | Escala de severidad | Heurística/Principio violada(o)                            |
+|---|------------------------------------------------------------------------------------------------------|---------------------|-------------------------------------------------------------|
+| 1 | Duplicidad redundante de alertas de stock en la vista general del Dashboard | 2                   | Consistencia y estándares / Reducción de carga cognitiva               |
+| 2 | Inoperancia total de la búsqueda y el botón "Filtrar" en el módulo de Proveedores | 3                   | Retroalimentación del sistema / Flexibilidad y eficiencia                            |
+| 3 | Falta de responsividad y superposición de textos en el contenedor lateral de Kits | 3                   | Diseño estético y minimalista                    |
+| 4 | Bloqueo funcional en el menú de acciones de la tabla de Inventario | 4                   | Control y libertad del usuario |
+| 5 | Permisión de sobreventa de Kits sin stock e insuficiencia en la gestión de errores | 4                   | Prevención de errores / Recuperación ante errores |        
+
+
+**Detalle de hallazgos**
+- **Hallazgo H-01**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Tarea evaluada** | Visualización de alertas en el Dashboard |
+| **Ubicación** | Dashboard general - Icono de notificaciones (Campana superior) |
+| **Problema identificado** | Duplicidad redundante de alertas de stock en la misma pantalla |
+| **Severidad** | 2 |
+| **Heurística vulnerada** | Consistencia y estándares / Diseño estético y minimalista |
+| **Descripción** | Al hacer clic en el icono de la campana en la barra superior, el panel flotante de notificaciones se despliega directamente sobre una vista principal que ya tiene como único propósito listar de forma idéntica las alertas de *"Producto a agotarse"* y *"Producto pronto a caducar"*. |
+| **Impacto para el usuario** | Genera ruido visual innecesario y redundancia de datos. Al presentarse la misma información en dos capas superpuestas, se satura la interfaz y se sobrecarga cognitivamente al usuario sin aportar valor real. |
+| **Recomendación** | Implementar una validación de ruta: si el usuario ya se encuentra dentro de la sección principal de notificaciones/alertas, el dropdown de la campana superior debe desactivarse o simplemente no abrirse al hacer clic, quedando como un indicador visual estático. |
+
+**Evidencia**
+*Figura 1. Menú desplegable de notificaciones duplicando la información de la sección de fondo.*
+
+<img src="./assets/Chapter-6/ev-heuristica2.png" alt="Figura 1 - Hallazgo H-01" width="250px">
+
+
+- **Hallazgo H-02**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Tarea evaluada** | Búsqueda y filtrado de proveedores |
+| **Ubicación** | Módulo de Proveedores - Barra de herramientas superior |
+| **Problema identificado** | Inoperancia funcional de la barra de búsqueda y el botón "Filtrar" |
+| **Severidad** | 3 |
+| **Heurística vulnerada** | Retroalimentación del sistema / Flexibilidad y eficiencia de uso |
+| **Descripción** | Los componentes de interacción en la sección de Proveedores (el campo de texto para buscar y el botón *"Filtrar"*) actúan visualmente como elementos interactivos. Sin embargo, al ingresar datos o hacer clic en ellos, la tabla de registros permanece estática sin procesar el filtro ni emitir señales de carga. |
+| **Impacto para el usuario** | Alta frustración y sensación de que la plataforma está rota. Si el volumen de proveedores crece, la incapacidad de buscar o filtrar obliga al escaneo manual, rompiendo la eficiencia del flujo de trabajo. |
+| **Recomendación** | Conectar el valor del `<input>` a un filtro reactivo en el frontend o disparar la petición correspondiente al backend. Si la opción avanzada de "Filtrar" aún no está desarrollada, se debe deshabilitar el botón visualmente y añadir un *tooltip* informativo: *"Función en desarrollo"*. |
+
+**Evidencia**
+
+![Figura 2 - Hallazgo H-02](./assets/Chapter-6/ev-heuristica3.png)
+
+*Figura 2. Módulo de proveedores con controles de búsqueda y filtrado inactivos.*
+
+
+- **Hallazgo H-03**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Tarea evaluada** | Visualización de Kits estructurados |
+| **Ubicación** | Barra lateral derecha - Panel de visualización de Kits |
+| **Problema identificado** | Falta de responsividad y superposición de textos (*overlapping*) |
+| **Severidad** | 3 |
+| **Heurística vulnerada** | Diseño estético y minimalista (Visual UI Bug) |
+| **Descripción** | En la tarjeta de detalle de los componentes del kit (ej. *"Pack Galletas Deli"*), las cajas de texto no se adaptan correctamente al ancho reducido de la barra lateral. Esto ocasiona que los nombres largos de los productos colisionen y se encimen sobre las etiquetas de *"Precio unitario"* y *"Total"*. |
+| **Impacto para el usuario** | Perjudica gravemente la legibilidad de los costos de cada ítem del kit, lo que puede inducir a errores de cálculo visuales por parte del usuario y proyecta un acabado descuidado de la interfaz. |
+| **Recomendación** | Modificar las reglas CSS del contenedor interno del ítem. Se sugiere aplicar una propiedad flex-direction en columna (`flex-direction: column`) cuando el espacio sea estrecho para situar los precios debajo del nombre, o aplicar un límite de ancho con truncamiento de texto (`text-overflow: ellipsis`). |
+
+**Evidencia**
+
+<img src="./assets/Chapter-6/ev-heuristica4.png" alt="Figura 1 - Hallazgo H-03" width="250px">
+
+
+*Figura 3. Superposición visual de textos y precios en el bloque del Kit.*
+
+
+- **Hallazgo H-04**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Tarea evaluada** | Gestión y edición de existencias del inventario |
+| **Ubicación** | Módulo de Inventario - Tabla de Productos (Columna Acciones) |
+| **Problema identificado** | Bloqueo funcional total al seleccionar las opciones del menú de acciones |
+| **Severidad** | 4 |
+| **Heurística vulnerada** | Control y libertad del usuario |
+| **Descripción** | Al interactuar con el botón de tres puntos en la fila de cualquier producto, el menú contextual se despliega de manera correcta mostrando las acciones de *"Ver detalle"*, *"Editar"* y *"Eliminar"*. No obstante, al hacer clic sobre cualquiera de las opciones, el sistema las ignora por completo y no ejecuta ninguna acción. |
+| **Impacto para el usuario** | Bloqueo crítico del flujo de administración. El usuario pierde el control y la libertad sobre los datos del inventario, viéndose imposibilitado de actualizar precios, corregir datos o eliminar ítems obsoletos. |
+| **Recomendación** | Verificar que las opciones del menú tengan correctamente enlazados sus manejadores de eventos (`onClick`). Adicionalmente, revisar que no exista un conflicto de capas (`z-index`) que coloque el menú detrás de una capa invisible, impidiendo registrar la pulsación del ratón. |
+
+**Evidencia**
+
+![Figura 4 - Hallazgo H-04](./assets/Chapter-6/ev-heuristica5.png)
+
+*Figura 4. Menú de acciones desplegado pero inoperante al clic.*
+
+
+ - **Hallazgo H-05**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Tarea evaluada** | Control de flujo de existencias y registro de ventas |
+| **Ubicación** | Módulo de Gestión de Ventas - Borrador de salida de productos |
+| **Problema identificado** | Permisión de sobreventa de Kits sin stock disponible y manejo de error genérico |
+| **Severidad** | 4 |
+| **Heurística vulnerada** | Prevención de errores / Ayuda a reconocer y recuperarse de errores |
+| **Descripción** | El selector del borrador de salida permite añadir cantidades ilimitadas de un kit (ej. 14 unidades de *"Combo gaseosas"*), ignorando que los productos que lo componen individualmente tienen stock en cero en la tabla izquierda. Al intentar *"Guardar"*, el sistema procesa la solicitud inválida y arroja un banner de error genérico: *"Error al guardar la venta. Por favor, intente nuevamente"*. |
+| **Impacto para el usuario** | Muy grave. Permite la venta ficticia de productos inexistentes y desorienta al usuario con un mensaje de error que sugiere un problema del servidor en lugar de explicar la causa real (falta de existencias). El usuario queda atrapado sin saber cómo corregir la acción. |
+| **Recomendación** | 1. **En Frontend:** Deshabilitar dinámicamente el botón `+` de incremento en el borrador si la cantidad del kit requiere más unidades de las disponibles en el stock real de cualquiera de sus componentes. <br>2. **En Mensajería:** Cambiar la respuesta del banner por un texto descriptivo: *"No se pudo registrar la venta: Stock insuficiente en los componentes del Kit"*. |
+
+**Evidencia**
+
+![Figura 5 - Hallazgo H-05](./assets/Chapter-6/ev-heuristica1.png)
+
+*Figura 5. Ventana de ventas mostrando el incremento desmedido de un kit sin stock y el consecuente banner de error genérico.*
+
 
 ## 6.4. Auditoria de Experiencias de Usuario.
 La auditoría de experiencias de usuario fue llevada a cabo con el objetivo de obtener retroalimentación externa sobre la calidad de la interfaz y la arquitectura de información de StockWise, así como de brindar retroalimentación a otro equipo de trabajo. El proceso contempló dos dimensiones: la auditoría realizada a un grupo externo y la auditoría recibida por parte de otro grupo evaluador.
