@@ -992,7 +992,11 @@ La condición experimental busca obtener evidencia a favor de la hipótesis alte
 | :--- | :--- |
 | **Exploratoria** | Se observa a todos los usuarios que se registraron con el plan gratuito de StockWise durante el período de 60 días. No se aplica ninguna intervención; el objetivo es describir el comportamiento natural de conversión bajo el modelo freemium actual.<br><br>**Límite del grupo:** Usuarios activos (al menos una sesión por semana) con plan gratuito en el período de observación. |
 
-### 8.2.5. Scale Calculations and Decisions
+### 8.2.5. Scale Calculations and Decisions 
+
+Para el diseño de los experimentos de StockWise, la determinación de la cantidad de evidencia (tamaño de la muestra y duración) se fundamenta en un equilibrio estadístico riguroso entre la Certeza y la Precisión. Esto asegura que las métricas obtenidas tras la interacción de los usuarios (dueños de bodegas y startups) con el software sean confiables para la toma de decisiones tecnológicas y de negocio, y no el resultado de fluctuaciones aleatorias. 
+
+
 
 ### 8.2.6. Methods Selection
 
