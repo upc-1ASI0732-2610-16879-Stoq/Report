@@ -220,10 +220,14 @@
     - [7.2.2. Stages Deployment Pipeline Components](#722-stages-deployment-pipeline-components)
   - [7.3. Continuous deployment](#73-continuous-deployment)
     - [7.3.1. Tools and Practices](#731-tools-and-practices)
+      - [Herramientas](#herramientas)
       - [Recomendaciones](#recomendaciones)
       - [Consideraciones adicionales](#consideraciones-adicionales)
     - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
-- [Conclusiones](#conclusiones)
+  - [7.4. Continuous Monitoring](#74-continuous-monitoring)
+    - [7.4.1. Tools and Practices](#741-tools-and-practices)
+    - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
+    - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
 - [Recomendaciones](#recomendaciones-1)
 - [Bibliografia](#bibliografia)
 - [Anexos](#anexos)
@@ -4609,6 +4613,8 @@ Los cambios de mayor prioridad (severidad 3 o 4) fueron atendidos en su totalida
 # Capitulo VII: DevOps Practices
 
 ## 7.1. Continuous Integration
+En StockWise, la Integración Continua se implementa como un proceso automatizado para salvaguardar la integridad del código fuente a lo largo del ciclo de desarrollo. Esta práctica asegura que cada propuesta de cambio o nueva funcionalidad sea verificada en sintaxis, compilaciónñ así como una suite exhaustiva de pruebas antes de su incorporación definitiva.A continuación, se detallan las herramientas, las convenciones de trabajo y la estructura técnica del pipeline diseñado bajo GitHub Actions para dar soporte a esta estrategia.
+
 
 ### 7.1.1. Tools and Practices
 
@@ -4656,7 +4662,7 @@ Prácticas aplicadas:
 
 ### 7.1.2. Build & Test Suite Pipeline Components
 
-Nuestro objetivo es Compilar el backend y validar automáticamente que los cambios superen todas las pruebas (Unit, Integration, BDD) antes de permitir un merge o despliegue.
+Nuestro objetivo es compilar el backend y validar automáticamente que los cambios superen todas las pruebas (Unit, Integration, BDD) antes de permitir un merge o despliegue.
 
 **Activadores (on):** `push` y `pull_request` en ramas `feature/*`, `develop` y `testing`.
 
@@ -4750,6 +4756,13 @@ Las etapas implementadas fueron las siguientes:
 ### 7.3.1. Tools and Practices
 El proceso de Continuous Deployment (CD) automático hacia producción únicamente deberá habilitarse cuando la suite de pruebas y los *smoke scenarios* presenten un nivel adecuado de robustez, confiabilidad y cobertura.
 
+#### Herramientas
+
+- GitHub será utilizado como repositorio central de código fuente y gestión de versiones.
+- Jenkins será utilizado para la automatización y orquestación de los pipelines de CI/CD.
+- La plataforma de despliegue podrá ser Railway, Azure u otra infraestructura definida por el proyecto.
+- Las herramientas de monitoreo y observabilidad deberán proporcionar métricas, logs y alertas para supervisar el estado de la aplicación después de cada despliegue.
+
 #### Recomendaciones
 
 - No habilitar despliegues automáticos hacia producción sin mecanismos de control adicionales, tales como:
@@ -4757,12 +4770,16 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
   - estrategias de *feature flags*,
   - validaciones previas obligatorias.
 
+- La rama `main` deberá representar en todo momento una versión estable y desplegable de la aplicación.
+
 - En caso de habilitar CD automático:
-  - la rama `main` deberá ejecutar un workflow automatizado responsable de:
+  - la rama `main` deberá activar un pipeline automatizado responsable de:
     1. construir la aplicación,
     2. ejecutar pruebas Unit, Integration y Specs,
     3. generar y publicar artefactos,
-    4. y realizar el despliegue automático hacia la plataforma objetivo (por ejemplo, Railway o Azure).
+    4. desplegar automáticamente la aplicación hacia la plataforma objetivo.
+
+- Los artefactos generados durante el proceso de construcción deberán almacenarse y versionarse para garantizar la reproducibilidad de los despliegues.
 
 - El pipeline de despliegue deberá incluir mecanismos de rollback automático:
   - ante la detección de fallos en los *smoke tests* posteriores al despliegue,
@@ -4772,6 +4789,8 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
 
 - Todo despliegue a producción deberá generar trazabilidad mediante logs, métricas y registros de auditoría.
 - Se recomienda integrar monitoreo continuo y alertas automáticas para detectar degradaciones funcionales o de rendimiento posteriores al despliegue.
+- Los resultados de las ejecuciones del pipeline deberán mantenerse disponibles para facilitar auditorías, diagnósticos y análisis posteriores.
+- Se recomienda utilizar estrategias de despliegue progresivo (*rolling*, *blue-green* o *canary deployments*) cuando la criticidad del sistema lo requiera.
 
 ### 7.3.2. Production Deployment Pipeline Components
 
@@ -4779,14 +4798,15 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
 - **Build and compilation:** Vite, SWC (Speedy Web Compiler) y npm (Node Package Manager)
 - **Artifact repository:** npm Public Registry (Registro público de npm) 
 
+## 7.4. Continuous Monitoring
 
-<div style="page-break-after: always;"></div>
+### 7.4.1. Tools and Practices
 
-# Conclusiones
+### 7.4.2. Monitoring Pipeline Components
 
 El informe consolida el ciclo de vida de StockWise como solución SaaS orientada a pymes, startups y bodegas que hoy dependen de registros manuales o herramientas poco especializadas. La evidencia documentada (Lean UX, entrevistas, needfinding y especificación con user stories, backlog e impact mapping) muestra que el problema no es solo “falta de software”, sino falta de trazabilidad, consistencia de datos y visibilidad en tiempo real, lo que se traduce en quiebres de stock, sobrecostos y decisiones de compra poco informadas.
 
-En términos de diseño e implementación, el trabajo demuestra que es viable abordar el dominio con arquitectura y modelado centrados en el negocio (contextos delimitados, diseño orientado a objetos y modelo de datos), complementados con experiencias diferenciadas en web y móvil y una API REST que actúa como contrato estable entre capas. La planificación por sprints y la entrega de evidencias (landing, frontends, app móvil nativa, backend y documentación de API) reflejan un producto coherente con la propuesta de valor: digitalizar inventario, ventas y alertas sin exigir al usuario una curva de adopción propia de un ERP tradicional.
+### 7.4.4. Notification Pipeline Components
 
 La verificación y validación aportan un cierre técnico sólido: las pruebas unitarias e de integración garantizan la estabilidad del núcleo del dominio, mientras que el enfoque BDD con Gherkin conecta explícitamente los requisitos con el comportamiento observable. Asimismo, la incorporación del análisis estático de código eleva los estándares de mantenibilidad y seguridad, complementándose con validaciones heurísticas de usabilidad y auditorías de experiencia de usuario —tanto realizadas como recibidas— que aseguran un producto final intuitivo, robusto y centrado en el cliente.
 
