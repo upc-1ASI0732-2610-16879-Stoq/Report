@@ -29,7 +29,7 @@
         U202313773 - Fabiola Del Rocio Saldaña Ayalan <br>
         U20221B778 - Roy Linsh Fernandez Remon  <br>
     </p>
-    <p><em>Mayo, 2026</em></p>
+    <p><em>Junio, 2026</em></p>
 </div>
 
 <br>
@@ -42,7 +42,7 @@
 | Version | Fecha | Autor | Descripcion de modificaciones |
 |---|---|---|---|
 | TP  |11/05/2026  | - Luciana Carolina Choquehuanca Nuñez <br> - Ronald Joel Peralta Chipa <br> - Sanchez Rios, Camila Cristina <br> - Fabiola Del Rocio Saldaña Ayalan <br> - Roy Linsh Fernandez Remon  <br> | Capitulo I: Introduccion <br> Capitulo II: Requirements Elicitation & Analysis <br> Capítulo III: Requirements Specification <br> Capítulo IV: Product Design <br> Capítulo V: Product Implementation<br> Capítulo VI: Product Verification & Validation <br> Capítulo VII: DevOps Practices     |
-| TB2  |15/06/2026  | - Luciana Carolina Choquehuanca Nuñez <br> - Ronald Joel Peralta Chipa <br> - Sanchez Rios, Camila Cristina <br> - Fabiola Del Rocio Saldaña Ayalan <br> - Roy Linsh Fernandez Remon  <br> | Capítulo VI: Product Verification & Validation <br> Capítulo VII: DevOps Practices <br> Capítulo VIII: Experiment-Driven    |
+| AV2  |15/06/2026  | - Luciana Carolina Choquehuanca Nuñez <br> - Ronald Joel Peralta Chipa <br> - Sanchez Rios, Camila Cristina <br> - Fabiola Del Rocio Saldaña Ayalan <br> - Roy Linsh Fernandez Remon  <br> | Capítulo VI: Product Verification & Validation <br> Capítulo VII: DevOps Practices <br> Capítulo VIII: Experiment-Driven    |
 
 <div style="page-break-after: always;"></div>
 
@@ -72,9 +72,6 @@
   - [2.1. Competidores](#21-competidores)
     - [2.1.1. Analisis competitivo](#211-analisis-competitivo)
     - [2.1.2. Estrategias y tacticas frente a competidores](#212-estrategias-y-tacticas-frente-a-competidores)
-      - [Estrategias Generales de Posicionamiento](#estrategias-generales-de-posicionamiento)
-      - [Estrategias Ofensivas frente a Competidores](#estrategias-ofensivas-frente-a-competidores)
-      - [Estrategias Defensivas](#estrategias-defensivas)
   - [2.2. Entrevistas](#22-entrevistas)
     - [2.2.1. Diseno de entrevistas](#221-diseno-de-entrevistas)
     - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
@@ -101,7 +98,6 @@
       - [4.1.3.2. Android Mobile Style Guidelines](#4132-android-mobile-style-guidelines)
   - [4.2. Information Architecture](#42-information-architecture)
     - [4.2.1. Organization Systems](#421-organization-systems)
-      - [Organization Systems](#organization-systems)
     - [4.2.2. Labeling Systems](#422-labeling-systems)
     - [4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
     - [4.2.4. Searching Systems](#424-searching-systems)
@@ -119,12 +115,8 @@
     - [4.5.2. iOS Mobile Applications Prototyping](#452-ios-mobile-applications-prototyping)
   - [4.6. Web Applications UX/UI Design](#46-web-applications-uxui-design)
     - [4.6.2. Web Applications Wireflow Diagrams](#462-web-applications-wireflow-diagrams)
-    - [User Goal: “Crear cuenta e ingresar a la aplicación”](#user-goal-crear-cuenta-e-ingresar-a-la-aplicación)
-    - [User Goal: “Crear un nuevo rol para el personal”](#user-goal-crear-un-nuevo-rol-para-el-personal)
     - [4.6.3. Web Applications Mock-ups](#463-web-applications-mock-ups)
     - [4.6.4. Web Applications User Flow Diagrams](#464-web-applications-user-flow-diagrams)
-    - [User Goal: “Registrar salida de productos (venta/consumo/merma)”](#user-goal-registrar-salida-de-productos-ventaconsumomerma)
-    - [User Goal: “Gestionar inventario (ingresar reposición y crear producto)”](#user-goal-gestionar-inventario-ingresar-reposición-y-crear-producto)
   - [4.7. Web Applications Prototyping](#47-web-applications-prototyping)
   - [4.8. Domain-Driven Software Architecture](#48-domain-driven-software-architecture)
     - [4.8.1. Software Architecture Context Diagram](#481-software-architecture-context-diagram)
@@ -133,55 +125,22 @@
   - [4.9. Software Object-Oriented Design](#49-software-object-oriented-design)
     - [4.9.1. Class Diagrams](#491-class-diagrams)
     - [4.9.2. Class Dictionary](#492-class-dictionary)
-    - [IAM Context](#iam-context)
-    - [Product Management Context](#product-management-context)
-    - [Inventory Context](#inventory-context)
-    - [Sales Context](#sales-context)
-    - [Alert Stock Context](#alert-stock-context)
-    - [Reports Context](#reports-context)
   - [4.10. Database Design](#410-database-design)
     - [4.10.1. Relational/Non-Relational Database Diagram](#4101-relationalnon-relational-database-diagram)
 - [Capitulo V: Product Implementation](#capitulo-v-product-implementation)
   - [5.1. Software Configuration Management](#51-software-configuration-management)
     - [5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)
-      - [Software Deployment](#software-deployment)
     - [5.1.2. Source Code Management](#512-source-code-management)
-      - [GitFlow](#gitflow)
     - [5.1.3. Source Code Style Guide \& Conventions](#513-source-code-style-guide--conventions)
-      - [Mobile Development (UI \& Logic)](#mobile-development-ui--logic)
     - [5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)
-      - [Requisitos de Estructura](#requisitos-de-estructura)
-      - [Pasos para el Despliegue](#pasos-para-el-despliegue)
   - [5.2. Product Implementation \& Deployment](#52-product-implementation--deployment)
     - [5.2.1. Sprint Backlogs](#521-sprint-backlogs)
-    - [Sprint 1: Núcleo Móvil, APIs Base y Landing Page](#sprint-1-núcleo-móvil-apis-base-y-landing-page)
-    - [Sprint 2: Funcionalidades Avanzadas y Alertas](#sprint-2-funcionalidades-avanzadas-y-alertas)
-    - [Sprint 3: Integración de Hardware, Geolocalización y Cierre](#sprint-3-integración-de-hardware-geolocalización-y-cierre)
     - [5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
     - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)
     - [5.2.4. Acuerdo de Servicio - SaaS](#524-acuerdo-de-servicio---saas)
-      - [1. Definiciones](#1-definiciones)
-      - [2. Objeto del Acuerdo](#2-objeto-del-acuerdo)
-      - [3. Registro y Acceso](#3-registro-y-acceso)
-      - [4. Tarifas y Planes](#4-tarifas-y-planes)
-      - [5. Propiedad Intelectual](#5-propiedad-intelectual)
-      - [6. Uso Aceptable](#6-uso-aceptable)
-      - [7. Protección de Datos y Privacidad](#7-protección-de-datos-y-privacidad)
-      - [8. Disponibilidad del Servicio](#8-disponibilidad-del-servicio)
-      - [9. Limitación de Responsabilidad](#9-limitación-de-responsabilidad)
-      - [10. Modificaciones del Acuerdo](#10-modificaciones-del-acuerdo)
     - [5.2.5. Implemented Native-Mobile Application Evidence](#525-implemented-native-mobile-application-evidence)
     - [5.2.6. Implemented RESTful API and/or Serverless Backend Evidence](#526-implemented-restful-api-andor-serverless-backend-evidence)
     - [5.2.7. RESTful API documentation](#527-restful-api-documentation)
-      - [Authentication](#authentication)
-      - [Products](#products)
-      - [Combos](#combos)
-      - [Tags](#tags)
-      - [Units](#units)
-      - [Sales](#sales)
-      - [Inventory](#inventory)
-      - [StockAlert](#stockalert)
-      - [Report](#report)
     - [5.2.8. Team Collaboration Insights](#528-team-collaboration-insights)
   - [5.3. Video About-the-Product](#53-video-about-the-product)
 - [Part II: Verification, Validation \& Pipeline](#part-ii-verification-validation--pipeline)
@@ -196,7 +155,6 @@
       - [6.2.1.1. .Coding standard \& Code conventions](#6211-coding-standard--code-conventions)
       - [6.2.1.2. Code Quality \& Code Security.](#6212-code-quality--code-security)
     - [6.2.2. Reviews](#622-reviews)
-  - [6.2.2. Reviews](#622-reviews-1)
   - [6.3. Validation Interviews.](#63-validation-interviews)
     - [6.3.1. Diseño de Entrevistas.](#631-diseño-de-entrevistas)
     - [6.3.2. Registro de Entrevistas.](#632-registro-de-entrevistas)
@@ -220,15 +178,34 @@
     - [7.2.2. Stages Deployment Pipeline Components](#722-stages-deployment-pipeline-components)
   - [7.3. Continuous deployment](#73-continuous-deployment)
     - [7.3.1. Tools and Practices](#731-tools-and-practices)
-      - [Herramientas](#herramientas)
-      - [Recomendaciones](#recomendaciones)
-      - [Consideraciones adicionales](#consideraciones-adicionales)
     - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
   - [7.4. Continuous Monitoring](#74-continuous-monitoring)
     - [7.4.1. Tools and Practices](#741-tools-and-practices)
     - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
+    - [7.4.3. Alerting Pipeline Components](#743-alerting-pipeline-components)
     - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
-- [Recomendaciones](#recomendaciones-1)
+- [Part III: Experiment-Driven Lifecycle](#part-iii-experiment-driven-lifecycle)
+- [Capitulo VIII: Experiment-Driven Development](#capitulo-viii-experiment-driven-development)
+  - [8.1. Experiment Planning](#81-experiment-planning)
+    - [8.1.1. As-Is Summary](#811-as-is-summary)
+    - [8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims](#812-raw-material-assumptions-knowledge-gaps-ideas-claims)
+    - [8.1.3. Experiment-Ready Questions](#813-experiment-ready-questions)
+    - [8.1.4. Question Backlog](#814-question-backlog)
+    - [8.1.5. Experiment Cards](#815-experiment-cards)
+  - [8.2. Experiment Design](#82-experiment-design)
+    - [8.2.1. Hypotheses](#821-hypotheses)
+    - [8.2.2. Domain Business Metrics](#822-domain-business-metrics)
+    - [8.2.3. Measures](#823-measures)
+    - [8.2.4. Conditions](#824-conditions)
+    - [8.2.5. Scale Calculations and Decisions](#825-scale-calculations-and-decisions)
+    - [8.2.6. Methods Selection](#826-methods-selection)
+    - [8.2.7. Data Analytics: Goals, KPIs and Metrics Selection](#827-data-analytics-goals-kpis-and-metrics-selection)
+    - [8.2.8. Web and Mobile Tracking Plan](#828-web-and-mobile-tracking-plan)
+  - [8.3. Experimentation](#83-experimentation)
+    - [8.3.1. To-Be User Stories](#831-to-be-user-stories)
+    - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)
+- [Conclusiones](#conclusiones)
+- [Recomendaciones](#recomendaciones)
 - [Bibliografia](#bibliografia)
 - [Anexos](#anexos)
 
@@ -675,7 +652,7 @@ Además de definir los segmentos por criterios psicográficos, hemos incorporado
 
 ### 2.1.2. Estrategias y tacticas frente a competidores
 
-#### Estrategias Generales de Posicionamiento
+**Estrategias Generales de Posicionamiento**
 
 **1. Especialización en experiencia multidispositivo**
 
@@ -699,7 +676,7 @@ Además de definir los segmentos por criterios psicográficos, hemos incorporado
 - Implementar asistente inteligente para tareas complejas.
 - Diseñar plantillas preconfiguradas por tipo de negocio.
 
-#### Estrategias Ofensivas frente a Competidores
+**Estrategias Ofensivas frente a Competidores**
 
 **1. Contra Zoho Inventory**
 
@@ -734,7 +711,7 @@ Además de definir los segmentos por criterios psicográficos, hemos incorporado
 - Campañas dirigidas a retail tradicional con interés en digitalizarse.
 - Precios más accesibles para negocios mixtos.
 
-#### Estrategias Defensivas
+**Estrategias Defensivas**
 
 **1. Ante posible commoditización**
 
@@ -1845,7 +1822,7 @@ La arquitectura de la información, también conocida como Information Architect
 ### 4.2.1. Organization Systems
 La interfaz se divide en módulos bien definidos, accesibles desde un panel de navegación estructurado jerárquicamente. Estos módulos incluyen: Inicio, Home, Inventario y Configuración. Cada sección agrupa funciones específicas según su propósito, permitiendo que las tareas clave estén siempre al alcance del usuario.
 
-#### Organization Systems
+**Organization Systems**
 
 La arquitectura de organización de StockWise está diseñada siguiendo principios de agrupación lógica y progresiva de la información, permitiendo a los usuarios acceder rápidamente a las funciones necesarias según su rol y contexto de uso.
 
@@ -1864,13 +1841,13 @@ La arquitectura de organización de StockWise está diseñada siguiendo principi
 1. **Agrupación por Funcionalidad**
    Las características se organizan según su propósito común, facilitando la asociación mental y reduciendo la carga cognitiva.
 
-1. **Jerarquía Visual Progresiva**
+2. **Jerarquía Visual Progresiva**
    La información se presenta desde lo general hacia lo específico, permitiendo drill-down controlado según las necesidades del usuario.
 
-1. **Contextualización Dinámica**
+3. **Contextualización Dinámica**
    Las opciones disponibles se adaptan según el rol del usuario y el módulo activo, mostrando solo las funciones relevantes.
 
-1. **Consistencia Transversal**
+4. **Consistencia Transversal**
    Mismos patrones organizativos se aplican en todos los módulos, creando una experiencia unificada y predecible.
 
 **Organización de Contenido por Módulo**
@@ -2521,7 +2498,7 @@ A continuación, se presenta el enlace para visualizar el video de navegación d
 
  <img src="assets/Chapter-4/wireframes-web/flow1.png" alt="Wireflow 1" width="900px">
 
-### User Goal: “Crear cuenta e ingresar a la aplicación”
+**User Goal: “Crear cuenta e ingresar a la aplicación”**
 
 User persona: Empresa — Administrador
 **Happy path**
@@ -2542,7 +2519,7 @@ User persona: Empresa — Administrador
 
  <img src="assets/Chapter-4//wireframes-web/flow2.png" alt="Wireflow 2" width="900px">
 
-### User Goal: “Crear un nuevo rol para el personal”
+**User Goal: “Crear un nuevo rol para el personal”**
 
 User persona: Empresa — Administrador
 
@@ -2584,7 +2561,7 @@ User persona: Empresa — Administrador
 
  <img src="assets/Chapter-4/mockups-web/flowdiagram1.png" alt="Web Flow Diagram" width="800px">
 
-### User Goal: “Registrar salida de productos (venta/consumo/merma)”
+ **User Goal: “Registrar salida de productos (venta/consumo/merma)”**
 
 User persona: Tienda/Almacén — Operador(a)
 **Happy path**
@@ -2617,7 +2594,7 @@ User persona: Tienda/Almacén — Operador(a)
  <img src="assets/Chapter-4/mockups-web/flowdiagram4.png" alt="Web Flow Diagram" width="500px">
 
 
-### User Goal: “Gestionar inventario (ingresar reposición y crear producto)”
+ **User Goal: “Gestionar inventario (ingresar reposición y crear producto)”**
 
 User persona: Tienda/Almacén — Operador(a)
 
@@ -2698,7 +2675,7 @@ El presente diccionario de clases describe los principales elementos del diagram
 
 <br>
 
-### IAM Context
+**IAM Context**
 
 | Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
 |---|---|---|---|---|
@@ -2708,7 +2685,7 @@ El presente diccionario de clases describe los principales elementos del diagram
 | `IUserRepository` | Interface | Define las operaciones de acceso a datos para usuarios. | No aplica | `FindById(id)`, `FindByEmail(email)`, `Save(user)`, `Update(user)` |
 
 
-### Product Management Context
+ **Product Management Context**
 
 | Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
 |---|---|---|---|---|
@@ -2720,7 +2697,7 @@ El presente diccionario de clases describe los principales elementos del diagram
 | `IProductRepository` | Interface | Define las operaciones de persistencia para productos. | No aplica | `FindById(id)`, `FindAll()`, `Save(product)`, `Update(product)` |
 
 
-### Inventory Context
+ **Inventory Context**
 
 | Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
 |---|---|---|---|---|
@@ -2732,7 +2709,7 @@ El presente diccionario de clases describe los principales elementos del diagram
 | `IInventoryRepository` | Interface | Define las operaciones de acceso a datos para el inventario. | No aplica | `FindByProductId(productId)`, `SaveMovement(movement)`, `UpdateStock(item)`, `FindLowStock()` |
 
 
-### Sales Context
+ **Sales Context**
 
 | Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
 |---|---|---|---|---|
@@ -2743,7 +2720,7 @@ El presente diccionario de clases describe los principales elementos del diagram
 | `ISaleRepository` | Interface | Define las operaciones de persistencia para ventas. | No aplica | `FindById(id)`, `FindByDate(from, to)`, `Save(sale)` |
 
 
-### Alert Stock Context
+ **Alert Stock Context**
 
 | Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
 |---|---|---|---|---|
@@ -2753,7 +2730,7 @@ El presente diccionario de clases describe los principales elementos del diagram
 | `IAlertRepository` | Interface | Define las operaciones de persistencia para las alertas de stock. | No aplica | `FindPending()`, `Save(alert)`, `Update(alert)` |
 
 
-### Reports Context
+ **Reports Context**
 
 | Clase / Interfaz | Tipo | Descripción | Atributos principales | Métodos principales |
 |---|---|---|---|---|
@@ -2787,7 +2764,8 @@ En la siguiente sección se describe la ruta de referencia de cada uno de los pr
 * **CSS** Es el lenguaje de estilos que se utiliza para controlar la apariencia visual de la página.
 
 
-#### Software Deployment
+**Software Deployment**
+
 * **Git:** Herramienta de control de versiones que nos permitirá rastrear cambios, colaborar de manera eficiente y mantener un historial detallado de las modificaciones en el código fuente.
 * **GitHub:** Plataforma de alojamiento que facilitará la colaboración en equipo, la gestión de ramas, el seguimiento de issues y la integración continua (CI/CD).
 
@@ -2801,7 +2779,7 @@ El proyecto seguirá las convenciones de flujo de trabajo establecidas por el mo
 *   **Repositorio Mobil Applications:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/MobileAppMobileApp.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Frontend-Web-Applications)
 *   **Repositorio Web Applications:** [https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-FrontendWeb.git](https://github.com/upc-pre-202510-1asi0730-4366-AyniTech/Frontend-Web-Applications)
 
-#### GitFlow
+**GitFlow**
 
 **Estructura de branches (Ramas):**
 
@@ -2821,7 +2799,7 @@ Para los mensajes de los commits realizados, se utilizará la especificación **
 `git commit -m "<type>[optional scope]:<title>" -m"<description>"`
 
 ### 5.1.3. Source Code Style Guide & Conventions
-#### Mobile Development (UI & Logic)
+**Mobile Development (UI & Logic)**
 Para garantizar la mantenibilidad de la aplicación móvil, se seguirán las siguientes convenciones:
 
 * **Nomenclatura de Recursos:** Todos los archivos de recursos (iconos, layouts, drawables) deben utilizar `snake_case` (ej. `ic_back_button.xml`, `fragment_login.xml`).
@@ -2841,14 +2819,15 @@ Para garantizar la mantenibilidad de la aplicación móvil, se seguirán las sig
 ### 5.1.4. Software Deployment Configuration
 Para el despliegue de la Landing Page, es necesario contar con una cuenta de GitHub, una organización establecida y un repositorio dedicado. El proceso de despliegue se realizará aprovechando las capacidades de **GitHub Pages**. A continuación, se detallan los requisitos y pasos a seguir:
 
-#### Requisitos de Estructura
+**Requisitos de Estructura**
 Para un despliegue correcto, el repositorio debe mantener la siguiente estructura de archivos y nomenclaturas:
 * **index.html**: Archivo principal que contiene la estructura y contenido de la landing page.
 * **style.css**: Archivo que contiene las hojas de estilo del sitio.
 * **assets/**: Carpeta raíz para recursos multimedia.
     * **img/**: Subcarpeta dedicada exclusivamente a las imágenes del sitio.
 
-#### Pasos para el Despliegue
+**Pasos para el Despliegue**
+
 1. **Creación del Repositorio:** Crear un repositorio específico dentro de la organización de GitHub para alojar exclusivamente el código de la Landing Page.
 2. **Carga de Archivos:** Subir los archivos siguiendo la estructura mencionada anteriormente mediante un `commit` inicial a la rama principal.
 3. **Configuración de GitHub Pages:** 
@@ -2864,7 +2843,7 @@ Para un despliegue correcto, el repositorio debe mantener la siguiente estructur
 ### 5.2.1. Sprint Backlogs
 A continuación, se detallan los Sprint Backlogs trabajados a lo largo del desarrollo de la plataforma Stoq. La planificación abarca desde la configuración inicial y desarrollo del núcleo móvil, hasta la integración de funcionalidades avanzadas como geolocalización y escaneo por código de barras.
 
-### Sprint 1: Núcleo Móvil, APIs Base y Landing Page
+**Sprint 1: Núcleo Móvil, APIs Base y Landing Page**
 
 El objetivo de este primer sprint fue establecer la infraestructura base, desarrollar los servicios de autenticación y construir los módulos principales de gestión de inventario para la aplicación móvil.
 
@@ -2879,7 +2858,7 @@ El objetivo de este primer sprint fue establecer la infraestructura base, desarr
 
 
 
-### Sprint 2: Funcionalidades Avanzadas y Alertas
+**Sprint 2: Funcionalidades Avanzadas y Alertas**
 
 Durante este sprint, el equipo se enfocó en optimizar el flujo de inventario, integrando sistemas de alertas tempranas, gestión de roles y la exploración de comandos por voz.
 
@@ -2894,7 +2873,7 @@ Durante este sprint, el equipo se enfocó en optimizar el flujo de inventario, i
 | SPK01 | Innovación UX | TSK-31 | Entrada por Voz (Spike) | Prototipo de integración Speech-to-Text para comandos básicos de inventario. | 6 | Luciana Choquehuanca | In-Process |
 | US01 | Gestión de Productos (Web) | TSK-W03 | Web Inventory CRUD | Desarrollo de las tablas de gestión de productos (Crear, Editar, Listar) en la versión Web. | 7 | Fabiola Saldaña | Done |
 
-### Sprint 3: Integración de Hardware, Geolocalización y Cierre
+**Sprint 3: Integración de Hardware, Geolocalización y Cierre**
 
 El último sprint culminó el desarrollo con el acceso al dispositivo (GPS), mejoras de seguridad y las pruebas integrales y unitarias de calidad.
 
@@ -2926,7 +2905,7 @@ El presente Acuerdo de Servicio regula los términos y condiciones bajo los cual
 
 Este acuerdo se incorpora como parte integral de los "Términos y Condiciones" disponibles en el sitio web oficial de Stoq, y su aceptación es obligatoria para completar el registro y uso de las aplicaciones web y móviles.
 
-#### 1. Definiciones
+1. Definiciones
 "Plataforma": Ecosistema compuesto por la aplicación móvil (Kotlin/Flutter), el dashboard web y el backend operado por el equipo de desarrollo de Stoq.
 
 "Usuario": Persona natural o jurídica que accede a la plataforma en calidad de Administrador o Empleado.
@@ -2937,27 +2916,27 @@ Este acuerdo se incorpora como parte integral de los "Términos y Condiciones" d
 
 "Plan": Modalidad de suscripción (Freemium o Premium) que determina las funcionalidades activas y límites de registros.
 
-#### 2. Objeto del Acuerdo
+2. Objeto del Acuerdo
 Stoq concede al usuario una licencia limitada, no exclusiva, intransferible y revocable para utilizar la plataforma exclusivamente con fines de gestión operativa de inventarios, logística y administración de ventas internas.
 
-#### 3. Registro y Acceso
+3. Registro y Acceso
 El uso de la plataforma requiere la creación de una cuenta mediante el formulario de registro oficial.
 
 Cada usuario es responsable de la confidencialidad de sus credenciales (correo y contraseña) y del uso que se realice bajo su sesión.
 
 Stoq se reserva el derecho de suspender o eliminar cuentas que realicen actividades fraudulentas o infrinjan la integridad del sistema.
 
-#### 4. Tarifas y Planes
+4. Tarifas y Planes
 La plataforma opera bajo un modelo de suscripción SaaS. El Plan Premium permite el acceso a funciones avanzadas como el escaneo por código de barras, geolocalización de sedes y reportes de analítica profunda.
 
 Las suscripciones se renuevan automáticamente al finalizar el periodo contratado, a menos que el usuario gestione la cancelación antes del vencimiento.
 
 Ante el impago del servicio, Stoq se reserva el derecho de restringir el acceso a las funciones premium, manteniendo la cuenta en modo de consulta o bajo las limitaciones del plan gratuito.
 
-#### 5. Propiedad Intelectual
+5. Propiedad Intelectual
 Todos los derechos sobre la plataforma, incluyendo código fuente (Backend, Web y Mobile), diseño de interfaces (UI), marcas y algoritmos de predicción pertenecen exclusivamente al equipo de desarrollo de Stoq.
 
-#### 6. Uso Aceptable
+6. Uso Aceptable
 Queda expresamente prohibido:
 
 - Manipular el código fuente o intentar realizar ingeniería inversa sobre las aplicaciones.
@@ -2966,7 +2945,7 @@ Queda expresamente prohibido:
 
 - Interferir con la operación técnica de los Web Services o realizar ataques de denegación de servicio.
 
-#### 7. Protección de Datos y Privacidad
+7. Protección de Datos y Privacidad
 Stoq garantiza el cumplimiento estricto de la Ley N.º 29733 - Ley de Protección de Datos Personales del Perú.
 
 Los datos de inventario y personales serán tratados únicamente para fines operativos y estadísticos de la plataforma.
@@ -2975,13 +2954,13 @@ Los usuarios tienen derecho a acceder, rectificar o suprimir sus datos mediante 
 
 Se emplean medidas de seguridad técnicas (encriptación y tokens JWT) para proteger la información almacenada.
 
-#### 8. Disponibilidad del Servicio
+8. Disponibilidad del Servicio
 Stoq busca mantener una alta disponibilidad del servicio (99.5%). No obstante, el acceso puede interrumpirse temporalmente por mantenimientos programados o fallas en servicios de terceros (hosting/nube).
 
-#### 9. Limitación de Responsabilidad
+9. Limitación de Responsabilidad
 Stoq no se responsabiliza por errores en el conteo físico de productos, decisiones financieras basadas en los reportes generados o pérdidas de mercadería derivadas de un mal uso de la plataforma por parte del usuario.
 
-#### 10. Modificaciones del Acuerdo
+10. Modificaciones del Acuerdo
 Stoq podrá actualizar este acuerdo para reflejar nuevas funcionalidades o cambios legales. Se notificará a los usuarios con al menos 5 días de anticipación a través de la aplicación o correo electrónico registrado.
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
@@ -3003,7 +2982,7 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 
 ---
 
-#### Authentication
+**Authentication**
 *Gestión de autenticación y roles de usuario.*
 
 | Método | Endpoint | Descripción |
@@ -3014,7 +2993,7 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 
 ---
 
-#### Products
+**Products**
 *Puntos de acceso disponibles para la gestión de productos.*
 
 | Método | Endpoint | Descripción |
@@ -3027,7 +3006,7 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 
 ---
 
-#### Combos
+ **Combos**
 *Puntos de acceso disponibles para la gestión de combos (kits).*
 
 | Método | Endpoint | Descripción |
@@ -3038,7 +3017,7 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 
 ---
 
-#### Tags
+ **Tags**
 *Puntos de acceso para la gestión de etiquetas.*
 
 | Método | Endpoint | Descripción |
@@ -3047,7 +3026,7 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 
 ---
 
-#### Units
+ **Units**
 *Puntos de acceso para la gestión de unidades de medida.*
 
 | Método | Endpoint | Descripción |
@@ -3056,7 +3035,7 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 
 ---
 
-#### Sales
+ **Sales**
 *Operaciones de ventas con integración automática de inventario y reportes.*
 
 | Método | Endpoint | Descripción |
@@ -3067,7 +3046,7 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 
 ---
 
-#### Inventory
+ **Inventory**
 *Operaciones del inventario general, por producto y por lote.*
 
 | Método | Endpoint | Descripción |
@@ -3084,7 +3063,7 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 
 ---
 
-#### StockAlert
+ **StockAlert**
 *Gestión de alertas de stock y nivel de inventario.*
 
 | Método | Endpoint | Descripción |
@@ -3095,7 +3074,7 @@ La documentación de la API RESTful fue generada mediante **Swagger / OpenAPI**,
 
 ---
 
-#### Report
+ **Report**
 *Puntos de acceso disponibles para la gestión de reportes de categoría y de stock promedio.*
 
 | Método | Endpoint | Descripción |
@@ -3405,7 +3384,6 @@ A pesar de su naturaleza informativa, la landing page se rige por estándares de
 - Aislamiento: Configuración hermética de variables de entorno para evitar la filtración accidental de URLs o credenciales de desarrollo en el build de producción.
 
 ### 6.2.2. Reviews
-## 6.2.2. Reviews
 
 Durante el desarrollo del sistema **NorthEye**, se realizaron revisiones continuas del producto con el objetivo de asegurar la calidad del código, validar el cumplimiento de los requerimientos funcionales y no funcionales, y detectar de manera temprana posibles errores de diseño, implementación o integración.
 
@@ -4756,14 +4734,14 @@ Las etapas implementadas fueron las siguientes:
 ### 7.3.1. Tools and Practices
 El proceso de Continuous Deployment (CD) automático hacia producción únicamente deberá habilitarse cuando la suite de pruebas y los *smoke scenarios* presenten un nivel adecuado de robustez, confiabilidad y cobertura.
 
-#### Herramientas
+**Herramientas**
 
 - GitHub será utilizado como repositorio central de código fuente y gestión de versiones.
 - Jenkins será utilizado para la automatización y orquestación de los pipelines de CI/CD.
 - La plataforma de despliegue podrá ser Railway, Azure u otra infraestructura definida por el proyecto.
 - Las herramientas de monitoreo y observabilidad deberán proporcionar métricas, logs y alertas para supervisar el estado de la aplicación después de cada despliegue.
 
-#### Recomendaciones
+**Recomendaciones**
 
 - No habilitar despliegues automáticos hacia producción sin mecanismos de control adicionales, tales como:
   - aprobación humana (*approval gate*),
@@ -4785,7 +4763,7 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
   - ante la detección de fallos en los *smoke tests* posteriores al despliegue,
   - el sistema deberá revertir automáticamente a la última versión estable disponible.
 
-#### Consideraciones adicionales
+ **Consideraciones adicionales**
 
 - Todo despliegue a producción deberá generar trazabilidad mediante logs, métricas y registros de auditoría.
 - Se recomienda integrar monitoreo continuo y alertas automáticas para detectar degradaciones funcionales o de rendimiento posteriores al despliegue.
@@ -4801,12 +4779,1009 @@ El proceso de Continuous Deployment (CD) automático hacia producción únicamen
 ## 7.4. Continuous Monitoring
 
 ### 7.4.1. Tools and Practices
+El proceso de Continuous Monitoring tiene como objetivo supervisar de manera continua el comportamiento de la aplicación, la infraestructura y los servicios desplegados, permitiendo identificar oportunamente errores, degradaciones de rendimiento e incidentes que puedan afectar la experiencia de los usuarios.
 
+ **Herramientas**
+
+- Jenkins podrá integrarse con herramientas de monitoreo y observabilidad para proporcionar información relacionada con la ejecución de pipelines y despliegues.
+- La plataforma de despliegue (Railway, Azure u otra infraestructura seleccionada) deberá proporcionar métricas operativas sobre disponibilidad, consumo de recursos y estado de los servicios.
+- Los sistemas de logging centralizado deberán recopilar y almacenar eventos generados por la aplicación para facilitar tareas de diagnóstico, auditoría y análisis de incidentes.
+- Las herramientas de observabilidad deberán permitir la recopilación y visualización de métricas, trazas y registros mediante paneles de monitoreo centralizados.
+- Las herramientas de monitoreo deberán soportar la generación de alertas automáticas ante condiciones anómalas o umbrales previamente definidos.
+
+ **Prácticas recomendadas**
+
+- Implementar monitoreo continuo de los principales componentes del sistema:
+  - disponibilidad de la aplicación,
+  - utilización de CPU y memoria,
+  - tiempos de respuesta,
+  - errores HTTP,
+  - estado de la base de datos,
+  - consumo de recursos de la infraestructura.
+
+- Establecer métricas base (*baseline metrics*) que permitan comparar el comportamiento normal del sistema frente a posibles anomalías.
+
+- Definir indicadores clave de desempeño (*KPIs*) y objetivos de nivel de servicio (*SLOs*) para medir la calidad y confiabilidad del sistema.
+
+- Registrar eventos relevantes generados por la aplicación para facilitar el análisis de incidentes y la identificación de causas raíz.
+
+- Mantener paneles de observabilidad actualizados que permitan visualizar indicadores operativos en tiempo real.
+
+- Configurar alertas automáticas para notificar oportunamente degradaciones de rendimiento, errores críticos o interrupciones del servicio.
+
+- Revisar periódicamente las métricas recolectadas para detectar tendencias, cuellos de botella y oportunidades de mejora.
+
+ **Consideraciones adicionales**
+
+- El monitoreo deberá mantenerse activo durante todo el ciclo de vida de la aplicación.
+- Los datos recolectados deberán conservarse durante un período suficiente para realizar análisis históricos, auditorías técnicas e investigaciones de incidentes.
+- Se recomienda complementar el monitoreo técnico con métricas relacionadas con el comportamiento de los usuarios y el uso de las funcionalidades principales del sistema.
+- Toda la información obtenida deberá servir como insumo para actividades de mejora continua, optimización del producto y toma de decisiones operativas.
+- Los mecanismos de monitoreo y observabilidad deberán formar parte de la estrategia general de confiabilidad y operación del sistema.
+- 
 ### 7.4.2. Monitoring Pipeline Components
+
+El ecosistema de monitoreo de StockWise está diseñado para garantizar la observabilidad continua en las diferentes capas de la plataforma: Backend, Frontend Web y Landing Page. Este enfoque permite identificar proactivamente cuellos de botella en el rendimiento y asegurar la disponibilidad del sistema. Los componentes principales de este pipeline son: 
+
+- Infraestructura y Plataforma (PaaS Monitoring): Se hace uso de las herramientas de telemetría nativas proporcionadas por las plataformas de despliegue. Render actúa como el componente principal para monitorear el backend, proveyendo métricas en tiempo real sobre el uso de CPU, consumo de memoria RAM y el tráfico de red de los contenedores de Spring Boot. Por su parte, Vercel y Netlify monitorizan el rendimiento del tráfico web, los tiempos de carga y el estado de la distribución de los archivos estáticos de Angular y React. 
+- Application Performance Monitoring (APM) y Health Checks: Para la capa de negocio y acceso a datos, el backend integra librerías como Spring Boot Actuator, la cual expone endpoints estandarizados (como /actuator/health y /actuator/metrics). Estos componentes permiten verificar el estado de conexión con la base de datos relacional y el estado de la Máquina Virtual de Java (JVM). En el lado del cliente, se utilizan las analíticas de Vercel para evaluar métricas de experiencia de usuario (Core Web Vitals) y prevenir las regresiones de rendimiento identificadas en auditorías previas. 
+- Log Management (Gestión de Registros): Se emplea un sistema de agregación de logs de ejecución estandarizado. Los logs generados por los errores de integración o pruebas unitarias se almacenan temporalmente en los artefactos de GitHub Actions. Simultáneamente, Render actúa como el consolidador de los logs transaccionales (stdout y stderr) del entorno de pruebas y producción, lo que permite la trazabilidad completa de errores, como fallos en el registro de inventario o en la ejecución de alertas de stock mínimo.
+
+### 7.4.3. Alerting Pipeline Components
+
+El pipeline de alertas se encarga de procesar los eventos críticos detectados durante la integración continua, el despliegue y la monitorización en vivo, distribuyéndolos de forma automatizada al equipo de desarrollo. Su objetivo es minimizar el tiempo medio de resolución (MTTR) de incidentes. Está compuesto por: 
+
+1. Generadores de Eventos (Event Triggers): Son los motores que evalúan el estado del sistema frente a reglas predefinidas. Los eventos primarios se originan en GitHub Actions (al detectar un fallo en el pipeline de CI tras un push o pull request), en Render (cuando ocurre un error o éxito de redespliegue del backend) y en Vercel / Netlify (al finalizar la compilación del frontend o la landing page). 
+2. Reglas de Filtrado y Umbrales: Para evitar la fatiga por notificaciones redundantes, el pipeline evalúa el nivel de criticidad del evento. Solo se emiten notificaciones ante eventos determinantes: interrupciones de servicio, errores de compilación, fallos en las pruebas automatizadas (Unit/Integration Tests) o confirmaciones de puestas a producción exitosas. 
+3. Canales de Distribución (Delivery Channels): Las plataformas de CI/CD utilizan webhooks e integraciones nativas para enrutar los eventos hacia plataformas colaborativas y de mensajería del equipo. Esto permite una trazabilidad inmediata desde que se detecta el incidente hasta su notificación. 
+4. Matriz de Escalamiento y Destinatarios: El componente de enrutamiento distribuye la alerta al responsable correspondiente según la matriz de configuración del proyecto: 
+   - Alertas de CI (GitHub Actions): Notificaciones de workflows fallidos dirigidas al responsable de integración (Ronald Peralta). 
+   - Alertas de Despliegue de Aplicación (Render y Vercel): Notificaciones sobre despliegues exitosos o caídas en los entornos de Backend y Frontend, dirigidas a la encargada de la distribución (Fabiola Del Rocio). 
+   - Alertas de Landing Page (Netlify): Notificaciones de finalización de compilación dirigidas a todo el equipo en general.
+
+### 7.4.4. Notification Pipeline Components
+
+El componente de notificaciones tiene como finalidad comunicar de forma automática eventos relevantes detectados durante la ejecución de los procesos de integración, despliegue y monitoreo continuo, permitiendo una respuesta rápida ante incidentes o situaciones que requieran atención del equipo de desarrollo.
+
+**Flujo general de notificaciones**
+
+1. Un evento es detectado por el sistema de monitoreo o por un pipeline automatizado.
+2. El evento es clasificado según su nivel de severidad.
+3. Se genera una notificación asociada al incidente.
+4. La notificación es enviada al canal correspondiente.
+5. El equipo responsable evalúa la situación y ejecuta las acciones necesarias.
+
+ **Componentes principales**
+
+* Sistema de monitoreo encargado de detectar eventos y anomalías.
+* Motor de alertas responsable de generar las notificaciones.
+* Canales de comunicación utilizados para distribuir los mensajes.
+* Equipo responsable de recibir y gestionar los incidentes reportados.
+
+ **Canales de notificación**
+
+Las notificaciones podrán enviarse mediante:
+
+* correo electrónico,
+* paneles de monitoreo,
+* sistemas de mensajería corporativa,
+* plataformas colaborativas utilizadas por el equipo de desarrollo.
+
+ **Eventos que generan notificaciones**
+
+* Fallos durante la ejecución de pipelines.
+* Errores detectados durante despliegues.
+* Interrupciones del servicio.
+* Incremento anormal en los tiempos de respuesta.
+* Consumo excesivo de recursos de infraestructura.
+* Fallos de conectividad con servicios externos o bases de datos.
+* Resultados negativos obtenidos durante verificaciones posteriores al despliegue.
+
+ **Consideraciones adicionales**
+
+* Las notificaciones deberán priorizarse según el nivel de criticidad del evento detectado.
+* Se recomienda evitar la generación excesiva de alertas para reducir el riesgo de fatiga operacional.
+* Los registros de notificaciones deberán conservarse para fines de auditoría y análisis posterior.
+* El sistema deberá permitir la trazabilidad completa desde la detección del incidente hasta su resolución.
+
+| Componente                         | Herramienta      | Tipo de evento notificado                                   | Destinatarios                         |
+|------------------------------------|------------------|-------------------------------------------------------------|----------------------------------------|
+| Notificación de CI fallido         | GitHub Actions   | Workflow fallido en `push` o `pull_request`                 | Ronald Peralta            |
+| Notificación de deploy exitoso     | Render           | Backend desplegado correctamente en producción              | Fabiola Del Rocio                 |
+| Notificación de deploy fallido     | Render           | Error durante el redeploy del backend                       | Fabiola Del Rocio                |
+| Notificación de deploy frontend    | Vercel           | Deploy completado                       | Fabiola Del Rocio                   |
+| Notificación de deploy landing     | Netlify          | Build completado                                            | Equipo               |
+
+
+<div style="page-break-after: always;"></div>
+
+# Part III: Experiment-Driven Lifecycle
+
+# Capitulo VIII: Experiment-Driven Development
+
+## 8.1. Experiment Planning
+
+### 8.1.1. As-Is Summary
+
+**Estado actual de la gestión de inventarios**
+
+Actualmente, los administradores y operadores de bodegas (dueños de negocio, encargados de logística) gestionan su inventario de forma predominantemente manual. Los métodos tradicionales como cuadernos físicos, hojas de papel sueltas y la memoria son las herramientas más comunes. El uso de hojas de cálculo (Excel) es limitado, principalmente porque los usuarios no tienen la familiaridad técnica o el tiempo para implementarlas correctamente. Esta operación se realiza a diario, con picos de actividad durante los momentos de atención al cliente, recepción de mercadería o al cierre del día.
+
+**Principales dolores y procesos actuales**
+
+- **Registro de productos y movimientos:** Los usuarios anotan entradas y salidas en papel o confían en su memoria. Este proceso es lento y propenso a errores de anotación, cálculo u omisión, especialmente cuando el negocio está en horas de mayor afluencia de clientes. La falta de un registro digital inmediato provoca que la información del stock esté casi siempre desactualizada.
+
+- **Búsqueda y localización de productos: **No existe un sistema de ubicación dentro del almacén. Los operadores dependen de su conocimiento empírico o recorren las estanterías de forma manual para encontrar un producto. Cuando no logran localizar un artículo, lo dan por hecho como "perdido" o asumen que ya no está disponible, lo que se traduce directamente en una pérdida de venta o un quiebre de stock no detectado a tiempo.
+
+- **Conteo y control de stock:** El proceso de conteo físico para verificar existencias es lento y se realiza de manera esporádica. Los usuarios invierten una cantidad considerable de tiempo (sin un registro métrico preciso, pero reconocido como significativo) en estas auditorías manuales, lo que resta horas operativas al negocio.
+
+- **Frecuencia de quiebres de stock y sobrecompras:** Según los testimonios de los entrevistados, los quiebres de stock (productos agotados que el cliente solicita) ocurren con una frecuencia estimada de 2 veces por mes. Esta cifra, aunque pueda parecer baja, representa pérdidas de venta recurrentes y una señal de alerta sobre la falta de previsión. Las sobrecompras ocurren como consecuencia de no tener visibilidad del stock real.
+
+- **Reacción ante problemas:** Cuando un producto no se encuentra (quiebre no detectado), la reacción inmediata es darlo por perdido. No existen mecanismos de búsqueda sistemática ni alertas que anticipen el problema. Esta conducta genera una normalización de la pérdida y una baja en la competitividad del negocio.
+
+**Comportamientos y actitudes observadas**
+
+- **Proactividad limitada**: La gestión es reactiva. Los usuarios no planifican el reabastecimiento basándose en datos históricos o tendencias, sino en la urgencia del momento ("se me acabó, pido más").
+
+- **Resignación ante la pérdida**: La frase "lo doy por perdido" es recurrente, evidenciando una aceptación tácita de que el desorden y los errores son parte inevitable de la operación.
+
+- **Alta dependencia cognitiva:** La memoria del dueño o encargado es el principal "sistema de información", lo que vuelve el negocio vulnerable al ausentismo o al cansancio.
+
+**Limitaciones y barreras para adoptar una solución digital**
+
+A pesar de que los usuarios reconocen los problemas del método manual, existen barreras que han impedido su migración a un sistema digital:
+
+- **Falta de tiempo:** El principal obstáculo no es el costo ni la complejidad tecnológica (de hecho, la mayoría usa smartphones y está adaptada a la tecnología). La barrera crítica es la falta de tiempo para investigar, seleccionar e implementar un sistema que se adapte a sus necesidades, ya que la operación diaria del negocio les absorbe por completo.
+
+- **Necesidad de simplicidad extrema:** Los usuarios no buscan un ERP complejo. Requieren una solución intuitiva, que funcione "desde el primer día" y que no exija una curva de aprendizaje técnica. La entrada por voz y el escaneo rápido son altamente valorados como alternativas al tipeo manual.
+
+- **Desconfianza en sistemas genéricos:** Existe la percepción de que las aplicaciones de inventario existentes son "para grandes empresas" o demasiado complicadas para su operación del día a día.
+
+Fuentes de información
+
+Este resumen se fundamenta en las siguientes actividades de investigación documentadas en el Capítulo II (Sección 2.2 y 2.3):
+
+- Entrevistas en profundidad realizadas a dueños de bodegas (Ariana, Mauricio, Marcelo) y emprendedores (Alexander), donde se identificaron los patrones de uso actuales, dolores y expectativas.
+- Análisis de entrevistas (2.2.3) que cuantificó que el 100% de los usuarios del segmento de bodegas utiliza control manual (cuaderno/Excel) y sufre pérdidas por falta de alertas.
+- As-Is Scenario Mapping (2.3.5) que detalló, paso a paso, las fricciones del proceso actual de registro, control, vencimiento y búsqueda.
+- User Journey Mapping (2.3.3) que evidenció los picos de frustración y el esfuerzo cognitivo en las etapas de "gestión de inventario" y "búsqueda de productos".
+
+
+### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
+
+En esta sección se recopilan los insumos iniciales que orientan la planificación de los experimentos para StockWise. Estos elementos provienen del análisis As-Is, entrevistas, problemáticas identificadas y funcionalidades propuestas para los segmentos objetivo: bodegas especializadas por rubro y startups/emprendedores en expansión con necesidades logísticas. El objetivo no es validar directamente una solución, sino identificar creencias, vacíos de información, ideas y afirmaciones que puedan convertirse posteriormente en preguntas experimentales.
+
+Assumptions
+
+1. Los dueños de bodegas y emprendedores necesitan digitalizar su gestión de inventario, pero requieren una solución simple, accesible y de rápida adopción.
+
+2. Los usuarios estarían dispuestos a reemplazar cuadernos, hojas de cálculo o registros manuales si la plataforma reduce errores y tiempo operativo.
+
+3. Las alertas de stock bajo y productos próximos a vencer pueden ayudar a disminuir pérdidas económicas por desabastecimiento o caducidad.
+
+4. Los emprendedores en crecimiento valoran más una herramienta centralizada que una solución compleja con demasiadas funciones avanzadas.
+
+5. La trazabilidad de movimientos, roles y permisos es importante para negocios donde varias personas modifican productos, precios o cantidades.
+
+6. Los reportes visuales pueden mejorar la toma de decisiones sobre compras, ventas, rotación de productos y reabastecimiento.
+
+7. La adopción tecnológica depende más de la facilidad de uso y del onboarding que del interés inicial por digitalizar el negocio.
+
+8. Las funcionalidades como QR, ubicación por estantería, escaneo por cámara y predicción de reabastecimiento pueden diferenciar a StockWise frente a herramientas genéricas.
+
+ Knowledge Gaps
+
+1. ¿Qué tan dispuestos están los usuarios a dejar sus métodos actuales como Excel, cuadernos o registros físicos?
+
+2. ¿Cuáles son las funcionalidades mínimas que los usuarios consideran indispensables para usar StockWise de forma diaria?
+
+3. ¿Qué nivel de dificultad perciben los usuarios al registrar productos, salidas, lotes o vencimientos dentro de la plataforma?
+
+4. ¿Qué tan valiosas resultan las alertas automáticas frente al control manual que actualmente realizan los negocios?
+
+5. ¿Cuánto tiempo operativo se podría reducir al centralizar inventario, movimientos y reportes en una sola plataforma?
+
+6. ¿Qué tan importante es para los usuarios contar con roles, permisos e historial de cambios dentro del sistema?
+
+7. ¿Qué tipo de reportes consideran más útiles los usuarios: ventas, stock, ganancias, productos más vendidos, vencimientos o movimientos?
+
+8. ¿Qué canales generan mayor intención de registro para StockWise: landing page, redes sociales, recomendaciones, comunidades de emprendedores o contacto directo?
+
+9. ¿Qué precio o modelo de pago sería aceptable para bodegas y emprendimientos pequeños?
+
+10. ¿Qué funciones avanzadas, como QR, escaneo por cámara, geolocalización o predicción inteligente, realmente serían usadas por los segmentos objetivo?
+
+ Ideas
+
+1. Implementar un onboarding guiado que explique paso a paso cómo registrar productos, configurar stock mínimo y revisar alertas.
+
+2. Incluir alertas automáticas de stock bajo y productos próximos a vencer para prevenir pérdidas y mejorar el reabastecimiento.
+
+3. Diseñar un dashboard simple con indicadores clave como productos críticos, próximos vencimientos, movimientos recientes y productos más vendidos.
+
+4. Permitir el registro rápido de productos mediante formularios simples, duplicado de productos, carga por lote o escaneo.
+
+5. Incorporar roles y permisos para que el administrador controle qué acciones pueden realizar sus empleados.
+
+6. Agregar historial de movimientos para identificar quién modificó productos, precios, cantidades o registros de entrada y salida.
+
+7. Usar códigos QR o ubicación por estantería para acelerar la búsqueda física de productos en almacenes o bodegas.
+
+8. Implementar reportes exportables en PDF o Excel para facilitar el análisis de ventas, stock y ganancias.
+
+9. Probar una landing page orientada a beneficios concretos: reducir pérdidas, ahorrar tiempo y controlar el inventario desde cualquier dispositivo.
+
+10. Evaluar un modelo freemium o planes escalables que permitan iniciar gratis y pagar por funciones avanzadas.
+
+ Claims
+
+1. “StockWise permite a pequeños negocios controlar su inventario de forma más ordenada y confiable que los métodos manuales.”
+
+2. “Las alertas de stock bajo y vencimiento reducen pérdidas económicas y errores operativos en bodegas y emprendimientos.”
+
+3. “Una plataforma simple y accesible puede facilitar la adopción tecnológica en negocios que actualmente usan cuadernos o Excel.”
+
+4. “La trazabilidad de movimientos mejora el control interno cuando varias personas participan en la gestión del inventario.”
+
+5. “Los reportes visuales ayudan a los usuarios a tomar mejores decisiones de compra, venta y reabastecimiento.”
+
+6. “StockWise ofrece una experiencia más adecuada para pymes que herramientas complejas como ERPs tradicionales.”
+
+7. “La centralización de inventario, ventas, alertas y reportes en una sola plataforma aumenta la eficiencia operativa.”
+
+8. “Las funcionalidades avanzadas como QR, escaneo por cámara y predicción inteligente pueden mejorar la diferenciación del producto si responden a necesidades reales del usuario.”
+
+### 8.1.3. Experiment-Ready Questions
+
+Esta sección presenta preguntas listas para ser convertidas en experimentos. Las preguntas se organizan según el tipo de aprendizaje que se desea obtener: validación de utilidad del producto, facilidad de uso, adopción, modelo de negocio, impacto operativo y atracción de usuarios. Estas preguntas permitirán diseñar experimentos como entrevistas de validación, pruebas de usabilidad, análisis de eventos en la plataforma, encuestas, pruebas A/B en landing page y medición de métricas de uso.
+
+ **Validación del problema y utilidad del producto**
+
+1. ¿Los dueños de bodegas y emprendedores consideran que la gestión manual de inventario es un problema suficientemente importante como para cambiar de herramienta?
+
+2. ¿Los usuarios perciben que StockWise resuelve mejor sus problemas actuales que Excel, cuadernos o registros físicos?
+
+3. ¿La centralización de productos, movimientos, alertas y reportes en una sola plataforma genera una mejora percibida en la organización del negocio?
+
+4. ¿Los usuarios consideran que StockWise les ayuda a reducir errores en el control de stock?
+
+5. ¿Los usuarios identifican valor inmediato en poder consultar su inventario desde cualquier dispositivo?
+   
+**Validación de funcionalidades principales**
+
+1. ¿Las alertas de stock bajo son entendidas y consideradas útiles por los usuarios durante la gestión diaria?
+
+2. ¿Las alertas de productos próximos a vencer ayudan a los usuarios a prevenir pérdidas por caducidad?
+
+3. ¿El historial de movimientos permite a los usuarios comprender mejor quién realizó cambios en el inventario?
+
+4. ¿Los reportes de ventas, stock y productos más vendidos son considerados útiles para tomar decisiones de compra o reposición?
+
+5. ¿El registro por lotes facilita la gestión de productos con proveedor, fecha de ingreso y fecha de vencimiento?
+
+6. ¿La búsqueda por nombre, código, categoría o etiqueta permite encontrar productos más rápido que el método actual?
+
+**Validación de usabilidad y adopción**
+
+1. ¿Los usuarios pueden registrar un producto nuevo sin ayuda externa durante su primera interacción con la plataforma?
+
+2. ¿Los usuarios entienden fácilmente cómo configurar el stock mínimo de un producto?
+
+3. ¿El flujo para registrar entradas y salidas de productos es claro para personas con poca experiencia tecnológica?
+
+4. ¿El onboarding reduce la confusión inicial al usar la plataforma?
+
+5. ¿Qué partes del flujo generan mayor fricción: registro de producto, control de stock, alertas, reportes o configuración de usuarios?
+
+6. ¿Los usuarios consideran que la interfaz es suficientemente simple para usarla durante la atención diaria del negocio?
+
+**Validación de funciones avanzadas**
+
+1. ¿Los usuarios consideran útil ubicar productos mediante QR o ubicación por estantería?
+
+2. ¿El escaneo por cámara reduce el tiempo de registro frente al ingreso manual de productos?
+
+3. ¿La predicción de reabastecimiento genera confianza en los usuarios o prefieren seguir decidiendo manualmente?
+
+4. ¿Los usuarios realmente usarían comandos por voz para registrar productos o movimientos de inventario?
+
+5. ¿Qué funciones avanzadas generan mayor interés: QR, cámara, geolocalización, reportes o predicción inteligente?
+
+**Validación del modelo de negocio**
+
+1. ¿Los usuarios estarían dispuestos a pagar por StockWise si perciben reducción de errores y ahorro de tiempo?
+
+2. ¿Qué modelo de pago resulta más atractivo para bodegas y emprendedores: freemium, suscripción mensual, plan anual o pago por funcionalidad?
+
+3. ¿El precio de los planes premium representa una barrera para pequeños negocios?
+
+4. ¿Qué funcionalidades justificarían que un usuario pase de un plan gratuito a un plan de pago?
+
+5. ¿Los usuarios aceptarían pagar más por funcionalidades avanzadas como reportes, QR, alertas inteligentes o predicción de reabastecimiento?
+
+**Validación de impacto operativo**
+
+1. ¿El uso de StockWise reduce el tiempo necesario para registrar productos o movimientos de inventario?
+
+2. ¿Los usuarios cometen menos errores al registrar entradas y salidas usando la plataforma?
+
+3. ¿La plataforma ayuda a reducir pérdidas por productos vencidos o por falta de stock?
+
+4. ¿Los usuarios revisan con mayor frecuencia el estado de su inventario cuando cuentan con dashboard y alertas?
+
+5. ¿El uso de reportes mejora la planificación de compras y reposición?
+
+**Validación de atracción, conversión y recomendación**
+
+1. ¿La landing page comunica claramente el valor principal de StockWise para bodegas y emprendedores?
+
+2. ¿Qué mensaje de la landing page genera mayor intención de registro: ahorro de tiempo, reducción de pérdidas, control desde cualquier dispositivo o reportes automáticos?
+
+3. ¿Qué canal genera mayor cantidad de registros: redes sociales, recomendaciones, comunidades de emprendedores o búsqueda orgánica?
+
+4. ¿Los usuarios recomendarían StockWise a otros dueños de bodegas o emprendedores?
+
+5. ¿Qué elemento genera mayor confianza antes del registro: testimonios, demostración del producto, precios claros o beneficios medibles?
+
+### 8.1.4. Question Backlog
+
+| # | Pregunta | Área de incertidumbre | Prioridad | Relación con hipótesis |
+|---|----------|----------------------|-----------|------------------------|
+| 1 | ¿Los usuarios de bodegas realmente usarán la entrada por voz como método principal de registro, o preferirán el escaneo por cámara? | Adopción de funcionalidad innovadora | Alta | Hipótesis 1 (Alertas anti-quiebre) |
+| 2 | ¿El porcentaje del 15% de conversión de freemium a premium en 60 días es realista para el mercado de bodegas peruano? | Modelo de negocio | Alta | Hipótesis 3 (Freemium) |
+| 3 | ¿Los reportes visuales móviles serán utilizados semanalmente por el 70% de los usuarios, o la frecuencia será menor? | Engagement del usuario | Alta | Hipótesis 2 (Reportes para decidir) |
+| 4 | ¿Qué tiempo real dedican hoy los usuarios al control manual de stock (línea base) para poder medir una reducción del 40%? | Métrica base | Alta | Hipótesis 4 (Automatización) |
+| 5 | ¿Los usuarios confían en las alertas predictivas de reabastecimiento o prefieren seguir usando su criterio empírico? | Confianza en IA/predicción | Media | Hipótesis 1 y 4 |
+| 6 | ¿La falta de tiempo para implementar un sistema es la verdadera barrera, o existen otros factores no detectados (ej. desconfianza en la nube)? | Barreras de adopción | Alta | Todas |
+| 7 | ¿Los usuarios están dispuestos a pagar por funcionalidades como geolocalización o escaneo por lotes, o las consideran "nice to have"? | Propuesta de valor de planes premium | Media | Hipótesis 3 |
+| 8 | ¿El onboarding guiado dentro de la app reduce efectivamente la curva de aprendizaje para usuarios con baja experiencia tecnológica? | Usabilidad | Media | Hipótesis 1 |
+| 9 | ¿Los usuarios realmente consultan el historial de movimientos con frecuencia, o es una funcionalidad de respaldo poco utilizada? | Valor real de funcionalidad | Baja | Hipótesis 2 |
+| 10 | ¿La generación de boletas digitales desde el móvil reduce errores de facturación en un 50%, o la mayoría de los negocios ya usan sistemas alternativos? | Impacto real | Media | Hipótesis 5 |
+
+
+
+### 8.1.5. Experiment Cards
+Las Experiment Cards son el artefacto central del proceso de experimentación. Cada tarjeta captura la información esencial de un experimento antes de su ejecución, estructurando tanto la pregunta que se busca responder como la configuración operativa del experimento.
+
+A continuación se presentan las Experiment Cards definidas para StockWise, alineadas con las hipótesis de negocio y el Question Backlog priorizado.
+
+ **Experiment Card #1**
+
+| Campo | Detalle |
+|--------|---------|
+| ID | EXP-01 |
+| Pregunta | ¿Las alertas push de stock bajo generan una reducción medible en los quiebres de inventario de los usuarios de StockWise? |
+| Por qué | La Hipótesis 1 del Lean UX Process establece que las alertas inteligentes push resolverán el problema de pérdidas económicas por quiebres de stock inesperados en pymes. Si esta hipótesis es incorrecta, el equipo estaría priorizando una funcionalidad de alto costo de desarrollo con bajo impacto real. |
+| Hipótesis | Creemos que activar las alertas push de stock bajo reducirá en al menos un 40% la frecuencia de quiebres de inventario reportados por los usuarios activos de StockWise en un período de 4 semanas. |
+| Simplest Useful Thing | Implementar y habilitar las notificaciones push de stock bajo en la app mobile y medir la variación en la tasa de quiebres de inventario entre usuarios que reciben alertas (grupo experimental) y usuarios que no (grupo control). |
+
+- Configuración del experimento
+
+| Campo | Detalle |
+|--------|---------|
+| Medidas | Tasa de quiebres de inventario por usuario por semana; Tasa de reabastecimiento a tiempo (dentro de las 24 h posteriores a la alerta); Tasa de apertura de la notificación push. |
+| Condiciones | Experimental: usuarios con alertas push activas. Control: usuarios sin alertas push activadas. |
+| Escala | Mínimo 30 usuarios por condición (60 en total), durante 4 semanas. Nivel de significancia: α = 0.05. Potencia estadística: 80%. MDE: 15% de diferencia en tasa de quiebres. |
+
+--- 
+ **Experiment Card #2**
+
+| Campo | Detalle |
+|--------|---------|
+| ID | EXP-02 |
+| Pregunta | ¿Los reportes visuales de inventario aumentan la frecuencia con la que los usuarios toman decisiones de reabastecimiento basadas en datos? |
+| Por qué | La Hipótesis 2 del Lean UX Process indica que los reportes visuales móviles resolverán la falta de visibilidad sobre el rendimiento del inventario. Sin evidencia de que los usuarios los utilizan y actúan en base a ellos, la funcionalidad no demuestra valor de negocio real. |
+| Hipótesis | Creemos que los usuarios que acceden semanalmente a los reportes visuales de StockWise realizarán al menos un 30% más de ajustes de reabastecimiento por semana, en comparación con usuarios que no utilizan esta funcionalidad. |
+| Simplest Useful Thing | Comparar la frecuencia de acciones de reabastecimiento entre usuarios que acceden a reportes (≥1 vez/semana) y usuarios que no los consultan, durante un período de 3 semanas. |
+
+- Configuración del experimento
+
+| Campo | Detalle |
+|--------|---------|
+| Medidas | Número de acciones de reabastecimiento por usuario por semana; Frecuencia de acceso al módulo de reportes; Tiempo promedio de sesión en el módulo de reportes. |
+| Condiciones | Experimental: usuarios que acceden a reportes al menos una vez por semana. Control: usuarios que no acceden a reportes en el período observado. |
+| Escala | Mínimo 25 usuarios por condición, durante 3 semanas. Nivel de significancia: α = 0.05. Potencia estadística: 80%. MDE: 20% de diferencia en acciones de reabastecimiento. |
+
+--- 
+ **Experiment Card #3**
+
+| Campo | Detalle |
+|--------|---------|
+| ID | EXP-03 |
+| Pregunta | ¿El modelo freemium de StockWise logra una tasa de conversión a planes de pago de al menos 15% dentro de los primeros 60 días de uso? |
+| Por qué | La Hipótesis 3 plantea que el modelo freemium resolverá la barrera económica de acceso. Si la tasa de conversión es significativamente menor al 15%, el modelo de monetización actual requiere revisión antes de escalar. |
+| Hipótesis | Creemos que al menos el 15% de los usuarios que inician con el plan gratuito de StockWise realizará una conversión a un plan de pago dentro de los primeros 60 días de uso activo. |
+| Simplest Useful Thing | Observar y registrar la tasa de conversión de usuarios freemium a premium durante los primeros 60 días post-registro, sin modificar el flujo actual. |
+
+- Configuración del experimento
+
+| Campo | Detalle |
+|--------|---------|
+| Medidas | Tasa de conversión freemium → premium en 60 días; Tiempo promedio hasta la primera conversión; Funcionalidades más utilizadas antes de la conversión. |
+| Condiciones | Exploratoria: se observa el comportamiento de todos los usuarios freemium registrados en el período de 60 días. No hay grupo de control separado; se compara contra el criterio de éxito definido (15%). |
+| Escala | Mínimo 80 usuarios freemium registrados durante el período de observación. Nivel de significancia: α = 0.05. MDE: diferencia del 5% respecto al umbral objetivo del 15%. |
+
+## 8.2. Experiment Design
+
+### 8.2.1. Hypotheses
+
+**Experimento 1: Alertas Inteligentes Push de Stock Bajo y Vencimientos**
+
+| Componente | Detalle de la Hipótesis |
+| :--- | :--- |
+| **Question** | ¿Reducirá la frecuencia de desabastecimiento y pérdidas por caducidad en las bodegas la implementación de alertas push automáticas? |
+| **Belief** | Al implementar un sistema de alertas push automáticas en tiempo real, se proporciona un recordatorio inmediato a los dueños de los negocios antes de que se agoten sus productos críticos o venzan sus lotes. Esto optimiza los tiempos operativos de reposición y disminuye las mermas económicas. |
+| **Hypothesis** | Creemos que activar las alertas push en la aplicación móvil reducirá la frecuencia de quiebres de inventario en al menos un 40% en un período de 4 semanas, y se observará que un 70% de los reabastecimientos ocurren dentro de las primeras 24 horas posteriores a la notificación. |
+| **Null Hypothesis** | La implementación de las alertas push no afectará significativamente la tasa de quiebres de inventario ni acelerará el tiempo de reposición de los productos por parte de los usuarios. |
+
+<br>
+
+**Experimento 2: Dashboard con Reportes Visuales de Rendimiento y Rotación**
+
+| Componente | Detalle de la Hipótesis |
+| :--- | :--- |
+| **Question** | ¿Aumentará la frecuencia de decisiones de compra basadas en datos si los usuarios disponen de un dashboard con reportes visuales simples? |
+| **Belief** | Al permitir que los usuarios visualicen gráficos sencillos sobre sus productos más vendidos, rotación y fluctuaciones de stock, se elimina la complejidad del análisis manual en cuadernos o Excel. Esto incrementa la confianza en sus decisiones comerciales y reduce la acumulación de stock muerto. |
+| **Hypothesis** | Creemos que ofrecer un módulo de reportes visuales integrados en el dashboard principal aumentará en un 30% la frecuencia semanal con la que los usuarios ajustan sus solicitudes de reabastecimiento basándose en datos del sistema, logrando una tasa de adopción de la función de al menos el 50% de los usuarios activos. |
+| **Null Hypothesis** | La presencia de un dashboard con reportes visuales de inventario no alterará significativamente el comportamiento de compra de los usuarios ni el volumen de ajustes en su stock. |
+
+<br>
+
+**Experimento 3: Sistema de Trazabilidad, Roles e Historial de Movimientos**
+| Componente | Detalle de la Hipótesis |
+| :--- | :--- |
+| **Question** | ¿Reducirá los errores de inventario e inconsistencias operativas la implementación de roles, permisos y un historial de movimientos detallado? |
+| **Belief** | Al otorgar visibilidad completa sobre qué empleado modificó un precio, entrada o salida, se incrementa la responsabilidad del personal y se identifican anomalías rápidamente. Esto soluciona la desconfianza del administrador cuando delega la gestión de la tienda a terceros. |
+| **Hypothesis** | Creemos que la implementación de un módulo de control de roles con historial de auditoría disminuirá las discrepancias de stock (inventario teórico vs. físico) en un 50% en negocios operados por más de dos personas tras un periodo de 30 días de uso continuo. |
+| **Null Hypothesis** | La introducción de roles, permisos e historial de movimientos no tendrá un impacto estadísticamente significativo en la reducción de discrepancias de inventario o errores cometidos por los colaboradores. |
+
+<br>
+
+**Experimento 4: Ubicación por Estanterías y Distribución del Almacén**
+
+| Componente | Detalle de la Hipótesis |
+| :--- | :--- |
+| **Question** | ¿Reducirá el tiempo de preparación de pedidos (picking) y la desorganización física la digitalización de la ubicación por estanterías en StockWise? |
+| **Belief** | Al asociar cada producto registrado a una estantería, nivel o sector específico dentro de la plataforma, los usuarios y empleados nuevos evitarán perder tiempo buscando físicamente los artículos. Esto agilizará los flujos diarios de despacho tanto en bodegas como en pequeños almacenes de startups.|
+| **Hypothesis** | Creemos que estructurar la información con un indicador de ubicación física por estantería reducirá en un 35% el tiempo promedio empleado en localizar y despachar productos durante la preparación de pedidos en los primeros 15 días de uso. |
+| **Null Hypothesis** | El registro de la ubicación por estanterías en la plataforma no generará cambios estadísticamente significativos en los tiempos de búsqueda y despacho físico de la mercadería. |
+
+
+<br>
+
+**Experimento 5: Modelo de Adquisición Freemium para Escalabilidad**
+
+| Componente | Detalle de la Hipótesis |
+| :--- | :--- |
+| **Question** | ¿Mitigará la barrera económica inicial y generará conversión a planes de pago la introducción de un modelo de adquisición freemium? |
+| **Belief** | Al ofrecer un acceso inicial sin costo enfocado en las funciones operativas esenciales de StockWise, los dueños de negocios pueden experimentar el valor real de la herramienta en su rutina diaria sin arriesgar capital. Esto genera confianza para invertir en el plan premium cuando su inventario crezca.  |
+| **Hypothesis** | Creemos que al implementar un modelo de plan gratuito con topes de almacenamiento de productos, al menos un 15% de los usuarios activos freemium migrará voluntariamente a un plan de pago premium dentro de sus primeros 60 días de uso para desbloquear funciones avanzadas. |
+| **Null Hypothesis** | La disponibilidad de un modelo freemium no generará un impacto significativo en la tasa de conversión a planes de pago, manteniendo métricas equivalentes a un modelo tradicional de prueba por tiempo limitado (Free Trial). |
+
+### 8.2.2. Domain Business Metrics
+
+Para evaluar el éxito de los experimentos planteados en el marco XDPD, se definen las siguientes métricas de negocio y de dominio. Estas variables permiten cuantificar el impacto directo de las funcionalidades de StockWise sobre la eficiencia operativa y la rentabilidad de las bodegas especializadas y startups del segmento objetivo.
+
+
+
+**1. Métricas de Gestión de Inventario y Pérdidas (Dominio Logístico)**
+* Tasa de Quiebre de Stock (Inventory Stockout Rate):
+    *  Descripción: Mide el porcentaje de productos críticos que se agotan completamente en el inventario, generando ventas perdidas.
+    * Fórmula: $\left( \frac{\text{Número de productos sin stock}}{\text{Total de productos en catálogo}} \right) \times 100$
+    * Objetivo Vinculado (EXP-01): Reducir esta tasa en un 40% en un periodo de 4 semanas mediante la activación de alertas push inteligentes.
+
+* Tasa de Mermas por Caducidad (Waste/Expired Product Rate):
+    * Descripción: Cuantifica las pérdidas económicas directas causadas por productos que vencen en los estantes o almacenes sin ser vendidos.
+    * Fórmula: $\left( \frac{\text{Costo total de productos vencidos}}{\text{Costo total del inventario adquirido}} \right) \times 100$
+    * Objetivo Vinculado (EXP-01): Disminuir la merma financiera al asegurar un reabastecimiento proactivo antes del vencimiento del lote.
+
+
+ **2. Métricas de Eficiencia Operativa y Control Interno**
+
+* Índice de Discrepancia de Stock (Inventory Discrepancy Rate):
+    * Descripción: Evalúa la precisión del control de inventario midiendo la diferencia entre el stock teórico registrado en el software y el stock físico real de la tienda.
+    * Fórmula: $\left( \frac{\text{Unidades de stock físico} - \text{Unidades de stock en sistema}}{\text{Unidades de stock físico}} \right) \times 100$
+    * Objetivo Vinculado (EXP-03): Reducir este índice en un 50% en negocios multifuncionales tras 30 días de implementar el control de roles e historial de auditoría.
+
+* Tiempo Promedio de Picking y Despacho (Average Order Picking Time):
+    * Descripción Mide el tiempo que le toma a un operario o dueño de bodega localizar físicamente un producto dentro del almacén para preparar un pedido.
+    * Fórmula: $\frac{\text{Tiempo total empleado en preparación de pedidos}}{\text{Total de pedidos preparados}}$
+    * Objetivo Vinculado (EXP-04): Lograr una reducción del 35% en el tiempo de localización física gracias a la organización por estanterías digitalizadas.
+
+
+**3. Métricas de Producto y Adopción Digital**
+
+* Frecuencia de Ajustes Basados en Datos (Data-Driven Decisions Rate):
+    * Descripción: Mide el número de veces a la semana que un usuario realiza modificaciones, compras o pedidos de reabastecimiento basándose explícitamente en la consulta del dashboard de reportes visuales de StockWise.
+    * Fórmula: $\frac{\text{Número de órdenes de reabastecimiento guiadas por reportes}}{\text{Total de órdenes de reabastecimiento generadas}}$
+    * Objetivo Vinculado (EXP-02): Incrementar este comportamiento comercial en un 30% semanal, fomentando la migración del cuaderno al análisis digital.
+
+
+**4. Métricas de Negocio y Monetización (SaaS Growth)**
+
+* Tasa de Conversión de Freemium a Premium (Freemium-to-Paid Conversion Rate):
+    * Descripción: Evalúa la viabilidad del modelo de negocio calculando el porcentaje de pequeños negocios que deciden pasar del plan gratuito a un plan de pago para expandir sus límites de almacenamiento.
+    * Fórmula: $\left( \frac{\text{Usuarios freemium que compran un plan premium en } 60 \text{ días}}{\text{Total de usuarios freemium registrados en el mismo periodo}} \right) \times 100$
+    * Objetivo Vinculado (EXP-05): Alcanzar o superar una tasa de conversión del 15% dentro de los primeros 60 días de uso activo en la plataforma.
+
+### 8.2.3. Measures
+
+Para validar las hipótesis definidas en el Lean UX Hypothesis Statements (sección 1.2.2.3), se establecen las siguientes medidas cuantitativas y cualitativas. Cada métrica incluye su línea base (estado actual sin StockWise), el objetivo de éxito y el método de medición.
+
+**Métricas de Validación de Hipótesis**
+
+| Hipótesis | Métrica | Línea base (As-Is) | Objetivo (To-Be) | Método de medición | Frecuencia |
+|------------|----------|--------------------|------------------|--------------------|------------|
+| **H1 – Alertas anti-quiebre** | Reducción de pérdidas por productos agotados | Pérdidas actuales sin cuantificar; 83% de precisión de inventario (NetSuite, 2024) | 80% de usuarios reportan 25% menos pérdidas | Encuesta trimestral a usuarios activos + análisis de movimientos de stock en la app | Trimestral |
+| **H2 – Reportes para decidir** | Tasa de uso de reportes + mejora en decisiones de compra | 0% (no usan reportes digitales) | 70% de usuarios usan reportes semanalmente y mejoran un 30% sus decisiones de compra | Eventos de uso en la app (analytics) + encuesta de autopercepción | Mensual |
+| **H3 – Freemium como puerta de entrada** | Tasa de conversión de gratuitos a premium | No aplica (no existe producto previo) | 15% de usuarios gratuitos convierten a premium en 60 días | Seguimiento de suscripciones en backend (evento de upgrade) | Diario (acumulado a 60 días) |
+| **H4 – Automatización que ahorra tiempo** | Reducción de tiempo en control manual + eliminación de quiebres críticos | Tiempo de control manual no medido, pero identificado como significativo; 2 quiebres críticos por mes (estimado) | 40% menos tiempo en control manual; 90% menos quiebres críticos | Tiempo registrado en la app (desde login hasta cierre) vs. estimación inicial; conteo de alertas de stock bajo resueltas | Semanal |
+| **H5 – Boleta digital sin errores** | Reducción de errores de facturación + mejora en precisión de ingresos | Errores frecuentes por anotación manual (sin cifra exacta) | 50% menos errores de facturación; 35% más precisión en ingresos | Comparación de boletas emitidas vs. conciliación bancaria; encuesta trimestral | Trimestral |
+
+**Métricas adicionales de producto (para monitoreo continuo):**
+
+| Métrica | Descripción | Línea base | Objetivo | Método |
+|----------|-------------|-------------|----------|---------|
+| **Tiempo de registro de un producto** | Tiempo transcurrido desde que el usuario abre el formulario hasta que guarda el producto | > 2 minutos (proceso manual) | < 30 segundos utilizando voz o escaneo | Tracing de eventos dentro de la aplicación |
+| **Tasa de adopción de funcionalidades clave** | Porcentaje de usuarios que utilizan voz, escaneo, geolocalización y predicción de stock | 0% | > 40% de adopción para cada funcionalidad | Segmentación por tipo de plan y análisis de eventos de uso |
+| **Net Promoter Score (NPS)** | Probabilidad de que los usuarios recomienden StockWise a otros negocios | No aplica | > 50 (nivel excelente) | Encuesta integrada en la aplicación después del primer mes de uso |
+| **Churn Rate (Tasa de abandono)** | Porcentaje de usuarios que dejan de utilizar la aplicación después de 30 días | No aplica | < 10% | Seguimiento de la última sesión registrada y cancelaciones de cuenta |
+
+### 8.2.4. Conditions
+Las condiciones describen los estados o grupos bajo los cuales se recopilará la evidencia en cada experimento. Para experimentos basados en creencias (*belief-led*), se distingue entre la condición experimental y la condición de control. Para experimentos exploratorios, se describen los límites o características del grupo estudiado.
+
+---
+
+ **Condiciones para EXP-01 — Alertas push de stock bajo**
+
+La condición experimental busca obtener evidencia a favor de la hipótesis alternativa (las alertas reducen los quiebres). La condición de control opera bajo la suposición de que la hipótesis nula es correcta (no hay diferencia significativa).
+
+| Condición | Descripción | Criterio de asignación |
+| :--- | :--- | :--- |
+| **Experimental** | Usuarios con las notificaciones push de stock bajo habilitadas en la app mobile de StockWise. Estos usuarios reciben alertas automáticas cuando un producto cae por debajo del umbral de stock mínimo configurado. | Usuarios que activan las notificaciones push en la configuración de la app. |
+| **Control** | Usuarios que no tienen habilitadas las notificaciones push de stock bajo. Continúan gestionando su inventario sin recibir alertas automáticas del sistema. | Usuarios que no han activado las notificaciones push o las tienen desactivadas. |
+
+---
+
+ **Condiciones para EXP-02 — Reportes visuales**
+
+| Condición | Descripción | Criterio de asignación |
+| :--- | :--- | :--- |
+| **Experimental** | Usuarios que acceden al módulo de reportes visuales al menos una vez por semana durante el período de observación. | Comportamiento observado a través del tracking de eventos en la app (evento: `report_viewed`). |
+| **Control** | Usuarios que no acceden al módulo de reportes en ninguna ocasión durante el período de observación de 3 semanas. | Ausencia del evento `report_viewed` en el período definido. |
+
+---
+
+ **Condiciones para EXP-03 — Conversión freemium a premium**
+
+| Condición | Descripción |
+| :--- | :--- |
+| **Exploratoria** | Se observa a todos los usuarios que se registraron con el plan gratuito de StockWise durante el período de 60 días. No se aplica ninguna intervención; el objetivo es describir el comportamiento natural de conversión bajo el modelo freemium actual.<br><br>**Límite del grupo:** Usuarios activos (al menos una sesión por semana) con plan gratuito en el período de observación. |
+
+### 8.2.5. Scale Calculations and Decisions 
+
+Para el diseño de los experimentos de StockWise, la determinación de la cantidad de evidencia (tamaño de la muestra y duración) se fundamenta en un equilibrio estadístico riguroso entre la Certeza y la Precisión. Esto asegura que las métricas obtenidas tras la interacción de los usuarios (dueños de bodegas y startups) con el software sean confiables para la toma de decisiones tecnológicas y de negocio, y no el resultado de fluctuaciones aleatorias. 
+
+1. Definición de la Certeza (Certainty)
+   La certeza representa la probabilidad de error aceptable dentro de las pruebas. Para mitigar los riesgos de falsos descubrimientos o de ignorar validaciones exitosas, los experimentos cuantitativos del proyecto operan bajo dos constantes estadísticas estándar: 
+   - Nivel de Significación ($\alpha$): Se ha establecido en 0.05 para todos los experimentos. Esto actúa como un control directo contra el Error Tipo I (falso positivo), brindando un 95% de confianza en que, si se detecta una mejora en métricas (como la reducción de quiebres de stock), esta se debe realmente a la funcionalidad implementada en StockWise. 
+   - Poder Estadístico ($1 - \beta$): Se ha configurado en 80% para las pruebas comparativas. Este parámetro previene el Error Tipo II (falso negativo), garantizando que si una característica como las alertas push o los reportes tiene un impacto real en la operación del usuario, el experimento posee una alta probabilidad de detectarlo exitosamente. 
+
+2. Definición de la Precisión (Precision) 
+   
+    La precisión se materializa a través del Efecto Mínimo Detectable (MDE). Este indicador define la granularidad del cambio operativo que StockWise considera "valioso" para justificar la integración definitiva de una característica al Core del producto. Al tratarse de un SaaS B2B en etapa de validación, se buscan impactos amplios que venzan la barrera de la "falta de tiempo" que tienen los negocios manuales.
+
+3. Cálculos de Escala por Experimento
+   
+    Aplicando los criterios de certeza y precisión mencionados, se han tomado las siguientes decisiones de escala para ejecutar las Experiment Cards: 
+   - Experimento 1 (EXP-01): Alertas push de stock bajo 
+     - Métrica Principal: Tasa de quiebres de inventario. 
+     - Precisión (MDE): Se busca detectar una diferencia mínima del 15% en la tasa de quiebres entre el grupo experimental y el de control. 
+     - Escala Calculada: Se requiere un mínimo de 30 usuarios por condición (60 usuarios en total). 
+     - Duración: 4 semanas, periodo determinado para abarcar la variabilidad mensual clásica del ciclo de reabastecimiento logístico en bodegas. 
+   - Experimento 2 (EXP-02): Reportes visuales de inventario 
+     - Métrica Principal: Frecuencia de acciones de reabastecimiento. 
+     - Precisión (MDE): Un incremento mínimo del 20% en acciones de reabastecimiento por parte de los usuarios que consumen reportes. 
+     - Escala Calculada: Un mínimo de 25 usuarios por condición (50 usuarios en total). 
+     - Duración: 3 semanas de monitoreo continuo mediante el tracking de eventos web y móvil. 
+   - Experimento 3 (EXP-03): Viabilidad del modelo Freemium 
+     - Métrica Principal: Tasa de conversión de freemium a premium. 
+     - Precisión (MDE): Se admite un margen de diferencia del 5% respecto a la meta central de negocio (15% de conversión). 
+     - Escala Calculada: Mínimo 80 usuarios freemium registrados. A diferencia de los anteriores, este estudio es de naturaleza exploratoria, por lo que se observará a la totalidad de la muestra contra el criterio de éxito en lugar de usar un grupo de control aislado. 
+     - Duración: 60 días, permitiendo que el usuario madure en el uso de la herramienta y perciba el límite de valor del plan básico.
+
+    En conclusión, estas decisiones de escala aseguran que StockWise sea evaluado bajo el marco de experimentación continua con rigor matemático, balanceando la obtención de tamaños de muestra factibles (50 a 80 usuarios) con la capacidad de detectar impactos radicales en los dolores logísticos de sus clientes.
+
+
+### 8.2.6. Methods Selection 
+
+En esta sección se detalla la estrategia metodológica empleada para ejecutar los experimentos en StockWise. El diseño de la investigación se rige por la optimización de recursos técnicos y el rigor analítico, asegurando que los datos recopilados sean válidos para evaluar las hipótesis de negocio establecidas. 
+
+1. El Principio del "Simplest Useful Thing" (La solución más simple y útil)
+   
+    Para alcanzar el tamaño de muestra requerido y recopilar evidencia contundente, los métodos seleccionados priorizan la menor complejidad técnica posible que aún garantice la precisión de los datos. En lugar de desarrollar sistemas predictivos complejos desde la primera iteración, StockWise utiliza activadores lógicos directos. Por ejemplo, para el EXP-01, la "cosa más simple y útil" es disparar una notificación push basada en un umbral estático (min_stock) configurado por el usuario, evitando el esfuerzo de implementar un modelo de Inteligencia Artificial hasta que el comportamiento básico de respuesta a alertas haya sido validado. 
+2. Objeto de Investigación vs. Método
+   
+    Es fundamental distinguir entre lo que se desea aprender (el objeto) y cómo se recopilarán los datos (el método). En StockWise, el objeto de investigación está compuesto por las preguntas de negocio (por ejemplo: "¿Las alertas push reducen los quiebres de stock?"). El método, por otro lado, es la técnica de ingeniería y análisis aplicada para responderla. Los métodos seleccionados son: 
+   - Para EXP-01 (Alertas Push): Prueba A/B (A/B Testing) con Feature Toggles. Se dividirá a los usuarios en un Grupo Experimental (con alertas habilitadas) y un Grupo de Control (sin alertas). La plataforma utilizará Feature Toggles (banderas de funcionalidad) gestionadas desde el backend para habilitar o deshabilitar el envío de notificaciones sin modificar el código base de la aplicación móvil. 
+   - Para EXP-02 (Reportes Visuales): Análisis de Cohortes Observacional. Dado que no se puede forzar a un usuario a utilizar el dashboard, el método consistirá en rastrear eventos de uso en el frontend web. Se comparará el comportamiento de la cohorte que accede al reporte voluntariamente (registrado mediante el evento report_viewed) contra la cohorte que no lo hace. 
+   - Para EXP-03 (Conversión Freemium): Análisis de Embudo (Funnel Analysis) Longitudinal. Al ser un experimento exploratorio, el método consiste en monitorear la tasa de conversión natural de todos los usuarios registrados en el plan gratuito a lo largo de un periodo de 60 días, rastreando los eventos desde session_started hasta plan_upgrade_completed. 
+3. Aislamiento de Experimentos (Control de Colisiones)
+   
+    Para garantizar la integridad estadística, se aplica una estricta norma de no concurrencia cruzada: ningún usuario será expuesto simultáneamente a dos alteraciones en el mismo flujo de trabajo que puedan sesgar los resultados. Si bien un usuario puede participar en el EXP-01 (alertas) y en el EXP-03 (conversión), los parámetros de evaluación están aislados. La asignación a grupos experimentales se realizará de forma aleatoria y se vinculará unívocamente al identificador del usuario (user_id), garantizando que la experiencia de un cliente de StockWise sea consistente durante todas las semanas que dure la prueba. 
+4. Consideraciones Éticas y Operativas (Do No Harm)
+   
+    La ejecución de los métodos de experimentación en un entorno B2B requiere un diseño responsable. Dado que StockWise maneja el inventario real de bodegas y startups, los experimentos se rigen por el principio de "no causar daño" a la operatividad del cliente: 
+   - Integridad de la data: Las pruebas A/B o el tracking de eventos no interferirán, bloquearán ni alterarán los registros de base de datos de los movimientos de inventario reales (entradas y salidas). 
+   - Transparencia (Opt-out): Aunque las funcionalidades experimentales se desplieguen, los usuarios mantienen el control de su configuración (por ejemplo, pudiendo desactivar o silenciar las alertas push del EXP-01 si consideran que interrumpen su atención en tienda).
+
+### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
+
+En esta sección se definen los objetivos de análisis, KPIs y métricas que permitirán evaluar el desempeño del producto StockWise. Estas métricas están alineadas con el enfoque experiment-driven del proyecto y permiten validar la adopción, el uso, la eficiencia operativa y la viabilidad del modelo SaaS para la gestión de inventarios en PYMES y emprendedores.
+
+El objetivo de estas métricas es medir el comportamiento real de los usuarios dentro de la plataforma, identificar oportunidades de mejora y validar si la solución propuesta resuelve efectivamente los problemas de control de inventario, trazabilidad y gestión operativa.
+
+1. Tasa de activación de usuarios (Activation Rate)
+
+**Descripción:**  
+Porcentaje de usuarios registrados que completan el onboarding y realizan su primera acción relevante (crear producto, registrar inventario o visualizar dashboard).
+
+**Fórmula:**  
+Usuarios activos iniciales / Usuarios registrados * 100
+
+**Meta:**  
+Alcanzar una tasa de activación mínima del 45% en los primeros 60 días.
+
+**Objetivo del KPI:**  
+Medir la efectividad del proceso de onboarding y la facilidad de adopción inicial del sistema.
+
+ 2. Tasa de uso del módulo de inventario (Feature Adoption Rate)
+
+**Descripción:**  
+Porcentaje de usuarios activos que utilizan el módulo principal de inventario para registrar, editar o eliminar productos.
+
+**Fórmula:**  
+Usuarios que usan inventario / Usuarios activos * 100
+
+**Meta:**  
+Alcanzar al menos un 70% de uso semanal del módulo de inventario.
+
+**Objetivo del KPI:**  
+Validar que la funcionalidad principal del producto es realmente utilizada en la operación diaria.
+
+ 3. Frecuencia de operaciones de inventario (Inventory Interaction Frequency)
+
+**Descripción:**  
+Número promedio de acciones relacionadas al inventario realizadas por usuario activo por semana.
+
+**Fórmula:**  
+Total de acciones de inventario / Usuarios activos
+
+**Meta:**  
+Lograr un promedio mínimo de 5 interacciones por usuario por semana.
+
+**Objetivo del KPI:**  
+Medir el nivel de dependencia del sistema en la gestión operativa del negocio.
+
+4. Efectividad del sistema de alertas (Alert Response Rate)
+
+**Descripción:**  
+Porcentaje de alertas de stock bajo o productos próximos a vencer que generan acción por parte del usuario.
+
+**Fórmula:**  
+Alertas atendidas / Alertas generadas * 100
+
+**Meta:**  
+Alcanzar una tasa de respuesta del 60% o superior.
+
+**Objetivo del KPI:**  
+Evaluar si el sistema de alertas aporta valor real en la prevención de pérdidas.
+
+
+5. Retención de usuarios (User Retention Rate)
+
+**Descripción:**  
+Porcentaje de usuarios que continúan utilizando la plataforma después de su primera semana de uso.
+
+**Fórmula:**  
+Usuarios activos semana 2 / Usuarios activos semana 1 * 100
+
+**Meta:**  
+Mantener una retención mínima del 50% en la segunda semana.
+
+**Objetivo del KPI:**  
+Medir la capacidad del producto para generar uso recurrente.
+
+6. Tiempo de operación por tarea (Task Completion Time)
+
+**Descripción:**  
+Tiempo promedio que tarda un usuario en completar una operación de inventario (registro o actualización de producto).
+
+**Fórmula:**  
+Tiempo total de operaciones / Número de operaciones
+
+**Meta:**  
+Reducir el tiempo promedio a menos de 2 minutos por operación.
+
+**Objetivo del KPI:**  
+Evaluar la eficiencia del sistema y la experiencia de usuario en tareas críticas.
+
+7. Tasa de conversión a plan pago (Conversion Rate)
+
+**Descripción:**  
+Porcentaje de usuarios gratuitos que migran a un plan de pago dentro de la plataforma SaaS.
+
+**Fórmula:**  
+Usuarios de pago / Usuarios totales * 100
+
+**Meta:**  
+Alcanzar una conversión inicial del 8% en los primeros 3 meses.
+
+**Objetivo del KPI:**  
+Validar la viabilidad del modelo de negocio del producto.
+
+8. Nivel de satisfacción del usuario (User Satisfaction Score - CSAT)
+
+**Descripción:**  
+Evaluación del nivel de satisfacción del usuario respecto al uso del sistema.
+
+**Fórmula:**  
+Promedio de encuestas de satisfacción (escala 1 a 5)
+
+**Meta:**  
+Obtener un puntaje mínimo de 4.2 sobre 5.
+
+**Objetivo del KPI:**  
+Medir la percepción de calidad del producto y la experiencia de usuario.
+
+9. Disponibilidad del sistema (System Availability)
+
+**Descripción:**  
+Porcentaje de tiempo en el que la plataforma se encuentra operativa y disponible para los usuarios.
+
+**Fórmula:**  
+Tiempo activo del sistema / Tiempo total * 100
+
+**Meta:**  
+Mantener una disponibilidad mínima del 95%.
+
+**Objetivo del KPI:**  
+Garantizar confiabilidad del sistema en entornos de uso real.
+
+**Relación con el enfoque experiment-driven**
+
+Estas métricas permiten validar hipótesis del producto StockWise mediante datos reales de uso, facilitando la toma de decisiones basada en evidencia. Asimismo, permiten:
+
+- Medir la adopción real del sistema
+- Evaluar la eficiencia de los flujos de inventario
+- Validar la efectividad de alertas y automatización
+- Determinar la viabilidad del modelo SaaS
+- Identificar fricciones en la experiencia de usuario
+
+De esta manera, el producto puede evolucionar de forma iterativa basada en métricas objetivas y no en suposiciones.
+
+### 8.2.8. Web and Mobile Tracking Plan
+
+El **Tracking Plan** define los eventos, propiedades y canales de recolección de datos que StockWise utilizará para medir el comportamiento de los usuarios durante la ejecución de los experimentos definidos. Su propósito es garantizar que los datos recopilados sean suficientes, precisos y estén directamente alineados con las métricas de evaluación de cada experimento.
+
+ **Principios del Tracking Plan**
+
+- Se rastrea únicamente la información necesaria para responder las preguntas de investigación definidas en los experimentos (**economía de datos**).
+- Los nombres de los eventos siguen la convención **objeto_acción** utilizando formato **snake_case** (por ejemplo: `alert_opened`).
+- Cada evento incorpora únicamente las propiedades mínimas requeridas para segmentar, filtrar y analizar los datos.
+- La recolección de datos se realiza únicamente durante el período definido en la escala de cada experimento.
+- Todos los eventos deben contar con una marca temporal (`timestamp`) para garantizar la trazabilidad y el análisis cronológico.
+
+---
+
+ **Eventos del Frontend Web (Vue.js — Vercel)**
+
+| Evento | Descripción | Propiedades | Experimentos relacionados |
+|----------|-------------|-------------|---------------------------|
+| `session_started` | El usuario inicia sesión en la aplicación web. | `user_id`, `plan_type`, `timestamp` | EXP-01, EXP-02, EXP-03 |
+| `product_viewed` | El usuario visualiza el detalle de un producto en el inventario. | `user_id`, `product_id`, `timestamp` | EXP-01 |
+| `inventory_restocked` | El usuario registra un reabastecimiento de un producto. | `user_id`, `product_id`, `quantity_added`, `timestamp` | EXP-01, EXP-02 |
+| `report_viewed` | El usuario accede al módulo de reportes visuales. | `user_id`, `report_type`, `timestamp` | EXP-02 |
+| `plan_upgrade_started` | El usuario inicia el proceso de actualización a un plan de pago. | `user_id`, `current_plan`, `target_plan`, `timestamp` | EXP-03 |
+| `plan_upgrade_completed` | El usuario completa la conversión a un plan de pago. | `user_id`, `previous_plan`, `new_plan`, `timestamp` | EXP-03 |
+
+---
+
+ **Eventos de la Aplicación Mobile**
+
+| Evento | Descripción | Propiedades | Experimentos relacionados |
+|----------|-------------|-------------|---------------------------|
+| `app_session_started` | El usuario abre la aplicación móvil. | `user_id`, `platform`, `plan_type`, `timestamp` | EXP-01, EXP-02, EXP-03 |
+| `alert_received` | El sistema envía una notificación push de stock bajo al dispositivo del usuario. | `user_id`, `product_id`, `current_stock`, `min_stock_threshold`, `timestamp` | EXP-01 |
+| `alert_opened` | El usuario abre una notificación push recibida. | `user_id`, `product_id`, `time_to_open`, `timestamp` | EXP-01 |
+| `alert_dismissed` | El usuario descarta la notificación sin interactuar con ella. | `user_id`, `product_id`, `timestamp` | EXP-01 |
+| `stock_out_detected` | El sistema detecta que un producto alcanza cero unidades en inventario. | `user_id`, `product_id`, `timestamp` | EXP-01 |
+| `report_viewed_mobile` | El usuario accede al módulo de reportes desde la aplicación móvil. | `user_id`, `report_type`, `timestamp` | EXP-02 |
+| `inventory_restocked_mobile` | El usuario registra un reabastecimiento desde la aplicación móvil. | `user_id`, `product_id`, `quantity_added`, `timestamp` | EXP-01, EXP-02 |
+
+
+---
+
+ **Eventos y Logs del Backend (Spring Boot — Render)**
+
+| Evento / Endpoint | Descripción | Captura registrada | Experimentos relacionados |
+|------------------|-------------|-------------------|---------------------------|
+| `POST /api/v1/alerts` | Creación de una nueva alerta de stock bajo. | Log con `user_id`, `product_id`, `timestamp`. | EXP-01 |
+| `GET /api/v1/reports` | Consulta del módulo de reportes. | Log con `user_id`, `report_type`, `timestamp`. | EXP-02 |
+| `POST /api/v1/inventory/restock` | Registro de una operación de reabastecimiento. | Log con `user_id`, `product_id`, `quantity`, `timestamp`. | EXP-01, EXP-02 |
+| `POST /api/v1/subscriptions/upgrade` | Solicitud de actualización a un plan de pago. | Log con `user_id`, `new_plan`, `timestamp`. | EXP-03 |
+
+---
+
+ **Resumen del Tracking Plan por Experimento**
+
+| Experimento | Eventos principales a rastrear | Canal de recolección | Duración |
+|-------------|-------------------------------|---------------------|----------|
+| **EXP-01 — Impacto de alertas push de stock bajo** | `alert_received`, `alert_opened`, `stock_out_detected`, `inventory_restocked` | Aplicación Mobile + Backend | 4 semanas |
+| **EXP-02 — Uso de reportes visuales para reabastecimiento** | `report_viewed`, `report_viewed_mobile`, `inventory_restocked`, `inventory_restocked_mobile` | Web + Mobile + Backend | 3 semanas |
+| **EXP-03 — Conversión del modelo freemium** | `session_started`, `plan_upgrade_started`, `plan_upgrade_completed` | Web + Mobile + Backend | 60 días |
+
+---
+
+ **Trazabilidad entre Experimentos y Eventos**
+
+| Experimento | Objetivo de medición | Eventos clave |
+|-------------|---------------------|---------------|
+| **EXP-01** | Reducir quiebres de inventario mediante alertas inteligentes. | `alert_received`, `alert_opened`, `stock_out_detected`, `inventory_restocked` |
+| **EXP-02** | Incrementar decisiones de reabastecimiento basadas en datos. | `report_viewed`, `report_viewed_mobile`, `inventory_restocked`, `inventory_restocked_mobile` |
+| **EXP-03** | Validar la efectividad del modelo freemium para la conversión a planes de pago. | `session_started`, `plan_upgrade_started`, `plan_upgrade_completed` |
+
+## 8.3. Experimentation
+
+### 8.3.1. To-Be User Stories
+
+Las **To-Be User Stories** representan los nuevos requisitos funcionales derivados de las hipótesis de experimentación de StockWise. Estas historias permiten implementar las condiciones experimentales definidas en las Experiment Cards y habilitan la captura de eventos necesarios para validar las hipótesis planteadas.
+
+ **Backlog de To-Be User Stories**
+
+| Story ID | User Story | Prioridad | Epic |
+|-----------|------------|------------|------|
+| **US-TB01** | Como usuario de StockWise, quiero recibir una notificación push cuando el stock de un producto baje del umbral mínimo configurado, para poder reabastecer a tiempo y evitar quiebres de inventario. | Alta | EP-EXP01: Alertas inteligentes de stock |
+| **US-TB02** | Como usuario de StockWise, quiero poder configurar el umbral mínimo de stock para cada producto de forma individual, para personalizar las alertas según las necesidades de mi negocio. | Alta | EP-EXP01: Alertas inteligentes de stock |
+| **US-TB03** | Como usuario de StockWise, quiero ver un historial de alertas de stock bajo recibidas en los últimos 30 días, para evaluar cuáles productos generan más quiebres frecuentes. | Media | EP-EXP01: Alertas inteligentes de stock |
+| **US-TB04** | Como usuario de StockWise, quiero acceder a un dashboard de reportes visuales que muestre el movimiento de inventario de la semana actual, para tomar decisiones de reabastecimiento basadas en datos. | Alta | EP-EXP02: Reportes visuales de inventario |
+| **US-TB05** | Como usuario de StockWise, quiero que el sistema registre automáticamente cuándo accedo al módulo de reportes, para que el equipo pueda analizar el patrón de uso de esta funcionalidad. | Alta | EP-EXP02: Reportes visuales de inventario |
+| **US-TB06** | Como visitante con plan gratuito de StockWise, quiero ver una comparativa clara entre el plan gratuito y los planes de pago antes de decidir hacer upgrade, para evaluar si el costo adicional vale el beneficio. | Alta | EP-EXP03: Conversión freemium |
+| **US-TB07** | Como usuario de StockWise, quiero que el sistema registre de forma automática cuando inicio el proceso de upgrade de plan, para que el equipo pueda medir la tasa de conversión freemium a premium. | Alta | EP-EXP03: Conversión freemium |
+
+---
+
+ **Relación entre Epics y User Stories**
+
+| Epic | Objetivo | User Stories asociadas |
+|--------|-----------|-----------------------|
+| **EP-EXP01: Alertas inteligentes de stock** | Validar el impacto de las alertas push en la reducción de quiebres de inventario. | US-TB01, US-TB02, US-TB03 |
+| **EP-EXP02: Reportes visuales de inventario** | Validar si los reportes visuales incrementan las decisiones de reabastecimiento basadas en datos. | US-TB04, US-TB05 |
+| **EP-EXP03: Conversión freemium** | Medir la efectividad del modelo freemium para convertir usuarios a planes de pago. | US-TB06, US-TB07 |
+
+---
+
+ **Criterios de Aceptación — US-TB01**
+
+**Historia:** Notificación push de stock bajo.
+
+```gherkin
+Feature: Notificación push de stock bajo
+
+  Scenario: Usuario recibe alerta cuando el stock cae por debajo del umbral
+
+    Given que el usuario tiene configurado un umbral mínimo de 5 unidades para el producto "Arroz 1kg"
+    And el stock actual del producto es de 10 unidades
+
+    When se registra una salida de 6 unidades del producto "Arroz 1kg"
+
+    Then el sistema envía una notificación push al dispositivo del usuario
+    And la notificación indica el nombre del producto y el stock actual
+    And se registra el evento "alert_received" con el user_id y el product_id correspondientes
+
+  Scenario: Usuario no recibe alerta cuando el stock se mantiene por encima del umbral
+
+    Given que el umbral mínimo es de 5 unidades para el producto "Leche evaporada"
+    And el stock actual es de 20 unidades
+
+    When se registra una salida de 10 unidades
+
+    Then el sistema no envía ninguna notificación push
+    And el stock resultante (10 unidades) permanece por encima del umbral configurado
+```
+
+---
+
+ **Criterios de Aceptación — US-TB04**
+
+**Historia:** Dashboard de reportes visuales de inventario.
+
+```gherkin
+Feature: Dashboard de reportes visuales de inventario
+
+  Scenario: Usuario accede al módulo de reportes y visualiza el movimiento semanal
+
+    Given que el usuario ha iniciado sesión en StockWise
+    And existen movimientos de inventario registrados en los últimos 7 días
+
+    When el usuario navega al módulo "Reportes"
+
+    Then el sistema muestra un gráfico con las entradas y salidas de inventario de la semana actual
+    And se registra el evento "report_viewed" con el user_id, el tipo de reporte y el timestamp
+
+  Scenario: Usuario sin movimientos registrados accede al módulo de reportes
+
+    Given que el usuario ha iniciado sesión en StockWise
+    And no existen movimientos de inventario en los últimos 7 días
+
+    When el usuario navega al módulo "Reportes"
+
+    Then el sistema muestra un mensaje indicando que no hay datos para el período seleccionado
+    And el evento "report_viewed" se registra igualmente
+```
+
+---
+
+ **Trazabilidad con los Experimentos**
+
+| Experimento | User Stories relacionadas |
+|-------------|--------------------------|
+| **EXP-01 — Alertas push de stock bajo** | US-TB01, US-TB02, US-TB03 |
+| **EXP-02 — Reportes visuales de inventario** | US-TB04, US-TB05 |
+| **EXP-03 — Conversión freemium** | US-TB06, US-TB07 |
+
+Esta trazabilidad garantiza que cada funcionalidad implementada contribuya directamente a la validación de una hipótesis experimental definida en el proceso Lean UX.
+
+
+### 8.3.2. To-Be Product Backlog
+
+El **To-Be Product Backlog** incorpora las User Stories experimentales al backlog existente de StockWise, priorizadas según su valor para la validación de las hipótesis de negocio.
+
+ **Backlog Priorizado**
+
+| Orden | Story ID | Título | Descripción | Story Points |
+|--------|-----------|---------|-------------|--------------|
+| 1 | US-TB01 | Notificación push de stock bajo | Como usuario quiero recibir una notificación push cuando el stock de un producto baje del umbral mínimo configurado, para evitar quiebres de inventario. | 5 |
+| 2 | US-TB06 | Comparativa de planes freemium vs premium | Como visitante con plan gratuito quiero ver una comparativa clara entre planes antes de hacer upgrade, para evaluar si el beneficio justifica el costo. | 3 |
+| 3 | US-TB04 | Dashboard de reportes visuales de inventario | Como usuario quiero acceder a un dashboard que muestre el movimiento de inventario semanal, para tomar decisiones de reabastecimiento basadas en datos. | 5 |
+| 4 | US-TB02 | Configuración de umbral mínimo por producto | Como usuario quiero configurar el umbral mínimo de stock por producto de forma individual, para personalizar las alertas según mi negocio. | 3 |
+| 5 | US-TB07 | Registro de evento de upgrade de plan | Como usuario quiero que el sistema registre cuando inicio el proceso de upgrade, para que el equipo mida la tasa de conversión freemium a premium. | 2 |
+| 6 | US-TB05 | Registro de evento de acceso a reportes | Como usuario quiero que el sistema registre cuando accedo al módulo de reportes, para que el equipo analice el patrón de uso. | 2 |
+| 7 | US-TB03 | Historial de alertas de stock bajo | Como usuario quiero ver un historial de alertas recibidas en los últimos 30 días, para identificar los productos con más quiebres frecuentes. | 3 |
+
+ **Resumen del Backlog**
+
+| Métrica | Valor |
+|----------|--------|
+| Total de User Stories | 7 |
+| Total de Story Points | 23 |
+| Historias de prioridad alta | 6 |
+| Historias de prioridad media | 1 |
+
+ **Distribución por Epic**
+
+| Epic | User Stories | Story Points |
+|--------|--------------|--------------|
+| EP-EXP01: Alertas inteligentes de stock | US-TB01, US-TB02, US-TB03 | 11 |
+| EP-EXP02: Reportes visuales de inventario | US-TB04, US-TB05 | 7 |
+| EP-EXP03: Conversión freemium | US-TB06, US-TB07 | 5 |
+
+ **Trazabilidad con los Experimentos**
+ 
+| Experimento | Historias asociadas |
+|-------------|---------------------|
+| EXP-01 — Alertas push de stock bajo | US-TB01, US-TB02, US-TB03 |
+| EXP-02 — Reportes visuales de inventario | US-TB04, US-TB05 |
+| EXP-03 — Conversión freemium a premium | US-TB06, US-TB07 |
+
+
+<div style="page-break-after: always;"></div>
+
+# Conclusiones
 
 El informe consolida el ciclo de vida de StockWise como solución SaaS orientada a pymes, startups y bodegas que hoy dependen de registros manuales o herramientas poco especializadas. La evidencia documentada (Lean UX, entrevistas, needfinding y especificación con user stories, backlog e impact mapping) muestra que el problema no es solo “falta de software”, sino falta de trazabilidad, consistencia de datos y visibilidad en tiempo real, lo que se traduce en quiebres de stock, sobrecostos y decisiones de compra poco informadas.
 
-### 7.4.4. Notification Pipeline Components
+En términos de diseño e implementación, el trabajo demuestra que es viable abordar el dominio con arquitectura y modelado centrados en el negocio (contextos delimitados, diseño orientado a objetos y modelo de datos), complementados con experiencias diferenciadas en web y móvil y una API REST que actúa como contrato estable entre capas. La planificación por sprints y la entrega de evidencias (landing, frontends, app móvil nativa, backend y documentación de API) reflejan un producto coherente con la propuesta de valor: digitalizar inventario, ventas y alertas sin exigir al usuario una curva de adopción propia de un ERP tradicional.
 
 La verificación y validación aportan un cierre técnico sólido: las pruebas unitarias e de integración garantizan la estabilidad del núcleo del dominio, mientras que el enfoque BDD con Gherkin conecta explícitamente los requisitos con el comportamiento observable. Asimismo, la incorporación del análisis estático de código eleva los estándares de mantenibilidad y seguridad, complementándose con validaciones heurísticas de usabilidad y auditorías de experiencia de usuario —tanto realizadas como recibidas— que aseguran un producto final intuitivo, robusto y centrado en el cliente.
 
@@ -4849,4 +5824,3 @@ Enlace Landing: [https://stockwiselanding.netlify.app/](https://stockwiselanding
 Enlace Frontend: [https://stocktrack-frontend.vercel.app/auth/register](https://stocktrack-frontend.vercel.app/auth/register)
 
 Enlace Backend: [https://stoq-web-backend.onrender.com/swagger-ui.html](https://stoq-web-backend.onrender.com/swagger-ui.html)
-
