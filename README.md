@@ -1515,6 +1515,17 @@ El **To-Be Product Backlog** incorpora las User Stories experimentales al backlo
 
 #### 8.3.3.6. Team Collaboration Insights
 
+Se evidencian insights de los repositorios de Github donde se han trabajado las implementaciones. Link de organización: https://github.com/upc-1ASI0732-2610-16879-Stoq 
+
+Insights de repositorio de landing page Link: https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-LandingPage 
+![Insights-landing page](img/la.png)
+
+Insights de repositorio de frontend Link: https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-FrontendWeb 
+![Insights-frontend](img/la2.png)
+
+Insights de repositorio de backend Link: https://github.com/upc-1ASI0732-2610-16879-Stoq/Stoq-Web-Backend
+![Insights-frontend](img/la3.png)
+
 ### 8.3.4. To-Be Validation Interviews
 
 #### 8.3.4.1. Diseno de Entrevistas
