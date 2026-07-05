@@ -1587,6 +1587,40 @@ En conjunto, estas evidencias demuestran que la aplicación Frontend Web To-Be f
 
 #### 8.3.3.4. Implemented To-Be Native-Mobile Application Evidence
 
+La implementación To-Be de la aplicación móvil estuvo relacionada principalmente con el **EXP-01 — Alertas push de stock bajo**. Este experimento busca validar si las alertas inteligentes permiten que los usuarios reaccionen a tiempo cuando un producto cae por debajo del umbral mínimo configurado, reduciendo así los quiebres de inventario y mejorando la planificación del reabastecimiento.
+
+Para ello, la aplicación móvil incorpora vistas orientadas al control rápido del inventario, la revisión del estado de productos, el seguimiento de movimientos y la consulta de información relevante desde un dispositivo móvil. Esta evidencia se relaciona directamente con la **US-TB01 — Notificación push de stock bajo**, debido a que el sistema debe permitir que el usuario identifique productos críticos y actúe oportunamente. Asimismo, se relaciona con la **US-TB02 — Configuración de umbral mínimo por producto**, ya que la vista de inventario permite visualizar información de stock actual y stock mínimo. Finalmente, también se vincula con la **US-TB03 — Historial de alertas de stock bajo**, porque el usuario puede consultar movimientos o registros asociados al comportamiento del inventario.
+
+El objetivo de esta implementación no es únicamente mostrar pantallas móviles, sino evidenciar cómo la experiencia nativa permite sostener el ciclo experiment-driven. En el contexto del EXP-01, la aplicación móvil es relevante porque los usuarios de bodegas y emprendimientos suelen revisar el stock durante la operación diaria del negocio. Por ello, contar con una interfaz rápida y accesible desde el celular facilita la reacción ante alertas, el seguimiento de productos críticos y la toma de decisiones de reposición.
+
+**Evidencias de implementación To-Be de la aplicación móvil**
+
+| Elemento implementado | Descripción | User Story relacionada | Experimento relacionado | Métrica / evento asociado | Evidencia |
+|---|---|---|---|---|---|
+| Dashboard móvil | Presenta una vista general del estado del inventario y accesos rápidos a funciones principales. | US-TB01 | EXP-01 | `alert_received`, `alert_opened` | Dashboard móvil |
+| Historial de movimientos | Permite consultar entradas, salidas y cambios realizados en el inventario. | US-TB03 | EXP-01 | `stock_out_detected`, `inventory_restocked` | Historial móvil |
+| Inventario por producto | Permite revisar productos, cantidades disponibles, stock mínimo y datos necesarios para identificar productos críticos. | US-TB02 | EXP-01 | `alert_received`, `stock_out_detected` | Inventario móvil |
+
+**Dashboard móvil To-Be**
+
+![Dashboard móvil To-Be](img/mobile-dashboard.png)
+
+La imagen muestra el dashboard móvil de StockWise, donde el usuario puede revisar información general del inventario y acceder rápidamente a las funcionalidades principales. Esta vista contribuye al EXP-01 porque permite que el usuario identifique el estado general de sus productos desde el celular y pueda reaccionar con mayor rapidez ante situaciones de bajo stock o vencimiento próximo.
+
+**Historial de movimientos y seguimiento del inventario**
+
+![Historial de movimientos móvil](img/mobile-history-alerts.png)
+
+La imagen evidencia una vista de seguimiento del inventario, donde el usuario puede consultar movimientos, entradas o salidas de productos. Esta funcionalidad se relaciona con la US-TB03 porque permite revisar el comportamiento reciente del inventario y analizar qué productos presentan mayor riesgo de quiebre o requieren una acción de reposición.
+
+**Inventario por producto en la aplicación móvil**
+
+![Inventario por producto móvil](img/mobile-inventory-product.png)
+
+La imagen muestra la vista de inventario por producto, donde el usuario puede consultar información como producto, cantidad disponible, precio, fecha o stock mínimo. Esta pantalla se relaciona con la US-TB02 porque permite visualizar información necesaria para configurar o interpretar los umbrales mínimos de stock. Además, esta vista apoya la validación del EXP-01, ya que facilita la identificación de productos que podrían generar alertas automáticas cuando su cantidad disponible cae por debajo del límite establecido.
+
+En conjunto, estas evidencias demuestran que la aplicación móvil To-Be fue orientada a la validación del impacto de las alertas de stock bajo en la operación diaria de los usuarios. Las vistas implementadas permiten consultar el estado del inventario, revisar movimientos y detectar productos críticos desde un dispositivo móvil. Por lo tanto, esta implementación contribuye directamente al ciclo experiment-driven, ya que permite relacionar la experiencia móvil con eventos como `alert_received`, `alert_opened`, `stock_out_detected` e `inventory_restocked`.
+
 #### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
 
 #### 8.3.3.6. Team Collaboration Insights
