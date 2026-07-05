@@ -1542,9 +1542,48 @@ Insights de repositorio de backend Link: https://github.com/upc-1ASI0732-2610-16
 
 ### 8.5.1. Shareback Session Artifacts: Learning Workflow
 
+El aprendizaje continuo es un pilar fundamental en el ciclo de vida y desarrollo de StockWise. Para garantizar la mejora constante del producto, la evolución de la plataforma y la alineación de todo el equipo, se establecieron sesiones periódicas de retroalimentación conocidas como Shareback Sessions.
+
+**Formato de la Shareback Session**
+
+Estas sesiones están diseñadas como un espacio colaborativo estructurado donde los integrantes del equipo comparten sus aprendizajes, métricas validadas y desafíos descubiertos durante la ejecución de los experimentos y pruebas de usabilidad. La estructura seguida en cada sesión es:
+
+1. Introducción y revisión: Alineación sobre los objetivos del sprint o experimento reciente.
+
+2. Presentación de aprendizajes: Exposición individual de descubrimientos técnicos, operativos y de negocio.
+
+3. Análisis colectivo: Discusión de los hallazgos basados en la interacción real de los usuarios en la plataforma.
+
+4. Registro de acciones: Toma de decisiones para mejorar procesos, pivotar funcionalidades o ajustar la arquitectura.
+
+**Documentación de los Aprendizajes**
+Cada sesión genera artefactos de conocimiento que se almacenan en un repositorio interno accesible para todo el equipo. Esta documentación asegura que los errores no se repitan y fomenta la reutilización de soluciones exitosas. Los aprendizajes se registran bajo el formato: Título del Aprendizaje, Descripción Detallada, Evidencia, Impacto en el Proyecto, y Acciones Futuras.
+
+A continuación, se presentan los dos artefactos de aprendizaje más recientes y relevantes del proyecto:
+
+**Artefacto de Aprendizaje 2: Depuración y Optimización de la Experiencia de Usuario (UX/UI)**
+- Título del Aprendizaje: Resolución de fricciones en navegación, interactividad y validación.
+
+- Descripción Detallada: Durante las etapas de prueba de la interfaz web, se identificaron diversas fricciones que afectaban la retención de contexto y frustraban al usuario final. El equipo consolidó estos 14 hallazgos en cuatro áreas de corrección sistemática.
+
+- Evidencia: Reportes de usabilidad documentando spinners infinitos, solapamiento de menús, enlaces sin respuesta y exposición de llaves de traducción.
+
+- Impacto en el Proyecto: La depuración integral mejoró drásticamente la fluidez de la plataforma. Las correcciones aplicadas fueron:
+
+1. Flujo de Autenticación y Sesión: Se implementó un manejo de tiempo de espera (timeout) adecuado en la pantalla de Login, eliminando el spinner infinito sin retroalimentación. Se restauró el enrutamiento del enlace "¿Olvidaste tu contraseña?" para dirigir al flujo de recuperación sin recargar la vista actual.
+
+2. Navegación y Layout: Se corrigió el enrutamiento para evitar redirecciones inesperadas a "Ajustes" al refrescar el Dashboard. Se optimizó el menú lateral (Sidebar) ajustando textos largos y asegurando que el control de idioma permanezca visible al colapsar el panel. Se eliminó la duplicidad visual de notificaciones y títulos en las cabeceras.
+
+3. Interactividad y Retroalimentación: Se activó la funcionalidad de los botones de "Filtrar" en los módulos de Proveedores y Ventas. Se resolvieron los bloqueos de estado en los modales (como el atasco de "Nuevo Personal" tras una operación exitosa) y se habilitaron acciones del menú contextual, como "Editar" producto.
+
+4. Validación de Datos y Mensajería: Se introdujeron validaciones estrictas de campos obligatorios al crear elementos complejos como un "Kit". Se estandarizaron los mensajes visuales tras acciones de edición/eliminación para cumplir con la guía de diseño, y se depuraron los diccionarios de traducción para evitar la exposición de variables internas al usar la app en inglés.
+
 ## 8.6. To-Be Software Platform Pre-launch
 
 ### 8.6.1. About-the-Product Intro Video
+El video de introducción de StockWise es la pieza central de nuestra estrategia de prelanzamiento. Tiene como objetivo comunicar la propuesta de valor de forma directa y visual, conectando con las frustraciones operativas de nuestro público objetivo y demostrando lo fácil que es migrar hacia nuestra solución digital.
+
+Link del video: 
 
 # Conclusiones y recomendaciones
 En conclusión, el desarrollo de StockWise permitió aplicar distintas buenas prácticas de ingeniería de software que mejoraron la calidad y confiabilidad del sistema. El uso de pruebas unitarias permitió validar el correcto funcionamiento de componentes individuales, mientras que las pruebas de integración aseguraron una comunicación adecuada entre módulos como inventario, autenticación y gestión de productos, ayudando a detectar errores antes del despliegue.
