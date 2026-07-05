@@ -265,7 +265,7 @@
       - [8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence](#8335-implemented-to-be-restful-api-andor-serverless-backend-evidence)
       - [8.3.3.6. Team Collaboration Insights](#8336-team-collaboration-insights)
     - [8.3.4. To-Be Validation Interviews](#834-to-be-validation-interviews)
-      - [8.3.4.1. Diseno de Entrevistas](#8341-diseno-de-entrevistas)
+      - [8.3.4.1. Diseño de Entrevistas](#8341-diseño-de-entrevistas)
       - [8.3.4.2. Registro de Entrevistas](#8342-registro-de-entrevistas)
   - [8.4. Experiment Aftermath \& Analysis](#84-experiment-aftermath--analysis)
     - [8.4.1. Analysis and Interpretation of Results](#841-analysis-and-interpretation-of-results)
@@ -1638,7 +1638,112 @@ Insights de repositorio de backend Link: https://github.com/upc-1ASI0732-2610-16
 
 ### 8.3.4. To-Be Validation Interviews
 
-#### 8.3.4.1. Diseno de Entrevistas
+#### 8.3.4.1. Diseño de Entrevistas
+
+**Segmento #1: Bodegas especializadas por rubro**
+
+**Presentación del entrevistado:**
+- ¿Cuál es tu nombre?
+- ¿Qué edad tienes?
+- ¿Desde cuándo gestionas esta bodega?
+- ¿Cuál es el rubro principal de tu bodega?
+
+
+**Contexto de la prueba:** El usuario interactúa con la app móvil y plataforma web para gestión de inventarios, enfocándose en los flujos de inicio de sesión, navegación de la interfaz, creación de productos/kits y el módulo de ventas.
+
+
+**User Goal: Iniciar sesión y Recuperación de cuenta**
+- El usuario hace clic en el enlace "¿Olvidaste tu contraseña?" y es redirigido correctamente al flujo de recuperación sin recargar la vista actual.
+- El usuario introduce su correo y contraseña.
+- Hace clic en el botón "Log In".
+- El sistema muestra un tiempo de carga óptimo, evitando esperas prolongadas o un "spinner" infinito.
+- El usuario es redirigido al Dashboard.
+
+
+**User Goal: Interacción con la Interfaz y Menú Lateral (Sidebar)**
+- El usuario visualiza la cabecera sin duplicidad en el título de la sección.
+- Comprueba que el panel derecho de notificaciones es único y no está duplicado.
+- El usuario colapsa el menú lateral izquierdo y verifica que el control de idioma sigue visible y accesible.
+- Cambia el idioma a inglés para probar la interfaz.
+- Visualiza las etiquetas del menú lateral asegurándose de que los textos largos (como "Administración...") se lean correctamente sin desbordar el contenedor.
+
+**User Goal: Inventario (Productos) y Módulo de Ventas**
+- El usuario ingresa a la sección de Inventario y abre los modales de "New Category" y "New product" (con el idioma en inglés), verificando que los textos se muestran correctamente sin exponer código interno.
+- Despliega el menú contextual de acciones en el listado de productos.
+- Selecciona "Editar" producto y verifica que la acción responde inmediatamente.
+- Selecciona "Eliminar" producto y visualiza un mensaje de confirmación - que respeta el diseño del sistema.
+- Navega al módulo de ventas e interactúa con el botón "Filtro" en la barra de búsqueda, comprobando que responde correctamente.
+
+**User Goal: Creación de Kits**
+- Pulsa el botón "Crear Kit" desde el menú principal.
+- Intenta guardar el Kit dejando campos obligatorios vacíos.
+- El sistema bloquea la acción y muestra mensajes de error y validación - claros.
+- Completa los campos correctamente y guarda el Kit con éxito.
+  
+
+**Preguntas principales (Enfocadas en las mejoras):**
+- ¿Qué te pareció la fluidez al iniciar sesión? ¿Notaste alguna demora inusual?
+- ¿Pudiste utilizar la opción de recuperar contraseña sin problemas?
+- Al recargar la página principal (Dashboard), ¿te mantuviste en la misma pantalla o notaste algún salto extraño?
+- ¿Qué te pareció el diseño del menú lateral al colapsarlo? ¿Pudiste encontrar el botón de idioma fácilmente?
+- ¿Cómo fue tu experiencia al editar o eliminar un producto desde el listado? ¿Los mensajes que aparecieron fueron claros?
+- ¿Qué pasó cuando intentaste crear un Kit sin llenar toda la información? ¿El sistema te indicó claramente qué faltaba?
+- ¿Te resultó fácil utilizar el botón de filtros en la sección de ventas?
+
+**Valoración de experiencia:**
+- Del 1 al 10, ¿qué tan fluida te pareció la plataforma comparada con versiones anteriores o sistemas similares?
+- ¿Qué mejora visual o funcional agradeces más en esta prueba?
+- ¿Qué función le agregarías sí o sí?
+-¿Recomendarías esta plataforma a otros dueños de bodegas? ¿Por qué?
+
+-------------------------------------------
+
+**Segmento #2: Startups y emprendedores con necesidades logísticas**
+
+**Presentación del entrevistado:**
+- ¿Cuál es tu nombre?
+- ¿Qué edad tienes?
+- ¿Qué tipo de producto vendes o almacenas?
+- ¿Tienes local físico, almacén propio o trabajas con terceros?
+
+**Contexto de la prueba:** El usuario interactúa con la plataforma web para gestionar stock avanzado, registrar compras de proveedores y administrar los accesos del personal.
+
+**User Goal: Iniciar sesión y Recuperación de cuenta**
+- El usuario prueba el flujo de "¿Olvidaste tu contraseña?" comprobando la redirección correcta.
+- Ingresa sus credenciales y accede al sistema sin atascos en la pantalla de carga.
+
+
+**User Goal: Gestión de Proveedores**
+- El usuario navega a la sección de Proveedores.
+- Utiliza la barra de búsqueda y hace clic en el botón "Filtrar", verificando que la interfaz reaccione y aplique los filtros.
+- Selecciona la acción "Editar" en un proveedor de la lista.
+- Guarda los cambios y verifica que el mensaje de éxito tenga un diseño consistente y agradable.
+
+**User Goal: Gestión de Personal**
+- El usuario navega a la sección de Administración de personal.
+- Hace clic en "Nuevo Personal" y completa el formulario.
+- Guarda el registro exitosamente.
+- El modal se cierra de forma automática y correcta, sin quedarse atascado en un estado de carga indefinido.
+
+**User Goal: Inventario y Traducción**
+- Cambia el idioma a inglés desde el menú lateral colapsado.
+- Abre el modal de creación de nueva categoría y producto.
+- Verifica que la traducción sea correcta y no muestre llaves de programación.
+- Intenta crear un Kit con campos vacíos para comprobar la respuesta visual de error.
+
+**Preguntas principales (Enfocadas en las mejoras):**
+- ¿Cómo sentiste el tiempo de respuesta al momento de iniciar sesión y - cargar la plataforma?
+- Al interactuar con la lista de proveedores, ¿el botón de filtrar funcionó como esperabas?
+- Cuando editaste la información de un proveedor, ¿el mensaje de confirmación fue claro y visualmente agradable?
+- ¿Cómo fue el proceso de registrar a un "Nuevo Personal"? ¿El sistema finalizó la tarea correctamente o sentiste que se quedó cargando?
+- ¿Notaste algún problema con los textos de las ventanas emergentes al cambiar el idioma a inglés?
+- Al navegar por el menú lateral izquierdo, ¿pudiste leer bien todas las opciones sin que los textos se cortaran abruptamente?
+
+**Valoración de experiencia:**
+- Del 1 al 10, ¿qué tanta confianza te transmite la estabilidad de la plataforma para tu operativa diaria?
+- ¿Qué funcionalidad te pareció más ágil durante esta sesión?
+- ¿Sientes que los avisos y errores del sistema (como al crear un kit incompleto) te ayudan a no cometer errores operativos?
+- ¿Recomendarías esta plataforma a otros emprendedores? ¿Por qué?
 
 #### 8.3.4.2. Registro de Entrevistas
 
