@@ -1550,6 +1550,41 @@ En conjunto, estas evidencias demuestran que la Landing Page To-Be fue orientada
 
 #### 8.3.3.3. Implemented To-Be Frontend-Web Application Evidence
 
+La implementación To-Be de la aplicación Frontend Web estuvo relacionada principalmente con el **EXP-02 — Reportes visuales de inventario**. Este experimento busca validar si el acceso a información visual del inventario incrementa la frecuencia con la que los usuarios toman decisiones de reabastecimiento basadas en datos.
+
+Para ello, la aplicación web incorpora vistas orientadas al análisis y control del inventario, como el dashboard principal, el módulo de inventario/productos y la vista de salida de productos. Estas evidencias se relacionan directamente con la **US-TB04 — Dashboard de reportes visuales de inventario**, debido a que permiten al usuario consultar métricas, productos con alertas, ingresos mensuales, productos más vendidos y estado actual del stock. Asimismo, se relacionan con la **US-TB05 — Registro de evento de acceso a reportes**, ya que el acceso a estas vistas puede ser medido mediante eventos como `report_viewed`.
+
+El objetivo de esta implementación no es únicamente mostrar información operativa, sino apoyar la validación experimental del uso de reportes visuales dentro de StockWise. Por ello, la aplicación web cumple un rol importante dentro del ciclo experiment-driven, ya que permite observar si los usuarios consultan información visual, revisan productos críticos y toman decisiones de inventario a partir de la información disponible en el sistema.
+
+**Evidencias de implementación To-Be del Frontend Web**
+
+| Elemento implementado | Descripción | User Story relacionada | Experimento relacionado | Métrica / evento asociado | Evidencia |
+|---|---|---|---|---|---|
+| Dashboard principal | Presenta información general del negocio, indicadores relevantes, productos con alertas, ingresos mensuales y productos más vendidos. | US-TB04 | EXP-02 | `report_viewed` | Dashboard web |
+| Módulo de inventario | Permite visualizar productos registrados, precios, stock actual, stock mínimo, kits y opciones de reposición o creación de productos. | US-TB04 | EXP-02 | `report_viewed`, `inventory_restocked` | Inventario web |
+| Vista de salida de productos | Permite registrar salidas de productos y visualizar un borrador con cantidades, precios y total de la operación. | US-TB04, US-TB05 | EXP-02 | `inventory_restocked` | Salida de productos |
+
+**Dashboard principal de la aplicación web To-Be**
+
+![Dashboard principal de la aplicación web To-Be](img/frontend-dashboard.png)
+
+La imagen muestra el dashboard principal de la aplicación web, donde el usuario puede revisar indicadores generales del negocio, como productos en inventario, ingresos del mes, ventas realizadas y productos con alertas. Además, se visualizan gráficos de productos más vendidos e ingresos mensuales, junto con un panel de notificaciones sobre productos por agotarse o próximos a caducar. Esta vista contribuye al EXP-02 porque permite que el usuario consulte información visual antes de tomar decisiones de reabastecimiento.
+
+**Módulo de inventario y productos de la aplicación web To-Be**
+
+![Módulo de inventario y productos de la aplicación web To-Be](img/frontend-inventory-products.png)
+
+La imagen evidencia el módulo de inventario, donde el usuario puede revisar productos registrados, precio unitario, stock actual, stock mínimo e información adicional. También se observan acciones para crear kits, agregar productos e ingresar reposición. Esta funcionalidad se relaciona con la US-TB04 porque permite analizar el estado actual del inventario y detectar productos que podrían requerir reposición o seguimiento.
+
+**Vista de salida de productos de la aplicación web To-Be**
+
+![Vista de salida de productos de la aplicación web To-Be](img/frontend-reports.png)
+
+La imagen muestra la vista de salida de productos, donde el usuario puede buscar productos, aplicar filtros, revisar el stock actual y construir un borrador de salida con cantidades, precios y total de la operación. Esta evidencia permite conectar la consulta del inventario con una acción operativa concreta, ya que las salidas registradas impactan directamente en el stock disponible. Por ello, esta vista se relaciona con el evento `inventory_restocked` y complementa la validación del EXP-02, al permitir analizar cómo los movimientos de inventario influyen en las decisiones posteriores de reposición.
+
+En conjunto, estas evidencias demuestran que la aplicación Frontend Web To-Be fue orientada a la validación del uso de información visual para la toma de decisiones de inventario. Las vistas implementadas permiten que el usuario consulte métricas, revise alertas, analice productos registrados y ejecute acciones relacionadas con el control de stock. Por lo tanto, esta implementación contribuye directamente al ciclo experiment-driven, ya que permite recolectar datos sobre el uso de reportes y evaluar si estos influyen en decisiones reales dentro del negocio.
+
+
 #### 8.3.3.4. Implemented To-Be Native-Mobile Application Evidence
 
 #### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
