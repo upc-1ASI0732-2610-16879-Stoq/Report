@@ -1952,8 +1952,13 @@ En general, estas prácticas aportaron beneficios importantes como mayor estabil
 
 # Video App Validation
 
+**Video app mobile validation:** https://canva.link/5zzsufn0huy1z6b 
+
+**Video app web validation:**
+
 # Video About-the-Team
 
 # Bibliografia
 
 # Anexos
+
