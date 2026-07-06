@@ -1768,6 +1768,79 @@ Insights de repositorio de backend Link: https://github.com/upc-1ASI0732-2610-16
 
 ### 8.4.1. Analysis and Interpretation of Results
 
+Con base en la ejecución de los experimentos definidos en las secciones 8.1 y 8.2, y sustentada en la evidencia recolectada durante las To-Be Validation Interviews (sección 8.3.4), se presenta el análisis e interpretación de los resultados obtenidos para cada uno de los experimentos planificados.
+
+**Experimento EXP-01: Alertas push de stock bajo**
+
+Hipótesis: Creemos que activar las alertas push en la aplicación móvil reducirá la frecuencia de quiebres de inventario en al menos un 40% en un período de 4 semanas, y se observará que un 70% de los reabastecimientos ocurren dentro de las primeras 24 horas posteriores a la notificación.
+
+Resultados obtenidos:
+
+A través de las entrevistas de validación con usuarios del segmento de bodegas (Marcelo Binda, Ariana Agreda, Maryori Atanacio, Mauricio Elera), se identificaron los siguientes hallazgos clave relacionados con las alertas:
+
+|Hallazgo | Evidencia | Interpretación |
+|--- |----- | -----  |
+|Valoración positiva de las alertas automáticas  | Marcelo Binda destacó que "la incorporación de alertas automáticas y un dashboard centralizado le ayuda a tomar decisiones más informadas y evitar pérdidas por falta de control". Ariana Agreda mencionó que "le ha gustado las notificaciones acerca de los productos que están por vencerse y agotarse". | Los usuarios perciben valor en recibir notificaciones proactivas sobre el estado de su inventario. Las alertas son identificadas como un elemento clave para reducir pérdidas y anticipar problemas. |
+|Reacción temprana ante riesgos | Mauricio Elera señaló que "las métricas rápidas y las alertas inteligentes le permiten reaccionar a tiempo ante riesgos como el bajo stock o productos por vencer". | La funcionalidad de alertas no solo informa, sino que genera una respuesta operativa por parte del usuario, lo que sugiere un impacto positivo en la reducción de quiebres.  |
+|Sugerencia de mejora: escáner de códigos de barras|Maryori Atanacio recomendó "añadir una funcionalidad para que pueda usarse con un lector de códigos de barras y sea más sencillo agregar productos". | Si bien las alertas son valoradas, los usuarios identifican oportunidades de mejora en el registro de productos, lo que podría potenciar aún más el impacto de las alertas al reducir la fricción en el ingreso de datos.|
+
+Interpretación general:
+
+Los resultados cualitativos indican que la hipótesis del EXP-01 se valida parcialmente. Los usuarios reconocen el valor de las alertas automáticas y reportan una mejora en su capacidad de reacción ante quiebres de stock y vencimientos. Sin embargo, la reducción del 40% en quiebres no pudo ser cuantificada directamente en esta fase de validación, ya que los experimentos se realizaron en un entorno controlado y con prototipos funcionales, no en producción con métricas continuas. La evidencia sugiere que el impacto real dependerá de la correcta implementación de las alertas y de la integración con funcionalidades complementarias como el registro rápido de productos.
+
+**Estado de la hipótesis: Parcialmente validada**
+
+**Experimento EXP-02: Reportes visuales de inventario**
+
+Hipótesis: Creemos que ofrecer un módulo de reportes visuales integrados en el dashboard principal aumentará en un 30% la frecuencia semanal con la que los usuarios ajustan sus solicitudes de reabastecimiento basándose en datos del sistema, logrando una tasa de adopción de la función de al menos el 50% de los usuarios activos.
+
+Resultados obtenidos:
+
+A partir de las entrevistas con usuarios de ambos segmentos, se obtuvieron los siguientes hallazgos relacionados con los reportes visuales:
+
+|Hallazgo | Evidencia | Interpretación |
+|--- |----- | -----  |
+|Valoración de la simplicidad y claridad de la interfaz  | Marcelo Binda destacó "la simplicidad de la interfaz y la rapidez con la que puede realizar tareas básicas como el registro de productos y la consulta del inventario". Ariana Agreda comentó que "le resulta amigable y sencillo el flujo de la aplicación". | La usabilidad y claridad visual son percibidas como fortalezas del producto, lo que facilita la adopción de funcionalidades como los reportes.|
+|Centralización de la información como ventaja | Mauricio Elera señaló que "la mayor ventaja de StockWise es centralizar toda la operación en un solo lugar, lo que le ayuda a reducir errores y mantener una gestión mucho más eficiente". | Los reportes visuales contribuyen a esta centralización al ofrecer una vista consolidada del estado del inventario, lo que respalda la hipótesis de que facilitan decisiones basadas en datos. |
+|Sugerencia de mejora: personalización de reportes|Juan Carlos Ramírez sugirió "mejorar la personalización de reportes para adaptarlo mejor a las necesidades de su negocio". Alexander Miranda recomendó "generar reportes acerca de aquellos productos que se hayan vencido". | Si bien los reportes son valorados, los usuarios demandan mayor flexibilidad y personalización, lo que indica que la funcionalidad actual es un buen punto de partida pero requiere evolución.|
+|Valoración de métricas del dashboard   | Alexander Miranda mencionó que "las métricas del dashboard le parecieron idóneas".   | El dashboard con indicadores clave es percibido como útil y alineado con las necesidades de los usuarios.  |
+
+Interpretación general:
+
+La hipótesis del EXP-02 se valida parcialmente. Los usuarios valoran positivamente la disponibilidad de información visual y centralizada, y reconocen que esta les ayuda a tomar decisiones más informadas. Sin embargo, la tasa de adopción del 50% y el incremento del 30% en ajustes de reabastecimiento no pudieron ser cuantificados en esta fase, ya que la validación se realizó mediante entrevistas con prototipos y no con métricas de uso en producción. La demanda de personalización sugiere que el módulo de reportes debe evolucionar para maximizar su impacto.
+
+**Estado de la hipótesis: Parcialmente validada**
+
+**Experimento EXP-03: Modelo freemium**
+
+Hipótesis: Creemos que al implementar un modelo de plan gratuito con topes de almacenamiento de productos, al menos un 15% de los usuarios activos freemium migrará voluntariamente a un plan de pago premium dentro de sus primeros 60 días de uso para desbloquear funciones avanzadas.
+
+Resultados obtenidos:
+
+A partir de las entrevistas de validación y la implementación de la Landing Page To-Be, se identificaron los siguientes hallazgos:
+
+|Hallazgo |	Evidencia |Interpretación |
+|----|----|-----|
+|Interés en el producto y disposición a recomendar	|Marcelo Binda percibe la herramienta como "una solución práctica y adecuada para pequeñas bodegas que buscan digitalizar su operación". Mauricio Elera afirmó que "centralizar toda la operación en un solo lugar le ayuda a reducir errores".	|Existe una percepción positiva del valor del producto, lo que constituye una base favorable para la conversión a planes de pago.|
+|Reconocimiento del valor de las funciones avanzadas	|Alexander Miranda señaló que "le sería de mucha utilidad generar reportes acerca de aquellos productos que se hayan vencido". Juan Carlos Ramírez destacó que "funcionalidades como la alerta de stock bajo y la gestión por lotes serían de gran apoyo".	|Los usuarios identifican valor en funcionalidades que podrían estar disponibles solo en planes premium, lo que sugiere que existe disposición a pagar por acceso a estas características.|
+|Sugerencia de integración con otras herramientas|	Mauricio Elera señaló que "un módulo de facturación y la integración con software contable harían la plataforma mucho más completa".	|La disposición a pagar podría aumentar si el producto se integra con herramientas complementarias que los usuarios ya utilizan (facturación, contabilidad).|
+|Landing Page orientada a conversión|	La Landing Page To-Be incorpora una sección de comparativa de planes freemium vs premium con llamados a la acción claros ("Empezar prueba gratuita de 14 días", "Probar 14 días gratis").|	La implementación de la Landing Page permite medir eventos de conversión como session_started, plan_upgrade_started y plan_upgrade_completed, lo que facilitará la validación cuantitativa del modelo freemium en fases posteriores.|
+
+Interpretación general:
+
+La hipótesis del EXP-03 se encuentra en proceso de validación. Los resultados cualitativos indican que los usuarios reconocen el valor del producto y muestran interés en funcionalidades avanzadas, lo que sugiere que el modelo freemium podría ser efectivo. Sin embargo, la tasa de conversión del 15% en 60 días no pudo ser medida en esta fase, ya que la validación se realizó con prototipos y entrevistas, no con métricas de uso real en producción. La Landing Page To-Be implementada permitirá recolectar estos datos en futuras iteraciones.
+
+**Estado de la hipótesis: En proceso de validación (resultados cualitativos favorables)**
+
+**Resumen de resultados**
+
+|Experimento |	Hipótesis	|Resultado cualitativo	|Estado
+|----|----|----|----|
+EXP-01	|Alertas push reducen quiebres de stock en 40%	|Usuarios valoran alertas y reportan mejor reacción ante riesgos. Sugieren mejoras en registro de productos.	|Parcialmente validada
+EXP-02|	Reportes visuales aumentan decisiones de reabastecimiento en 30%	|Usuarios valoran centralización y simplicidad. Demandan mayor personalización de reportes.	|Parcialmente validada
+EXP-03|	Modelo freemium logra conversión del 15% en 60 días	|Usuarios reconocen valor del producto y disposición a recomendar. Interés en funcionalidades avanzadas.	|En proceso de validación
+
+
 ### 8.4.2. Re-scored and Re-prioritized Question Backlog
 
 ## 8.5. Continuous Learning
