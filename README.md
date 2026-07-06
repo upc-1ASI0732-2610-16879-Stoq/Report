@@ -1843,6 +1843,59 @@ EXP-03|	Modelo freemium logra conversión del 15% en 60 días	|Usuarios reconoce
 
 ### 8.4.2. Re-scored and Re-prioritized Question Backlog
 
+Con base en los resultados obtenidos durante la ejecución de los experimentos y el análisis de las entrevistas de validación, se ha revisado y re-priorizado el Question Backlog definido en la sección 8.1.4. El nuevo orden refleja el conocimiento adquirido, la validación parcial de algunas hipótesis y la aparición de nuevas preguntas que orientarán los próximos ciclos experimentales.
+
+**Criterios de re-priorización**
+
+Criterio	|Descripción
+|-----|-----|
+Alta prioridad	|Preguntas cuya respuesta es crítica para la validación de las hipótesis centrales del producto o para la toma de decisiones estratégicas.
+Media prioridad|	Preguntas que aportan información valiosa para mejorar el producto, pero no bloquean decisiones inmediatas.
+Baja prioridad| 	Preguntas que pueden ser respondidas en fases posteriores, una vez validadas las hipótesis principales.
+
+**Question Backlog Re-priorizado**
+
+#|	Pregunta|	Área de incertidumbre|	Prioridad anterior|	Nueva prioridad	|Justificación del cambio|	Relación con hipótesis
+|---|----|---|--|---|---|---|
+|**Nuevas preguntas surgidas durante la experimentación**						
+1|	¿Cómo podemos integrar StockWise con sistemas de facturación y software contable para aumentar el valor percibido del producto?|	Integración con ecosistema	|Nueva	|Alta|	Durante las entrevistas, Mauricio Elera señaló que "un módulo de facturación y la integración con software contable harían la plataforma mucho más completa". Esta necesidad recurrente sugiere que la integración con herramientas complementarias podría ser un diferenciador clave.|	Hipótesis 3 (Freemium)
+2	|¿Qué tan importante es para los usuarios la funcionalidad de escáner de códigos de barras para agilizar el registro de productos?|	Funcionalidad de registro|	Nueva|	Alta|Maryori Atanacio recomendó "añadir una funcionalidad para que pueda usarse con un lector de códigos de barras y sea más sencillo agregar productos". Esta sugerencia, combinada con la importancia del registro rápido, justifica una prioridad alta.|	Hipótesis 1 (Alertas) y 4 (Automatización)
+3	|¿Qué nivel de personalización de reportes es necesario para que los usuarios consideren que el módulo satisface completamente sus necesidades?	|Personalización de reportes	|Nueva|	Media	|Juan Carlos Ramírez sugirió "mejorar la personalización de reportes". Esta demanda indica que la funcionalidad actual es un buen punto de partida, pero requiere evolución para maximizar su adopción.	|Hipótesis 2 (Reportes)
+4	|¿Es viable implementar un flujo optimizado para la creación de productos y reposiciones como sugirieron los usuarios?	|Experiencia de usuario	|Nueva|	Media	|Alexander Miranda sugirió "facilitar el flujo de cuando se crea un producto y se agrega una reposición". Esta mejora podría reducir la fricción en el uso diario del sistema.|	Hipótesis 4 (Automatización)
+5	|¿Los usuarios estarían dispuestos a pagar por funcionalidades premium si estas incluyen integración con herramientas de contabilidad?|	Modelo de negocio	|Nueva|	Media|La integración con contabilidad podría ser un factor de conversión a planes premium. Esta pregunta permite explorar si el valor agregado de la integración justifica el costo.|	Hipótesis 3 (Freemium)
+**Preguntas existentes re-priorizadas**		
+1|	¿Los usuarios de bodegas realmente usarán la entrada por voz como método principal de registro, o preferirán el escaneo por cámara?|	Adopción de funcionalidad innovadora	|Alta	|Media	|Los resultados cualitativos sugieren que los usuarios valoran más el escaneo rápido (cámara o código de barras) que la entrada por voz. Esta pregunta se mantiene, pero baja su prioridad al tener indicios de respuesta.|	Hipótesis 1 (Alertas anti-quiebre)
+2	|¿El porcentaje del 15% de conversión de freemium a premium en 60 días es realista para el mercado de bodegas peruano?	|Modelo de negocio	|Alta|	Alta	|Esta pregunta sigue siendo crítica para la viabilidad del modelo de negocio. Aunque los resultados cualitativos son favorables, la confirmación cuantitativa es necesaria. Se mantiene en prioridad alta.	|Hipótesis 3 (Freemium)
+3	|¿Los reportes visuales móviles serán utilizados semanalmente por el 70% de los usuarios, o la frecuencia será menor?	|Engagement del usuario|	Alta|	Alta|	Los usuarios valoran los reportes, pero la demanda de personalización sugiere que la adopción podría ser menor si no se ajustan a sus necesidades. Esta pregunta sigue siendo clave.|	Hipótesis 2 (Reportes para decidir)
+4	|¿Qué tiempo real dedican hoy los usuarios al control manual de stock (línea base) para poder medir una reducción del 40%?|	Métrica base|	Alta|	Alta|	No se obtuvo una línea base cuantificada en la validación. Esta pregunta sigue siendo crítica para medir el impacto real de la automatización en la siguiente fase.	|Hipótesis 4 (Automatización)
+5	|¿Los usuarios confían en las alertas predictivas de reabastecimiento o prefieren seguir usando su criterio empírico?|	Confianza en IA/predicción	|Media|	Alta|	Los resultados cualitativos muestran que los usuarios valoran las alertas, pero la confianza en predicciones más avanzadas aún no se ha probado. Se prioriza para explorar el potencial de la funcionalidad de predicción inteligente.|	Hipótesis 1 y 4
+6	|¿La falta de tiempo para implementar un sistema es la verdadera barrera, o existen otros factores no detectados (ej. desconfianza en la nube)?	|Barreras de adopción|	Alta|	Alta	|Esta pregunta sigue siendo fundamental para la estrategia de adopción. Los resultados de las entrevistas confirman que la falta de tiempo es una barrera, pero no descartan otros factores como la desconfianza o la falta de conocimiento.|	Todas
+7	|¿Los usuarios están dispuestos a pagar por funcionalidades como geolocalización o escaneo por lotes, o las consideran "nice to have"?	|Propuesta de valor de planes premium	|Media|	Media	|Los resultados cualitativos sugieren que los usuarios valoran funcionalidades prácticas (alertas, reportes) por encima de las avanzadas (geolocalización). Se mantiene en prioridad media.	|Hipótesis 3
+8	|¿El onboarding guiado dentro de la app reduce efectivamente la curva de aprendizaje para usuarios con baja experiencia tecnológica?|	Usabilidad|	Media	|Media|	No se identificaron problemas de usabilidad graves durante las entrevistas, pero tampoco se midió específicamente el impacto del onboarding. Se mantiene en prioridad media.	|Hipótesis 1
+9	|¿Los usuarios realmente consultan el historial de movimientos con frecuencia, o es una funcionalidad de respaldo poco utilizada?|	Valor real de funcionalidad	|Baja	|Baja	|Los usuarios no mencionaron el historial de movimientos como una funcionalidad crítica. Se mantiene en prioridad baja, ya que otras funcionalidades son más valoradas.|	Hipótesis 2
+10|	¿La generación de boletas digitales desde el móvil reduce errores de facturación en un 50%, o la mayoría de los negocios ya usan sistemas alternativos?|	Impacto real	|Media|	Media	|Los usuarios mencionaron la necesidad de facturación, pero no se profundizó en esta funcionalidad durante las entrevistas. Se mantiene en prioridad media.	|Hipótesis 5
+
+**Resumen del Question Backlog Re-priorizado**
+
+|Prioridad	|Total de preguntas	|Preguntas nuevas	|Preguntas existentes
+|---|---|---|---|
+Alta	|7|	2	|5
+Media|	6|	3	|3
+Baja|	1|	0	|1
+**Total**|	**14**|	**5**	|**9**
+
+**Conclusiones del re-scoring**
+
+1. Las hipótesis centrales (EXP-01 y EXP-02) se validan parcialmente, lo que confirma que las funcionalidades de alertas y reportes son valoradas por los usuarios y tienen potencial para generar el impacto esperado en la operación de bodegas y emprendimientos.
+
+2. El modelo freemium (EXP-03) tiene indicios favorables, pero su validación definitiva requerirá la medición de métricas de conversión en producción durante los próximos 60 días.
+
+3. Nuevas preguntas han surgido, principalmente relacionadas con la integración con herramientas complementarias (facturación, contabilidad) y la mejora de la experiencia de registro de productos (escáner de códigos de barras, flujo optimizado).
+
+4. La prioridad de la entrada por voz ha disminuido, ya que los usuarios muestran mayor interés en el escaneo rápido (cámara o código de barras) como método de registro ágil.
+
+5. La personalización de reportes se identifica como un área de mejora prioritaria, ya que los usuarios valoran la información visual pero demandan mayor flexibilidad para adaptarla a sus necesidades específicas.
+
 ## 8.5. Continuous Learning
 
 ### 8.5.1. Shareback Session Artifacts: Learning Workflow
