@@ -1970,6 +1970,12 @@ El video de introducción de StockWise es la pieza central de nuestra estrategia
 
 Link del video: 
 
+# Matriz de Evaluación Etica y de Impacto
+
+La siguiente matriz evalúa el impacto de la plataforma StockWise en su entorno operativo y social, alineándose con las responsabilidades éticas y profesionales de la ingeniería de software. El objetivo de este análisis es identificar tanto los efectos positivos que el sistema busca potenciar, como los posibles riesgos éticos o sociales que el equipo de desarrollo debe mitigar. 
+
+
+
 # Conclusiones y recomendaciones
 En conclusión, el desarrollo de StockWise permitió aplicar distintas buenas prácticas de ingeniería de software que mejoraron la calidad y confiabilidad del sistema. El uso de pruebas unitarias permitió validar el correcto funcionamiento de componentes individuales, mientras que las pruebas de integración aseguraron una comunicación adecuada entre módulos como inventario, autenticación y gestión de productos, ayudando a detectar errores antes del despliegue.
 
