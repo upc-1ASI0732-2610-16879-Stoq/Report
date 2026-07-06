@@ -1503,7 +1503,15 @@ El **To-Be Product Backlog** incorpora las User Stories experimentales al backlo
 
 ### 8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle
 
-#### 8.3.3.1. To-Be Sprint Backlogs
+#### 8.3.3.1. To-Be Sprint Backlogs 
+
+Para llevar a cabo la fase de experimentación y poder medir los eventos definidos en el Tracking Plan, el equipo ha estructurado el desarrollo de las To-Be User Stories en dos sprints cortos. Esta división permite un despliegue ágil, priorizando primero la captura de datos críticos de conversión (Freemium) y las alertas de stock, para luego integrar los reportes visuales complejos. 
+
+**Sprint Experimental 1: Alertas Críticas y Conversión Freemium** 
+
+Objetivo del Sprint: Desplegar el motor de notificaciones push, habilitar la configuración de umbrales por producto e instrumentar el embudo de conversión en la Landing Page para iniciar la recolección de datos del EXP-01 y EXP-03. 
+
+
 
 #### 8.3.3.2. Implemented To-Be Landing Page Evidence
 
