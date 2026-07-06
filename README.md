@@ -1933,7 +1933,10 @@ Tras consolidar los resultados de la sección 8.4.1, el equipo realizó una sesi
 ### 8.6.1. About-the-Product Intro Video
 El video de introducción de StockWise es la pieza central de nuestra estrategia de prelanzamiento. Tiene como objetivo comunicar la propuesta de valor de forma directa y visual, conectando con las frustraciones operativas de nuestro público objetivo y demostrando lo fácil que es migrar hacia nuestra solución digital.
 
-Link del video: 
+
+![Videos About the Product](./img/video-about-the-product-intro.png)
+
+Link del video: [https://drive.google.com/file/d/1nWKlcMUbDZ25eBlWmbuqpE1_28_3Ji0n/view?usp=sharing](https://drive.google.com/file/d/1nWKlcMUbDZ25eBlWmbuqpE1_28_3Ji0n/view?usp=sharing)
 
 # Conclusiones y recomendaciones
 En conclusión, el desarrollo de StockWise permitió aplicar distintas buenas prácticas de ingeniería de software que mejoraron la calidad y confiabilidad del sistema. El uso de pruebas unitarias permitió validar el correcto funcionamiento de componentes individuales, mientras que las pruebas de integración aseguraron una comunicación adecuada entre módulos como inventario, autenticación y gestión de productos, ayudando a detectar errores antes del despliegue.
