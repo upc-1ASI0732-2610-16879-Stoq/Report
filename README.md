@@ -1503,7 +1503,35 @@ El **To-Be Product Backlog** incorpora las User Stories experimentales al backlo
 
 ### 8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle
 
-#### 8.3.3.1. To-Be Sprint Backlogs
+#### 8.3.3.1. To-Be Sprint Backlogs 
+
+Para llevar a cabo la fase de experimentación y poder medir los eventos definidos en el Tracking Plan, el equipo ha estructurado el desarrollo de las To-Be User Stories en dos sprints cortos. Esta división permite un despliegue ágil, priorizando primero la captura de datos críticos de conversión (Freemium) y las alertas de stock, para luego integrar los reportes visuales complejos. 
+
+**Sprint Experimental 1: Alertas Críticas y Conversión Freemium** 
+
+Objetivo del Sprint: Desplegar el motor de notificaciones push, habilitar la configuración de umbrales por producto e instrumentar el embudo de conversión en la Landing Page para iniciar la recolección de datos del EXP-01 y EXP-03. 
+
+| Story ID | Story Title                     | Task ID | Task Title                    | Description                                                                                                                | Est. (Hrs) | Assigned To          | Status |
+|----------|---------------------------------|---------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------|------------|----------------------|--------|
+| US-TB01  | Notificación push de stock bajo | TSK-E01 | Lógica de Notificaciones Push | Configurar el servicio de notificaciones en el backend (Spring Boot) para emitir la alerta cuando se alcance el min_stock. | 6          | Ronald Peralta       | Done   |
+| US-TB01  | Notificación push de stock bajo | TSK-E02 | Instrumentación del Evento    | Implementar el tracking del evento alert_received y alert_opened en el entorno móvil.                                      | 4          | Luciana Choquehuanca | Done   |
+| US-TB02  | Configuración de umbral mínimo  | TSK-E03 | UI Configuración Umbral       | Añadir campo editable de "stock mínimo" en el modal de creación y edición de productos (Mobile/Web).                       | 5          | Camila Sanchez       | Done   |
+| US-TB06  | Comparativa freemium vs premium | TSK-E04 | Landing Page Pricing          | Diseñar e integrar la tabla comparativa de planes en la Landing Page con React/Tailwind.                                   | 6          | Fabiola Saldaña      | Done   |
+| US-TB07  | Evento de upgrade de plan       | TSK-E05 | Tracking de Conversión        | Conectar el botón de upgrade con el servicio de analítica para disparar el evento plan_upgrade_started.                    | 3          | Roy Fernandez        | Done   |
+
+
+**Sprint Experimental 2: Analítica Visual e Historial** 
+
+Objetivo del Sprint: Implementar el panel de reportes semanales y el historial de alertas, asegurando la instrumentación necesaria para validar el EXP-02 y complementar el EXP-01. 
+
+| Story ID | Story Title                    | Task ID | Task Title               | Description                                                                                     | Est. (Hrs) | Assigned To          | Status |
+|----------|--------------------------------|---------|--------------------------|-------------------------------------------------------------------------------------------------|------------|----------------------|--------|
+| US-TB04  | Dashboard de reportes visuales | TSK-E06 | Gráficos Semanales Web   | Integrar librería de gráficos en Angular para mostrar entradas/salidas de los últimos 7 días.   | 8          | Fabiola Saldaña      | Done   |
+| US-TB04  | Dashboard de reportes visuales | TSK-E07 | Endpoint de Reportes     | Crear ruta GET en el backend que retorne el consolidado semanal para el dashboard.              | 5          | Roy Fernandez        | Done   |
+| US-TB05  | Evento de acceso a reportes    | TSK-E08 | Tracking Módulo Reportes | Insertar enrutador para que al montar la vista de reportes se registre el evento report_viewed. | 2          | Ronald Peralta       | Done   |
+| US-TB03  | Historial de alertas de stock  | TSK-E09 | Vista Historial Móvil    | Crear pantalla en la app móvil que consuma la API de alertas y liste los últimos 30 días.       | 6          | Camila Sanchez       | Done   |
+| US-TB03  | Historial de alertas de stock  | TSK-E10 | Pruebas y QA             | Validar que el historial filtre correctamente y no presente latencias en el renderizado.        | 4          | Luciana Choquehuanca | Done   |
+
 
 #### 8.3.3.2. Implemented To-Be Landing Page Evidence
 
@@ -1622,6 +1650,13 @@ La imagen muestra la vista de inventario por producto, donde el usuario puede co
 En conjunto, estas evidencias demuestran que la aplicación móvil To-Be fue orientada a la validación del impacto de las alertas de stock bajo en la operación diaria de los usuarios. Las vistas implementadas permiten consultar el estado del inventario, revisar movimientos y detectar productos críticos desde un dispositivo móvil. Por lo tanto, esta implementación contribuye directamente al ciclo experiment-driven, ya que permite relacionar la experiencia móvil con eventos como `alert_received`, `alert_opened`, `stock_out_detected` e `inventory_restocked`.
 
 #### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
+
+La implementación del backend en la fase To-Be ha sido desplegada exitosamente y documentada mediante la especificación OpenAPI 3.1. Los endpoints desarrollados proveen la base transaccional y analítica necesaria para ejecutar los experimentos definidos en el ciclo Experiment-Driven (XDPD), facilitando la captura de métricas y la funcionalidad de las interfaces cliente. 
+
+Toda la evidencia de la API RESTful se encuentra centralizada y accesible mediante Swagger UI en el entorno de producción. 
+
+Enlace de la documentación interactiva (Swagger UI): https://stoq-web-backend.onrender.com/swagger-ui/index.html
+
 
 #### 8.3.3.6. Team Collaboration Insights
 
@@ -1937,6 +1972,22 @@ El video de introducción de StockWise es la pieza central de nuestra estrategia
 ![Videos About the Product](./img/video-about-the-product-intro.png)
 
 Link del video: [https://drive.google.com/file/d/1nWKlcMUbDZ25eBlWmbuqpE1_28_3Ji0n/view?usp=sharing](https://drive.google.com/file/d/1nWKlcMUbDZ25eBlWmbuqpE1_28_3Ji0n/view?usp=sharing)
+
+# Matriz de Evaluación Etica y de Impacto
+
+La siguiente matriz evalúa el impacto de la plataforma StockWise en su entorno operativo y social, alineándose con las responsabilidades éticas y profesionales de la ingeniería de software. El objetivo de este análisis es identificar tanto los efectos positivos que el sistema busca potenciar, como los posibles riesgos éticos o sociales que el equipo de desarrollo debe mitigar. 
+
+| Dimensión | Descripción del Impacto                                                                                                                                                                                                                  | Nivel de Impacto | Acciones de Mitigación / Potenciación                                                                                                                                                                                                         |
+|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Ética     | Privacidad y protección de datos comerciales: Los usuarios confían información financiera sensible, volumen de ventas y datos de proveedores al sistema. Existe el riesgo de exposición si no se aplican medidas de seguridad adecuadas. | Alto             | Mitigación: Implementación estricta de seguridad con encriptación de contraseñas, uso de tokens JWT y control de acceso basado en roles (RBAC), asegurando que los empleados solo vean la información autorizada por el administrador.        |
+| Ética     | Transparencia en el modelo de negocio: Implementación de un modelo Freemium. Existe el riesgo ético de atrapar al usuario en un ecosistema de pago mediante costos ocultos.                                                              | Medio            | Mitigación: Diseño de una Landing Page con una tabla comparativa de planes 100% transparente, detallando los topes exactos de almacenamiento gratuito y las funcionalidades premium, sin exigir tarjeta de crédito para la versión de prueba. |
+| Social    | Inclusión y reducción de la brecha digital: Las bodegas y pequeños negocios suelen operar con baja familiaridad tecnológica. StockWise impulsa la digitalización de este sector tradicional.                                             | Alto             | Potenciación: Mantener el principio de "simplicidad extrema", diseñando interfaces intuitivas orientadas a la acción (escaneo por cámara, alertas visuales) y un proceso de onboarding guiado para facilitar la curva de aprendizaje.         |
+| Social    | Reducción del estrés laboral y carga cognitiva: Los administradores dependen actualmente de su memoria y procesos manuales, generando altos niveles de fatiga y frustración al detectar errores.                                         | Alto             | Potenciación: Delegar la carga cognitiva al sistema mediante alertas push automatizadas para stock bajo y productos próximos a vencer, brindando tranquilidad y control operativo al usuario.                                                 |
+| Económica | Reducción de pérdidas por mermas y quiebres: El manejo manual genera pérdidas frecuentes por caducidad no detectada o ventas no realizadas por falta de stock.                                                                           | Alto             | Potenciación: Uso de métricas en tiempo real y predicciones de reabastecimiento a través del dashboard. Esto optimiza las decisiones de compra e incrementa directamente la rentabilidad del negocio.                                         |
+| Económica | Impacto en la escalabilidad de las Pymes: El desorden operativo limita el crecimiento de las startups y almacenes.                                                                                                                       | Medio            | Potenciación: El sistema de trazabilidad, historial de movimientos y gestión por lotes permite a los dueños delegar tareas con confianza y expandir sus canales de venta sin perder el control.                                               |
+| Ambiental | Reducción del consumo de papel y materiales físicos: Actualmente, el 100% de los usuarios de bodegas entrevistados utiliza cuadernos o registros en papel.                                                                               | Medio            | Potenciación: Fomentar la digitalización completa del registro de entradas, salidas, mermas y emisión de boletas desde el dispositivo móvil, reduciendo gradualmente la huella de carbono de la administración de la tienda.                  |
+
+El desarrollo de StockWise demuestra un compromiso profesional que trasciende la simple creación de código. Al abordar la gestión de inventarios, la plataforma actúa como un catalizador de modernización para el sector microempresarial, un segmento económicamente vital pero tecnológicamente desatendido. Las decisiones arquitectónicas, desde la protección de rutas hasta la simplicidad de la UI, responden éticamente a la necesidad de proteger el flujo de caja y los datos de estos emprendedores, asegurando un impacto social y económico netamente positivo.
 
 # Conclusiones y recomendaciones
 En conclusión, el desarrollo de StockWise permitió aplicar distintas buenas prácticas de ingeniería de software que mejoraron la calidad y confiabilidad del sistema. El uso de pruebas unitarias permitió validar el correcto funcionamiento de componentes individuales, mientras que las pruebas de integración aseguraron una comunicación adecuada entre módulos como inventario, autenticación y gestión de productos, ayudando a detectar errores antes del despliegue.
