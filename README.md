@@ -270,7 +270,7 @@
   - [8.4. Experiment Aftermath \& Analysis](#84-experiment-aftermath--analysis)
     - [8.4.1. Analysis and Interpretation of Results](#841-analysis-and-interpretation-of-results)
     - [8.4.2. Re-scored and Re-prioritized Question Backlog](#842-re-scored-and-re-prioritized-question-backlog)
-  - [8.5. Continuous Learning](#85-continuous-learning)
+    - [8.5. Continuous Learning](#85-continuous-learning)
     - [8.5.1. Shareback Session Artifacts: Learning Workflow](#851-shareback-session-artifacts-learning-workflow)
   - [8.6. To-Be Software Platform Pre-launch](#86-to-be-software-platform-pre-launch)
     - [8.6.1. About-the-Product Intro Video](#861-about-the-product-intro-video)
@@ -1896,45 +1896,37 @@ Baja|	1|	0	|1
 
 5. La personalización de reportes se identifica como un área de mejora prioritaria, ya que los usuarios valoran la información visual pero demandan mayor flexibilidad para adaptarla a sus necesidades específicas.
 
-## 8.5. Continuous Learning
+
+
+### 8.5. Continuous Learning
 
 ### 8.5.1. Shareback Session Artifacts: Learning Workflow
 
-El aprendizaje continuo es un pilar fundamental en el ciclo de vida y desarrollo de StockWise. Para garantizar la mejora constante del producto, la evolución de la plataforma y la alineación de todo el equipo, se establecieron sesiones periódicas de retroalimentación conocidas como Shareback Sessions.
+Tras consolidar los resultados de la sección 8.4.1, el equipo realizó una sesión de **Shareback**: una reunión donde se comparten los hallazgos del experimento con todo el equipo y se toma, por cada hipótesis o métrica, una decisión explícita de Persevere (continuar sin cambios), Pivot (cambiar el enfoque) o Kill (descartar la idea). Esta sesión cierra el ciclo de aprendizaje continuo y alimenta directamente al Question Backlog re-priorizado (8.4.2).
 
-**Formato de la Shareback Session**
+| Sesión | Shareback Session — Ciclo Experimental Sprint 4 |
+| :--- | :--- |
+| **Date** | 2026-07-05 |
+| **Time** | 09:00 PM |
+| **Location** | Reunión virtual vía Discord |
+| **Prepared By** | Fabiola Saldaña |
+| **Attendees** | Peralta Chipa, Ronald Joel / Choquehuanca Nuñez, Luciana Carolina / Sanchez Rios, Camila / Fernandez Remon, Roy Linsh / Saldaña Ayala, Fabiola Del Rocio |
+| **Agenda** | 1) Repaso de los resultados de validación cualitativa y entrevistas (8.4.1). 2) Discusión abierta de hallazgos y sorpresas. 3) Decisión Persevere/Pivot/Kill por hipótesis. 4) Traslado de conclusiones al Question Backlog re-priorizado (8.4.2). |
 
-Estas sesiones están diseñadas como un espacio colaborativo estructurado donde los integrantes del equipo comparten sus aprendizajes, métricas validadas y desafíos descubiertos durante la ejecución de los experimentos y pruebas de usabilidad. La estructura seguida en cada sesión es:
+<br>
 
-1. Introducción y revisión: Alineación sobre los objetivos del sprint o experimento reciente.
+**Decisiones tomadas**
 
-2. Presentación de aprendizajes: Exposición individual de descubrimientos técnicos, operativos y de negocio.
+| Hipótesis / Métrica | Resultado observado | Decisión | Justificación |
+| :--- | :--- | :--- | :--- |
+| EXP-01 — Alertas push de stock bajo | Alta valoración cualitativa para evitar pérdidas, pero fricción alta al registrar productos manualmente. No se pudo medir la reducción del 40% en entorno controlado. | **Persevere, con Pivot en UX** | Se mantiene la lógica de las alertas (Persevere), pero se decide pivotar el flujo de ingreso implementando un **flujo optimizado de creación y duplicación rápida de productos** para reducir la carga manual y asegurar la adopción real. |
+| EXP-02 — Reportes visuales de inventario | Los usuarios valoran la centralización, pero demandan personalización específica (ej. reportes solo de vencidos). | **Pivot (Evolución de feature)** | El dashboard estático validó la necesidad, pero para lograr el 30% de aumento en ajustes de reabastecimiento, se debe pivotar hacia vistas personalizables. |
+| EXP-03 — Modelo freemium | Interés validado en funciones avanzadas y disposición a recomendar. Sin embargo, no hay denominador real aún para calcular el 15% de conversión en 60 días. | **Persevere, con extensión de medición** | No hay evidencia para descartar el modelo; se necesita lanzar a producción con la nueva Landing Page implementada para rastrear eventos y conversiones reales. |
+| Feature — Integración Contable / Facturación | Fuerte sugerencia espontánea por parte de los entrevistados para el plan Premium. | **Diferir** | Se reconoce como un gran aportante de valor al modelo freemium, pero se prioriza conscientemente para un próximo ciclo tras estabilizar métricas base. |
 
-3. Análisis colectivo: Discusión de los hallazgos basados en la interacción real de los usuarios en la plataforma.
+<br>
 
-4. Registro de acciones: Toma de decisiones para mejorar procesos, pivotar funcionalidades o ajustar la arquitectura.
-
-**Documentación de los Aprendizajes**
-Cada sesión genera artefactos de conocimiento que se almacenan en un repositorio interno accesible para todo el equipo. Esta documentación asegura que los errores no se repitan y fomenta la reutilización de soluciones exitosas. Los aprendizajes se registran bajo el formato: Título del Aprendizaje, Descripción Detallada, Evidencia, Impacto en el Proyecto, y Acciones Futuras.
-
-A continuación, se presentan los dos artefactos de aprendizaje más recientes y relevantes del proyecto:
-
-**Artefacto de Aprendizaje 2: Depuración y Optimización de la Experiencia de Usuario (UX/UI)**
-- Título del Aprendizaje: Resolución de fricciones en navegación, interactividad y validación.
-
-- Descripción Detallada: Durante las etapas de prueba de la interfaz web, se identificaron diversas fricciones que afectaban la retención de contexto y frustraban al usuario final. El equipo consolidó estos 14 hallazgos en cuatro áreas de corrección sistemática.
-
-- Evidencia: Reportes de usabilidad documentando spinners infinitos, solapamiento de menús, enlaces sin respuesta y exposición de llaves de traducción.
-
-- Impacto en el Proyecto: La depuración integral mejoró drásticamente la fluidez de la plataforma. Las correcciones aplicadas fueron:
-
-1. Flujo de Autenticación y Sesión: Se implementó un manejo de tiempo de espera (timeout) adecuado en la pantalla de Login, eliminando el spinner infinito sin retroalimentación. Se restauró el enrutamiento del enlace "¿Olvidaste tu contraseña?" para dirigir al flujo de recuperación sin recargar la vista actual.
-
-2. Navegación y Layout: Se corrigió el enrutamiento para evitar redirecciones inesperadas a "Ajustes" al refrescar el Dashboard. Se optimizó el menú lateral (Sidebar) ajustando textos largos y asegurando que el control de idioma permanezca visible al colapsar el panel. Se eliminó la duplicidad visual de notificaciones y títulos en las cabeceras.
-
-3. Interactividad y Retroalimentación: Se activó la funcionalidad de los botones de "Filtrar" en los módulos de Proveedores y Ventas. Se resolvieron los bloqueos de estado en los modales (como el atasco de "Nuevo Personal" tras una operación exitosa) y se habilitaron acciones del menú contextual, como "Editar" producto.
-
-4. Validación de Datos y Mensajería: Se introdujeron validaciones estrictas de campos obligatorios al crear elementos complejos como un "Kit". Se estandarizaron los mensajes visuales tras acciones de edición/eliminación para cumplir con la guía de diseño, y se depuraron los diccionarios de traducción para evitar la exposición de variables internas al usar la app en inglés.
+**Aprendizaje principal de la sesión:** Ninguna hipótesis central fue descartada (**Kill**) en este ciclo; el equipo decidió **perseverar** con el modelo de negocio y las funcionalidades núcleo, extendiendo el tiempo de medición hacia un entorno de producción real. Sin embargo, los descubrimientos cualitativos demostraron que para alcanzar los objetivos cuantitativos deseados, se requiere un **Pivot** en la experiencia de uso: es imprescindible priorizar el escáner de códigos de barras y la personalización de reportes, ya que la limitación actual identificada radica en la fricción operativa, no en el diseño conceptual de la solución.
 
 ## 8.6. To-Be Software Platform Pre-launch
 
@@ -1952,9 +1944,9 @@ En general, estas prácticas aportaron beneficios importantes como mayor estabil
 
 # Video App Validation
 
-**Video app mobile validation:** https://canva.link/5zzsufn0huy1z6b 
+**Video app mobile validation:** [https://canva.link/5zzsufn0huy1z6b](https://canva.link/5zzsufn0huy1z6b) 
 
-**Video app web validation:**
+**Video app web validation:** [https://drive.google.com/file/d/1IDTGIL7bwv_QfjnIkG7h_DPrEv4yW_R8/view?usp=sharing](https://drive.google.com/file/d/1IDTGIL7bwv_QfjnIkG7h_DPrEv4yW_R8/view?usp=sharing) 
 
 # Video About-the-Team
 
