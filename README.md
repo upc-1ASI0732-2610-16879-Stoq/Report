@@ -1651,6 +1651,13 @@ En conjunto, estas evidencias demuestran que la aplicación móvil To-Be fue ori
 
 #### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
 
+La implementación del backend en la fase To-Be ha sido desplegada exitosamente y documentada mediante la especificación OpenAPI 3.1. Los endpoints desarrollados proveen la base transaccional y analítica necesaria para ejecutar los experimentos definidos en el ciclo Experiment-Driven (XDPD), facilitando la captura de métricas y la funcionalidad de las interfaces cliente. 
+
+Toda la evidencia de la API RESTful se encuentra centralizada y accesible mediante Swagger UI en el entorno de producción. 
+
+Enlace de la documentación interactiva (Swagger UI): https://stoq-web-backend.onrender.com/swagger-ui/index.html
+
+
 #### 8.3.3.6. Team Collaboration Insights
 
 Se evidencian insights de los repositorios de Github donde se han trabajado las implementaciones. Link de organización: https://github.com/upc-1ASI0732-2610-16879-Stoq 
