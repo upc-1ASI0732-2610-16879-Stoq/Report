@@ -1524,6 +1524,13 @@ Objetivo del Sprint: Desplegar el motor de notificaciones push, habilitar la con
 
 Objetivo del Sprint: Implementar el panel de reportes semanales y el historial de alertas, asegurando la instrumentación necesaria para validar el EXP-02 y complementar el EXP-01. 
 
+| Story ID | Story Title                    | Task ID | Task Title               | Description                                                                                     | Est. (Hrs) | Assigned To          | Status |
+|----------|--------------------------------|---------|--------------------------|-------------------------------------------------------------------------------------------------|------------|----------------------|--------|
+| US-TB04  | Dashboard de reportes visuales | TSK-E06 | Gráficos Semanales Web   | Integrar librería de gráficos en Angular para mostrar entradas/salidas de los últimos 7 días.   | 8          | Fabiola Saldaña      | Done   |
+| US-TB04  | Dashboard de reportes visuales | TSK-E07 | Endpoint de Reportes     | Crear ruta GET en el backend que retorne el consolidado semanal para el dashboard.              | 5          | Roy Fernandez        | Done   |
+| US-TB05  | Evento de acceso a reportes    | TSK-E08 | Tracking Módulo Reportes | Insertar enrutador para que al montar la vista de reportes se registre el evento report_viewed. | 2          | Ronald Peralta       | Done   |
+| US-TB03  | Historial de alertas de stock  | TSK-E09 | Vista Historial Móvil    | Crear pantalla en la app móvil que consuma la API de alertas y liste los últimos 30 días.       | 6          | Camila Sanchez       | Done   |
+| US-TB03  | Historial de alertas de stock  | TSK-E10 | Pruebas y QA             | Validar que el historial filtre correctamente y no presente latencias en el renderizado.        | 4          | Luciana Choquehuanca | Done   |
 
 
 #### 8.3.3.2. Implemented To-Be Landing Page Evidence
