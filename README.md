@@ -1511,6 +1511,19 @@ Para llevar a cabo la fase de experimentación y poder medir los eventos definid
 
 Objetivo del Sprint: Desplegar el motor de notificaciones push, habilitar la configuración de umbrales por producto e instrumentar el embudo de conversión en la Landing Page para iniciar la recolección de datos del EXP-01 y EXP-03. 
 
+| Story ID | Story Title                     | Task ID | Task Title                    | Description                                                                                                                | Est. (Hrs) | Assigned To          | Status |
+|----------|---------------------------------|---------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------|------------|----------------------|--------|
+| US-TB01  | Notificación push de stock bajo | TSK-E01 | Lógica de Notificaciones Push | Configurar el servicio de notificaciones en el backend (Spring Boot) para emitir la alerta cuando se alcance el min_stock. | 6          | Ronald Peralta       | Done   |
+| US-TB01  | Notificación push de stock bajo | TSK-E02 | Instrumentación del Evento    | Implementar el tracking del evento alert_received y alert_opened en el entorno móvil.                                      | 4          | Luciana Choquehuanca | Done   |
+| US-TB02  | Configuración de umbral mínimo  | TSK-E03 | UI Configuración Umbral       | Añadir campo editable de "stock mínimo" en el modal de creación y edición de productos (Mobile/Web).                       | 5          | Camila Sanchez       | Done   |
+| US-TB06  | Comparativa freemium vs premium | TSK-E04 | Landing Page Pricing          | Diseñar e integrar la tabla comparativa de planes en la Landing Page con React/Tailwind.                                   | 6          | Fabiola Saldaña      | Done   |
+| US-TB07  | Evento de upgrade de plan       | TSK-E05 | Tracking de Conversión        | Conectar el botón de upgrade con el servicio de analítica para disparar el evento plan_upgrade_started.                    | 3          | Roy Fernandez        | Done   |
+
+
+**Sprint Experimental 2: Analítica Visual e Historial** 
+
+Objetivo del Sprint: Implementar el panel de reportes semanales y el historial de alertas, asegurando la instrumentación necesaria para validar el EXP-02 y complementar el EXP-01. 
+
 
 
 #### 8.3.3.2. Implemented To-Be Landing Page Evidence
