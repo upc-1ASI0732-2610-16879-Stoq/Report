@@ -274,6 +274,7 @@
     - [8.5.1. Shareback Session Artifacts: Learning Workflow](#851-shareback-session-artifacts-learning-workflow)
   - [8.6. To-Be Software Platform Pre-launch](#86-to-be-software-platform-pre-launch)
     - [8.6.1. About-the-Product Intro Video](#861-about-the-product-intro-video)
+- [Matriz de Evaluación Etica y de Impacto](#matriz-de-evaluación-etica-y-de-impacto)
 - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Video App Validation](#video-app-validation)
 - [Video About-the-Team](#video-about-the-team)
